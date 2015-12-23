@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>html高斯模糊</title>
+
+
+<!-- 
+<link type="text/css" href=".css" media="screen" rel="stylesheet">
+-->
+
+<style>
+ * {
+ margin:0;
+ padding:0;
+ font-family:"微软雅黑"；
+ }
+ body{
+ background-color:#eee;
+ }
+ 
+ header {
+ background-color:#666;
+ height:45px;
+ 
+ }
+ 
+  .content {
+	background-color:#f9f9f9;
+    width: 1024px;
+    min-height: 500px;
+	margin: 0 auto;
+	margin-top:15px;
+	border: 1px solid #eee;
+	border-radius: 10px;
+	padding:10px;
+
+ }
+   .list {
+	background-color:#fff;
+    padding: 5px;
+    font-size: 20px;
+    font-family: "微软雅黑";
+   
+
+
+ }
+	.blur {
+	position: absolute;
+	width: 100%; bottom: 0; left: 0;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	/* blur */
+	filter: url(blur-5px.svg#blur);
+	/* css3 */
+	-webkit-filter: blur(5px);
+	-moz-filter: blur(5px);
+	filter: blur(5px); /* FireFox 35+ support */
+	/* IE6~IE9 */
+	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=5, MakeShadow=false);
+	*left: -5px; left: -5px;
+ }
+ 
+</style>
+
+</head>
+
+<body>
+	<header>
+		<div style="margin-left:50px;">
+			<span style="line-height: 45px;font-family: fantasy;font-size: 33px;color: #eee;">
+				JLD
+			</span>
+			<span style="line-height: 45px;font-family: fantasy;font-size: 15px;color: #eee;">
+				liuyouth.com
+			</span>
+		</div>
+	
+	</header>
+	
+	<div class="content">
+		<div style="padding: 10px;font-size: 25px;color: #424442;">
+		html高斯模糊
+		</div>
+		<div id="list" class="list">
+			<div style="padding: 10px;font-size: 22px;color: #424442;">
+				" filter blur css过滤器 "
+			</div>
+			<div style="padding: 10px;color: #666;">
+				<span>截止到2015-12-23市面上的主流浏览器都可以兼容。IE效果略差。
+				</span><br>
+				<span style="font-size:35px;color:#00ff80;">*</span><span  style="line-height:30px;">
+				添加这个class的div 以及所有的子控件都会被模糊，</span><br>
+				<span>所以要做背景需要用相对定位或者绝对定位来达到背景模糊的效果。
+				</span><br>
+				
+			</div>
+			<div style="padding: 10px;color: #2CD62D; background-color:#3a3a3a;border-radius:10px;font-size: 15px;">
+				<span style="color: #EEE;"> 示例代码
+				</span><br>
+				<p>
+					<link rel='stylesheet' type='text/css' href='http://tools.oschina.net/js/syntaxhighlighter_3.0.83/styles/shCoreEmacs.css'/><div id="highlighter_566073" class="syntaxhighlighter  js"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="js plain">.blur&nbsp;{</code></div><div class="line number2 index1 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">position:&nbsp;absolute;</code></div><div class="line number3 index2 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">width:&nbsp;100%;&nbsp;bottom:&nbsp;0;&nbsp;left:&nbsp;0;</code></div><div class="line number4 index3 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">-webkit-transform:&nbsp;translateZ(0);</code></div><div class="line number5 index4 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">transform:&nbsp;translateZ(0);</code></div><div class="line number6 index5 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js comments">/*&nbsp;blur&nbsp;*/</code></div><div class="line number7 index6 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">filter:&nbsp;url(blur-5px.svg</code><code class="js preprocessor">#blur);</code></div><div class="line number8 index7 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js comments">/*&nbsp;css3&nbsp;*/</code></div><div class="line number9 index8 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">-webkit-filter:&nbsp;blur(5px);</code></div><div class="line number10 index9 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">-moz-filter:&nbsp;blur(5px);</code></div><div class="line number11 index10 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">filter:&nbsp;blur(5px);&nbsp;</code><code class="js comments">/*&nbsp;FireFox&nbsp;35+&nbsp;support&nbsp;*/</code></div><div class="line number12 index11 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js comments">/*&nbsp;IE6~IE9&nbsp;*/</code></div><div class="line number13 index12 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">filter:&nbsp;progid:DXImageTransform.Microsoft.Blur(PixelRadius=5,&nbsp;MakeShadow=</code><code class="js keyword">false</code><code class="js plain">);</code></div><div class="line number14 index13 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">*left:&nbsp;-5px;&nbsp;left:&nbsp;-5px;</code></div><div class="line number15 index14 alt2"><code class="js spaces">&nbsp;</code><code class="js plain">}</code></div><div class="line number16 index15 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;</code>&nbsp;</div></div></td></tr></tbody></table></div>
+				</p><br>
+				
+			</div>
+		</div>
+	
+	</div>
+	
+
+
+
+
+
+
+<script type="text/javascript" src="content.js"></script>
+<script type="text/javascript" src="platform/js/articleType.js"></script>
+<script type="text/javascript" src="platform/js/jquery.min.js"></script>
+
+<script type="text/javascript">
+	
+	$(document).ready(function () {
+			
+			});
+			
+			
+			
+	function getRandomColor(){ 
+		return "#"+("00000"+((Math.random()*16777215+0.5)>>0).toString(16)).slice(-6); 
+	} 
+</script>
+</body>
+
+</html>
