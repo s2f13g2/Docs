@@ -1,0 +1,104 @@
+﻿body{
+	font:14px/1.5 normal Lato,DIN,'Microsoft Yahei',"Droid Sans","Helvetica Neue","Droid Sans Fallback","Heiti SC",sans-self;
+}
+
+.cv {
+  display:block;
+  margin:auto;
+  top:100px;
+	color:#666;
+	font-size:13px;
+	font-family:"微软雅黑";
+	height:auto;
+	background:#fff;color:#333;
+	-moz-box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.15);/*firefox*/
+	-webkit-box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.15);/*safari或chrome*/
+	box-shadow:0px 6px 15px 0px rgba(0, 0, 0, 0.15);/*opera或ie9*/
+}
+.item a{
+	padding:5px 5px 5px 10px;
+	font-size:1.6rem;
+	color:#333;
+	transition:padding-left .2s ease;
+	text-decoration:none;
+}
+.item span{
+
+	transition:padding-left .2s ease;
+	text-decoration:none;
+}
+.item a:hover{
+	color:#36E095;
+	padding-left:30px;
+	
+}
+.list{
+	padding:10px;
+}
+.form{
+	margin-top:10px;
+	min-height:100px;
+	padding:10px;
+	background-color:#fff;
+	border-radius:5px;
+	-moz-box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.15);/*firefox*/
+	-webkit-box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.15);/*safari或chrome*/
+	box-shadow:0px 6px 15px 0px rgba(0, 0, 0, 0.15);/*opera或ie9*/
+}
+.form input{
+	border:2px solid rgba(54, 224, 149, 0.29);
+	border-radius:2px;
+	height:23px;
+	width:300px;
+	
+}
+.form input:hover{
+	border:2px solid rgba(54, 224, 149, 0.8);
+	
+}	
+.form div{
+	margin:3px;
+	
+}
+.form span{
+	width:60px;
+	display:-moz-inline-box;
+	display:inline-block;
+}
+button{
+	height:30px;
+	min-width:45px;
+	border:0;
+	background-color:rgba(0, 0, 0, 0);
+	border-radius:5px;
+	font:14px/1.5 normal Lato,DIN,'Microsoft Yahei',"Droid Sans","Helvetica Neue","Droid Sans Fallback","Heiti SC",sans-self;
+	
+}
+button:hover{
+	background-color:#36E095;
+	color:#fff;
+}
+.year{
+	color:#cfcccc;
+	font-size:2em;
+}
+
+.month{
+	color:#36E095;
+	font-size:2em;
+}
+.date{
+	background-color:#cfcccc;
+	color:#ffffff;
+	font-size:0.5em;
+	padding:2px 6px;
+	line-height:20px;
+	height:20px;
+	border-radius:2px;
+	float:right;
+}
+.intro{
+	color:#999;
+	font-size:1.3rem;
+	padding:5px 5px 5px 10px;
+}

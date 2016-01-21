@@ -1,268 +1,77 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>测试</title>
+		<script src="https://cdn1.lncld.net/static/js/av-mini-0.6.4.js"></script>
+		 <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+		<script src="js.js"></script>
+		<link href="css.css" rel="stylesheet">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
- <head>
- 	<style type="text/css">
- 	body{
-	font-family:"Avenir Next", Avenir, 'Helvetica Neue', 'Lato', 'Segoe UI', Helvetica, Arial, sans-serif;
-	margin:0;
-	padding:0;
-}
-.pricing-section {
-	min-height: 100vh;
-	display: -webkit-flex;
-	display: flex;
-	-webkit-flex-direction: column;
-	flex-direction: column;
-	-webkit-justify-content: center;
-	justify-content: center;
-	-webkit-align-items: center;
-	align-items: center;
-}
-.pricing-section__title {
-	font-size: 1.4em;
-	font-weight: 700;
-	flex: none;
-	text-align:center;
-}
+	</head>
+	<body style="background-color:#fff;">
 
-.bg-7 {
-	color: #C3E9F5;
-	background: linear-gradient(45deg, #7e67e5, #02cbdf);
-}
-/* norbu */
-.pricing--norbu .pricing__item {
-	margin: 1em;
-	color: #fff;
-	cursor: default;
-	font-family: 'Myriad Pro', Arial, sans-serif;
-	border: 1px solid rgba(255,255,255,0.4);
-	background: rgba(255,255,255,0.08);
-	border-radius: 10px;
-	-webkit-transition: border-color 0.3s, background 0.3s;
-	transition: border-color 0.3s, background 0.3s;
-}
+		<div id="5694b23166d868b0882291f6" style="display:none;" class="item"><a href="http://www.zi-han.net/theme/hplus/form_editors.html" target="_blank">111</a><br><span>有颜55555色的</span></div>
+	
+		
+		<div class="cv">
+			
+			
+			<!-- 	<button onclick="javascript:read();">
+					读取
+			</button>
+				<button onclick="javascript:edit();">
+					编辑
+			</button>
+				<button onclick="javascript:deleteA();">
+					删除
+			</button> -->
+			<span>用户ID</span>	
+			<input id="userIdInput">
+				<button onclick="javascript:getByType();">
+					获取列表
+			</button>
+			<span style="color:#999">我已经添加了一个用户id为12的用户，以便测试</span>	
+			<div  id="list" class="list"> 
+				
+			</div>
+		</div>
+		
+		<div class="form">
+				<div >
+					<span>用户ID</span>	
+					<input id="userId">
+					
+				</div>
+				<div >
+					<span>订单号</span>	
+					<input id="orderId">
+					
+				</div>
+				<div>
+					<span>商品图</span>	
+					<input id="goodUrl">
+					<span style="color:#999">这里目前是直接添加网络图片地址，以后会做出上传图片</span>	
+					
+				</div>
+				<div>
+					<span>价格</span>	
+					<input id="plice">
+					
+				</div>
+				<div>
+					<span>数量</span>	
+					<input id="goodNumb">
+					
+				</div>
+			<button onclick="javascript:submit();">
+					添加这条数据
+			</button>
+			<span style="color:#999">这里我开放了权限，可自行添加数据测试</span>	
 
-.pricing--norbu .pricing__item:hover {
-	border: 1px solid rgba(255,255,255,1);
-	background: rgba(255,255,255,0.18);
-}
-
-.pricing--norbu .pricing__title {
-	font-size: 2em;
-	font-weight: 400;
-	margin: 0.5em 0;
-	padding: 1em;
-	position: relative;
-}
-
-.pricing--norbu .pricing__title::after {
-	content: '';
-	position: absolute;
-	width: 20%;
-	height: 1px;
-	background: #fff;
-	left: 40%;
-	bottom: 0;
-}
-
-.pricing--norbu .icon {
-	display: inline-block;
-	min-width: 2em;
-}
-
-.pricing--norbu .pricing__price {
-	font-size: 3.5em;
-	padding: 0.5em 0 0 0;
-	font-weight: 400;
-	position: relative;
-	z-index: 100;
-}
-
-.pricing--norbu .pricing__currency {
-	font-size: 0.5em;
-	vertical-align: super;
-}
-
-.pricing--norbu .pricing__period {
-	font-size: 0.25em;
-	display: block;
-	padding: 1em;
-}
-
-.pricing--norbu .pricing__sentence {
-	padding: 1em 2em;
-	font-size: 1em;
-	margin: 0 auto 1em;
-}
-
-.pricing--norbu .pricing__feature-list {
-	font-size: 1.15em;
-	margin: 0 2em;
-	letter-spacing: 0;
-	padding: 2em 0;
-	list-style: none;
-}
-
-.pricing--norbu .pricing__feature {
-	line-height: 1.4;
-}
-
-.pricing--norbu .pricing__feature::before {
-	content: "\e87a";
-	font-family: 'linearicons';
-	display: inline-block;
-	vertical-align: middle;
-	padding: 0 0.75em 0 0;
-}
-
-.pricing--norbu .pricing__action {
-	border:0;
-	font-weight: bold;
-	flex: none;
-	margin: auto 1em 1em;
-	padding: 1.25em 2em;
-	color: #4aa8e4;
-	background: rgba(255,255,255,0.7);
-	border-radius: 5px;
-	-webkit-transition: background 0.3s;
-	transition: background 0.3s;
-}
-
-.pricing--norbu .pricing__action:hover,
-.pricing--norbu .pricing__action:focus {
-	background: #fff;
-}
-
-/* Dawa */
-.pricing--dawa .pricing__item {
-	padding: 0 2em;
-}
-
-.pricing--dawa .pricing__title {
-	font-weight: bold;
-	font-size: 1.8em;
-	padding: 0 0 0.5em;
-	background: url(../img/line.png) no-repeat 50% 100%;
-}
-
-.pricing--dawa .pricing__price {
-	font-size: 3.75em;
-	line-height: 1;
-	margin: 1em 0 0.65em;
-	font-family: 'Homemade Apple', cursive;
-}
-
-.pricing--dawa .pricing__period {
-	font-size: 0.25em;
-	display: block;
-}
-
-.pricing--dawa .pricing__sentence {
-	font-family: 'Homemade Apple', cursive;
-	margin: 0;
-}
-
-.pricing--dawa .pricing__feature-list {
-	margin: 0 0 1.5em;
-	padding: 1em;
-	list-style: none;
-	text-align: center;
-}
-
-.pricing--dawa .pricing__action {
-	border-radius: 30px;
-	font-size: 1.5em;
-	padding: 0.5em 1.5em;
-	font-family: 'Homemade Apple', cursive;
-	-webkit-transition: color 0.3s;
-	transition: color 0.3s;
-}
-
-.pricing--dawa .pricing__action:hover,
-.pricing--dawa .pricing__action:focus {
-	color: #fffa5c;
-}
-
-@media screen and (max-width: 40em) {
-	.pricing--dawa .pricing__item {
-		border: 1px solid rgba(255,255,255,0.6);
-		margin: 1em;
-	}
-}
-
-.pricing {
-	display: -webkit-flex;
-	display: flex;
-	-webkit-flex-wrap: wrap;
-	flex-wrap: wrap;
-	-webkit-justify-content: center;
-	justify-content: center;
-	width: 100%;
-	margin: 0 auto 3em;
-}
-.pricing__item {
-	position: relative;
-	display: -webkit-flex;
-	display: flex;
-	-webkit-flex-direction: column;
-	flex-direction: column;
-	-webkit-align-items: stretch;
-	align-items: stretch;
-	text-align: center;
-	-webkit-flex: 0 1 330px;
-	flex: 0 1 330px;
-}
- 	</style>
- </head>
- <body>
-  <section class="pricing-section bg-7"> 
-		<h2 class="pricing-section__title">LIUYOUTH.COM/实验室</h2> 
-   <div class="pricing pricing--norbu"> 
-    <div class="pricing__item"> 
-     <h3 class="pricing__title">JLD</h3> 
-     <p class="pricing__sentence">记录点滴的Code-Life</p> 
-     <div class="pricing__price">
-      <span class="pricing__currency">1-</span>8
-      <span class="pricing__period">/ 2016</span>
-     </div> 
-     <ul class="pricing__feature-list"> 
-      <li class="pricing__feature">Java - Javascript - Regex</li> 
-      <li class="pricing__feature">Android - Ios </li> 
-      <li class="pricing__feature" style="width: 300px;margin-left: -22px;">与技术相关的东西(这里没意思)</li> 
-     </ul> 
-     <button class="pricing__action" onclick="window.location.href='jld/index.html'">Let Me See</button> 
-    </div> 
-    <div class="pricing__item pricing__item--featured"> 
-     <h3 class="pricing__title">生活需求</h3> 
-     <p class="pricing__sentence">生活中遇到美好的事物</p> 
-     <div class="pricing__price">
-      <span class="pricing__currency">1-</span>8
-      <span class="pricing__period">/ 2016</span>
-     </div> 
-     <ul class="pricing__feature-list"> 
-			 <li class="pricing__feature">享受生活 / 败家 </li> 
-      <li class="pricing__feature"></li> 
-      <li class="pricing__feature">品质生活 / 轻奢 </li> 
-     </ul> 
-     <button class="pricing__action" onclick="window.location.href='apple/index.html'">Let Me See</button> 
-    </div> 
-    <div class="pricing__item"> 
-     <h3 class="pricing__title">精神需求</h3> 
-			<p class="pricing__sentence">音乐 / 电影 / 图片 / 文章</p> 
-     <div class="pricing__price">
-      <span class="pricing__currency">1-</span>8
-      <span class="pricing__period">/ 2016</span>
-     </div> 
-     <ul class="pricing__feature-list"> 
-      <li class="pricing__feature">小众软件 / 更好的体验</li> 
-      <li class="pricing__feature">精致的音乐，美图，文字</li> 
-      <li class="pricing__feature">最新的电影 / 猎奇 </li> 
-     </ul> 
-     <button class="pricing__action" onclick="window.location.href='jld/index.html'">Let Me See</button> 
-    </div> 
-   </div> 
-  </section>
- </body>
+				
+		</div>
+			
+		
+	</body>
 </html>
