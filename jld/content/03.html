@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>回到顶部的TOP</title>
+
+
+<!-- 
+<link type="text/css" href=".css" media="screen" rel="stylesheet">
+-->
+
+<style>
+ * {
+ margin:0;
+ padding:0;
+ font-family:"微软雅黑"；
+ }
+ body{
+ background-color:#eee;
+ }
+ 
+ header {
+ background-color:#666;
+ height:45px;
+ 
+ }
+ 
+  .content {
+	background-color:#f9f9f9;
+    width: 1024px;
+    min-height: 500px;
+	margin: 0 auto;
+	margin-top:15px;
+	border: 1px solid #eee;
+	border-radius: 10px;
+	padding:10px;
+
+ }
+   .list {
+	background-color:#fff;
+    padding: 5px;
+    font-size: 20px;
+    font-family: "微软雅黑";
+   
+
+
+ }
+	.blur {
+	position: absolute;
+	width: 100%; bottom: 0; left: 0;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	/* blur */
+	filter: url(blur-5px.svg#blur);
+	/* css3 */
+	-webkit-filter: blur(5px);
+	-moz-filter: blur(5px);
+	filter: blur(5px); /* FireFox 35+ support */
+	/* IE6~IE9 */
+	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=5, MakeShadow=false);
+	*left: -5px; left: -5px;
+ }
+ 
+</style>
+
+</head>
+
+<body>
+	<header>
+		<div style="margin-left:50px;" onclick="location='index.html'" >
+			<span style="line-height: 45px;font-family: fantasy;font-size: 33px;color: #eee;">
+				JLD
+			</span>
+			<span style="line-height: 45px;font-family: fantasy;font-size: 15px;color: #eee;">
+				liuyouth.com
+			</span>
+		</div>
+	
+	</header>
+	
+	<div class="content">
+		<div style="padding: 10px;font-size: 25px;color: #424442;">
+		回到顶部的TOP【向上按钮】
+		</div>
+		<div id="list" class="list">
+			<div style="padding: 10px;font-size: 22px;color: #424442;">
+				" filter blur css过滤器 "
+			</div>
+			<div style="padding: 10px;color: #666;">
+				<span>截止到2015-12-23市面上的主流浏览器都可以兼容。IE效果略差。
+				</span><br>
+				<span style="font-size:35px;color:#00ff80;">*</span><span  style="line-height:30px;">
+				添加这个class的div 以及所有的子控件都会被模糊，</span><br>
+				<span>所以要做背景需要用相对定位或者绝对定位来达到背景模糊的效果。
+				</span><br>
+				
+			</div>
+			<div style="padding: 10px;color: #2CD62D; background-color:#3a3a3a;border-radius:10px;font-size: 15px;">
+				<span style="color: #EEE;"> 示例代码
+				</span><br>
+				<p>
+					<link rel='stylesheet' type='text/css' href='http://tools.oschina.net/js/syntaxhighlighter_3.0.83/styles/shCoreEmacs.css'/><div id="highlighter_774575" class="syntaxhighlighter  xml"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div><div class="line number18 index17 alt1">18</div><div class="line number19 index18 alt2">19</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code class="xml keyword">style</code><code class="xml plain">&gt;</code></div><div class="line number2 index1 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">#top&nbsp;{</code></div><div class="line number3 index2 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">z-index:100;</code></div><div class="line number4 index3 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">font-family:Arial,&nbsp;Helvetica,&nbsp;sans-serif;</code></div><div class="line number5 index4 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">font-size:12px;</code></div><div class="line number6 index5 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">color:#fafafa;</code></div><div class="line number7 index6 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">background:rgba(0,&nbsp;0,&nbsp;0,&nbsp;0.65);</code></div><div class="line number8 index7 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">padding:3px&nbsp;5px;</code></div><div class="line number9 index8 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">position:fixed;</code></div><div class="line number10 index9 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">bottom:86px;</code></div><div class="line number11 index10 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">right:0px;</code></div><div class="line number12 index11 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">cursor:pointer;</code></div><div class="line number13 index12 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">border-bottom:&nbsp;1px&nbsp;solid&nbsp;#444;</code></div><div class="line number14 index13 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">}</code></div><div class="line number15 index14 alt2"><code class="xml spaces">&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">style</code><code class="xml plain">&gt;</code></div><div class="line number16 index15 alt1"><code class="xml plain">//放图片的TOP</code></div><div class="line number17 index16 alt2"><code class="xml plain">&lt;</code><code class="xml keyword">a</code>&nbsp;<code class="xml color1">id</code><code class="xml plain">=</code><code class="xml string">"top"</code><code class="xml plain">&gt;&lt;</code><code class="xml keyword">img</code>&nbsp;<code class="xml color1">style</code><code class="xml plain">=</code><code class="xml string">"width:31px;&nbsp;"</code>&nbsp;<code class="xml color1">alt</code><code class="xml plain">=</code><code class="xml string">""</code>&nbsp;<code class="xml color1">src</code><code class="xml plain">=</code><code class="xml string">"images/这里是放图片的名称.png"</code><code class="xml plain">&gt;&lt;/</code><code class="xml keyword">a</code><code class="xml plain">&gt;&nbsp;</code></div><div class="line number18 index17 alt1"><code class="xml plain">//文字的TOP</code></div><div class="line number19 index18 alt2"><code class="xml plain">&lt;</code><code class="xml keyword">a</code>&nbsp;<code class="xml color1">id</code><code class="xml plain">=</code><code class="xml string">"top"</code><code class="xml plain">&gt;GoTop&lt;/</code><code class="xml keyword">a</code><code class="xml plain">&gt;&nbsp;</code></div></div></td></tr></tbody></table></div>
+				</p><br>
+				<span style="color: #EEE;"> JS 部分 实现Go Top  隐现 
+				</span><br>
+				<p>
+					<link rel='stylesheet' type='text/css' href='http://tools.oschina.net/js/syntaxhighlighter_3.0.83/styles/shCoreEmacs.css'/><div id="highlighter_293578" class="syntaxhighlighter  js"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="js comments">//监听屏幕滚动到底部TOP的显示隐藏</code></div><div class="line number2 index1 alt1"><code class="js spaces">&nbsp;</code><code class="js plain">$(window).scroll(</code><code class="js keyword">function</code><code class="js plain">()&nbsp;{</code></div><div class="line number3 index2 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js keyword">if</code><code class="js plain">($(</code><code class="js keyword">this</code><code class="js plain">).scrollTop()&nbsp;!=&nbsp;0)&nbsp;{</code></div><div class="line number4 index3 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">$(</code><code class="js string">'#top'</code><code class="js plain">).fadeIn();</code></div><div class="line number5 index4 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">}&nbsp;</code><code class="js keyword">else</code>&nbsp;<code class="js plain">{</code></div><div class="line number6 index5 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">$(</code><code class="js string">'#top'</code><code class="js plain">).fadeOut();</code></div><div class="line number7 index6 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">}</code></div><div class="line number8 index7 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">});</code></div><div class="line number9 index8 alt2"><code class="js spaces">&nbsp;</code><code class="js comments">//点击top滚回顶部</code></div><div class="line number10 index9 alt1"><code class="js spaces">&nbsp;</code><code class="js plain">$(</code><code class="js string">'#top'</code><code class="js plain">).click(</code><code class="js keyword">function</code><code class="js plain">()&nbsp;{</code></div><div class="line number11 index10 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">$(</code><code class="js string">'body,html'</code><code class="js plain">).animate({scrollTop:0},500);</code></div><div class="line number12 index11 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">});</code></div></div></td></tr></tbody></table></div>
+				</p><br>
+				
+			</div>
+		</div>
+	
+	</div>
+	
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="content.js"></script>
+<script type="text/javascript" src="platform/js/articleType.js"></script>
+<script type="text/javascript" src="platform/js/jquery.min.js"></script>
+
+<script type="text/javascript">
+	
+	$(document).ready(function () {
+			
+			});
+			
+			
+			
+	function getRandomColor(){ 
+		return "#"+("00000"+((Math.random()*16777215+0.5)>>0).toString(16)).slice(-6); 
+	} 
+</script>
+</body>
+
+</html>

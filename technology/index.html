@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JLD</title>
+
+
+<!-- 
+<link type="text/css" href=".css" media="screen" rel="stylesheet">
+-->
+
+<style>
+ * {
+ margin:0;
+ padding:0;
+ font-family:"微软雅黑"；
+ }
+ body{
+ background-color:#eee;
+ }
+ 
+ header {
+ background-color:#666;
+ height:45px;
+ 
+ }
+ 
+  .content {
+   
+    min-height: 500px;
+	margin: 0 auto;
+	margin-top:15px;
+	border: 1px solid #eee;
+	border-radius: 10px;
+	padding:10px;
+	overflow:auto;
+
+ }
+   .list {
+	overflow:auto;
+    padding: 5px;
+    font-size: 20px;
+    font-family: "微软雅黑";
+
+ }
+ 
+    .item {
+   	 background-color:#fff;
+	 padding: 13px;
+	 width: 30.33333333%;
+	 margin-top:20px;
+	 overflow:auto;
+	 float:left;
+	 border-radius: 5px;
+	 margin-left: 20px;
+	 transition: all .5s ease;
+	}
+	.item:hover{
+		-webkit-transform: scale(1.05);
+	    -moz-transform: scale(1.05);
+	    transform: scale(1.05);
+	    -webkit-border-radius: 8px;
+	    -moz-border-radius: 8px;
+	    border-radius: 8px;
+	    position: relative;
+	    z-index: 100;
+	}
+	.blur {
+	position: absolute;
+	width: 100%; bottom: 0; left: 0;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	/* blur */
+	filter: url(blur-5px.svg#blur);
+	/* css3 */
+	-webkit-filter: blur(5px);
+	-moz-filter: blur(5px);
+	filter: blur(5px); /* FireFox 35+ support */
+	/* IE6~IE9 */
+	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=5, MakeShadow=false);
+	*left: -5px; left: -5px;
+ }
+ 
+</style>
+</head>
+
+<body>
+	<header>
+		<div style="margin-left:50px;" onclick="location='index.html'" >
+			<span style="line-height: 45px;font-family: fantasy;font-size: 33px;color: #eee;">
+				JLD
+			</span>
+			<span style="line-height: 45px;font-family: fantasy;font-size: 15px;color: #eee;">
+				liuyouth.com
+			</span>
+		</div>
+	
+	</header>
+	
+	<div class="content">
+		<div style="padding: 10px;font-size: 25px;color: #424442;">
+
+		</div>
+		<div id="list" class="list">
+			<a href="../NetworkCollection/index.html"><div class="item" >
+				<div style="width:33.3%;text-align:center;float:left;">
+					<img style="border-radius:50%;width:74%;height:74%;" src="http://www.zi-han.net/theme/hplus/img/a3.jpg">
+					<br>
+					<span style="font-weight:bold; color:#333;font-size:0.8em; line-height: 30px;">网站收藏夹</span>
+				</div>
+				<div style="width:66.6%; float:left;">
+					<div style=" padding-left:10px;">
+						<span style="font-weight:bold; color:rgb(103, 106, 108);font-size:0.8em; ">关于工作的网站</span>
+						<br>
+						<span style=" color:rgb(103, 106, 108);font-size:0.6em; ">在这里你可以找到很多精品网站</span>
+						<br>
+						
+						<span style="font-weight:bold; color:rgb(103, 106, 108);font-size:0.8em; ">收藏职业范围如下</span>
+						<br>
+						<span style="color:rgb(103, 106, 108);font-size:0.7em; "> JAVA | Android | iOS | PHP | HTML</span>
+						<br>
+						<span style="color:rgb(103, 106, 108);font-size:0.7em; "> UI | UE </span>
+						<br>
+						<br>
+						<span style="color:rgb(103, 106, 108);font-size:0.7em; "> PS：无需注册便可添加自己推荐的网站哦！</span>
+						
+					</div>
+				</div>
+			</div></a>
+
+			<a href="../jingjing/index.html"><div class="item" >
+				<div style="width:33.3%;text-align:center;float:left;">
+					<img style="border-radius:50%;width:74%;height:74%;" src="http://www.zi-han.net/theme/hplus/img/a5.jpg">
+					<br>
+					<span style="font-weight:bold; color:#333;font-size:0.8em; line-height: 30px;">微信公众号</span>
+				</div>
+				<div style="width:66.6%; float:left;">
+					<div style=" padding-left:10px;">
+						<span style="font-weight:bold; color:rgb(103, 106, 108);font-size:0.8em; ">嗨~ 晶晶的朋友</span>
+						<br>
+						<span style=" color:rgb(103, 106, 108);font-size:0.6em; ">这个是你网站的一个demo</span>
+						<br>
+						
+						<span style="font-weight:bold; color:rgb(103, 106, 108);font-size:0.8em; ">只是简单的弄了下，如果可以我们再详谈吧。</span>
+					
+						
+					</div>
+				</div>
+			</div></a>
+
+			<a href="../technology/code.html"><div class="item" >
+				<div style="width:33.3%;text-align:center;float:left;">
+					<img style="border-radius:50%;width:74%;height:74%;" src="http://www.zi-han.net/theme/hplus/img/a2.jpg">
+					<br>
+					<span style="font-weight:bold; color:#333;font-size:0.8em; line-height: 30px;">Code · Blog</span>
+				</div>
+				<div style="width:66.6%; float:left;">
+					<div style=" padding-left:10px;">
+						<span style="font-weight:bold; color:rgb(103, 106, 108);font-size:0.8em; ">关于编程</span>
+						<br>
+						<span style=" color:rgb(103, 106, 108);font-size:0.6em; ">在这里你可以看到我的学习技术的日程</span>
+						<br>
+						
+						<span style="font-weight:bold; color:rgb(103, 106, 108);font-size:0.8em; ">编程范围如下</span>
+						<br>
+						<span style="color:rgb(103, 106, 108);font-size:0.7em; "> JAVA | Android | iOS | 正则 | HTML</span>
+						<br>
+						<br>
+						<span style="color:rgb(103, 106, 108);font-size:0.7em; "> PS：目前是旧版，新版正在制作中！</span>
+						
+					</div>
+				</div>
+			</div></a>
+		</div>
+	
+	</div>
+	
+
+
+
+
+
+
+<script type="text/javascript" src="content.js"></script>
+<script type="text/javascript" src="platform/js/articleType.js"></script>
+<script type="text/javascript" src="platform/js/jquery.min.js"></script>
+
+<script type="text/javascript">
+	
+
+
+	$(document).ready(function () {
+					//$('#list').empty();
+			/*for(var i=0;i<rows.length;i++){
+				var rowsData = rows[i];
+				var top= 130 ;
+				top = 130 + 26*i;
+				var div = '<div  style="border-left: 3px solid; border-left-color:'+getRandomColor()+';  padding-left: 20px;"> <span>'+rowsData.articleTitle+'</span><span style="float: right;font-size: 14px;">'+rowsData.createdTime+'</span><span style="float: right;font-size: 14px; color:#fff; border-radius:4px;margin-right:10px;padding: 1px 3px 1px 3px; background-color:#93b6f5;">'+getNameByArticleType(rowsData.articleType)+'</span></div>';
+				div = '<div onclick="location=\'content/'+rowsData.articleID+'.html\'">';
+				div += '<div class="blur"  style="display:;left: 230px;   width: 1000px;top:'+top+'px;"> <span>'+rowsData.articleTitle+'</span><span style="float: right;font-size: 14px;">'+rowsData.createdTime+'</span><span ';
+				div += 'style="float: right;font-size: 14px; color:#fff; border-radius:4px;margin-right:10px;padding: 1px 3px 1px 3px;">'+getNameByArticleType(rowsData.articleType)+'</span></div>';
+				div += '<div class="item" id="'+rowsData.articleID+'";   style=""> <span onclick="javascript:window.location.href=content/'+rowsData.createdTime+'/'+rowsData.articleID+'.html" >'+rowsData.articleTitle+'</span><span style="float: right;font-size: 14px;">'+rowsData.createdTime+'';
+				div += '</span><span style="float: right;font-size: 14px; color:#fff; border-radius:4px;margin-right:10px;padding: 1px 3px 1px 3px; background-color:#93b6f5;">'+getNameByArticleType(rowsData.articleType)+'</span></div>';
+				div += '</div >';
+				
+			
+
+				$('#list').append(div)
+			}*/
+		});
+			
+	
+			
+	function getRandomColor(){ 
+		return "#"+("00000"+((Math.random()*16777215+0.5)>>0).toString(16)).slice(-6); 
+	} 
+	
+</script>
+</body>
+
+</html>
