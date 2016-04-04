@@ -234,6 +234,7 @@
 							<input id="price" placeholder="price/价格" >
 							<input id="upDate" placeholder="upDate/更新日期" >
 							<label style="width:100px;"> 原封 <input id="isNew" placeholder="原封" type="checkbox"></label>
+							<label style="width:100px;"> 特惠 <input id="isHot" placeholder="原封" type="checkbox"></label>
 							<select id="color">
 								<option>灰黑色</option>
 								<option>银白色</option>
@@ -251,18 +252,108 @@
 								<option>港版</option>
 								<option>国行</option>
 							</select>
-
+							<input id="pwd" placeholder="权限密匙" >
 							
 					
 				</div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" onclick="javascript:submit();"class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
 </div>
-		
+		<script type="text/javascript">
+			$(function(){
+				AV.initialize('sujl6vsYWRukNstwlxaBWm4X-gzGzoHsz', 'gqaeDmmXOPJusBKlHf8XrDFK');
+				// 初始化 param1：应用 id、param2：应用 key
+				showData();
+			});
+			function test(){
+			
+
+			}
+			<!--添加数据-->
+			function submit(){
+				var pwd = $("#pwd").val();
+				if(pwd==="869689491"){
+
+				var isNewStr;
+				if ($("#isNew").attr("checked")==true) {
+					isNewStr=1;
+				}else{
+					isNewStr=0;
+				};	
+				var isHot;
+				if ($("#isHot").attr("checked")==true) {
+					isHot=1;
+				}else{
+					isHot=0;
+				};	
+				var model =$("#model option:selected").index();  //获取选中的项
+				var edition =$("#edition option:selected").index();  //获取选中的项
+				var capacity =$("#capacity option:selected").index();  //获取选中的项
+				var color =$("#color option:selected").index();  //获取选中的项
+
+				var memo = AV.Object.extend('memo');
+				var memo = new memo();
+				memo.save({
+					ns:$("#ns").val(),
+					price: $("#price").val(),
+					upDate: $("#upDate").val(),
+					isNew: isNewStr,
+					isNew: isHot,
+					model: model,
+					edition: edition,
+					capacity: capacity,
+					color: color,
+				}, {
+					success: function(object) {
+						alert("保存成功！");
+					}
+				}
+				);
+				}else{
+					alert("权限验证错误！");
+				}
+			}
+			<!--加载数据-->
+			function showData(){
+				var query = new AV.Query('memo');
+				var model = "12";
+				
+
+
+				query.equalTo('model',1 );
+				
+
+				query.find({
+					success: function(results) {
+						console.log('Successfully retrieved ' + results.length + ' posts.');
+						// 处理返回的结果数据
+						for (var i = 0; i < results.length; i++) {
+							var object = results[i];
+							var item = '';
+							var cTime = object.createdAt;
+							var date = cTime.getMonth()+1 +'/'+cTime.getDate();
+							item += '<div id="'+object.id+'" class="item">';
+							item += '<a ">';
+							item += '订单号为：'+object.get('orderId')+'</a><span class="date">'+date+'</span>';
+							item += '<br><img src="'+object.get('goodUrl')+'" target="_blank">';
+							item += '<br><span class="intro">'+object.get('plice')+'元 x '+object.get('goodNumb')+'</span>';
+							item += '</div>';
+							var data = object.createdAt;
+							
+							$("#list").append(item);
+						}
+					},
+					error: function(error) {
+						console.log('Error: ' + error.code + ' ' + error.message);
+					}
+				});
+			
+		}
+		</script>
 	</body>
 </html>
