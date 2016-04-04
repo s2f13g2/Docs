@@ -63,7 +63,7 @@
 		</div>
 		<div class="content">
 			<div class="menuList container">
-				<div class="row">
+				<div id="row" class="row">
 											
 					
 						
@@ -82,7 +82,7 @@
 								
 							</div>
 						</div>
-						<div class="dataDiv">
+						<div id="dataDiv">
 							<div class="hotDataList">
 								
 
@@ -97,7 +97,7 @@
 
 								
 							</div>
-							<div class="dataList">
+							<div id="dataList">
 								<div class="dataItem">
 									<div class="ns">
 									 三网移动2G联通电信234
@@ -147,7 +147,7 @@
 							</div>
 						</div>
 						<div class="dataDiv">
-							<div class="hotDataList">
+							<div id="hotDataList">
 								
 
 								<div class="hotItem">
@@ -161,7 +161,7 @@
 
 								
 							</div>
-							<div class="dataList">
+							<div id="dataList">
 								<div class="dataItem">
 									 <div class="ns">
 										 三网移动2G联通电信234
@@ -239,11 +239,11 @@
 								<option>灰黑色</option>
 								<option>银白色</option>
 								<option>土豪金</option>
-								<option>玫瑰金（部分机型没有该颜色）</option>
+								<option>玫瑰金</option>
 							</select>
 							<select id="capacity">
 								<option>16GB</option>
-								<option>32GB（部分机型没有32GB）</option>
+								<option>32GB</option>
 								<option>64GB</option>
 								<option>128GB</option>
 							</select>
@@ -259,7 +259,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" onclick="javascript:submit();"class="btn btn-primary">Save changes</button>
+        <button type="button" onclick="javascript:test();"class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
@@ -268,11 +268,11 @@
 			$(function(){
 				AV.initialize('sujl6vsYWRukNstwlxaBWm4X-gzGzoHsz', 'gqaeDmmXOPJusBKlHf8XrDFK');
 				// 初始化 param1：应用 id、param2：应用 key
-				showData();
+				show();
 			});
 			function test(){
-			
-
+				var da="<div>545646546</div>";
+				$("#dataList0").append(da);
 			}
 			<!--添加数据-->
 			function submit(){
@@ -280,22 +280,23 @@
 				if(pwd==="869689491"){
 
 				var isNewStr;
-				if ($("#isNew").attr("checked")==true) {
+				if ($("#isNew").prop("checked")==true) {
 					isNewStr=1;
 				}else{
 					isNewStr=0;
-				};	
-				var isHot;
-				if ($("#isHot").attr("checked")==true) {
-					isHot=1;
+				};
+			
+				var isHotStr;
+				if ($("#isHot").prop("checked")==true) {
+					isHotStr=1;
 				}else{
-					isHot=0;
-				};	
+					isHotStr=0;
+				};
 				var model =$("#model option:selected").index();  //获取选中的项
 				var edition =$("#edition option:selected").index();  //获取选中的项
 				var capacity =$("#capacity option:selected").index();  //获取选中的项
 				var color =$("#color option:selected").index();  //获取选中的项
-
+				
 				var memo = AV.Object.extend('memo');
 				var memo = new memo();
 				memo.save({
@@ -303,7 +304,7 @@
 					price: $("#price").val(),
 					upDate: $("#upDate").val(),
 					isNew: isNewStr,
-					isNew: isHot,
+					isHot: isHotStr,
 					model: model,
 					edition: edition,
 					capacity: capacity,
@@ -319,41 +320,145 @@
 				}
 			}
 			<!--加载数据-->
-			function showData(){
+			function showData(m){
 				var query = new AV.Query('memo');
-				var model = "12";
-				
-
-
-				query.equalTo('model',1 );
-				
-
+				var m = m;
+				query.equalTo('model',m );
 				query.find({
 					success: function(results) {
 						console.log('Successfully retrieved ' + results.length + ' posts.');
 						// 处理返回的结果数据
 						for (var i = 0; i < results.length; i++) {
-							var object = results[i];
+							var object = results[i]._serverData;
 							var item = '';
-							var cTime = object.createdAt;
-							var date = cTime.getMonth()+1 +'/'+cTime.getDate();
-							item += '<div id="'+object.id+'" class="item">';
-							item += '<a ">';
-							item += '订单号为：'+object.get('orderId')+'</a><span class="date">'+date+'</span>';
-							item += '<br><img src="'+object.get('goodUrl')+'" target="_blank">';
-							item += '<br><span class="intro">'+object.get('plice')+'元 x '+object.get('goodNumb')+'</span>';
-							item += '</div>';
-							var data = object.createdAt;
+						
 							
-							$("#list").append(item);
+							if (object.isHot==1) {
+								item += '<div class="hotItem"><div class="ns">'+object.ns+'</div><div style="margin-bottom:5px;">';
+								item += '<span class="upDate">'+object.upDate+'</span><span class="price">Price: '+object.price+'</span>';
+								item += '<span class="gb">'+getCapacityName( object.capacity)+'</span><span class="gb">'+getColorName( object.color)+'</span></div></div>';
+								$("#hotDataList"+m+"").append(item);
+							}else{
+								item += '<div class="dataItem"><div class="ns">'+object.ns+'</div><div style="margin-bottom:5px;">';
+								item += '<span class="upDate">'+object.upDate+'</span><span class="price">Price: '+object.price+'</span>';
+								item += '<span class="gb">'+getCapacityName( object.capacity)+'</span><span class="gb">'+getColorName( object.color)+'</span></div></div>';
+								$("#dataList"+m+"").append(item);
+							};
+							
 						}
+						
 					},
 					error: function(error) {
 						console.log('Error: ' + error.code + ' ' + error.message);
 					}
 				});
 			
-		}
+			}
+			function show(){
+				for (var i = 0; i < 7; i++) {
+					var model = getModelName(i);
+					var color = getColorName(i);
+					var capacity = getCapacityName(i);
+					var edition = getEditionName(i);
+
+					var div ='';
+					div +='<div class="menudiv  col-xs-12 col-sm-12 col-md-6"><div class="menu-title"><div style="float:left;">';
+					div +='<div>'+model+'</div><div class="saled">sold ：6</div></div><div style="float:right;"></div></div>';
+					div +='<div class="dataDiv"><div id="hotDataList'+i+'"></div><div id="dataList'+i+'"></div></div></div>';
+					$("#row").append(div);
+					showData(i);
+					
+				};
+
+			}
+			function getModelName(m){
+				var model;
+				switch (m){
+						case 0:
+						model ="iPhone5";
+						break;
+						case 1:
+						model ="iPhone5s";
+						break;
+						case 2:
+						model ="iPhone6";
+						break;
+						case 3:
+						model ="iPhone6 Plus";
+						break;
+						case 4:
+						model ="iPhone6s";
+						break;
+						case 5:
+						model ="iPhone6s Plus";
+						break;
+						case 6:
+						model ="iPhone5SE";
+						break;
+
+					}
+
+				return model;
+			}
+			function getColorName(c){
+				var color;
+				switch (c){
+						case 0:
+						color ="灰黑色";
+						break;
+						case 1:
+						color ="银白色";
+						break;
+						case 2:
+						color ="土豪金";
+						break;
+						case 3:
+						color ="玫瑰金（部分机型没有该颜色）";
+						break;
+						
+
+					}
+				return color;
+			}
+			function getCapacityName(c){
+				var capacity;
+				switch (c){
+						case 0:
+						capacity ="16GB";
+						break;
+						case 1:
+						capacity ="32GB";
+						break;
+						case 2:
+						capacity ="64GB";
+						break;
+						case 3:
+						capacity ="128GB";
+						break;
+						
+
+					}
+
+				return capacity;
+			}
+			function getEditionName(e){
+				var edition;
+				switch (e){
+						case 0:
+						edition ="美版";
+						break;
+						case 1:
+						edition ="港版";
+						break;
+						case 2:
+						edition ="国行";
+						break;
+
+					}
+
+				return edition;
+			}
+
 		</script>
 	</body>
 </html>
