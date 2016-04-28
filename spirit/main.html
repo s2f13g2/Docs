@@ -56,7 +56,7 @@
         <div class="content">
             <img src=""><img src=""><img src="">
             <div onclick="javascript:add();" style="font-size:3em; width:100px; height:100px;text-align:center;border:1px solid #333; margin:3px;line-height:98px;"> + </div>
-            
+            <input type="file" id="photoFileUpload" value="点我上传"/>
 
          
 
@@ -85,7 +85,7 @@
         <hr style="margin-bottom:30px; color:#eee">
 
         <div class="content">
-            <pre>
+            <pre style="    color: rgb(103, 106, 108);font-size: 1.4em;">
 每天认真洗脸多读书按时睡 少食多餐 
 变得温柔大度继续善良 保持爱心 
 不在人前矫情四处诉说以求宽慰 而是学会一个人静静的面对 
@@ -146,6 +146,21 @@
 
 <script type="text/javascript">
     $(function (){
+
+        var fileUploadControl = $('#photoFileUpload')[0];
+        if (fileUploadControl.files.length > 0) {
+          var file = fileUploadControl.files[0];
+          var name = 'avatar.jpg';
+
+          var avFile = new AV.File(name, file);
+          avFile.save().then(function(obj) {
+            // 数据保存成功
+            console.log(obj.url());
+          }, function(err) {
+            // 数据保存失败
+            console.log(err);
+          });
+        }
         
     });
 </script>
