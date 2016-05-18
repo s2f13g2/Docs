@@ -1,0 +1,212 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <head>
+        <title></title>
+        <style type="text/css">
+            body {
+            background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJ4AAACQCAMAAADOUSI5AAAAY1BMVEXu7u7q6urm5ubn5+fr6+vo6Ojp6enl5eXk5OTt7e3s7Ozw8PDv7+/z8/Pj4+Px8fHi4uLe3t7y8vLc3Nz09PTg4ODh4eHW1tbf39/b29vd3d329vb4+Pj19fXa2tr39/fY2NjpPiYAAAAwoklEQVR42jSbi3bjOKxl+dSDkiXFFWvSVbfu/P9fzt5QjXtV2rElkQSBg4MDJqVcaku5T31eytpyG2vayjzXXtve+W5aynhNxzxNtaYx0j7qwv9Ha5mvx7n3ubQ6T2PkaU2j57WVZeIyHpX6Utu6rmeuma/zmjN31SkN3+TGTX1a137ltS6l18QEpj61r7KuE7dsKdVj4u5pT70nhqyVexigZsdvKbWp+d1+jrx2vuzHMuW5M+Dq4JlLR5t6zqxvHX0pu...(line truncated)...
+
+            }
+            *{
+                font-family: Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif; 
+            }
+        </style>
+        <link rel="stylesheet" type="text/css" href="tautocomplete.css" />
+        <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+        <script src="tautocomplete.js" type="text/javascript"></script>
+        <script>
+            $(document).ready(function () {
+                var text2 = $("#Text2").tautocomplete({
+                    width: "700px",
+                    columns: [ 'permission','introduce'],
+                    data: function () {
+                        try{
+
+                            var data = [
+{'id':1,'permission':'android.permission.WRITE_USER_DICTIONARY','introduce':'允许应用程序向用户词典中写入新词'},
+{'id':2,'permission':'android.permission.WRITE_SYNC_SETTINGS','introduce':'写入Google在线同步设置'},
+{'id':3,'permission':'android.permission.WRITE_SOCIAL_STREAM','introduce':'读取用户的社交信息流'},
+{'id':4,'permission':'android.permission.WRITE_SMS','introduce':'允许程序写短信'},
+{'id':5,'permission':'android.permission.WRITE_SETTINGS','introduce':'允许程序读取或写入系统设置'},
+{'id':6,'permission':'android.permission.WRITE_SECURE_SETTINGS','introduce':'允许应用程序读取或写入安全系统设置'},
+{'id':7,'permission':'android.permission.WRITE_PROFILE','introduce':'允许程序写入个人资料数据'},
+{'id':8,'permission':'com.android.browser.permission.WRITE_HISTORY_BOOKMARKS','introduce':'允许一个应用程序写(但不可读)用户的浏览历史和书签'},
+{'id':9,'permission':'android.permission.WRITE_GSERVICES','introduce':'允许程序修改Google服务地图'},
+{'id':10,'permission':'android.permission.WRITE_EXTERNAL_STORAGE','introduce':'允许程序写入外部存储,如SD卡上写文件'},
+{'id':11,'permission':'android.permission.WRITE_CONTACTS','introduce':'写入联系人,但不可读取'},
+{'id':12,'permission':'android.permission.WRITE_CALL_LOG','introduce':'允许程序写入（但是不能读）用户的联系人数据'},
+{'id':13,'permission':'android.permission.WRITE_CALENDAR','introduce':'允许程序写入日程，但不可读取'},
+{'id':14,'permission':'android.permission.WRITE_APN_SETTINGS','introduce':'允许程序写入网络GPRS接入点设置'},
+{'id':15,'permission':'android.permission.WAKE_LOCK','introduce':'允许程序在手机屏幕关闭后后台进程仍然运行'},
+{'id':16,'permission':'android.permission.VIBRATE','introduce':'允许程序振动'},
+{'id':17,'permission':'android.permission.USE_SIP','introduce':'允许程序使用SIP视频服务'},
+{'id':18,'permission':'android.permission.USE_CREDENTIALS','introduce':'允许程序请求验证从AccountManager'},
+{'id':19,'permission':'android.permission.UPDATE_DEVICE_STATS','introduce':'允许程序更新设备状态'},
+{'id':20,'permission':'com.android.launcher.permission.UNINSTALL_SHORTCUT','introduce':'删除快捷方式'},
+{'id':21,'permission':'android.permission.TRANSMIT_IR','introduce':'允许使用设备的红外发射器，如果可用'},
+{'id':22,'permission':'android.permission.SYSTEM_ALERT_WINDOW','introduce':'允许程序显示系统窗口'},
+{'id':23,'permission':'android.permission.SUBSCRIBED_FEEDS_WRITE','introduce':'允许程序写入或修改订阅内容的数据库'},
+{'id':24,'permission':'android.permission.SUBSCRIBED_FEEDS_READ','introduce':'允许程序访问订阅信息的数据库'},
+{'id':22,'permission':'android.permission.STATUS_BAR','introduce':'允许程序打开、关闭、禁用状态栏'},
+{'id':23,'permission':'android.permission.SIGNAL_PERSISTENT_PROCESSES','introduce':'允许程序发送一个永久的进程信号'},
+{'id':24,'permission':'android.permission.SET_WALLPAPER_HINTS','introduce':'允许程序设置壁纸建议'},
+{'id':25,'permission':'android.permission.SET_WALLPAPER','introduce':'允许程序设置桌面壁纸'},
+{'id':26,'permission':'android.permission.SET_TIME_ZONE','introduce':'允许程序设置系统时区'},
+{'id':27,'permission':'android.permission.SET_TIME','introduce':'允许程序设置系统时间'},
+{'id':28,'permission':'android.permission.SET_PROCESS_LIMIT','introduce':'允许程序设置最大的进程数量的限制'},
+{'id':29,'permission':'android.permission.SET_PREFERRED_APPLICATIONS','introduce':'允许程序设置应用的参数，已不再工作具体查看addPackageToPreferred(String) 介绍'},
+{'id':30,'permission':'android.permission.SET_POINTER_SPEED','introduce':'无法被第三方应用获得，系统权限'},
+{'id':31,'permission':'android.permission.SET_ORIENTATION','introduce':'允许程序设置屏幕方向为横屏或标准方式显示，不用于普通应用'},
+{'id':32,'permission':'android.permission.SET_DEBUG_APP','introduce':'允许程序设置调试程序，一般用于开发'},
+{'id':33,'permission':'android.permission.SET_ANIMATION_SCALE','introduce':'允许程序设置全局动画缩放'},
+{'id':34,'permission':'android.permission.SET_ALWAYS_FINISH','introduce':'允许程序设置程序在后台是否总是退出'},
+{'id':36,'permission':'com.android.alarm.permission.SET_ALARM','introduce':'允许程序设置闹铃提醒'},
+{'id':37,'permission':'android.permission.SET_ACTIVITY_WATCHER','introduce':'允许程序设置Activity观察器一般用于monkey测试'},
+{'id':38,'permission':'android.permission.SEND_SMS','introduce':'允许程序发送短信'},
+{'id':39,'permission':'android.permission.SEND_RESPOND_VIA_MESSAGE','introduce':'允许用户在来电的时候用你的应用进行即时的短信息回复。'},
+{'id':40,'permission':'android.permission.RESTART_PACKAGES','introduce':'允许程序结束任务通过restartPackage(String)方法，该方式将在外来放弃'},
+{'id':41,'permission':'android.permission.REORDER_TASKS','introduce':'允许程序重新排序系统Z轴运行中的任务'},
+{'id':42,'permission':'android.permission.RECORD_AUDIO','introduce':'允许程序录制声音通过手机或耳机的麦克'},
+{'id':43,'permission':'android.permission.RECEIVE_WAP_PUSH','introduce':'允许程序接收WAP PUSH信息'},
+{'id':44,'permission':'android.permission.RECEIVE_SMS','introduce':'允许程序接收短信'},
+{'id':45,'permission':'android.permission.RECEIVE_MMS','introduce':'允许程序接收彩信'},
+{'id':46,'permission':'android.permission.RECEIVE_BOOT_COMPLETED','introduce':'允许程序开机自动运行'},
+{'id':47,'permission':'android.permission.REBOOT','introduce':'允许程序重新启动设备'},
+{'id':48,'permission':'android.permission.READ_USER_DICTIONARY','introduce':'从一个提供器中获取数据，针对对应的提供器，应用程序需要“读访问权限”'},
+{'id':49,'permission':'android.permission.READ_SYNC_STATS','introduce':'允许程序读取同步状态，获得Google在线同步状态'},
+{'id':50,'permission':'android.permission.READ_SYNC_SETTINGS','introduce':'允许程序读取同步设置，读取Google在线同步设置'},
+{'id':51,'permission':'android.permission.READ_SOCIAL_STREAM','introduce':'读取用户的社交信息流'},
+{'id':52,'permission':'android.permission.READ_SMS','introduce':'允许程序读取短信内容'},
+{'id':53,'permission':'android.permission.READ_PROFILE','introduce':'访问用户个人资料'},
+{'id':54,'permission':'android.permission.READ_PHONE_STATE','introduce':'允许程序访问电话状态'},
+{'id':55,'permission':'android.permission.READ_LOGS','introduce':'允许程序读取系统底层日志'},
+{'id':56,'permission':'android.permission.READ_INPUT_STATE','introduce':'允许程序读取当前键的输入状态，仅用于系统'},
+{'id':57,'permission':'com.android.browser.permission.READ_HISTORY_BOOKMARKS','introduce':'允许程序读取浏览器收藏夹和历史记录'},
+{'id':58,'permission':'android.permission.READ_FRAME_BUFFER','introduce':'允许程序读取帧缓存用于屏幕截图'},
+{'id':59,'permission':'android.permission.READ_EXTERNAL_STORAGE','introduce':'程序可以读取设备外部存储空间（内置SDcard和外置SDCard）的文件，如果您的App已经添加了“WRITE_EXTERNAL_STORAGE ”权限 ，则就没'},
+{'id':60,'permission':'android.permission.READ_CONTACTS','introduce':'允许程序访问联系人通讯录信息'},
+{'id':61,'permission':'android.permission.READ_CALL_LOG','introduce':'读取通话记录'},
+{'id':62,'permission':'android.permission.READ_CALENDAR','introduce':'允许程序读取用户的日程信息'},
+{'id':63,'permission':'android.permission.PROCESS_OUTGOING_CALLS','introduce':'允许程序监视，修改或放弃播出电话'},
+{'id':64,'permission':'android.permission.PERSISTENT_ACTIVITY','introduce':'允许程序创建一个永久的Activity，该功能标记为将来将被移除'},
+{'id':65,'permission':'android.permission.NFC','introduce':'允许程序执行NFC近距离通讯操作，用于移动支持'},
+{'id':66,'permission':'android.permission.MOUNT_UNMOUNT_FILESYSTEMS','introduce':'允许程序挂载、反挂载外部文件系统'},
+{'id':67,'permission':'android.permission.MOUNT_FORMAT_FILESYSTEMS','introduce':'允许程序格式化可移动文件系统，比如格式化清空SD卡'},
+{'id':68,'permission':'android.permission.MODIFY_PHONE_STATE','introduce':'允许程序修改电话状态，如飞行模式，但不包含替换系统拨号器界面'},
+{'id':69,'permission':'android.permission.MODIFY_AUDIO_SETTINGS','introduce':'允许程序修改声音设置信息'},
+{'id':70,'permission':'android.permission.MEDIA_CONTENT_CONTROL','introduce':'允许一个应用程序知道什么是播放和控制其内容。不被第三方应用使用。'},
+{'id':71,'permission':'android.permission.MASTER_CLEAR','introduce':'允许程序执行软格式化，删除系统配置信息'},
+{'id':72,'permission':'android.permission.MANAGE_DOCUMENTS','introduce':'允许一个应用程序来管理文档的访问，通常是一个文档选择器部分'},
+{'id':73,'permission':'android.permission.MANAGE_APP_TOKENS','introduce':'管理创建、摧毁、Z轴顺序，仅用于系统'},
+{'id':74,'permission':'android.permission.MANAGE_ACCOUNTS','introduce':'允许程序管理AccountManager中的账户列表'},
+{'id':75,'permission':'android.permission.LOCATION_HARDWARE','introduce':'允许一个应用程序中使用定位功能的硬件，不使用第三方应用'},
+{'id':76,'permission':'android.permission.KILL_BACKGROUND_PROCESSES','introduce':'允许程序调用killBackgroundProcesses(String).方法结束后台进程'},
+{'id':77,'permission':'android.permission.INTERNET','introduce':'允许程序访问网络连接，可能产生GPRS流量'},
+{'id':78,'permission':'android.permission.INTERNAL_SYSTEM_WINDOW','introduce':'允许程序打开内部窗口，不对第三方应用程序开放此权限'},
+{'id':79,'permission':'com.android.launcher.permission.INSTALL_SHORTCUT','introduce':'创建快捷方式'},
+{'id':80,'permission':'android.permission.INSTALL_PACKAGES','introduce':'允许程序安装应用'},
+{'id':81,'permission':'android.permission.INSTALL_LOCATION_PROVIDER','introduce':'允许程序安装定位提供'},
+{'id':82,'permission':'android.permission.INJECT_EVENTS','introduce':'允许程序访问本程序的底层事件，获取按键、轨迹球的事件流'},
+{'id':83,'permission':'android.permission.HARDWARE_TEST','introduce':'允许程序访问硬件辅助设备，用于硬件测试'},
+{'id':84,'permission':'android.permission.GLOBAL_SEARCH','introduce':'允许程序允许全局搜索'},
+{'id':85,'permission':'android.permission.GET_TOP_ACTIVITY_INFO','introduce':'允许一个应用程序检索私有信息是当前最顶级的活动，不被第三方应用使用'},
+{'id':86,'permission':'android.permission.GET_TASKS','introduce':'允许程序获取任务信息'},
+{'id':87,'permission':'android.permission.GET_PACKAGE_SIZE','introduce':'允许程序获取应用的文件大小'},
+{'id':88,'permission':'android.permission.GET_ACCOUNTS','introduce':'允许程序访问账户Gmail列表'},
+{'id':89,'permission':'android.permission.FORCE_BACK','introduce':'允许程序强制使用back后退按键，无论Activity是否在顶层'},
+{'id':90,'permission':'android.permission.FLASHLIGHT','introduce':'允许访问闪光灯'},
+{'id':91,'permission':'android.permission.FACTORY_TEST','introduce':'允许程序运行工厂测试模式'},
+{'id':92,'permission':'android.permission.EXPAND_STATUS_BAR','introduce':'允许程序扩展或收缩状态栏'},
+{'id':93,'permission':'android.permission.DUMP','introduce':'允许程序获取系统dump信息从系统服务'},
+{'id':94,'permission':'android.permission.DISABLE_KEYGUARD','introduce':'允许程序禁用键盘锁'},
+{'id':95,'permission':'android.permission.DIAGNOSTIC','introduce':'允许程序到RW到诊断资源'},
+{'id':96,'permission':'android.permission.DEVICE_POWER','introduce':'允许程序访问底层电源管理'},
+{'id':97,'permission':'android.permission.DELETE_PACKAGES','introduce':'允许程序删除应用'},
+{'id':98,'permission':'android.permission.DELETE_CACHE_FILES','introduce':'允许程序删除缓存文件'},
+{'id':99,'permission':'android.permission.CONTROL_LOCATION_UPDATES','introduce':'允许程序获得移动网络定位信息改变'},
+{'id':100,'permission':'android.permission.CLEAR_APP_USER_DATA','introduce':'允许程序清除用户数据'},
+{'id':101,'permission':'android.permission.CLEAR_APP_CACHE','introduce':'允许程序清除应用缓存'},
+{'id':102,'permission':'android.permission.CHANGE_WIFI_STATE','introduce':'允许程序改变WiFi状态'},
+{'id':103,'permission':'android.permission.CHANGE_WIFI_MULTICAST_STATE','introduce':'允许程序改变WiFi多播状态'},
+{'id':104,'permission':'android.permission.CHANGE_NETWORK_STATE','introduce':'允许程序改变网络状态,如是否联网'},
+{'id':105,'permission':'android.permission.CHANGE_CONFIGURATION','introduce':'允许当前应用改变配置，如定位'},
+{'id':106,'permission':'android.permission.CHANGE_COMPONENT_ENABLED_STATE','introduce':'改变组件是否启用状态'},
+{'id':107,'permission':'android.permission.CAPTURE_VIDEO_OUTPUT','introduce':'允许一个应用程序捕获视频输出，不被第三方应用使用'},
+{'id':108,'permission':'android.permission.CAPTURE_SECURE_VIDEO_OUTPUT','introduce':'允许一个应用程序捕获视频输出。不被第三方应用使用'},
+{'id':109,'permission':'android.permission.CAPTURE_AUDIO_OUTPUT','introduce':'允许一个应用程序捕获音频输出。不被第三方应用使用'},
+{'id':110,'permission':'android.permission.CAMERA','introduce':'允许程序访问摄像头进行拍照'},
+{'id':111,'permission':'android.permission.CALL_PRIVILEGED','introduce':'允许程序拨打电话，替换系统的拨号器界面'},
+{'id':112,'permission':'android.permission.CALL_PHONE','introduce':'允许程序从非系统拨号器里拨打电话'},
+{'id':113,'permission':'android.permission.BROADCAST_WAP_PUSH','introduce':'WAP PUSH服务收到后触发一个广播'},
+{'id':114,'permission':'android.permission.BROADCAST_STICKY','introduce':'允许程序收到广播后快速收到下一个广播'},
+{'id':115,'permission':'android.permission.BROADCAST_SMS','introduce':'允许程序当收到短信时触发一个广播'},
+{'id':116,'permission':'android.permission.BROADCAST_PACKAGE_REMOVED','introduce':'允许程序删除时广播'},
+{'id':117,'permission':'android.permission.BRICK','introduce':'能够禁用手机，非常危险，顾名思义就是让手机变成砖头'},
+{'id':118,'permission':'android.permission.BLUETOOTH_PRIVILEGED','introduce':'允许应用程序配对蓝牙设备，而无需用户交互。这不是第三方应用程序可用。'},
+{'id':119,'permission':'android.permission.BLUETOOTH_ADMIN','introduce':'允许程序进行发现和配对新的蓝牙设备'},
+{'id':120,'permission':'android.permission.BLUETOOTH','introduce':'允许程序连接配对过的蓝牙设备'},
+{'id':121,'permission':'android.permission.BIND_WALLPAPER','introduce':'必须通过WallpaperService服务来请求，只有系统才能用'},
+{'id':122,'permission':'android.permission.BIND_VPN_SERVICE','introduce':'绑定VPN服务'},
+{'id':123,'permission':'android.permission.BIND_TEXT_SERVICE','introduce':'必须要求textservice(例如吗 spellcheckerservice)，以确保只有系统可以绑定到它。'},
+{'id':124,'permission':'android.permission.BIND_REMOTEVIEWS','introduce':'必须通过RemoteViewsService服务来请求，只有系统才能用'},
+{'id':125,'permission':'android.permission.BIND_PRINT_SERVICE','introduce':'必须要求由printservice，以确保只有系统可以绑定到它。'},
+{'id':126,'permission':'android.permission.BIND_NOTIFICATION_LISTENER_SERVICE','introduce':'必须要求由notificationlistenerservice，以确保只有系统可以绑定到它。'},
+{'id':127,'permission':'android.permission.BIND_NFC_SERVICE','introduce':'由hostapduservice或offhostapduservice必须确保只有系统可以绑定到它。'},
+{'id':128,'permission':'android.permission.BIND_INPUT_METHOD','introduce':'请求InputMethodService服务，只有系统才能使用'},
+{'id':129,'permission':'android.permission.BIND_DEVICE_ADMIN','introduce':'请求系统管理员接收者receiver，只有系统才能使用'},
+{'id':130,'permission':'android.permission.BIND_APPWIDGET','introduce':'允许程序告诉appWidget服务需要访问小插件的数据库，只有非常少的应用才用到此权限'},
+{'id':131,'permission':'android.permission.BIND_ACCESSIBILITY_SERVICE','introduce':'请求accessibilityservice服务，以确保只有系统可以绑定到它。'},
+{'id':132,'permission':'android.permission.AUTHENTICATE_ACCOUNTS','introduce':'允许程序通过账户验证方式访问账户管理ACCOUNT_MANAGER相关信息'},
+{'id':133,'permission':'com.android.voicemail.permission.ADD_VOICEMAIL','introduce':'允许一个应用程序添加语音邮件系统'},
+{'id':134,'permission':'android.permission.ACCOUNT_MANAGER','introduce':'允许程序获取账户验证信息，主要为GMail账户信息，只有系统级进程才能访问的权限'},
+{'id':135,'permission':'android.permission.ACCESS_WIFI_STATE','introduce':'允许程序获取当前WiFi接入的状态以及WLAN热点的信息'},
+{'id':136,'permission':'android.permission.ACCESS_SURFACE_FLINGER','introduce':'Android平台上底层的图形显示支持，一般用于游戏或照相机预览界面和底层模式的屏幕截图'},
+{'id':137,'permission':'android.permission.ACCESS_NETWORK_STATE','introduce':'允许程序获取网络信息状态，如当前的网络连接是否有效'},
+{'id':138,'permission':'android.permission.ACCESS_MOCK_LOCATION','introduce':'允许程序获取模拟定位信息，一般用于帮助开发者调试应用'},
+{'id':139,'permission':'android.permission.ACCESS_LOCATION_EXTRA_COMMANDS','introduce':'允许程序访问额外的定位提供者指令'},
+{'id':140,'permission':'android.permission.ACCESS_FINE_LOCATION','introduce':'允许程序通过GPS芯片接收卫星的定位信息'},
+{'id':141,'permission':'android.permission.ACCESS_COARSE_LOCATION','introduce':'允许程序通过WiFi或移动基站的方式获取用户错略的经纬度信息'},
+{'id':142,'permission':'android.permission.ACCESS_CHECKIN_PROPERTIES','introduce':'允许程序读取或写入登记check-in数据库属性表的权限'}
+
+                              
+
+                            ];
+                        }
+                        catch(e)
+                        {
+                            alert(e)
+                        }
+                        var filterData = [];
+
+                        var searchData = eval("/" + text2.searchdata() + "/gi");
+                        
+                        $.each(data, function(i,v)
+                        {
+                           
+                                                        if (v.permission.search(new RegExp(searchData)) != -1) {
+                                filterData.push(v);
+                            }
+                                                        if (v.introduce.search(new RegExp(searchData)) != -1) {
+                                filterData.push(v);
+                            }
+                        });
+                        return filterData;
+                    },
+                    onchange: function () {
+                        $("#ta-p").html(text2.permission());
+                        $("#ta-i").html(text2.introduce());
+                        $("#ta-id").html(text2.id());
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body><br /><br /><br /><br /><br />
+        <div style="width: 100%; text-align:center;">
+            <input type="text" id="Text2" style=" font-size:1.8em; width: 500px; " placeholder="请输入权限相关的字符"/><br /><br />
+            ID: <span id="ta-id"></span><br />
+            permission: <span id="ta-p"></span><br />
+            introduce: <span id="ta-i"></span><br />
+        </div>
+    </body>
+</html>
