@@ -1,0 +1,717 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- Head --><head>
+    <meta charset="utf-8">
+    <title>圈儿~</title>
+
+    <meta name="description" content="Dashboard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+
+    <!--Basic Styles-->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link id="bootstrap-rtl-link" href="" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/weather-icons.min.css" rel="stylesheet">
+
+    <!--Fonts-->
+    <link href="http://fonts.useso.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300" rel="stylesheet" type="text/css">
+
+    <!--Beyond styles-->
+    <link id="beyond-link" href="assets/css/beyond.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/demo.min.css" rel="stylesheet">
+    <link href="assets/css/typicons.min.css" rel="stylesheet">
+    <link href="assets/css/animate.min.css" rel="stylesheet">
+    <link id="skin-link" href="" rel="stylesheet" type="text/css">
+
+    <!--Skin Script: Place this script in head to load scripts for skins and rtl support-->
+    <script async="" src="http://www.google-analytics.com/analytics.js"></script><script async="" src="http://www.google-analytics.com/analytics.js"></script><script async="" src="http://www.google-analytics.com/analytics.js"></script><script async="" src="http://www.google-analytics.com/analytics.js"></script><script async="" src="http://www.google-analytics.com/analytics.js"></script><script async="" src="http://www.google-analytics.com/analytics.js"></script><script async="" src="http://www.google-analytics.com/analytics.js"></script><script src="assets/js/skins.min.js"></script><!-- 播放器-->
+
+<link rel="stylesheet" type="text/css" href="Css/tplayer.css"><link rel="stylesheet" type="text/css" href="Plugins/FontAwesome4.1/css/font-awesome.min.css">
+
+
+
+
+	
+<style type="text/css">
+	body{
+		font-family: "open sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+	}
+	 .item {
+   	 background-color:#fff;
+	 padding: 13px;
+	 margin-top:20px;
+	 overflow:auto;
+	 float:left;
+	 border-radius: 5px;
+	 margin-left: 20px;
+	 transition: all .5s ease;
+	}
+	.item:hover{
+		-webkit-transform: scale(1.05);
+	    -moz-transform: scale(1.05);
+	    transform: scale(1.05);
+	    -webkit-border-radius: 8px;
+	    -moz-border-radius: 8px;
+	    border-radius: 8px;
+	    position: relative;
+	    z-index: 100;
+	}
+	.phoneSvg{
+		    background-repeat: no-repeat;
+    background-image: url("http://images.apple.com/v/iphone/home/r/home/images/familybrowser/iphone_comp_large.svg");
+    background-size: 48px 54px;
+    height: 54px;
+    width: 48px;
+	}
+	.padSvg{
+		    background-repeat: no-repeat;
+    background-image: url("http://images.apple.com/v/ipad/home/s/home/images/familybrowser/ipad_comp_large.svg");
+    background-size: 48px 54px;
+    height: 54px;
+    width: 48px;
+	}
+	.macSvg{
+		    background-repeat: no-repeat;
+    background-image: url("http://images.apple.com/v/mac/home/s/home/images/familybrowser/mac_comp_large.svg");
+    background-size: 48px 54px;
+    height: 54px;
+    width: 48px;
+	}
+	.peijianSvg{
+		    background-repeat: no-repeat;
+    background-image: url("../QuanEr/Images/peijian.svg");
+    background-size: 48px 54px;
+    height: 54px;
+    width: 48px;
+	}
+	.hanguoSvg{
+		    background-repeat: no-repeat;
+    background-image: url("../QuanEr/Images/hanguo.svg");
+    background-size: 48px 54px;
+    height: 54px;
+    width: 48px;
+	}
+</style>
+
+<!-- /Head -->
+<!-- Body -->
+<body>
+	 <!-- Navbar -->
+		<div class="navbar">
+			<div class="navbar-inner">
+				<div class="navbar-container">
+					<!-- Navbar Barnd -->
+					<div class="navbar-header pull-left">
+						<a href="#" class="navbar-brand">
+							<div style="text-align: center;margin-left: 20px;margin-top: 9px;">
+								<small>
+									QuanEr .圈儿							
+								</small>
+								
+								<small style="margin-left:20px;">
+									  -  [SomeThings]							
+								</small>
+							</div>
+						</a>
+                    </div>
+					
+					<!-- Account Area and Settings --->
+					<div class="navbar-header pull-right">
+						<div class="navbar-account">
+							<ul class="account-area">
+								<!--屏蔽掉三个选项
+								<li>
+									<a class=" dropdown-toggle" data-toggle="dropdown" title="Help" href="#">
+										<i class="icon fa fa-warning"></i>
+									</a>
+									<!--Notification Dropdown
+									<ul class="pull-right dropdown-menu dropdown-arrow dropdown-notifications">
+										<li>
+											<a href="#">
+												<div class="clearfix">
+													<div class="notification-icon">
+														<i class="fa fa-phone bg-themeprimary white"></i>
+													</div>
+													<div class="notification-body">
+														<span class="title">Skype meeting with Patty</span>
+														<span class="description">01:00 pm</span>
+													</div>
+													<div class="notification-extra">
+														<i class="fa fa-clock-o themeprimary"></i>
+														<span class="description">office</span>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="clearfix">
+													<div class="notification-icon">
+														<i class="fa fa-check bg-darkorange white"></i>
+													</div>
+													<div class="notification-body">
+														<span class="title">Uncharted break</span>
+														<span class="description">03:30 pm - 05:15 pm</span>
+													</div>
+													<div class="notification-extra">
+														<i class="fa fa-clock-o darkorange"></i>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="clearfix">
+													<div class="notification-icon">
+														<i class="fa fa-gift bg-warning white"></i>
+													</div>
+													<div class="notification-body">
+														<span class="title">Kate birthday party</span>
+														<span class="description">08:30 pm</span>
+													</div>
+													<div class="notification-extra">
+														<i class="fa fa-calendar warning"></i>
+														<i class="fa fa-clock-o warning"></i>
+														<span class="description">at home</span>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="clearfix">
+													<div class="notification-icon">
+														<i class="fa fa-glass bg-success white"></i>
+													</div>
+													<div class="notification-body">
+														<span class="title">Dinner with friends</span>
+														<span class="description">10:30 pm</span>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li class="dropdown-footer ">
+											<span>
+												Today, March 28
+											</span>
+											<span class="pull-right">
+												10°c
+												<i class="wi wi-cloudy"></i>
+											</span>
+										</li>
+									</ul>
+									<!--/Notification Dropdown
+								</li>
+								<li>
+									<a class="wave in dropdown-toggle" data-toggle="dropdown" title="Help" href="#">
+										<i class="icon fa fa-envelope"></i>
+										<span class="badge">3</span>
+									</a>
+									<!--Messages Dropdown
+									<ul class="pull-right dropdown-menu dropdown-arrow dropdown-messages">
+										<li>
+											<a href="#">
+												<img src="assets/img/avatars/divyia.jpg" class="message-avatar" alt="Divyia Austin">
+												<div class="message">
+													<span class="message-sender">
+														Divyia Austin
+													</span>
+													<span class="message-time">
+														2 minutes ago
+													</span>
+													<span class="message-subject">
+														Here's the recipe for apple pie
+													</span>
+													<span class="message-body">
+														to identify the sending application when the senders image is shown for the main icon
+													</span>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<img src="assets/img/avatars/bing.png" class="message-avatar" alt="Microsoft Bing">
+												<div class="message">
+													<span class="message-sender">
+														Bing.com
+													</span>
+													<span class="message-time">
+														Yesterday
+													</span>
+													<span class="message-subject">
+														Bing Newsletter: The January Issue‏
+													</span>
+													<span class="message-body">
+														Discover new music just in time for the Grammy® Awards.
+													</span>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<img src="assets/img/avatars/adam-jansen.jpg" class="message-avatar" alt="Divyia Austin">
+												<div class="message">
+													<span class="message-sender">
+														Nicolas
+													</span>
+													<span class="message-time">
+														Friday, September 22
+													</span>
+													<span class="message-subject">
+														New 4K Cameras
+													</span>
+													<span class="message-body">
+														The 4K revolution has come over the horizon and is reaching the general populous
+													</span>
+												</div>
+											</a>
+										</li>
+									</ul>
+									<!--/Messages Dropdown
+								</li>
+
+								<li>
+									<a class="dropdown-toggle" data-toggle="dropdown" title="Tasks" href="#">
+										<i class="icon fa fa-tasks"></i>
+										<span class="badge">4</span>
+									</a>
+									<!--Tasks Dropdown
+									<ul class="pull-right dropdown-menu dropdown-tasks dropdown-arrow ">
+										<li class="dropdown-header bordered-darkorange">
+											<i class="fa fa-tasks"></i>
+											4 Tasks In Progress
+										</li>
+										<li>
+											<a href="#">
+												<div class="clearfix">
+													<span class="pull-left">Account Creation</span>
+													<span class="pull-right">65%</span>
+												</div>
+
+												<div class="progress progress-xs">
+													<div style="width:65%" class="progress-bar"></div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="clearfix">
+													<span class="pull-left">Profile Data</span>
+													<span class="pull-right">35%</span>
+												</div>
+
+												<div class="progress progress-xs">
+													<div style="width:35%" class="progress-bar progress-bar-success"></div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="clearfix">
+													<span class="pull-left">Updating Resume</span>
+													<span class="pull-right">75%</span>
+												</div>
+
+												<div class="progress progress-xs">
+													<div style="width:75%" class="progress-bar progress-bar-darkorange"></div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="clearfix">
+													<span class="pull-left">Adding Contacts</span>
+													<span class="pull-right">10%</span>
+												</div>
+
+												<div class="progress progress-xs">
+													<div style="width:10%" class="progress-bar progress-bar-warning"></div>
+												</div>
+											</a>
+										</li>
+										<li class="dropdown-footer">
+											<a href="#">
+												See All Tasks
+											</a>
+											<button class="btn btn-xs btn-default shiny darkorange icon-only pull-right"><i class="fa fa-check"></i></button>
+										</li>
+									</ul>
+									<!--/Tasks Dropdown
+								</li>
+								-->
+								<li>
+									<a class="login-area dropdown-toggle" data-toggle="dropdown">
+										<div class="avatar" title="View your public profile">
+											<img src="Images/logo.png">
+										</div>
+										<section>
+											<h2><span class="profile"><span>David Stevenson</span></span></h2>
+										</section>
+									</a>
+									<!--Login Area Dropdown-->
+									<ul class="pull-right dropdown-menu dropdown-arrow dropdown-login-area">
+										<li class="username"><a>David Stevenson</a></li>
+										<li class="email"><a>David.Stevenson@live.com</a></li>
+										<!--Avatar Area-->
+										<li>
+											<div class="avatar-area">
+												<img src="Images/logo.png" class="avatar">
+												<span class="caption">Change Photo</span>
+											</div>
+										</li>
+										<!--Avatar Area-->
+										<li class="edit">
+											<a href="profile.html" class="pull-left">Profile</a>
+											<a href="#" class="pull-right">Setting</a>
+										</li>
+										<!--Theme Selector Area-->
+										<li class="theme-area">
+											<ul class="colorpicker" id="skin-changer">
+												<li><a class="colorpick-btn" href="#" style="background-color:#5DB2FF;" rel="assets/css/skins/blue.min.css"></a></li>
+												<li><a class="colorpick-btn" href="#" style="background-color:#2dc3e8;" rel="assets/css/skins/azure.min.css"></a></li>
+												<li><a class="colorpick-btn" href="#" style="background-color:#03B3B2;" rel="assets/css/skins/teal.min.css"></a></li>
+												<li><a class="colorpick-btn" href="#" style="background-color:#53a93f;" rel="assets/css/skins/green.min.css"></a></li>
+												<li><a class="colorpick-btn" href="#" style="background-color:#FF8F32;" rel="assets/css/skins/orange.min.css"></a></li>
+												<li><a class="colorpick-btn" href="#" style="background-color:#cc324b;" rel="assets/css/skins/pink.min.css"></a></li>
+												<li><a class="colorpick-btn" href="#" style="background-color:#AC193D;" rel="assets/css/skins/darkred.min.css"></a></li>
+												<li><a class="colorpick-btn" href="#" style="background-color:#8C0095;" rel="assets/css/skins/purple.min.css"></a></li>
+												<li><a class="colorpick-btn" href="#" style="background-color:#0072C6;" rel="assets/css/skins/darkblue.min.css"></a></li>
+												<li><a class="colorpick-btn" href="#" style="background-color:#585858;" rel="assets/css/skins/gray.min.css"></a></li>
+												<li><a class="colorpick-btn" href="#" style="background-color:#474544;" rel="assets/css/skins/black.min.css"></a></li>
+												<li><a class="colorpick-btn" href="#" style="background-color:#001940;" rel="assets/css/skins/deepblue.min.css"></a></li>
+											</ul>
+										</li>
+										<!--/Theme Selector Area-->
+										<li class="dropdown-footer">
+											<a href="login.html">
+												Sign out
+											</a>
+										</li>
+									</ul>
+									<!--/Login Area Dropdown-->
+								</li>
+								<!-- /Account Area -->
+								<!--Note: notice that setting div must start right after account area list.
+								no space must be between these elements-->
+								<!-- Settings -->
+							</ul><div class="setting">
+								<a id="btn-setting" title="Setting" href="#">
+									<i class="icon glyphicon glyphicon-cog"></i>
+								</a>
+							</div><div class="setting-container">
+								<label>
+									<input type="checkbox" id="checkbox_fixednavbar">
+									<span class="text">Fixed Navbar</span>
+								</label>
+								<label>
+									<input type="checkbox" id="checkbox_fixedsidebar">
+									<span class="text">Fixed SideBar</span>
+								</label>
+								<label>
+									<input type="checkbox" id="checkbox_fixedbreadcrumbs">
+									<span class="text">Fixed BreadCrumbs</span>
+								</label>
+								<label>
+									<input type="checkbox" id="checkbox_fixedheader">
+									<span class="text">Fixed Header</span>
+								</label>
+							</div>
+							<!-- Settings -->
+						</div>
+					</div>
+					<!-- /Account Area and Settings -->
+                
+				</div>
+			</div>
+		</div>
+	<!-- Navbar -->
+	<!-- Main Container -->
+	<div class="page-breadcrumbs">
+		<ul class="breadcrumb">
+			<li style=" line-height: 39px;">
+				<i class="fa fa-home"></i>
+				<a href="#"><small style="font-size: 14px;">
+				圈儿~						
+				</small></a>
+			</li>
+			
+		</ul>
+    </div>
+    <div class="main-container container-fluid">
+		<!-- 12	-->
+		<div id="listDiv" class="col-lg-12 col-sm-12 col-xs-12" >
+			<!-- item	-->
+			<!--  <div class="col-lg-4 col-sm-6 col-xs-12 " >
+				<div style="background-color: #FFFEFE;border-radius: 5px;margin: 10 0 10 0;padding: 10 0 10 0;position: static; display:table;">
+					<div class="col-lg-11 col-sm-11 col-xs-5" style="padding: 0;">
+						<img class="col-lg-12 col-sm-12 col-xs-12" style="padding:0px;" src="http://m.360buyimg.com/n12/jfs/t2365/168/1185439740/249828/68820aeb/564c5465N82d8e969.jpg!q70.jpg">
+					</div>
+					<div class="col-lg-12 col-sm-12 col-xs-7 " style="height: 100px;color: #333;">
+						<small style="font-size: 14px;height: 39px;">
+						  ipnone5S-  [SomeThings]							
+						</small>
+						<div style="margin-top: 4px;">
+							<small style="background-color: #333;color: #fff;padding: 1;border-radius: 3px;">
+								16GB							
+							</small>
+							
+							<small style=" margin-left:5px;">
+								全4G
+							</small>
+						</div>
+						<div class="col-lg-12 col-sm-12 col-xs-12" style="padding: 0;">
+							<div class="col-lg-6 col-sm-6 col-xs-12" style="margin-top: 2px;padding: 0;">
+								<small style="font-size: 15px;/* background-color: #333; */color: #FF2500;padding: 1;border-radius: 3px;">
+									￥2688.00							
+								</small>
+								
+								<small style=" margin-left:5px;">香槟金</small>
+							</div>
+							<div class="col-lg-6 col-sm-6 col-xs-12" style="margin-top: 5px;padding: 0;text-align: right;">
+								<small style="font-size: 15px;background-color: #FF2500;color: rgb(255, 255, 255);padding: 5px;border-radius: 3px;font-family: 'microsoft yahei',Verdana,Arial,Helvetica,sans-serif;">
+									立即购买							
+								</small>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div> -->
+			<div class="col-lg-3 col-sm-6 col-xs-12 " style="">
+				<div class="col-lg-12 col-sm-12 col-xs-12 item" >
+					<div class="col-lg-12 col-sm-12 col-xs-12 " >
+						
+						<a href="iphone.html">
+							<div  style="float:left;">
+								<figure class="phoneSvg"></figure>
+							</div>
+							<div style="float:left;">
+								<small style="font-size: 4em; margin-left:40px;">
+								  iPhone		
+								</small>
+							</div>
+						</a>
+					
+					</div>
+				</div>
+			</div> 
+			<div class="col-lg-3 col-sm-6 col-xs-12 " style="">
+				<div class="col-lg-12 col-sm-12 col-xs-12 item" >
+					<div class="col-lg-12 col-sm-12 col-xs-12 " >
+						<a href="ipad.html">
+							<div  style="float:left;">
+								<figure class="padSvg"></figure>
+							</div>
+							<div style="float:left;">
+								<small style="font-size: 4em; margin-left:40px;">
+								  iPad					
+								</small>
+							</div>
+						</a>
+						
+					</div>
+				</div>
+			</div> 
+			<div class="col-lg-3 col-sm-6 col-xs-12 " style="">
+				<div class="col-lg-12 col-sm-12 col-xs-12 item" >
+					<div class="col-lg-12 col-sm-12 col-xs-12 " >
+						<div  style="float:left;">
+							<figure class="macSvg"></figure>
+						</div>
+						<div style="float:left;">
+							<small style="font-size: 4em; margin-left:40px;">
+							  Mac					
+							</small>
+						</div>
+					
+					</div>
+				</div>
+			</div> 
+			<div class="col-lg-3 col-sm-6 col-xs-12 " style="">
+				<div class="col-lg-12 col-sm-12 col-xs-12 item" >
+					<div class="col-lg-12 col-sm-12 col-xs-12 " >
+						<a href="part.html">
+							<div  style="float:left;">
+								<figure class="peijianSvg"></figure>
+								
+							</div>
+							<div style="float:left;">
+								<small style="font-size: 4em; margin-left:40px;">
+								  配 件			
+								</small>
+							</div>
+						</a>
+						
+					
+					</div>
+				</div>
+			</div> 
+
+			<div class="col-lg-3 col-sm-6 col-xs-12 " style="">
+				<div class="col-lg-12 col-sm-12 col-xs-12 item" >
+					<div class="col-lg-12 col-sm-12 col-xs-12 " >
+						<div  style="float:left;">
+							<figure class="hanguoSvg"></figure>
+							
+						</div>
+						<div style="float:left;">
+							<small style="font-size: 4em; margin-left:40px;">
+							  韩国代购			
+							</small>
+						</div>
+						
+					
+					</div>
+				</div>
+			</div> 
+
+			<div class="col-lg-3 col-sm-6 col-xs-12 " style="">
+				<div class="col-lg-12 col-sm-12 col-xs-12 item" >
+					<div class="col-lg-12 col-sm-12 col-xs-12 " >
+						<div  style="float:left;">
+							
+							
+						</div>
+						<div style="float:left;">
+							<small style="font-size: 4em; margin-left:40px;">
+							  本区正在开发中....			
+							</small>
+						</div>
+						
+					
+					</div>
+				</div>
+			</div> 
+			
+			
+			
+			<!-- item			-->
+		</div> 
+		<!-- 12 -->
+    </div>
+	
+	<!-- Main Container -->
+    <!--Basic Scripts-->
+    <script src="assets/js/jquery-2.0.3.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!--Beyond Scripts-->
+    <script src="assets/js/beyond.min.js"></script>
+
+
+    <!--Page Related Scripts-->
+    <!--Sparkline Charts Needed Scripts-->
+    <script src="assets/js/charts/sparkline/jquery.sparkline.js"></script>
+    <script src="assets/js/charts/sparkline/sparkline-init.js"></script>
+
+    <!--Easy Pie Charts Needed Scripts-->
+    <script src="assets/js/charts/easypiechart/jquery.easypiechart.js"></script>
+    <script src="assets/js/charts/easypiechart/easypiechart-init.js"></script>
+
+    
+<script src="Js/jquery.js"></script>
+<script src="Js/jquery-ui.js"></script>
+<script src="Js/tPlayer.js"></script>
+<!--Flot Charts Needed Scripts--><!--Flot Charts Needed Scripts-->
+    <script src="assets/js/charts/flot/jquery.flot.js"></script>
+    <script src="assets/js/charts/flot/jquery.flot.resize.js"></script>
+    <script src="assets/js/charts/flot/jquery.flot.pie.js"></script>
+    <script src="assets/js/charts/flot/jquery.flot.tooltip.js"></script>
+    <script src="assets/js/charts/flot/jquery.flot.orderBars.js"></script>
+
+    <script>
+	var goodsAtrray = [
+		{goodID:"10001",goodsName:" ipnone5S-  [SomeThings] ",goodsImages:"http://m.360buyimg.com/n12/jfs/t2365/168/1185439740/249828/68820aeb/564c5465N82d8e969.jpg!q70.jpg",goodsNetwork:"全4G",goodsStorage:"16GB",goodsPrice:"2688.00",goodsColor:"香槟金",},
+		{goodID:"10002",goodsName:" ipnone5S-  [SomeThings] ",goodsImages:"http://m.360buyimg.com/n12/jfs/t2365/168/1185439740/249828/68820aeb/564c5465N82d8e969.jpg!q70.jpg",goodsNetwork:"全4G",goodsStorage:"32GB",goodsPrice:"2688.00",goodsColor:"香槟金",},
+		{goodID:"10003",goodsName:" ipnone5S-  [SomeThings] ",goodsImages:"http://m.360buyimg.com/n12/jfs/t2365/168/1185439740/249828/68820aeb/564c5465N82d8e969.jpg!q70.jpg",goodsNetwork:"全4G",goodsStorage:"64GB",goodsPrice:"2688.00",goodsColor:"香槟金",},
+		{goodID:"10004",goodsName:" ipnone5S-  [SomeThings] ",goodsImages:"http://m.360buyimg.com/n12/jfs/t2365/168/1185439740/249828/68820aeb/564c5465N82d8e969.jpg!q70.jpg",goodsNetwork:"全4G",goodsStorage:"16GB",goodsPrice:"2688.00",goodsColor:"太空灰",},
+		{goodID:"10005",goodsName:" ipnone5S-  [SomeThings] ",goodsImages:"http://m.360buyimg.com/n12/jfs/t2365/168/1185439740/249828/68820aeb/564c5465N82d8e969.jpg!q70.jpg",goodsNetwork:"全4G",goodsStorage:"32GB",goodsPrice:"2688.00",goodsColor:"太空灰",},
+		{goodID:"10006",goodsName:" ipnone5S-  [SomeThings] ",goodsImages:"http://m.360buyimg.com/n12/jfs/t2365/168/1185439740/249828/68820aeb/564c5465N82d8e969.jpg!q70.jpg",goodsNetwork:"全4G",goodsStorage:"64GB",goodsPrice:"2688.00",goodsColor:"太空灰",},
+		{goodID:"10007",goodsName:" ipnone5S-  [SomeThings] ",goodsImages:"http://m.360buyimg.com/n12/jfs/t2365/168/1185439740/249828/68820aeb/564c5465N82d8e969.jpg!q70.jpg",goodsNetwork:"全4G",goodsStorage:"16GB",goodsPrice:"2688.00",goodsColor:"银白色",},
+		{goodID:"10008",goodsName:" ipnone5S-  [SomeThings] ",goodsImages:"http://m.360buyimg.com/n12/jfs/t2365/168/1185439740/249828/68820aeb/564c5465N82d8e969.jpg!q70.jpg",goodsNetwork:"全4G",goodsStorage:"32GB",goodsPrice:"2688.00",goodsColor:"银白色",},
+		{goodID:"10009",goodsName:" ipnone5S-  [SomeThings] ",goodsImages:"http://m.360buyimg.com/n12/jfs/t2365/168/1185439740/249828/68820aeb/564c5465N82d8e969.jpg!q70.jpg",goodsNetwork:"全4G",goodsStorage:"64GB",goodsPrice:"2688.00",goodsColor:"银白色",},
+		
+		{goodID:"10021",goodsName:" ipnone6S-  [SomeThings] ",goodsImages:"http://img11.360buyimg.com/n12/jfs/t2113/203/128429424/95656/be32c7d2/55f0e7b5Nf1ed773f.jpg",goodsNetwork:"全4G",goodsStorage:"16GB",goodsPrice:"2688.00",goodsColor:"香槟金",},
+		{goodID:"10022",goodsName:" ipnone6S-  [SomeThings] ",goodsImages:"http://img11.360buyimg.com/n12/jfs/t2113/203/128429424/95656/be32c7d2/55f0e7b5Nf1ed773f.jpg",goodsNetwork:"全4G",goodsStorage:"32GB",goodsPrice:"2688.00",goodsColor:"香槟金",},
+		{goodID:"10023",goodsName:" ipnone6S-  [SomeThings] ",goodsImages:"http://img11.360buyimg.com/n12/jfs/t2113/203/128429424/95656/be32c7d2/55f0e7b5Nf1ed773f.jpg",goodsNetwork:"全4G",goodsStorage:"64GB",goodsPrice:"2688.00",goodsColor:"香槟金",},
+		{goodID:"10011",goodsName:" ipnone6S-  [SomeThings] ",goodsImages:"http://img14.360buyimg.com/n12/jfs/t2461/281/145335373/97081/8af73dbf/55f0e80aN532efcae.jpg",goodsNetwork:"全4G",goodsStorage:"16GB",goodsPrice:"2688.00",goodsColor:"玫瑰金",},
+		{goodID:"10012",goodsName:" ipnone6S-  [SomeThings] ",goodsImages:"http://img14.360buyimg.com/n12/jfs/t2461/281/145335373/97081/8af73dbf/55f0e80aN532efcae.jpg",goodsNetwork:"全4G",goodsStorage:"32GB",goodsPrice:"2688.00",goodsColor:"玫瑰金",},
+		{goodID:"10013",goodsName:" ipnone6S-  [SomeThings] ",goodsImages:"http://img14.360buyimg.com/n12/jfs/t2461/281/145335373/97081/8af73dbf/55f0e80aN532efcae.jpg",goodsNetwork:"全4G",goodsStorage:"64GB",goodsPrice:"2688.00",goodsColor:"玫瑰金",},
+		{goodID:"10014",goodsName:" ipnone6S-  [SomeThings] ",goodsImages:"http://img13.360buyimg.com/n12/jfs/t1987/254/132428285/96565/3564669b/55f0e7f0N778cce62.jpg",goodsNetwork:"全4G",goodsStorage:"16GB",goodsPrice:"2688.00",goodsColor:"太空灰",},
+		{goodID:"10015",goodsName:" ipnone6S-  [SomeThings] ",goodsImages:"http://img13.360buyimg.com/n12/jfs/t1987/254/132428285/96565/3564669b/55f0e7f0N778cce62.jpg",goodsNetwork:"全4G",goodsStorage:"32GB",goodsPrice:"2688.00",goodsColor:"太空灰",},
+		{goodID:"10016",goodsName:" ipnone6S-  [SomeThings] ",goodsImages:"http://img13.360buyimg.com/n12/jfs/t1987/254/132428285/96565/3564669b/55f0e7f0N778cce62.jpg",goodsNetwork:"全4G",goodsStorage:"64GB",goodsPrice:"2688.00",goodsColor:"太空灰",},
+		{goodID:"10017",goodsName:" ipnone6S-  [SomeThings] ",goodsImages:"http://img12.360buyimg.com/n12/jfs/t1750/358/1521618161/94974/710d9a9a/55f0e7d7N34623c97.jpg",goodsNetwork:"全4G",goodsStorage:"16GB",goodsPrice:"2688.00",goodsColor:"银白色",},
+		{goodID:"10018",goodsName:" ipnone6S-  [SomeThings] ",goodsImages:"http://img12.360buyimg.com/n12/jfs/t1750/358/1521618161/94974/710d9a9a/55f0e7d7N34623c97.jpg",goodsNetwork:"全4G",goodsStorage:"32GB",goodsPrice:"2688.00",goodsColor:"银白色",},
+		{goodID:"10019",goodsName:" ipnone6S-  [SomeThings] ",goodsImages:"http://img12.360buyimg.com/n12/jfs/t1750/358/1521618161/94974/710d9a9a/55f0e7d7N34623c97.jpg",goodsNetwork:"全4G",goodsStorage:"64GB",goodsPrice:"2688.00",goodsColor:"银白色",},
+		
+		]
+	
+	
+	
+	
+	    function startTimer(){ //计时器代码
+				 /*setInterval() 间隔指定的毫秒数不停地执行指定的代码*/
+				myVar=setInterval(function(){
+				
+				
+					
+						
+					},1000);
+	
+				}
+	$(document).ready(function () {
+	
+	/*$("#listDiv").empty();*/
+		for(var i=0;i<goodsAtrray.length;i++){
+			goodData = goodsAtrray[i] ;
+			
+			goodsName = goodData.goodsName;
+			goodsImages	= goodData.goodsImages;
+			goodsNetwork = goodData.goodsNetwork;
+			goodsStorage = goodData.goodsStorage;
+			goodsPrice = goodData.goodsPrice;
+			goodsColor = goodData.goodsColor;
+			goodsId = goodData.goodsId;
+			showData();
+		}
+	
+	
+	});
+	function showData(){
+	
+			//$("#listDiv").empty();
+		var item ='<div class="col-lg-3 col-sm-6 col-xs-12 " >';
+				item +='<div style="background-color: #FFFEFE;border-radius: 5px;margin: 10 0 10 0;padding: 10 0 10 0;position: static; display:table;">';
+				item +='<div class="col-lg-11 col-sm-11 col-xs-5" style="padding: 0;">';
+				item +='<img class="col-lg-12 col-sm-12 col-xs-12" style="padding:0px;" src="'+goodsImages+'" ></div>';
+				item +='<div class="col-lg-12 col-sm-12 col-xs-7 " style="height: 100px;color: #333;">';
+				item +='<small style="font-size: 14px;height: 39px;">';
+				item +=''+goodsName+'</small>';
+				item +='<div style="margin-top: 4px;">';
+				item +='<small style="background-color: #333;color: #fff;padding: 1;border-radius: 3px;">';
+				item +=''+goodsStorage+'</small>';
+				item +='<small style=" margin-left:5px;">';
+				item +=''+goodsNetwork+'</small></div>	';	
+				item +='<div class="col-lg-12 col-sm-12 col-xs-12" style="padding: 0;">';
+				item +='<div class="col-lg-6 col-sm-6 col-xs-12" style="margin-top: 2px;padding: 0;">';
+				item +='<small style="font-size: 15px;/* background-color: #333; */color: #FF2500;padding: 1;border-radius: 3px;">';
+				item +='￥'+goodsPrice+'	</small>		';
+				item +='<small style=" margin-left:5px;">'+goodsColor+'</small></div>';
+				item +='<div class="col-lg-6 col-sm-6 col-xs-12" style="margin-top: 5px;padding: 0;text-align: right;">		';
+				item +='<small onclick="javascript:buy('+goodsId+')" style="font-size: 15px;background-color: #FF2500;color: rgb(255, 255, 255);padding: 5px;border-radius: 3px;font-family: "microsoft yahei",Verdana,Arial,Helvetica,sans-serif;">	';
+				item +='立即购买</small></div></div></div></div></div>';
+
+		/*$("#listDiv").append(item);*/
+	
+	
+	
+	}
+    </script>
+   
+
+
+
+<!--  /Body -->
+
+<div id="flotTip" style="display: none; position: absolute; left: 818px; top: 501px;"></div></body></html>
