@@ -26,7 +26,7 @@
  }
  
   .content {
-	background-color:#f9f9f9;
+	background-color:rgba(249, 249, 249, 0.67);
     width: 1024px;
     min-height: 500px;
 	margin: 0 auto;
@@ -37,7 +37,7 @@
 
  }
    .list {
-	background-color:#fff;
+	background-color:rgba(131, 216, 234, 0.46);
     padding: 5px;
     font-size: 20px;
     font-family: "微软雅黑";
@@ -62,6 +62,10 @@
 	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=5, MakeShadow=false);
 	*left: -5px; left: -5px;
  }
+ td {
+ margin-left:10px;
+ color:#eee;
+ }
  
 </style>
 </head>
@@ -78,7 +82,7 @@
 		</div>
 	
 	</header>
-	
+	<img style="-webkit-user-select: none; cursor: zoom-in;position: absolute;z-index: -1;top: -180px;left: 0;" src="http://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-39923.jpg" width="1440" height="1440">
 	<div class="content">
 		<div style="padding: 10px;font-size: 25px;color: #424442;">
 		文章列表
@@ -92,6 +96,26 @@
 	
 	</div>
 	
+<footer style="background-color: rgba(51, 51, 51, 0.69);height: 478px;margin-top: 200px;">
+	<div>
+		<table>
+			<tr>
+				<td>
+					高清壁纸
+				</td>
+				<td>
+					<a href="http://alpha.wallhaven.cc/">http://alpha.wallhaven.cc/</a>
+				</td>
+				<td>
+					在线编译器-html
+				</td>
+				<td>
+					<a href="http://runjs.cn/">http://runjs.cn/</a>
+				</td>
+			</tr>
+		</table>
+	</div>
+</footer>
 
 
 
@@ -100,6 +124,7 @@
 
 <script type="text/javascript" src="content.js"></script>
 <script type="text/javascript" src="platform/js/articleType.js"></script>
+<script type="text/javascript" src="platform/js/jldColor.js"></script>
 <script type="text/javascript" src="platform/js/jquery.min.js"></script>
 
 <script type="text/javascript">
@@ -113,10 +138,11 @@
 				var top= 130 ;
 				top = 130 + 26*i;
 				var div = '<div  style="border-left: 3px solid; border-left-color:'+getRandomColor()+';  padding-left: 20px;"> <span>'+rowsData.articleTitle+'</span><span style="float: right;font-size: 14px;">'+rowsData.createdTime+'</span><span style="float: right;font-size: 14px; color:#fff; border-radius:4px;margin-right:10px;padding: 1px 3px 1px 3px; background-color:#93b6f5;">'+getNameByArticleType(rowsData.articleType)+'</span></div>';
+				
 				div = '<div onclick="location=\'content/'+rowsData.articleID+'.html\'">';
-				div += '<div class="blur"  style="display:;left: 230px;   width: 1000px;top:'+top+'px;"> <span>'+rowsData.articleTitle+'</span><span style="float: right;font-size: 14px;">'+rowsData.createdTime+'</span><span ';
+				div += '<div class="blur"  style="left: 220px;   width: 1000px;top:'+top+'px;"> <span style="color:#fff">'+rowsData.articleTitle+'</span><span style="float: right;font-size: 14px;">'+rowsData.createdTime+'</span><span ';
 				div += 'style="float: right;font-size: 14px; color:#fff; border-radius:4px;margin-right:10px;padding: 1px 3px 1px 3px;">'+getNameByArticleType(rowsData.articleType)+'</span></div>';
-				div += '<div class="item" id="'+rowsData.articleID+'";   style=""> <span onclick="javascript:window.location.href=content/'+rowsData.createdTime+'/'+rowsData.articleID+'.html" >'+rowsData.articleTitle+'</span><span style="float: right;font-size: 14px;">'+rowsData.createdTime+'';
+				div += '<div class="item" id="'+rowsData.articleID+'";   style="border-left: 3px solid; border-left-color:'+getjldColor()+'"> <span  style="color:#fff" ; onclick="javascript:window.location.href=content/'+rowsData.createdTime+'/'+rowsData.articleID+'.html" >'+rowsData.articleTitle+'</span><span style="float: right;font-size: 14px;">'+rowsData.createdTime+'';
 				div += '</span><span style="float: right;font-size: 14px; color:#fff; border-radius:4px;margin-right:10px;padding: 1px 3px 1px 3px; background-color:#93b6f5;">'+getNameByArticleType(rowsData.articleType)+'</span></div>';
 				div += '</div >';
 				
