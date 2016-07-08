@@ -1,0 +1,750 @@
+<html>
+ <head>
+  <script id="jquery_172" type="text/javascript" class="library" src="/js/sandbox/jquery/jquery-1.7.2.min.js"></script> 
+ </head>
+ <body>
+ 	<style type="text/css">
+ 	input{
+	width:300px;
+}
+textarea{
+width:500px;height:160px;margin-top:10px;
+}
+span{
+	width:100px;
+}
+</style>
+  <div style="margin:10px;"> 
+   <span>Package </span>
+   <input id="package" placeholder="请输入包名" /> 
+  </div> 
+  <div style="margin:10px;"> 
+   <span>Entity </span>
+   <input id="oentity" /> 
+   <span> to Entity </span>
+   <input id="entity" />
+   <br /> 
+  </div> 
+  <div style="margin:10px;"> 
+   <span>Function </span>
+   <br /> 
+   <textarea id="function" placeholder="请输入beseClass文件内容"></textarea> 
+  </div> 
+  <button onclick="tojs()"> 转js拼接 </button> 
+  <button onclick="change()"> 生成 </button> 
+  <button onclick="changeWebC()"> webC </button> 
+  <hr /> 
+  <div style="margin:10px;"> 
+   <span>Result </span>
+   <br /> 
+   <textarea id="result" placeholder=""></textarea> 
+  </div> 
+  <hr /> 
+  <div style="margin:10px;"> 
+   <span>每一个方法在全局的影响 </span>
+   <br /> 
+   <textarea id="" placeholder=""> 新增一个方法 例如：read 【web-Controller】read 【web-Servise】read 【web-ServiseImpl】read 【server-Controller】read 【server-Servise】read 【server-ServiseImpl】read 【path】read 【uri】read </textarea> 
+  </div> 
+  <script type="text/javascript">
+var base ="";
+
+$(function(){
+	init();
+});
+function tojs(){
+	var rdata = "";
+	
+	var data = $("#function").val();
+	var myarray = data.split("\n");
+	 for (var i=0;i < myarray.length ; i++) {
+		 rdata +="webC += '"+myarray[i]+"';";
+	 }
+	$("#result").val(rdata);
+	
+}
+
+
+
+function changeWebC(){
+	var packageName = $("#package").val();
+	var entityNameA = $("#entity").val();
+	var entityName = entityNameA.replace(/(\w)/,function(v){return v.toUpperCase()});;
+
+	var data = webC();
+	//替换包名
+       var packageReCat = /com.rescam.sywm.server.controller.goodsOwner/gi;
+			 var rdata =  data.replace(packageReCat,packageName);
+	//替换实体名字
+       var entityReCatA = /Recipient/g;
+			 rdata =  rdata.replace(entityReCatA,entityNameA);
+	//替换实体变量名字
+       var entityReCat = /recipient/g;
+			 rdata =  rdata.replace(entityReCat,entityName);
+			
+			
+
+	$("#result").val(rdata);
+	$("#result").select();
+
+}
+
+
+function change(){
+	var packageName = $("#package").val();
+	var oentityName = $("#oentity").val();
+	var opackageName = $("#opackage").val();
+	var entityName = $("#entity").val();
+	var oentityNameA = oentityName.replace(/(\w)/,function(v){return v.toUpperCase()});;
+	var entityNameA = entityName.replace(/(\w)/,function(v){return v.toUpperCase()});;
+
+	var data = $("#function").val();
+	//替换包名
+      // var packageReCat = new RegExp(opackageName, "gi");
+			// var rdata =  data.replace(packageReCat,packageName);
+	//替换实体名字
+       var entityReCatA = new RegExp(oentityNameA, "g");
+			 rdata =  data.replace(entityReCatA,entityNameA);
+	//替换实体变量名字
+       var entityReCat = new RegExp(oentityName, "g");
+			 rdata =  rdata.replace(entityReCat,entityName);
+			
+			
+
+	$("#result").val(rdata);
+	$("#result").select();
+
+}
+function init(){
+	base="";
+}
+
+function webC(){
+	var webC="";
+webC += 'package com.rescam.syhz.web.controller.goodsOwner;';
+webC += '';
+webC += 'import java.util.ArrayList;';
+webC += 'import java.util.List;';
+webC += 'import java.util.Map;';
+webC += '';
+webC += 'import javax.annotation.Resource;';
+webC += 'import javax.servlet.http.HttpServletRequest;';
+webC += '';
+webC += 'import org.springframework.context.annotation.Scope;';
+webC += 'import org.springframework.web.bind.annotation.RequestMapping;';
+webC += 'import org.springframework.web.bind.annotation.RequestParam;';
+webC += 'import org.springframework.web.bind.annotation.RestController;';
+webC += '';
+webC += 'import com.fasterxml.jackson.databind.ObjectMapper;';
+webC += 'import com.rescam.common.vo.DataTableInfo;';
+webC += 'import com.rescam.common.vo.ResultInfo;';
+webC += 'import com.rescam.common.web.controller.BaseController;';
+webC += 'import com.rescam.syhz.web.service.goodsOwner.RecipientService;';
+webC += 'import com.rescam.syhz.web.util.MessageConst;';
+webC += 'import com.rescam.syhz.web.vo.ValidInfo;';
+webC += '';
+webC += '@RestController';
+webC += '@RequestMapping("recipient")';
+webC += '@Scope("prototype")';
+webC += 'public class RecipientController extends BaseController {';
+webC += '	@Resource';
+webC += '	public RecipientService service;';
+webC += '';
+webC += '	/**';
+webC += '	 * 按条件查询数据列表';
+webC += '	 * ';
+webC += '	 * @param params';
+webC += '	 *            map{searchCode:入库编号 , searchDate:入库时间 , warehouseId:仓库ID }';
+webC += '	 * @param request';
+webC += '	 * @return';
+webC += '	 * @throws Exception';
+webC += '	 */';
+webC += '	@RequestMapping(value = "/search")';
+webC += '	public DataTableInfo search(@RequestParam Map<String, String> params,';
+webC += '			HttpServletRequest request) throws Exception {';
+webC += '		DataTableInfo dataTableInfo = new DataTableInfo();';
+webC += '';
+webC += '		int draw = Integer.valueOf(params.get("draw"));';
+webC += '		// 当前第几页，datatables从0开始算第一页';
+webC += '		int start = Integer.valueOf(params.get("start"));';
+webC += '		// 每页显示的数据量';
+webC += '		int length = Integer.valueOf(params.get("length"));';
+webC += '		// 转换为page';
+webC += '		int page = start / length + 1;';
+webC += '		params.put("page", String.valueOf(page));';
+webC += '		// 保存返回数据';
+webC += '		dataTableInfo.setDraw(draw);';
+webC += '		// 数据量';
+webC += '		Long rows = service.count(params);';
+webC += '		if (rows == null || rows == 0) {';
+webC += '			dataTableInfo.setRecordsFiltered(0);';
+webC += '			dataTableInfo.setRecordsTotal(0);';
+webC += '			dataTableInfo.setData(new ArrayList<Object>());';
+webC += '			return dataTableInfo;';
+webC += '		}';
+webC += '		// 数据';
+webC += '		List<Map<String, String>> list = service.search(params);';
+webC += '		dataTableInfo.setData(list);';
+webC += '		dataTableInfo.setRecordsFiltered(rows);';
+webC += '		dataTableInfo.setRecordsTotal(rows);';
+webC += '';
+webC += '		return dataTableInfo;';
+webC += '';
+webC += '	}';
+webC += '';
+webC += '	/**';
+webC += '	 * 读取单条数据';
+webC += '	 * ';
+webC += '	 * @param params';
+webC += '	 *            限制条件 ID';
+webC += '	 * @return 数据信息 / 系统错误！';
+webC += '	 */';
+webC += '	@RequestMapping("/read")';
+webC += '	public ResultInfo read(@RequestParam Map<String, String> params) {';
+webC += '		ResultInfo resultInfo = new ResultInfo();';
+webC += '		try {';
+webC += '			ObjectMapper objectMapper = new ObjectMapper();';
+webC += '			String result = service.read(params);';
+webC += '			resultInfo = objectMapper.readValue(result, ResultInfo.class);';
+webC += '		} catch (Exception e) {';
+webC += '			e.printStackTrace();';
+webC += '			resultInfo = new ResultInfo();';
+webC += '			resultInfo.setMsg(MessageConst.OPERATE_FAIL);';
+webC += '		}';
+webC += '		return resultInfo;';
+webC += '	}';
+webC += '';
+webC += '	@RequestMapping("/add")';
+webC += '	public ResultInfo add(@RequestParam Map<String, String> params,';
+webC += '			HttpServletRequest request) {';
+webC += '		ResultInfo resultInfo = new ResultInfo();';
+webC += '		ObjectMapper objectMapper = new ObjectMapper();';
+webC += '		try {';
+webC += '			String result = service.add(params);';
+webC += '			resultInfo = objectMapper.readValue(result, ResultInfo.class);';
+webC += '		} catch (Exception e) {';
+webC += '			e.printStackTrace();';
+webC += '			resultInfo = new ResultInfo();';
+webC += '			resultInfo.setMsg(MessageConst.OPERATE_FAIL);';
+webC += '		}';
+webC += '		return resultInfo;';
+webC += '';
+webC += '	}';
+webC += '';
+webC += '	@RequestMapping("/update")';
+webC += '	public ResultInfo update(@RequestParam Map<String, String> params,';
+webC += '			HttpServletRequest request) {';
+webC += '		ResultInfo resultInfo = new ResultInfo();';
+webC += '		ObjectMapper objectMapper = new ObjectMapper();';
+webC += '		try {';
+webC += '			String result = service.update(params);';
+webC += '			resultInfo = objectMapper.readValue(result, ResultInfo.class);';
+webC += '		} catch (Exception e) {';
+webC += '			e.printStackTrace();';
+webC += '			resultInfo = new ResultInfo();';
+webC += '			resultInfo.setMsg(MessageConst.OPERATE_FAIL);';
+webC += '		}';
+webC += '		return resultInfo;';
+webC += '';
+webC += '	}';
+webC += '';
+webC += '	// 校验Name唯一性';
+webC += '	@RequestMapping("/unique")';
+webC += '	public ValidInfo unique(@RequestParam Map<String, String> params) {';
+webC += '		ValidInfo info = new ValidInfo();';
+webC += '		ResultInfo resultInfo = new ResultInfo();';
+webC += '		try {';
+webC += '			String result = service.unique(params);';
+webC += '			ObjectMapper objectMapper = new ObjectMapper();';
+webC += '			resultInfo = objectMapper.readValue(result, ResultInfo.class);';
+webC += '			boolean flag = (boolean) resultInfo.getMsg();';
+webC += '			if (flag) {';
+webC += '				info.setInfo("");';
+webC += '				info.setStatus("y");';
+webC += '			} else {';
+webC += '				info.setStatus("n");';
+webC += '				info.setInfo("该收货人已存在！");';
+webC += '			}';
+webC += '		} catch (Exception e) {';
+webC += '			e.printStackTrace();';
+webC += '			info.setStatus("n");';
+webC += '			info.setInfo(MessageConst.OPERATE_FAIL);';
+webC += '		}';
+webC += '		return info;';
+webC += '	}';
+webC += '';
+webC += '	// 批量删除';
+webC += '	@RequestMapping("/delete/{recipientId}")';
+webC += '	public ResultInfo dels(@RequestParam Map<String, String> params) {';
+webC += '		ResultInfo resultInfo;';
+webC += '		try {';
+webC += '			ObjectMapper objectMapper = new ObjectMapper();';
+webC += '			String result = service.delete(params);';
+webC += '			resultInfo = objectMapper.readValue(result, ResultInfo.class);';
+webC += '		} catch (Exception e) {';
+webC += '			e.printStackTrace();';
+webC += '			resultInfo = new ResultInfo();';
+webC += '			resultInfo.setMsg(MessageConst.OPERATE_FAIL);';
+webC += '		}';
+webC += '';
+webC += '		return resultInfo;';
+webC += '	}';
+webC += '';
+webC += '}';
+webC += '';
+	return webC;
+}
+function serverC(){
+	var webC = "";
+webC += 'package com.rescam.sywm.server.controller.goodsOwner;';
+webC += '';
+webC += 'import java.util.List;';
+webC += 'import java.util.Map;';
+webC += '';
+webC += 'import javax.annotation.Resource;';
+webC += 'import javax.servlet.http.HttpServletRequest;';
+webC += '';
+webC += 'import org.springframework.web.bind.annotation.ModelAttribute;';
+webC += 'import org.springframework.web.bind.annotation.RequestMapping;';
+webC += 'import org.springframework.web.bind.annotation.RequestMethod;';
+webC += 'import org.springframework.web.bind.annotation.RequestParam;';
+webC += 'import org.springframework.web.bind.annotation.RestController;';
+webC += '';
+webC += 'import com.rescam.common.vo.ResultInfo;';
+webC += 'import com.rescam.sywm.rs.uri.goodsOwner.SYWMRecipientURI;';
+webC += 'import com.rescam.sywm.server.entity.Recipient;';
+webC += 'import com.rescam.sywm.server.service.goodsOwner.RecipientService;';
+webC += '';
+webC += '@RestController';
+webC += '@RequestMapping(value = SYWMRecipientURI.Base, method = RequestMethod.POST)';
+webC += 'public class RecipientController {';
+webC += '	@Resource';
+webC += '	RecipientService service;';
+webC += '';
+webC += '	/**';
+webC += '	 * 按条件查询数据列表数量';
+webC += '	 * ';
+webC += '	 * @throws Exception';
+webC += '	 */';
+webC += '	@RequestMapping(SYWMRecipientURI.Count)';
+webC += '	public ResultInfo getCount(@RequestParam Map<String, String> params)';
+webC += '			throws Exception {';
+webC += '		ResultInfo result = new ResultInfo();';
+webC += '';
+webC += '		Long count = service.getCount(params);';
+webC += '		result.setSuccess(true);';
+webC += '		result.setMsg(count);';
+webC += '';
+webC += '		return result;';
+webC += '	}';
+webC += '';
+webC += '	/**';
+webC += '	 * 按条件查询数据列表';
+webC += '	 * ';
+webC += '	 * @throws Exception';
+webC += '	 */';
+webC += '	@RequestMapping(SYWMRecipientURI.Search)';
+webC += '	public ResultInfo search(@RequestParam Map<String, String> params)';
+webC += '			throws Exception {';
+webC += '		ResultInfo result = new ResultInfo();';
+webC += '		List<Recipient> list = service.search(params);';
+webC += '		result.setSuccess(true);';
+webC += '		result.setMsg(list);';
+webC += '';
+webC += '		return result;';
+webC += '	}';
+webC += '';
+webC += '	@RequestMapping(SYWMRecipientURI.Read)';
+webC += '	public ResultInfo read(@RequestParam Map<String, String> params)';
+webC += '			throws Exception {';
+webC += '		ResultInfo resultInfo = new ResultInfo();';
+webC += '';
+webC += '		resultInfo.setMsg(service.read(params));';
+webC += '		resultInfo.setSuccess(true);';
+webC += '';
+webC += '		return resultInfo;';
+webC += '	}';
+webC += '';
+webC += '	@RequestMapping(SYWMRecipientURI.Delete)';
+webC += '	public ResultInfo delete(@RequestParam Map<String, String> params,';
+webC += '			HttpServletRequest request) throws Exception {';
+webC += '		ResultInfo resultInfo = new ResultInfo();';
+webC += '		service.delete(params.get("recipientIds"));';
+webC += '		resultInfo.setMsg("删除成功！");';
+webC += '		resultInfo.setSuccess(true);';
+webC += '		return resultInfo;';
+webC += '	}';
+webC += '';
+webC += '	@RequestMapping(SYWMRecipientURI.Add)';
+webC += '	public ResultInfo add(@ModelAttribute Recipient recipient) {';
+webC += '		ResultInfo resultInfo = new ResultInfo();';
+webC += '		resultInfo.setMsg(service.add(recipient));';
+webC += '		resultInfo.setSuccess(true);';
+webC += '		return resultInfo;';
+webC += '';
+webC += '	}';
+webC += '';
+webC += '	@RequestMapping(SYWMRecipientURI.Update)';
+webC += '	public ResultInfo update(@ModelAttribute Recipient recipient) {';
+webC += '		ResultInfo resultInfo = new ResultInfo();';
+webC += '		resultInfo.setMsg(service.update(recipient));';
+webC += '		resultInfo.setSuccess(true);';
+webC += '		return resultInfo;';
+webC += '';
+webC += '	}';
+webC += '';
+webC += '	@RequestMapping(SYWMRecipientURI.Unique)';
+webC += '	public ResultInfo unique(@RequestParam Map<String, String> params)';
+webC += '			throws Exception {';
+webC += '		ResultInfo info = new ResultInfo();';
+webC += '		Boolean flag = service.unique(params);';
+webC += '';
+webC += '		info.setMsg(flag);';
+webC += '		info.setSuccess(true);';
+webC += '		return info;';
+webC += '';
+webC += '	}';
+webC += '}';
+webC += '';
+	return webC;
+}
+
+function webS(){
+var webC="";
+	webC += 'package com.rescam.syhz.web.service.goodsOwner;';
+webC += '';
+webC += 'import java.util.List;';
+webC += 'import java.util.Map;';
+webC += '';
+webC += 'import com.rescam.common.web.service.BaseService;';
+webC += '';
+webC += 'public interface RecipientService extends BaseService {';
+webC += '	long count(Map<String, String> params) throws Exception;';
+webC += '';
+webC += '	List<Map<String, String>> search(Map<String, String> params)';
+webC += '			throws Exception;';
+webC += '';
+webC += '	String read(Map<String, String> params) throws Exception;';
+webC += '';
+webC += '	String delete(Map<String, String> param) throws Exception;';
+webC += '';
+webC += '	String add(Map<String, String> params) throws Exception;';
+webC += '';
+webC += '	String update(Map<String, String> params) throws Exception;';
+webC += '';
+webC += '	String unique(Map<String, String> params) throws Exception;';
+webC += '}';
+webC += '';
+	return webC;
+}
+function webSI(){
+var webC="";
+	webC += 'package com.rescam.syhz.web.service.goodsOwner.impl;';
+webC += '';
+webC += 'import java.util.ArrayList;';
+webC += 'import java.util.List;';
+webC += 'import java.util.Map;';
+webC += '';
+webC += 'import org.springframework.beans.factory.annotation.Autowired;';
+webC += 'import org.springframework.context.annotation.Scope;';
+webC += 'import org.springframework.stereotype.Service;';
+webC += '';
+webC += 'import com.fasterxml.jackson.databind.ObjectMapper;';
+webC += 'import com.rescam.common.rs.Client;';
+webC += 'import com.rescam.common.vo.ResultInfo;';
+webC += 'import com.rescam.common.web.service.impl.BaseServiceImpl;';
+webC += 'import com.rescam.syhz.web.service.goodsOwner.RecipientService;';
+webC += 'import com.rescam.sywm.rs.path.goodsOwner.SYWMRecipientPath;';
+webC += '';
+webC += '@Service()';
+webC += '@Scope("prototype")';
+webC += 'public class RecipientServiceImpl extends BaseServiceImpl implements';
+webC += '		RecipientService {';
+webC += '	@Autowired';
+webC += '	private Client sywmClient;';
+webC += '';
+webC += '	@Override';
+webC += '	public long count(Map<String, String> params) throws Exception {';
+webC += '		String response = sywmClient.post(SYWMRecipientPath.Count, params);';
+webC += '		ObjectMapper objectMapper = new ObjectMapper();';
+webC += '		ResultInfo info = new ResultInfo();';
+webC += '		info = objectMapper.readValue(response, ResultInfo.class);';
+webC += '		if (info.isSuccess()) {';
+webC += '';
+webC += '			return Double.valueOf(info.getMsg().toString()).longValue();';
+webC += '		} else {';
+webC += '';
+webC += '			return 0L;';
+webC += '		}';
+webC += '	}';
+webC += '';
+webC += '	@Override';
+webC += '	public List<Map<String, String>> search(Map<String, String> params)';
+webC += '			throws Exception {';
+webC += '';
+webC += '		String response = sywmClient.post(SYWMRecipientPath.Search, params);';
+webC += '		ObjectMapper objectMapper = new ObjectMapper();';
+webC += '		ResultInfo info = new ResultInfo();';
+webC += '		info = objectMapper.readValue(response, ResultInfo.class);';
+webC += '		if (info.isSuccess()) {';
+webC += '';
+webC += '			@SuppressWarnings("unchecked")';
+webC += '			List<Map<String, String>> msg = (List<Map<String, String>>) info';
+webC += '					.getMsg();';
+webC += '			return msg;';
+webC += '		} else {';
+webC += '';
+webC += '			return new ArrayList<Map<String, String>>();';
+webC += '		}';
+webC += '';
+webC += '	}';
+webC += '';
+webC += '	@Override';
+webC += '	public String read(Map<String, String> params) throws Exception {';
+webC += '';
+webC += '		String response = sywmClient.post(SYWMRecipientPath.Read, params);';
+webC += '';
+webC += '		return response;';
+webC += '	}';
+webC += '';
+webC += '	@Override';
+webC += '	public String delete(Map<String, String> params) throws Exception {';
+webC += '';
+webC += '		String response = sywmClient.post(SYWMRecipientPath.Delete, params);';
+webC += '';
+webC += '		return response;';
+webC += '	}';
+webC += '';
+webC += '	@Override';
+webC += '	public String add(Map<String, String> params) throws Exception {';
+webC += '';
+webC += '		String response = sywmClient.post(SYWMRecipientPath.Add, params);';
+webC += '';
+webC += '		return response;';
+webC += '	}';
+webC += '';
+webC += '	@Override';
+webC += '	public String update(Map<String, String> params) throws Exception {';
+webC += '';
+webC += '		String response = sywmClient.post(SYWMRecipientPath.Update, params);';
+webC += '';
+webC += '		return response;';
+webC += '	}';
+webC += '';
+webC += '	@Override';
+webC += '	public String unique(Map<String, String> params) throws Exception {';
+webC += '';
+webC += '		String response = sywmClient.post(SYWMRecipientPath.Unique, params);';
+webC += '';
+webC += '		return response;';
+webC += '	}';
+webC += '}';
+webC += '';
+	return webC;
+}
+function uri(){
+var webC="";
+	webC += 'package com.rescam.sywm.rs.uri.goodsOwner;';
+webC += '';
+webC += 'public class SYWMRecipientURI {';
+webC += '';
+webC += '	public static final String Base = "recipient";';
+webC += '';
+webC += '	public static final String Search = "search";';
+webC += '	public static final String Count = "count";';
+webC += '	public static final String Read = "read";';
+webC += '	public static final String Delete = "delete";';
+webC += '	public static final String Add = "add";';
+webC += '	public static final String Update = "update";';
+webC += '	public static final String Unique = "unique";';
+webC += '';
+webC += '';
+webC += '}';
+webC += '';
+	return webC;
+}
+function path(){
+var webC="";
+	webC += 'package com.rescam.sywm.rs.path.goodsOwner;';
+webC += '';
+webC += 'import com.rescam.common.rs.Path;';
+webC += 'import com.rescam.sywm.rs.uri.goodsOwner.SYWMRecipientURI;';
+webC += '';
+webC += 'public enum SYWMRecipientPath implements Path {';
+webC += '';
+webC += '	Search(SYWMRecipientURI.Search),';
+webC += '';
+webC += '	Count(SYWMRecipientURI.Count),';
+webC += '	';
+webC += '	Read(SYWMRecipientURI.Read),';
+webC += '	';
+webC += '	Delete(SYWMRecipientURI.Delete),';
+webC += '	';
+webC += '	Add(SYWMRecipientURI.Add),';
+webC += '';
+webC += '	Update(SYWMRecipientURI.Update),';
+webC += '	';
+webC += '	Unique(SYWMRecipientURI.Unique),';
+webC += '';
+webC += '';
+webC += '	;';
+webC += '';
+webC += '	private String pathString;';
+webC += '';
+webC += '	SYWMRecipientPath(String pathString) {';
+webC += '		this.pathString = "/" + SYWMRecipientURI.Base + "/" + pathString;';
+webC += '	}';
+webC += '';
+webC += '	@Override';
+webC += '	public String asString() {';
+webC += '		return pathString;';
+webC += '	}';
+webC += '';
+webC += '}';
+webC += '';
+	return webC;
+}
+function serverS(){
+var webC="";
+	webC += 'package com.rescam.sywm.server.service.goodsOwner;';
+webC += '';
+webC += 'import java.io.Serializable;';
+webC += 'import java.util.List;';
+webC += 'import java.util.Map;';
+webC += '';
+webC += 'import com.rescam.sywm.server.entity.Recipient;';
+webC += '';
+webC += 'public interface RecipientService {';
+webC += '';
+webC += '	Long getCount(Map<String, String> params) throws Exception;';
+webC += '';
+webC += '	List<Recipient> search(Map<String, String> params) throws Exception;';
+webC += '';
+webC += '	List<Recipient> read(Map<String, String> params) throws Exception;';
+webC += '';
+webC += '	void delete(String recipientId) throws Exception;';
+webC += '';
+webC += '	Serializable add(Recipient recipient);';
+webC += '';
+webC += '	Boolean update(Recipient recipient);';
+webC += '';
+webC += '	Boolean unique(Map<String, String> params) throws Exception;';
+webC += '}';
+webC += '';
+	return webC;
+}
+function serverSI(){
+var webC="";
+	webC += 'package com.rescam.sywm.server.service.goodsOwner.impl;';
+webC += '';
+webC += 'import java.io.Serializable;';
+webC += 'import java.util.List;';
+webC += 'import java.util.Map;';
+webC += '';
+webC += 'import javax.annotation.Resource;';
+webC += '';
+webC += 'import org.springframework.stereotype.Service;';
+webC += 'import org.springframework.transaction.annotation.Transactional;';
+webC += '';
+webC += 'import com.rescam.common.server.dao.BaseDAO;';
+webC += 'import com.rescam.sywm.server.entity.GoodsOwner;';
+webC += 'import com.rescam.sywm.server.entity.Recipient;';
+webC += 'import com.rescam.sywm.server.service.goodsOwner.RecipientService;';
+webC += '';
+webC += '@Transactional';
+webC += '@Service("declfromlistService")';
+webC += 'public class RecipientServiceImpl implements RecipientService {';
+webC += '	@Resource';
+webC += '	BaseDAO<Recipient> dao;';
+webC += '';
+webC += '	@Override';
+webC += '	public Long getCount(Map<String, String> params) throws Exception {';
+webC += '		String hql = "select count(1) from Recipient ";';
+webC += '		String searchCode = params.get("searchCode");';
+webC += '		if (searchCode != null & searchCode != "") {';
+webC += '			hql += "where recipientCode like ' % " + searchCode + " % ' ";';
+webC += '		}';
+webC += '		/* hql += " order by recipientId desc "; */';
+webC += '		return dao.count(hql);';
+webC += '	}';
+webC += '';
+webC += '	@Override';
+webC += '	public List<Recipient> search(Map<String, String> params) throws Exception {';
+webC += '		String hql = "from Recipient ";';
+webC += '		String searchCode = params.get("searchCode");';
+webC += '		int page = Integer.valueOf((params.get("page")));';
+webC += '		int rows = Integer.valueOf((params.get("length")));';
+webC += '		if (searchCode != null & searchCode != "") {';
+webC += '			hql += "where recipientCode like ' % " + searchCode + " % ' ";';
+webC += '		}';
+webC += '';
+webC += '		/* hql += " order by recipientId desc "; */';
+webC += '		return dao.find(hql, new Object[0], page, rows);';
+webC += '	}';
+webC += '';
+webC += '	@Override';
+webC += '	public List<Recipient> read(Map<String, String> params) throws Exception {';
+webC += '';
+webC += '		String hql = "from Recipient where recipientId = "';
+webC += '				+ params.get("recipientId");';
+webC += '';
+webC += '		return dao.find(hql);';
+webC += '';
+webC += '	}';
+webC += '';
+webC += '	@Override';
+webC += '	public void delete(String id) {';
+webC += '		String hql = "delete from Recipient where recipientId = " + id;';
+webC += '		dao.executeHql(hql);';
+webC += '	}';
+webC += '';
+webC += '	@Override';
+webC += '	public Serializable add(Recipient recipient) {';
+webC += '		GoodsOwner goodsOwner = new GoodsOwner();';
+webC += '		goodsOwner.setGoodsOwnerId(1);';
+webC += '		recipient.setGoodsOwner(goodsOwner);';
+webC += '		// 以上代码为临时数据正式时候需删除';
+webC += '		Serializable serializable = dao.save(recipient);';
+webC += '';
+webC += '		return serializable;';
+webC += '';
+webC += '	}';
+webC += '';
+webC += '	@Override';
+webC += '	public Boolean update(Recipient recipient) {';
+webC += '		GoodsOwner goodsOwner = new GoodsOwner();';
+webC += '		goodsOwner.setGoodsOwnerId(1);';
+webC += '		recipient.setGoodsOwner(goodsOwner);';
+webC += '		// 以上代码为临时数据正式时候需删除';
+webC += '		Boolean result = false;';
+webC += '		dao.update(recipient);';
+webC += '		result = true;';
+webC += '';
+webC += '		return result;';
+webC += '	}';
+webC += '';
+webC += '	@Override';
+webC += '	public Boolean unique(Map<String, String> params) throws Exception {';
+webC += '		Boolean flg = true;';
+webC += '		String goodsOwnerId = params.get("goodsOwnerId");';
+webC += '		String recipientName = params.get("param");';
+webC += '		String hql = "from Recipient ";';
+webC += '		/*';
+webC += '		 * where goodsOwner.goodsOwnerId =" + goodsOwnerId';
+webC += '		 */';
+webC += '		List<Recipient> list = dao.find(hql);';
+webC += '		for (int i = 0; i < list.size(); i++) {';
+webC += '			Recipient recipient = list.get(i);';
+webC += '			if (recipient.getRecipientName().equals(recipientName)) {';
+webC += '				flg = false;';
+webC += '				break;';
+webC += '			}';
+webC += '		}';
+webC += '		return flg;';
+webC += '	}';
+webC += '}';
+webC += '';
+	return webC;
+}
+  </script>
+ </body>
+</html>
