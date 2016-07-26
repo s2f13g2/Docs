@@ -11,7 +11,9 @@ $(function(){
 
 
 		});
-
+function startMusic(){
+	
+}
 function submit(){
 	var Article = AV.Object.extend('Article');
 	var Article = new Article();
