@@ -334,14 +334,14 @@
 						
 							
 							if (object.isHot==1) {
-								item += '<div class="hotItem"><div class="ns">'+object.ns+'</div><div style="margin-bottom:5px;">';
+								item += '<div class="hotItem"><div class="ns">'+object.ns+'<span class="gb">'+getCapacityName( object.capacity)+'</span><span class="gb">'+getColorName( object.color)+'</span></div><div style="margin-bottom:5px;">';
 								item += '<span class="upDate">'+object.upDate+'</span><span class="price">Price: '+object.price+'</span>';
-								item += '<span class="gb">'+getCapacityName( object.capacity)+'</span><span class="gb">'+getColorName( object.color)+'</span></div></div>';
+								item += '</div></div>';
 								$("#hotDataList"+m+"").append(item);
 							}else{
-								item += '<div class="dataItem"><div class="ns">'+object.ns+'</div><div style="margin-bottom:5px;">';
+								item += '<div class="dataItem"><div class="ns">'+object.ns+'<span class="gb">'+getCapacityName( object.capacity)+'</span><span class="gb">'+getColorName( object.color)+'</span></div><div style="margin-bottom:5px;">';
 								item += '<span class="upDate">'+object.upDate+'</span><span class="price">Price: '+object.price+'</span>';
-								item += '<span class="gb">'+getCapacityName( object.capacity)+'</span><span class="gb">'+getColorName( object.color)+'</span></div></div>';
+								item += '</div></div>';
 								$("#dataList"+m+"").append(item);
 							};
 							
