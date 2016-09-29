@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>业余作品</title>
+	<link rel="stylesheet" href="css/swiper-3.3.1.min.css">
+	<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+		font-family: "微软雅黑"
+	}
+	body{
+		background: #f5f5f5;
+	}
+	.header{
+		padding-left: 20px;
+		background: #fff;
+		height: 45px;
+	}
+	.logo{
+		background: -webkit-linear-gradient(left,#00b8ff,#7aff00);
+		-webkit-background-clip: text;
+		color: transparent;
+		line-height: 45px;
+		font-size: x-large;
+	}
+	.banner{
+		padding: 10px;
+		border-radius: 4px;
+		min-height: 150px;
+		background: #fff;
+		margin: 2% 2% 2% 2%;
+
+	}
+	.content{
+		border-radius: 4px;
+		margin: 2% 2% 2% 2%;
+
+	}
+	.boxContent{
+		border-radius: 4px;
+		background: #fff;
+
+	}
+	.boxRasterize{
+		width: 48%;
+		padding: 1%;
+		float: left;
+	}
+	.box{
+		padding: 3px;
+		margin: 1%;
+		border-radius: 4px;
+		background: #fff; 
+		width: 100%;
+	}
+	.box span{
+		margin: 3px;
+
+	}
+
+	.footer{
+
+	}
+	ul{
+		margin: 20px;
+	}
+	li{
+		color: #333;
+	}
+	a{text-decoration:none;}
+
+  /** 
+	* 
+	*/
+	span{
+		color: #fff;
+	}
+
+
+	.title{
+		min-height: 24px;
+		max-height: 24px;
+		padding: 1%;
+		border-radius: 4px 4px 0px 0px;
+	}
+	.usaType{
+		padding: 3px;
+		border-radius: 4px;
+		color: #ff6f76;
+		background: #fff;
+		
+	}
+	.net{
+		padding: 1%;
+		text-align: center;
+		color: #666;
+	}
+	.qq{
+		border: 0;
+		padding: 4px 16px;
+		border-radius: 50px;
+		line-height: 50px;
+		color: #999;
+		background: #f5f5f5;
+		transition: all 1s ease;
+	}
+	.qq:hover{
+		-webkit-box-shadow:0 0 7 #333;  
+		-moz-box-shadow:0 0 7px #333;  
+		box-shadow:0 0 7px #333; 
+		color: #fff;
+		background: #70CAFD;
+	}
+	.qr{
+
+	}
+	.pop{
+		padding: 20px;
+		background: #333;
+		display: none;
+		overflow: hidden;
+		border-radius: 5px;
+		position: relative;
+		top: -335px;
+		z-index: 100;
+		left: 344px;
+		width: 200px;
+	}
+	.swiper-slide img{ 
+		width: 350px;
+
+	}
+	.boxinfo{
+		padding: 1%;
+	}
+	</style>
+
+</head>
+<body>
+	<div class="header"><span class="logo">  liuyouth.github.io</span>
+		<a href="index.html"><span class="logo" style="margin-left:180px;">  自营商品</span></a></div>
+	</div>
+	<div class="banner">
+		<h2>  业余作品</h2>
+		<ul>
+			<li>
+				2015年9月份的HolleWrold，让我踏上了一条不归路。
+			</li>
+			<li>一种与显示器 键盘 鼠标 日夜相处的生活方式。 <a class="qq" href=""> 关于设备</a></li>
+			<li>永无休止的学习，求知之路！</li>
+			<li>合作联系 <a class="qq" href="http://wpa.qq.com/msgrd?v=3&uin=869689491&site=qq&menu=yes">QQ</a></li>
+		</ul>
+		
+	</div>
+	<div class="content">
+		<div class="boxRasterize" >
+			<div class="boxContent" >
+				<div class="title" style="    background-color: #ff6767;">
+					<div>
+						<span>Gank.io </span>
+						<span class="usaType">Android客户端 </span>
+
+						<img date-qr="1" class="qr" style="width: 24px;background: #fff;float: right;" src="img/mini2.png">
+						<span style="float:right;margin-right:5px;">扫码下载 → </span>
+					</div>
+					<div date-pop="1" class="pop" >
+						<div style="background: #333;    border-radius: 5px; ">
+							<img class="qr" style="width: 200px;background: #fff;float: right;" src="img/open2.png">
+						</div>
+					</div>
+				</div>
+				<div class="boxbanner">
+					<div class="swiper">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide" style="text-align: center;"><img src="img/gank1.png"></div>				
+								<div class="swiper-slide" style="text-align: center;"><img src="img/gank2.png"></div>
+								<div class="swiper-slide" style="text-align: center;"><img src="img/gank3.png"></div>
+							</div>
+
+						</div>
+
+					</div>
+					
+				</div>
+				<div class="boxinfo">
+					<h3>用到的技术</h3>
+					<ul>
+						<li>MVP</li>
+						<li>dagger · butterknife · </li>
+						<li>RxJava · Retrofit （好似亲哥俩）</li>
+						<li>Gson · Glide · ACache · okhttp3</li>
+						<li>RecycleView · CardView · WebView · SwipeRefreshLayout</li>
+						<li>滑动返回 </li>
+						<li>下拉刷新 上拉加载 </li>
+						<li>WebView 加载进度条</li>
+						<li>BUG吐槽 <a class="qq" href="http://wpa.qq.com/msgrd?v=3&uin=869689491&site=qq&menu=yes">QQ</a></li>
+					</ul>
+				</div>
+				<div class="net"> 
+					更新于2016-09-30
+				</div>
+
+			</div>
+		</div>
+		<div class="boxRasterize" >
+			<div class="boxContent" >
+				<div class="title" style="    background-color: #ff6767;">
+					<div>
+						<span>Songtaste </span>
+						<span class="usaType">Android客户端 </span>
+
+						<img date-qr="2" class="qr" style="width: 24px;background: #fff;float: right;" src="img/mini2.png">
+						<span style="float:right;margin-right:5px;">扫码下载 → </span>
+					</div>
+					<div class="pop" date-pop="2" >
+						<div style="background: #333;    border-radius: 5px; ">
+							<img class="qr" style="width: 200px;background: #fff;float: right;" src="img/open2.png">
+						</div>
+					</div>
+				</div>
+				<div class="boxbanner">
+					<div class="swiper">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide" style="text-align: center;"><img src="img/st1.png"></div>				
+								<div class="swiper-slide" style="text-align: center;"><img src="img/st2.png"></div>
+								
+							</div>
+
+						</div>
+
+					</div>
+					
+				</div>
+				<div class="boxinfo">
+					<h3>用到的技术</h3>
+					<ul>
+						<li>MVP</li>
+						<li>dagger · butterknife · </li>
+						<li>RxJava · Retrofit （好似亲哥俩）</li>
+						<li>Gson · Glide · ACache · okhttp3</li>
+						<li>RecycleView · CardView · WebView · SwipeRefreshLayout</li>
+						<li>滑动返回 </li>
+						<li>下拉刷新 上拉加载 </li>
+						<li>WebView 加载进度条</li>
+						<li>BUG吐槽 <a class="qq" href="http://wpa.qq.com/msgrd?v=3&uin=869689491&site=qq&menu=yes">QQ</a></li>
+					</ul>
+				</div>
+				<div class="net"> 
+					更新于2016-09-30
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div class="footer"></div>
+</body>
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/jquery.gradientify.min.js"></script>
+<script src="js/swiper-3.3.1.jquery.min.js"></script>
+
+<script type="text/javascript">
+var mySwiper = new Swiper ('.swiper-container', {
+	direction: 'horizontal',
+	autoplay: 3000,
+	loop: true,
+})  
+$(function(){
+		//logo颜色渐变动画
+		$(".logo").gradientify({
+			gradients: [
+			{ start: [49,76,172], stop: [242,159,191] },
+			{ start: [255,103,69], stop: [240,154,241] },
+			{ start: [33,229,241], stop: [235,236,117] }
+			]
+		});
+
+		$("[date-qr='1']").mouseenter(function(e){
+			//$(".pop").show(600);
+			$("[date-pop='1']").fadeIn();
+		});
+		$("[date-qr='1']").mouseleave(function(e){
+
+			//$(".pop").hide(600);
+			$("[date-pop='1']").fadeOut();
+		});
+		$("[date-qr='2']").mouseenter(function(e){
+			//$(".pop").show(600);
+			$("[date-pop='2']").fadeIn();
+		});
+		$("[date-qr='2']").mouseleave(function(e){
+
+			//$(".pop").hide(600);
+			$("[date-pop='2']").fadeOut();
+		});
+		
+
+	});
+</script>
+</html>
