@@ -1,0 +1,68 @@
+/**
+*   顶部header 以及导航样式
+*   实现了纯css 二级导航
+*/
+*{font-family:"微软雅黑";margin: 0; padding: 0;}
+a{
+text-decoration:none;
+color: #333;
+}
+
+@font-face {font-family: 'webfont';
+  src: url('//at.alicdn.com/t/4vms79hzn3h4zpvi.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/4vms79hzn3h4zpvi.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/4vms79hzn3h4zpvi.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/4vms79hzn3h4zpvi.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/4vms79hzn3h4zpvi.svg#思源黑体-极细') format('svg'); /* iOS 4.1- */
+}
+
+html{background-attachment: fixed; background-color: #eee; height: 100%;}
+#header{
+    background-color: #fff;overflow: hidden;
+    margin: auto;}
+    #navmenu{float: left; height: 54px; padding-top: 1px;}
+    #menu{float: left;}
+    #menu a{text-decoration: none;}
+    #menu ul{list-style: none; margin: 0; padding: 0;}
+    #menu > ul > li{float: left; padding-bottom: 12px;}
+    #menu ul li a{color: #999; display: block; font-size: 14px; height: 30px; line-height: 30px; padding: 11px 15px 10px; text-shadow: 0 1px 0 #FFFFFF;}
+    #menu ul li a:hover{color: #6ed56c}
+    #menu > ul > li.active > a{border-bottom:4px solid #6ed56c; color: #6ed56c; margin: -1px 0 -1px -1px; }
+    #menu > ul > li.active > a:hover{color: #6ed56c;}
+    #menu > ul > li:first-child > a{}
+    #menu ul ul{
+        background-color: rgba(255, 255, 255, 0.95);
+        border-radius: 5px 5px 5px 5px; box-shadow: 0 1px 0 #FFFFFF inset;  margin-top: 10px; opacity: 0; overflow: hidden; padding: 0; position: absolute; visibility: hidden; min-width: 250px; z-index: 1; -webkit-transition: all .5s; -moz-transition: all .5s; -ms-transition: all .5s; -o-transition: all .5s; transition: all .5s;}
+        #menu ul li:hover ul{min-height: 117px; margin-top: 0\9; opacity: 1; visibility: visible;}
+        #menu ul ul a{border-right-width: 0; border-top: 1px solid #D1D1D1; box-shadow: 0 1px 0 #FFFFFF inset; color: #999; height: 24px; line-height: 24px; padding: 7px 12px; text-shadow: 0 1px 0 #FFFFFF;}
+        #menu ul ul li:first-child a{border-top-width: 0;}
+        #menu ul ul a .icon{background-position: 50% 50%; background-repeat: no-repeat; display: block; float: left; height: 24px; margin-right: 10px; width: 24px;}
+
+    /*     #menu ul ul a .icon.elem0{background-image: url("/jscss/demoimg/201308/elem.png");}
+    #menu ul ul a .icon.elem1{background-image: url("/jscss/demoimg/201308/fb.png");}
+    #menu ul ul a .icon.elem2{background-image: url("/jscss/demoimg/201308/go.png");}
+    #menu ul ul a .icon.elem3{background-image: url("/jscss/demoimg/201308/rs.png");}
+    #menu ul ul a .icon.elem4{background-image: url("/jscss/demoimg/201308/sk.png");}
+    #menu ul ul a .icon.elem5{background-image: url("/jscss/demoimg/201308/su.png");} */
+
+        .logo{
+            background: -webkit-linear-gradient(left,#00b8ff,#7aff00);
+            -webkit-background-clip: text;
+            color: transparent;
+            line-height: 55px;
+            font-size: x-large;
+            padding: 0 25px 0 25px;
+        }
+
+
+    .content{
+        border-radius: 4px;
+        margin: 2% 2% 2% 2%;
+
+    }
+    .boxContent{
+        border-radius: 4px;
+        background: #fff;
+        margin: 5px;
+        padding: 5px;
+    }

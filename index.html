@@ -1,347 +1,304 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="baidu-site-verification" content="9iZgGgtlRk" />
- <head>
- 	<style type="text/css">
- 	body{
-	font-family:"Avenir Next", Avenir, 'Helvetica Neue', 'Lato', 'Segoe UI', Helvetica, Arial, sans-serif;
-	margin:0;
-	padding:0;
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>liuyouth 技术导航站点</title>
+    <link rel="stylesheet" href="css/lib/swiper-3.3.1.min.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <style>
+        .boxContent img {
+        height: 50px;
+    }
+    .bg-bubbles {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 220px;
+  z-index: 1;
 }
-.pricing-section {
-	min-height: 100vh;
-	display: -webkit-flex;
-	display: flex;
-	-webkit-flex-direction: column;
-	flex-direction: column;
-	-webkit-justify-content: center;
-	justify-content: center;
-	-webkit-align-items: center;
-	align-items: center;
+.bg-bubbles li {
+  position: absolute;
+  list-style: none;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.15);
+  bottom: -160px;
+  -webkit-animation: square 25s infinite;
+  animation: square 25s infinite;
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
 }
-.pricing-section__title {
-	font-size: 1.4em;
-	font-weight: 700;
-	flex: none;
-	text-align:center;
+.bg-bubbles li:nth-child(1) {
+  left: 10%;
 }
-
-.bg-7 {
-	color: #C3E9F5;
-	background: linear-gradient(45deg, #7e67e5, #02cbdf);
+.bg-bubbles li:nth-child(2) {
+  left: 20%;
+  width: 80px;
+  height: 80px;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-duration: 17s;
+          animation-duration: 17s;
 }
-/* norbu */
-.pricing--norbu .pricing__item {
-	margin: 1em;
-	color: #fff;
-	cursor: default;
-	font-family: 'Myriad Pro', Arial, sans-serif;
-	border: 1px solid rgba(255,255,255,0.4);
-	background: rgba(255,255,255,0.08);
-	border-radius: 10px;
-	-webkit-transition: border-color 0.3s, background 0.3s;
-	transition: border-color 0.3s, background 0.3s;
+.bg-bubbles li:nth-child(3) {
+  left: 25%;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
 }
-
-.pricing--norbu .pricing__item:hover {
-	border: 1px solid rgba(255,255,255,1);
-	background: rgba(255,255,255,0.18);
+.bg-bubbles li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation-duration: 22s;
+          animation-duration: 22s;
+  background-color: rgba(255, 255, 255, 0.25);
 }
-
-.pricing--norbu .pricing__title {
-	font-size: 2em;
-	font-weight: 400;
-	margin: 0.5em 0;
-	padding: 1em;
-	position: relative;
+.bg-bubbles li:nth-child(5) {
+  left: 70%;
 }
-
-.pricing--norbu .pricing__title::after {
-	content: '';
-	position: absolute;
-	width: 20%;
-	height: 1px;
-	background: #fff;
-	left: 40%;
-	bottom: 0;
+.bg-bubbles li:nth-child(6) {
+  left: 80%;
+  width: 120px;
+  height: 120px;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  background-color: rgba(255, 255, 255, 0.2);
 }
-
-.pricing--norbu .icon {
-	display: inline-block;
-	min-width: 2em;
+.bg-bubbles li:nth-child(7) {
+  left: 32%;
+  width: 160px;
+  height: 160px;
+  -webkit-animation-delay: 7s;
+          animation-delay: 7s;
 }
-
-.pricing--norbu .pricing__price {
-	font-size: 3.5em;
-	padding: 0.5em 0 0 0;
-	font-weight: 400;
-	position: relative;
-	z-index: 100;
+.bg-bubbles li:nth-child(8) {
+  left: 55%;
+  width: 20px;
+  height: 20px;
+  -webkit-animation-delay: 15s;
+          animation-delay: 15s;
+  -webkit-animation-duration: 40s;
+          animation-duration: 40s;
 }
-
-.pricing--norbu .pricing__currency {
-	font-size: 0.5em;
-	vertical-align: super;
+.bg-bubbles li:nth-child(9) {
+  left: 25%;
+  width: 10px;
+  height: 10px;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-duration: 40s;
+          animation-duration: 40s;
+  background-color: rgba(255, 255, 255, 0.3);
 }
-
-.pricing--norbu .pricing__period {
-	font-size: 0.25em;
-	display: block;
-	padding: 1em;
+.bg-bubbles li:nth-child(10) {
+  left: 90%;
+  width: 160px;
+  height: 160px;
+  -webkit-animation-delay: 11s;
+          animation-delay: 11s;
 }
-
-.pricing--norbu .pricing__sentence {
-	padding: 1em 2em;
-	font-size: 1em;
-	margin: 0 auto 1em;
+@-webkit-keyframes square {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-700px) rotate(600deg);
+            transform: translateY(-700px) rotate(600deg);
+  }
 }
-
-.pricing--norbu .pricing__feature-list {
-	font-size: 1.15em;
-	margin: 0 2em;
-	letter-spacing: 0;
-	padding: 2em 0;
-	list-style: none;
-}
-
-.pricing--norbu .pricing__feature {
-	line-height: 1.4;
-}
-
-.pricing--norbu .pricing__feature::before {
-	content: "\e87a";
-	font-family: 'linearicons';
-	display: inline-block;
-	vertical-align: middle;
-	padding: 0 0.75em 0 0;
-}
-
-.pricing--norbu .pricing__action {
-	border:0;
-	font-weight: bold;
-	flex: none;
-	margin: auto 1em 1em;
-	padding: 1.25em 2em;
-	color: #4aa8e4;
-	background: rgba(255,255,255,0.7);
-	border-radius: 5px;
-	-webkit-transition: background 0.3s;
-	transition: background 0.3s;
+@keyframes square {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-700px) rotate(600deg);
+            transform: translateY(-700px) rotate(600deg);
+  }
 }
 
-.pricing--norbu .pricing__action:hover,
-.pricing--norbu .pricing__action:focus {
-	background: #fff;
-}
+.wrapper {
+  background: #50a3a2;
+  background: -webkit-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
+  background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
+  top: 50%;
+  left: 0;
+  width: 96%;
+  height: 220px;
+  overflow: hidden;
 
-/* Dawa */
-.pricing--dawa .pricing__item {
-	padding: 0 2em;
 }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div style="width:30%;float:left;">
+            <span class="logo">  liuyouth.github.io</span>
+        </div>
+        <div id="navmenu" style="width:70%">
+            <nav id="menu">
+                <ul>
+                    <li class="active"><a href="index.html">liuyouth</a>
 
-.pricing--dawa .pricing__title {
-	font-weight: bold;
-	font-size: 1.8em;
-	padding: 0 0 0.5em;
-	background: url(../img/line.png) no-repeat 50% 100%;
-}
+                    </li>
+                    <li><a href="apps.html">个人作品</a>
+                    </li>
+                    <li><a href="gank.io.html">Gank.io</a>
 
-.pricing--dawa .pricing__price {
-	font-size: 3.75em;
-	line-height: 1;
-	margin: 1em 0 0.65em;
-	font-family: 'Homemade Apple', cursive;
-}
+                    </li>
+                    <li><a href="phones.html">iPhones</a>
+                        <ul>
+                            <li><a href="phones.html"><span class="icon elem0"></span>手机报价</a></li>
+                            <li><a href="#"><span class="icon elem0"></span>
+                                配件列表</a></li>
+                                <li><a href="#"><span class="icon elem0"></span>iphone 小通告</a></li>
 
-.pricing--dawa .pricing__period {
-	font-size: 0.25em;
-	display: block;
-}
+                            </ul>
+                        </li>
+                        <!-- <li><a href="#">Videos</a></li>
+                        <li><a href="#">Games</a></li>
+                        <li><a href="#">Blog</a>
+                            <ul>
+                                <li><a href="#"><span class="icon elem0"></span>menu element 1</a></li>
+                                <li><a href="#"><span class="icon elem0"></span>menu element 2</a></li>
+                                <li><a href="#"><span class="icon elem0"></span>menu element 3</a></li>
+                                <li><a href="#"><span class="icon elem0"></span>menu element 4</a></li>
+                                <li><a href="#"><span class="icon elem0"></span>menu element 5</a></li>
+                            </ul>
+                        </li> -->
+                        <li><a href="#">Me</a>
+                            <ul>
+                                <li class="icon elem0" >
+                                    <div style="width:350px;padding:10px;">
+                                        <div style="width:33.3%;text-align:center; float:left;">
+                                            <img style="border-radius:50%;width:73%;height:73%;" src="http://7xavig.com2.z0.glb.qiniucdn.com/b5ecaffd5ae41b0e230e34d677dec98f.png?imageMogr2/auto-orient/quality/100%7CimageMogr2/thumbnail/!100x100r/gravity/Center/crop/100x100/dx/0/dy/0">
+                                            <br>
+                                            <span style="font-weight:bold; color:rgb(103, 106, 108); font-size:0.8em; line-height: 30px;">刘 博</span>
+                                        </div>
+                                        <div style="width:66.6%; float:left;">
+                                            <div style=" padding-left:10px;">
+                                                <span style="font-weight:bold; color:rgb(103, 106, 108);font-size:0.8em; "><img  src="http://www.app-echo.com/statics/v3/images/sex0.png"> 白羊座</span>
 
-.pricing--dawa .pricing__sentence {
-	font-family: 'Homemade Apple', cursive;
-	margin: 0;
-}
+                                                <br>
+                                                <span style=" color:rgb(103, 106, 108);font-size:0.6em; "><img style="    width: 8px;margin: -2px 3px 0 0;
+                                                    height: 14px;"src="http://www.app-echo.com/statics/v3/images/icon_place.png"> 北京</span>
+                                                    <br>
+                                                    <span style="font-weight:bold; color:rgb(103, 106, 108);font-size:0.8em; ">LiuYouth, Item.</span>
+                                                    <br>
+                                                    <span style="color:rgb(103, 106, 108);font-size:0.7em; ">163邮箱： Faithll@163.com</span>
+                                                    <br>
+                                                    <span style="color:rgb(103, 106, 108);font-size:0.7em; "><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=869689491&amp;site=qq&amp;menu=yes">神兽：38637714 </a></span>
+                                                    <br>
 
-.pricing--dawa .pricing__feature-list {
-	margin: 0 0 1.5em;
-	padding: 1em;
-	list-style: none;
-	text-align: center;
-}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="    clear: both;"></div>
+                                        
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
 
-.pricing--dawa .pricing__action {
-	border-radius: 30px;
-	font-size: 1.5em;
-	padding: 0.5em 1.5em;
-	font-family: 'Homemade Apple', cursive;
-	-webkit-transition: color 0.3s;
-	transition: color 0.3s;
-}
+                </div>
+            </div>
+            <div style="text-align:center;clear:both">
+            </div>
 
-.pricing--dawa .pricing__action:hover,
-.pricing--dawa .pricing__action:focus {
-	color: #fffa5c;
-}
+            <div class="content wrapper">
+                <ul class="bg-bubbles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+                <div class="boxContent" style="color:#fff; position: absolute;top: 100px;width: 76%; margin:20px 10%; text-align: center;background-color:rgba(255, 255, 255, 0.32)">
+                    <h1 style="padding:10px;font-size:1.1em;display:block;">方便你我的互联网地图</h1>
+                    
+                    <span style="padding:10px;font-size:1em;color:#999;display:block;">添加你需要站点的方式（自助添加开发中）</span>
+                    <h4>人工添加 将您想要添加的网站信息以如下格式发送至我的邮箱（faithll@163.com）</h4>
+                    { url:'网站链接',img:'网站logo',message: '一句话描述此站点' }
+                </div>
+            </div>
+            <div id="webList" class="content" style="height:1000px">
+                
+                <div v-for="item in items" style="width:25%;float:left;">
+                   <div class="boxContent">
+                        <a href="{{item.url}}" target="_blank">
+                            <div style="text-align: center;">
+                                <img  src="{{item.img}}">
+                                <h5> {{ item.message }}</h5>
+                            </div>
+                        </a>
+                    </div> 
+                </div>
 
-@media screen and (max-width: 40em) {
-	.pricing--dawa .pricing__item {
-		border: 1px solid rgba(255,255,255,0.6);
-		margin: 1em;
-	}
-}
+            </div>
+            <div class="footer"></div>
 
-.pricing {
-	display: -webkit-flex;
-	display: flex;
-	-webkit-flex-wrap: wrap;
-	flex-wrap: wrap;
-	-webkit-justify-content: center;
-	justify-content: center;
-	width: 100%;
-	margin: 0 auto 3em;
-}
-.pricing__item {
-	position: relative;
-	display: -webkit-flex;
-	display: flex;
-	-webkit-flex-direction: column;
-	flex-direction: column;
-	-webkit-align-items: stretch;
-	align-items: stretch;
-	text-align: center;
-	-webkit-flex: 0 1 330px;
-	flex: 0 1 330px;
-}
-    .item {
-   	background-color: #fff;
-    padding: 13px;
-    overflow: auto;
-    border-radius: 5px;
-    transition: all .5s ease;
-    position: absolute;
-    right: 20px;
 
-	}
-	.item:hover{
-		-webkit-transform: scale(1.05);
-	    -moz-transform: scale(1.05);
-	    transform: scale(1.05);
-	    -webkit-border-radius: 8px;
-	    -moz-border-radius: 8px;
-	    border-radius: 8px;
-	    position: absolute;
-	    z-index: 100;
-	}
-	.icont a{
-		background: url(http://www.woyaogexing.com/source/images/vote-ico.png)  no-repeat; 
-		display: inline-block;
-	    font: 12px/17px "microsoft yahei";
-	    color: #333;
-	    padding-left: 20px;
-	    height: 17px;
-	    margin-top: 5px;
-	    vertical-align: top;
-	    margin-right: 5px;
-	    text-decoration: none;
-	}
-	.icont a.t {
-    background-position: -137px 0px;
-	}
-	.icont a.t:hover {
-    background-position: -137px -66px;
-	}
-	.icont a.d {
-    background-position: -137px -22px;
-	}
-	.icont a.d:hover {
-    background-position: -137px -88px;
-	}
-	.icont a.f {
-    background-position: -137px -44px;
-	}
-	.icont a.f:hover {
-    background-position: -137px -111px;
-	}
- 	</style>
- </head>
- <body>
-  <section class="pricing-section bg-7"> 
-		<h2 class="pricing-section__title">LIUYOUTH.COM/实验室</h2> 
-   <div class="pricing pricing--norbu"> 
-    <div class="pricing__item"> 
-     <h3 class="pricing__title">工作</h3> 
-     <p class="pricing__sentence">记录点滴的Code-Life</p> 
-     <div class="pricing__price">
-      <span class="pricing__currency">1-</span>8
-      <span class="pricing__period">/ 2016</span>
-     </div> 
-     <ul class="pricing__feature-list"> 
-      <li class="pricing__feature">Java - Javascript - Regex</li> 
-      <li class="pricing__feature">Android - Ios </li> 
-      <li class="pricing__feature" style="width: 300px;margin-left: -22px;">与技术相关的东西(这里没意思)</li> 
-     </ul> 
-     <button class="pricing__action" onclick="window.location.href='technology/index.html'">Let Me See</button> 
-    </div> 
-    <div class="pricing__item pricing__item--featured"> 
-     <h3 class="pricing__title">生活</h3> 
-     <p class="pricing__sentence">生活中遇到美好的事物</p> 
-     <div class="pricing__price">
-      <span class="pricing__currency">1-</span>8
-      <span class="pricing__period">/ 2016</span>
-     </div> 
-     <ul class="pricing__feature-list"> 
-			 <li class="pricing__feature">享受生活 / 败家 </li> 
-      <li class="pricing__feature"></li> 
-      <li class="pricing__feature">品质生活 / 轻奢 </li> 
-     </ul> 
-     <button class="pricing__action" onclick="window.location.href='QuanEr/main.html'">Let Me See</button> 
-    </div> 
-    <div class="pricing__item"> 
-     <h3 class="pricing__title">精神</h3> 
-			<p class="pricing__sentence">音乐 / 电影 / 图片 / 文章</p> 
-     <div class="pricing__price">
-      <span class="pricing__currency">1-</span>8
-      <span class="pricing__period">/ 2016</span>
-     </div> 
-     <ul class="pricing__feature-list"> 
-      <li class="pricing__feature">小众软件 / 更好的体验</li> 
-      <li class="pricing__feature">精致的音乐，美图，文字</li> 
-      <li class="pricing__feature">最新的电影 / 猎奇 </li> 
-     </ul> 
-     <button class="pricing__action" onclick="window.location.href='spirit/main.html'">Just Have One ！</button> 
-    </div> 
-    <div class="item" >
-				<div style="width:33.3%;text-align:center; float:left;">
-					<img style="border-radius:50%;width:74%;height:74%;" src="http://img.popoho.com/allimg/150307/20005K041-12.jpg">
-					<br>
-					<span style="font-weight:bold; color:rgb(103, 106, 108); font-size:0.8em; line-height: 30px;">刘 博</span>
-				</div>
-				<div style="width:66.6%; float:left;">
-					<div style=" padding-left:10px;">
-						<span style="font-weight:bold; color:rgb(103, 106, 108);font-size:0.8em; ">Code实验室</span>
-						<a href="new/apps.html"><span style="font-weight:bold; color:rgb(103, 106, 108);font-size:0.8em; ">个人项目</span></a>
-						<br>
-						<span style=" color:rgb(103, 106, 108);font-size:0.6em; ">坐标： 北京</span>
-						<br>
-						<span style="font-weight:bold; color:rgb(103, 106, 108);font-size:0.8em; ">LiuYouth, Item.</span>
-						<br>
-						<span style="color:rgb(103, 106, 108);font-size:0.7em; ">163邮箱： Faithll@163.com</span>
-						<br>
-						<span style="color:rgb(103, 106, 108);font-size:0.7em; ">神兽：38637714</span>
-						<br>
-						<div class="icont">
-						<a class="t" href="">0</a>
-						<a class="d" href="">0</a>
-						<a class="f" href="">0</a>
-						<span class="" style="color: #FFFFFF; font-size:0.2em;padding: 4px;background: linear-gradient(45deg, #3AE86F, #6DBCEA);border-radius: 5px;">点赞功能开发中...</span>
-						</div>
-					</div>
-				</div>
-			</div>
-   </div> 
-  </section>
- </body>
-</html>
+        </body>
+        <script src="js/lib/jquery-2.1.1.min.js"></script>
+        <script src="js/lib/jquery.gradientify.min.js"></script>
+        <script src="js/lib/jquery.nicescroll.js"></script>
+        <script src="js/lib/vue.js"></script>
+        <script type="text/javascript">
+
+        new Vue({
+              el: '#webList',
+              data: {
+                items: [
+                  { url:'http://gold.xitu.io/',img:'http://assets.gold.xitu.io/images/logo-header.svg',message: '高质量的技术社区' },
+                  { url:'http://www.jcodecraeer.com/',img:'http://www.easyicon.net/api/resizeApi.php?id=1194933&size=72',message: '泡在网上的日子做最好的移动开发社区'},
+                  { url:'http://www.apkbus.com',img:'http://www.apkbus.com/static/image/common/logo.png',message: '移动互联网门户'},
+                  { url:'http://www.biaonimeia.com/',img:'http://www.biaonimeia.com/images/logo_s.png',message: '一款自动化设计标注工具'},
+                  { url:'http://www.app-echo.com/',img:'http://www.app-echo.com/statics/v3/images/echoBrand@2x.png',message: '音乐社区'},
+                  { url:'http://huaban.com/',img:'http://huaban.com/img/logo.svg',message: '国内最优质图片灵感库'},
+                  { url:'https://dribbble.com/',img:'https://d13yacurqjgara.cloudfront.net/assets/ball-2acfbb9fdf187a34b07a7cc209d07025b39697eba6302c54942a556c10b3fa94.png',message: 'dribbble国外设计站'},
+                  { url:'http://iconfont.cn/',img:'http://www.easyicon.net/api/resizeApi.php?id=1194933&size=72',message: 'iconfont 阿里旗下的图标/字体站'},
+                ]
+              }
+            })
+        $(function(){
+            //logo颜色渐变动画
+            $(".logo").gradientify({
+                gradients: [
+                { start: [0, 184, 255], stop: [110, 213, 108] },
+                { start: [255,103,69], stop: [240,154,241] },
+                { start: [33,229,241], stop: [235,236,117] }
+                ]
+            });
+            //美化浏览器的滚动条
+            $("html").niceScroll({
+                touchbehavior:false,cursorcolor:"#0966ce",cursoropacitymax:1,cursorwidth:5,horizrailenabled:true,cursorborderradius:5,autohidemode:true,background:'none'
+            });
+            
+            //扩展动画
+            $.extend($.easing,{
+                    easeOutExpo:function(e,f,a,h,g){
+                        return(f==g)?a+h:h*(-Math.pow(2,-10*f/g)+1)+a
+                    },easeOutBounce:function(x,t,b,c,d){
+                    if((t/=d)<(1/2.75)){
+                        return c*(7.5625*t*t)+b;
+                    }else if(t<(2/2.75)){
+                        return c*(7.5625*(t-=(1.5/2.75))*t+.75)+b;
+                    }else if(t<(2.5/2.75)){
+                        return c*(7.5625*(t-=(2.25/2.75))*t+.9375)+b;
+                    }else{
+                        return c*(7.5625*(t-=(2.625/2.75))*t+.984375)+b;
+                    }
+                }
+            });
+        });
+        </script>
+        </html>

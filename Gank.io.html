@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="https://connoratherton.com/assets/css/vendor/loaders.css.min.css">
+	<link rel="stylesheet" href="css/menu.css">
+	<title>Gank.io - liuyouth 技术导航站点</title>
+	<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+		font-family: "微软雅黑"
+	}
+	body{
+		background: #f5f5f5;
+		color: #333;
+	}
+	.header{
+		padding-left: 20px;
+		background: #fff;
+		height: 45px;
+	}
+
+	.logoBG{
+		background: -webkit-linear-gradient(left,#00b8ff,#7aff00);
+		-webkit-background-clip: text;
+		line-height: 45px;
+		font-size: x-large;
+	}
+	.banner{
+		padding: 10px;
+		border-radius: 4px;
+		min-height: 150px;
+		background: #fff;
+		margin: 2% 2% 2% 2%;
+		
+	}
+	.content{
+		border-radius: 4px;
+		margin: 2% 2% 2% 2%;
+		background: #fff;
+		padding: 2%;
+		padding-bottom: 4%;
+		overflow: hidden;
+		min-height: 50px;
+	}
+	.item{
+		margin: 1%;
+		border-radius: 4px;
+		background: #fff; 
+		float: left;
+		width: 30%;
+		transition: all 1s ease;
+	}
+	.item span{
+		margin: 3px;
+
+	}
+	.item:hover{
+		-webkit-box-shadow:0 0 15 #fff;  
+		-moz-box-shadow:0 0 15px #fff;  
+		box-shadow:0 0 15px #fff; 
+	}
+	.footer{
+
+	}
+	ul{
+		margin: 20px;
+	}
+	li{
+		color: #333;
+	}
+	a{text-decoration:none;}
+
+  /** 
+	* 
+	*/
+	span{
+		color: #fff;
+	}
+	.usaType{
+		
+		border-radius: 4px;
+		padding: 0px 4px 1px 0px;
+		color: #ff6f76;
+		
+	}
+	.net{
+		color: #666;
+	}
+	.qq{
+		border: 0;
+		padding: 4px 16px;
+		border-radius: 50px;
+		line-height: 50px;
+		color: #999;
+		background: #f5f5f5;
+		transition: all 1s ease;
+	}
+	.qq:hover{
+		-webkit-box-shadow:0 0 7 #333;  
+		-moz-box-shadow:0 0 7px #333;  
+		box-shadow:0 0 7px #333; 
+		color: #fff;
+		background: #70CAFD;
+	}
+	.item img{
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
+		width: 100%;
+		overflow: hidden;
+	}
+	h2{
+		color: #333;
+	}
+	.content button{
+		border: 1px solid #fff;
+		border-radius: 4px;
+		background: transparent;
+		color: #fff;
+		padding: 8px;
+		font-size: 0.8em;
+		transition: all .5s ease;
+	}
+	.content button:hover{
+		border: 1px solid #fff;
+		border-radius: 4px;
+		background: rgba(255,255,255,0.22);
+		color: #fff;
+		padding: 8px;
+		font-size: 0.8em;
+	}
+	.content button:link{
+	
+	}
+	.dayContent a{
+		color: #333;
+	}
+	.dayContent img{
+		max-height: 380px;
+	}
+	</style>
+</head>
+<body>
+	<div id="header">
+        <div style="width:30%;float:left;">
+            <span class="logo">  liuyouth.github.io</span>
+        </div>
+        <div id="navmenu" style="width:70%">
+            <nav id="menu">
+                <ul>
+                    <li><a href="index.html">liuyouth</a>
+
+                    </li>
+                    <li ><a href="apps.html">个人作品</a>
+                    </li>
+                    <li class="active"><a href="gank.io.html">Gank.io</a>
+
+                    </li>
+                    <li><a href="phones.html">iPhones</a>
+                        <ul>
+                            <li><a href="phones.html"><span class="icon elem0"></span>手机报价</a></li>
+                            <li><a href="#"><span class="icon elem0"></span>
+                                配件列表</a></li>
+                                <li><a href="#"><span class="icon elem0"></span>iphone 小通告</a></li>
+
+                            </ul>
+                        </li>
+                        <!-- <li><a href="#">Videos</a></li>
+                        <li><a href="#">Games</a></li>
+                        <li><a href="#">Blog</a>
+                            <ul>
+                                <li><a href="#"><span class="icon elem0"></span>menu element 1</a></li>
+                                <li><a href="#"><span class="icon elem0"></span>menu element 2</a></li>
+                                <li><a href="#"><span class="icon elem0"></span>menu element 3</a></li>
+                                <li><a href="#"><span class="icon elem0"></span>menu element 4</a></li>
+                                <li><a href="#"><span class="icon elem0"></span>menu element 5</a></li>
+                            </ul>
+                        </li> -->
+                        <li><a href="#">Me</a>
+                            <ul>
+                                <li class="icon elem0" >
+                                    <div style="width:350px;padding:10px;">
+                                        <div style="width:33.3%;text-align:center; float:left;">
+                                            <img style="border-radius:50%;width:73%;height:73%;" src="http://7xavig.com2.z0.glb.qiniucdn.com/b5ecaffd5ae41b0e230e34d677dec98f.png?imageMogr2/auto-orient/quality/100%7CimageMogr2/thumbnail/!100x100r/gravity/Center/crop/100x100/dx/0/dy/0">
+                                            <br>
+                                            <span style="font-weight:bold; color:rgb(103, 106, 108); font-size:0.8em; line-height: 30px;">刘 博</span>
+                                        </div>
+                                        <div style="width:66.6%; float:left;">
+                                            <div style=" padding-left:10px;">
+                                                <span style="font-weight:bold; color:rgb(103, 106, 108);font-size:0.8em; "><img  src="http://www.app-echo.com/statics/v3/images/sex0.png"> 白羊座</span>
+
+                                                <br>
+                                                <span style=" color:rgb(103, 106, 108);font-size:0.6em; "><img style="    width: 8px;margin: -2px 3px 0 0;
+                                                    height: 14px;"src="http://www.app-echo.com/statics/v3/images/icon_place.png"> 北京</span>
+                                                    <br>
+                                                    <span style="font-weight:bold; color:rgb(103, 106, 108);font-size:0.8em; ">LiuYouth, Item.</span>
+                                                    <br>
+                                                    <span style="color:rgb(103, 106, 108);font-size:0.7em; ">163邮箱： Faithll@163.com</span>
+                                                    <br>
+                                                    <span style="color:rgb(103, 106, 108);font-size:0.7em; "><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=869689491&amp;site=qq&amp;menu=yes">神兽：38637714 </a></span>
+                                                    <br>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="    clear: both;"></div>
+                                        
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+            </div>
+            <div style="text-align:center;clear:both">
+            </div>
+		
+		<div class="banner">
+			<h2>  Gank.io WEB页面</h2>
+			<ul>
+				<li>感谢 Gank.io提供APi</li>
+				<li>本页面采用Angular.js 开发</li>
+				<li>闲暇之余，折腾的小玩具！</li>
+				<li>如有侵权请联系删除 <a class="qq" href="http://wpa.qq.com/msgrd?v=3&uin=869689491&site=qq&menu=yes">QQ</a></li>
+
+			</ul>    
+
+		</div>
+		<div class="content logoBG">
+			<div ng-app="myApp" ng-controller="customersCtrl" > 
+				<div style="
+				overflow: hidden;
+				" id="container" infinite-scroll='nextdate(page)' infinite-scroll-disabled="busy"  infinite-scroll-distance='1'>		<div>当前页面加载了 {{page-1}} 页数据 <button ng-click="fuli()">福利图</button> <button ng-click="day('0')">每日一Gank</button> </div>
+				<div id="list">
+					<div class="item" ng-repeat="x in results" >
+						<img src="{{x.url}}">
+						<div ng-click="day('{{x.infoUrl}}')"> {{ x.desc + ', ' + x.who }}</div></a>
+						<div></div>
+					</div>
+				</div>
+				<div id="day" style="padding:5px;">
+					<div class="dayTitle"></div>
+					<div class="dayContent"></div>
+					<div class="dayFooter"></div>
+				</div>
+
+			</div>
+			<div id="myApploader" style="
+			text-align: center;
+			margin: 0 auto;
+			width: 40px;
+			" class="loader"><div class="loader-inner ball-clip-rotate-multiple"><div></div><div></div></div></div>
+			<div id="myAppAgain" ng-click='updatedate(page);' style="display:none">
+				<div data-width="32.0" data-height="32.0" class="svg-box" style="width: 32.0px; height: 32.0px; margin: 0 auto;">
+					<svg width="38" height="38" viewBox="0 0 38 40">
+						<g class="transform-group">
+							<g transform="translate(0, 28.0) scale(1, -1) scale(0.03125, 0.03125)">
+								<path d="M512-212C229.239467-212 0 17.239467 0 300 0 582.760533 229.239467 812 512 812 794.760533 812 1024 582.760533 1024 300 1024 17.239467 794.760533-212 512-212ZM800.733867 374.717867 767.726933 374.717867 745.0624 374.717867C759.0912 342.9056 767.726933 308.123733 767.726933 270.9184 767.726933 127.387733 653.2096 10.993067 512 10.993067 370.7904 10.993067 256.273067 127.387733 256.273067 270.9184 256.273067 414.312533 370.4832 530.5024 511.453867 530.8096L512 434.382933 630.4768 554.805333 512 675.261867 511.488 583.170133C342.050133 582.897067 204.8 443.223467 204.8 270.9184 204.8 98.4768 342.3232-41.333333 512-41.333333 681.6768-41.333333 819.2 98.4768 819.2 270.9184 819.2 307.509333 812.270933 342.222933 800.733867 374.717867Z" fill="#737383"></path>
+							</g>
+						</g>
+					</svg>
+				</div>
+				<span>{{info}}</span>
+			</div>
+
+
+		</div>
+
+	</div>
+	<div class="footer"></div>
+
+
+	<script src="js/lib/jquery-2.1.1.min.js"></script>
+	<script src="js/lib/jquery.gradientify.min.js"></script>
+	<script src="js/lib/swiper-3.3.1.jquery.min.js"></script>
+	<script src="js/lib/jquery.nicescroll.js"></script>
+	<script src="js/lib/vue.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular-animate.min.js"></script>
+	<script type='text/javascript' src='js/lib/ng-infinite-scroll.min.js'></script>
+
+	<script type="text/javascript">
+
+
+	var app = angular.module('myApp', ['infinite-scroll']);
+	app.controller('customersCtrl', function($scope, $http) {
+			/**
+			 * 控制器
+			 */
+			 $scope.page = 1; // 记录页码
+			 $scope.dates =[]; // 日期数据
+			 $scope.datas =[]; // 数据
+			 $scope.busy =false; // 福利页面的刷新 开关  false 标示可以刷新  true  标示禁用刷新
+			 $scope.info = "Api服务器无响应，点击重试"; //福利面板 提示
+			//面板内容切换
+			$scope.fuli = function (){
+				$("#list").show();
+				$scope.busy =false;
+				$("#day").hide();
+
+			}
+			$scope.day = function (url){
+				if (url == "0") {
+					url = $scope.dates[0];
+				}
+				$scope.busy =true;
+				$("#day").show();
+				$("#list").hide();
+				$("#myAppAgain").hide();
+				$("#myApploader").hide();
+				updateDay(url);
+			}
+			$scope.updateDay = function(date){
+				$http.get("http://gank.io/"+date)
+				.success(function(response){  
+					// $("#myApploader").hide();
+					console.log(response);
+					/*$scope.busy = false;
+					if (response.results.length < 1) {
+						$scope.info = "没有更多了";
+						$("#myAppAgain").show();
+					}else{
+
+						$scope.page ++;	
+						for (var i = 0; i < response.results.length; i++) {
+							var dateStr =response.results[i].publishedAt; 
+							var gankdate = new Date(dateStr).Format("yyyy-MM-dd");
+							var infoUrl = "http://gank.io/api/day/"+gankdate.replace(/-/g,"/");
+							response.results[i].infoUrl = infoUrl;
+							$scope.dates.push(gankdate);
+							$scope.datas.push(response.results[i]);
+						};
+
+						$scope.results = $scope.datas;
+					}*/
+				})
+				.error(function(data, status, headers, config) {  
+					/*$("#myAppAgain").show();
+					$("#myApploader").hide();*/
+				});
+			}
+
+			function updateDay(date){
+				$http.get("http://gank.io/api/history/content/day/"+date)
+				.success(function(response){  
+					// $("#myApploader").hide();
+					console.log(response);
+					$scope.busy = false;
+					if (response.results.length < 1) {
+						$scope.info = "没有更多了";
+						$("#myAppAgain").show();
+					}else{
+
+						$scope.page ++;	
+						for (var i = 0; i < response.results.length; i++) {
+							var dateStr =response.results[i].content; 
+						};
+						$("#day .dayContent").empty();
+						$("#day .dayContent").append(dateStr);
+					}
+				})
+				.error(function(data, status, headers, config) {  
+					/*$("#myAppAgain").show();
+					$("#myApploader").hide();*/
+				});
+			}
+			/*//初始化数据
+			$http.get("http://gank.io/api/data/%E7%A6%8F%E5%88%A9/10/1")
+			.success(function(response) {
+				$("#myApploader").hide();
+				console.log(response);
+				$scope.results = response.results;})
+			.error(function(data, status, headers, config) {  
+				$("#myAppAgain").show();
+				$("#myApploader").hide();
+			});*/
+			//更新数据
+			$scope.updatedate = function(page){ 
+				
+				$scope.busy = true;
+				console.log("刷新数据: page="+page); 
+				$("#myApploader").show();
+				$("#myAppAgain").hide();
+				$("#myApploader").show();
+				$http.get("http://gank.io/api/data/%E7%A6%8F%E5%88%A9/10/"+page)
+				.success(function(response){  
+					$("#myApploader").hide();
+					console.log(response);
+					$scope.busy = false;
+					if (response.results.length < 1) {
+						$scope.info = "没有更多了";
+						$("#myAppAgain").show();
+					}else{
+
+						$scope.page ++;	
+						for (var i = 0; i < response.results.length; i++) {
+							var dateStr =response.results[i].publishedAt; 
+							var gankdate = new Date(dateStr).Format("yyyy-MM-dd");
+							var infoUrl = "http://gank.io/api/day/"+gankdate.replace(/-/g,"/");
+							response.results[i].infoUrl = infoUrl;
+							$scope.dates.push(gankdate.replace(/-/g,"/"));
+							$scope.datas.push(response.results[i]);
+						};
+
+						$scope.results = $scope.datas;
+					}
+				})
+				.error(function(data, status, headers, config) {  
+					$("#myAppAgain").show();
+					$("#myApploader").hide();
+				});
+
+			} 
+			//加载下一页数据
+			$scope.nextdate = function(page){ 
+				if ($scope.busy) return; 
+				$scope.busy = true;
+				console.log("正在加载数据：page="+page);
+				$("#myApploader").show();
+				$http.get("http://gank.io/api/data/%E7%A6%8F%E5%88%A9/10/"+page)
+				.success(function(response){  
+					$("#myApploader").hide();
+					console.log(response);
+					$scope.busy = false;
+					if (response.results.length < 1) {
+						$scope.info = "没有更多了";
+						$("#myAppAgain").show();
+					}else{
+
+						$scope.page ++;	
+						for (var i = 0; i < response.results.length; i++) {
+							var dateStr =response.results[i].publishedAt; 
+							var gankdate = new Date(dateStr).Format("yyyy-MM-dd");
+							var infoUrl = "http://gank.io/api/day/"+gankdate.replace(/-/g,"/");
+							response.results[i].infoUrl = infoUrl;
+							$scope.dates.push(gankdate.replace(/-/g,"/"));
+							$scope.datas.push(response.results[i]);
+						};
+
+						$scope.results = $scope.datas;
+					}
+				})
+				.error(function(data, status, headers, config) {  
+					$("#myAppAgain").show();
+					$("#myApploader").hide();
+				});
+
+			} 
+		});
+
+
+
+$(function(){
+	initUtil();
+	$("#day").hide();
+		//logo颜色渐变动画
+		$(".logo").gradientify({
+			gradients: [
+            { start: [0, 184, 255], stop: [110, 213, 108] },
+			{ start: [255,103,69], stop: [240,154,241] },
+			{ start: [33,229,241], stop: [235,236,117] }
+			]
+		});
+		$(".logoBG").gradientify({
+			gradients: [
+			{ start: [0, 184, 255], stop: [110, 213, 108] },
+			{ start: [255,103,69], stop: [240,154,241] },
+			{ start: [33,229,241], stop: [235,236,117] }
+			]
+		});
+		//美化浏览器的滚动条
+			$("html").niceScroll({
+				touchbehavior:false,cursorcolor:"#0966ce",cursoropacitymax:1,cursorwidth:5,horizrailenabled:true,cursorborderradius:5,autohidemode:true,background:'none'
+			});
+			
+			//扩展动画
+			$.extend($.easing,{
+					easeOutExpo:function(e,f,a,h,g){
+						return(f==g)?a+h:h*(-Math.pow(2,-10*f/g)+1)+a
+					},easeOutBounce:function(x,t,b,c,d){
+					if((t/=d)<(1/2.75)){
+						return c*(7.5625*t*t)+b;
+					}else if(t<(2/2.75)){
+						return c*(7.5625*(t-=(1.5/2.75))*t+.75)+b;
+					}else if(t<(2.5/2.75)){
+						return c*(7.5625*(t-=(2.25/2.75))*t+.9375)+b;
+					}else{
+						return c*(7.5625*(t-=(2.625/2.75))*t+.984375)+b;
+					}
+				}
+			});
+	});
+/**
+ * 添加自定义功能
+ */
+ function initUtil(){
+ 	//为Date类型设置Format 方法
+		Date.prototype.Format = function (fmt) { //author: meizz 
+			var o = {
+        "M+": this.getMonth() + 1, //月份 
+        "d+": this.getDate(), //日 
+        "h+": this.getHours(), //小时 
+        "m+": this.getMinutes(), //分 
+        "s+": this.getSeconds(), //秒 
+        "q+": Math.floor((this.getMonth() + 3) / 3), //季度 
+        "S": this.getMilliseconds() //毫秒 
+    };
+    if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+    for (var k in o)
+    	if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+    return fmt;
+}
+}
+</script>
+</body>
+</html>
