@@ -125,7 +125,7 @@
 		width: 200px;
 	}
 	.swiper-slide img{ 
-		width: 320px;
+		
 		
 	}
 
@@ -271,95 +271,7 @@
 
 
             <div id="appList" class="content">
-            	<div  v-for="item in items" style="width:100%;margin-top:60px;    overflow: hidden;" >
-
-            		<div style="width:20%;float:left;">
-            			<div style="margin-top:60px;background: #fff;border-radius:5px;">
-            				<div style="
-            				position: relative;
-            				top:-60px;
-            				text-align: center;
-            				">
-	            				<img style="
-	            				background: #ff6767;
-	            				border-radius: 50%;
-	            				width:100px;
-	            				margin-bottom:10px;"
-	            				src="img/gank.io.png">
-	            				
-            				</div>
-							<div style="
-            				position: relative;
-            				top:-40px;
-            				text-align: center;
-            				">
-								<h4 style="margin-bottom:20px;">Gank.io干货集中营</h4>
-	            				<div style="color:#333;font-size:12px;margin-bottom:10px;">提供关于IT行业的技术干货</div>
-	            				<div style="color:#333;font-size:12px;margin-bottom:10px;">包括但不限于以下行业相关</div>
-	            				<div style="color:#333;font-size:12px;margin-bottom:10px;">Android iOS 前端 </div>
-	            				
-	            				<div>BUG吐槽 <a class="qq" href="http://wpa.qq.com/msgrd?v=3&uin=869689491&site=qq&menu=yes">QQ</a></div>
-								<div style="color:#ccc;font-size:12px;">最后修改：2016-10-14</div>
-
-							</div>
-            			</div>
-            			<div class="my-pagination" >
-            				&nbsp;
-            			</div>
-            		</div>
-            		<div style="width:78%;float:left;margin-left:2%; ">
-            			<div class="swiper">
-            				<div class="swiper-container tab-view">
-            					<div class="swiper-wrapper">
-
-            						<div class="swiper-slide">
-            							<div  style="background: #fff;padding:10px;border-radius:5px;    text-align: center;">
-            								    <!-- Swiper -->
-											    <div class="imgs swiper-container">
-											        <div class="swiper-wrapper">
-											            <div class="swiper-slide">
-															<img src="img/gank1.png">
-											            </div>
-											            <div class="swiper-slide">
-            												<img src="img/gank2.png">
-											            </div>
-											            <div class="swiper-slide">
-            												<img src="img/gank3.png">
-											            </div>
-											            
-											        </div>
-											        <!-- Add Pagination -->
-											        <div class="swiper-pagination"></div>
-											    </div>
-            								
-            							</div>
-            						</div>
-            						<div class="swiper-slide" >
-            							<div  style="background: #fff;padding:10px;border-radius:5px; ">
-            								<div class="boxinfo">
-												<h3>用到的技术</h3>
-												<ul>
-													<li>MVP</li>
-													<li>dagger · butterknife · </li>
-													<li>RxJava · Retrofit </li>
-													<li>Gson · Glide · ACache · okhttp3</li>
-													<li>RecycleView · CardView · WebView · SwipeRefreshLayout</li>
-													<li>滑动返回 </li>
-													<li>下拉刷新 上拉加载 </li>
-												</ul>
-											</div>
-            							</div>
-            						</div>
-            						<div class="swiper-slide">
-            							<div  style="background: #fff;padding:10px;border-radius:5px;    text-align: center;">
-            								<img class="qr" style="width: 200px;background: #fff;" src="img/open2.png">
-            							</div>
-            						</div>
-            					</div>
-            				</div>
-            			</div>
-            		</div>
-        		</div>
+            
         		<div  v-for="item in items" style="width:100%;margin-top:60px;    overflow: hidden;" >
 
             		<div style="width:20%;float:left;">
@@ -369,11 +281,7 @@
             				top:-60px;
             				text-align: center;
             				">
-	            				<img style="
-	            				background: #ff6767;
-	            				border-radius: 50%;
-	            				width:100px;
-	            				margin-bottom:10px;"
+	            				<img style="{{item.style}}"
 	            				src="{{item.logo}}">
 	            				
             				</div>
@@ -427,7 +335,9 @@
             						</div>
             						<div class="swiper-slide">
             							<div  style="background: #fff;padding:10px;border-radius:5px;    text-align: center;">
-            								<a href="{{item.downloadUrl}}"><img class="qr" style="width: 200px;background: #fff;" src="{{item.downloadImg}}"></a>
+            								<a href="{{item.downloadUrl}}">
+												<h3>点击体验</h3>
+            									<img class="qr" style="width: 200px;background: #fff;" src="{{item.downloadImg}}"></a>
             							</div>
             						</div>
             					</div>
@@ -552,17 +462,44 @@
               el: '#appList',
               data: {
                 items: [
-                	{	name:"Gank.io干货集中营",logo:"img/gank.io.png",lastDate:"2016-10-14",
+                	{	name:"Gank.io干货集中营",logo:"img/gank.io.png",lastDate:"2016-10-14",style:"background: #ff6767;border-radius: 50%;width:100px;margin-bottom:10px;",
 	                	info:[
 		                		{m:"提供关于IT行业的技术干货"},
 		                		{m:"包括但不限于以下行业相关"},
 		                		{m:"Android iOS 前端"},
+		                		{m:"Android App"},
 		                	],
 		                imgs:[{m:"img/gank1.png"},{m:"img/gank2.png"},{m:"img/gank3.png"},],
 		                technologys:[{m:"MVP"},{m:"dagger · butterknife"},{m:"RxJava · Retrofit"},{m:"Gson · Glide · ACache · okhttp3"},{m:"RecycleView · CardView · WebView · SwipeRefreshLayout"},{m:"滑动返回"},{m:"下拉刷新 上拉加载"},],
 		                downloadImg:"img/open2.png",downloadUrl:"#",
-
                 	},
+                	{	name:"Songtaste客户端",logo:"img/songtaste.png",lastDate:"2015-07-22",style:"background: transparent;width:100px;margin-bottom:10px;",
+	                	info:[
+		                		{m:"songtaste定制客户端"},
+		                		{m:"2015-7-20日Songtaste网站关闭播放模块"},
+		                		{m:"易语言制作"},
+		                		{m:"Windows 软件"},
+		                	],
+		                imgs:[{m:"img/songtasteMax.png"},{m:"img/songtasteMin.png"},],
+		                technologys:[{m:"Ex_Dui 2.0"},{m:"正则"},{m:"音乐播放"},{m:"使用说明"},{m:"翻页方法：右击上一曲是上一页。下一页同上。"}],
+		                downloadImg:"img/songtaste.png",downloadUrl:"app/songtaste.exe",
+                	},
+                	{	name:"爱度亚麻籽油官网",logo:"img/aidu.png",lastDate:"2015-07-22",style:"padding:10px;background: #fff;border-radius: 5px;width:150px;margin-bottom:10px;",
+	                	info:[
+		                		{m:"前台样式根据设计图定制"},
+		                		{m:"后台使用javaEE，框架如下"},
+		                		{m:"Spring MVC Hibernate "},
+		                		{m:"Web站点"},
+		                	],
+		                imgs:[{m:"img/aidui.png"},{m:"img/ailife.png"},],
+		                technologys:[{m:"后台采用Spring MVC Hibernate 框架 "},
+		                		{m:"此站点大部分时间用在了UI矫正方面"},
+		                		{m:"与设计图上标注的尺寸相差小于1px"},
+		                		{m:"此项目我负责一些难点的突破，与较为复杂页面的实现"},
+		                		{m:"首页/生活这两个页面我主要负责的，感谢左经理的帮忙。"},],
+		                downloadImg:"img/aidu.png",downloadUrl:"http://www.aiduworld.com/cn/",
+                	},
+                	
                 ]
             }
         });
