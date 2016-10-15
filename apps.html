@@ -259,7 +259,7 @@
             	<h2>  业余作品</h2>
             	<ul>
             		<li>
-            			2014年3月份的HolleWrold，让我踏上了一条不归路。
+            			2014年3月份的HelloWorld，让我踏上了一条不归路。
             		</li>
             		<li>一种与显示器 键盘 鼠标 日夜相处的生活方式。 <a class="qq" href=""> 关于设备</a></li>
             		<li>永无休止的学习，求知之路！</li>
@@ -270,8 +270,8 @@
 
 
 
-            <div class="content">
-            	<div   style="width:100%;margin-top:60px;" >
+            <div id="appList" class="content">
+            	<div  v-for="item in items" style="width:100%;margin-top:60px;    overflow: hidden;" >
 
             		<div style="width:20%;float:left;">
             			<div style="margin-top:60px;background: #fff;border-radius:5px;">
@@ -321,10 +321,10 @@
 															<img src="img/gank1.png">
 											            </div>
 											            <div class="swiper-slide">
-            												<img src="img/gank3.png">
+            												<img src="img/gank2.png">
 											            </div>
 											            <div class="swiper-slide">
-            												<img src="img/gank2.png">
+            												<img src="img/gank3.png">
 											            </div>
 											            
 											        </div>
@@ -353,6 +353,81 @@
             						<div class="swiper-slide">
             							<div  style="background: #fff;padding:10px;border-radius:5px;    text-align: center;">
             								<img class="qr" style="width: 200px;background: #fff;" src="img/open2.png">
+            							</div>
+            						</div>
+            					</div>
+            				</div>
+            			</div>
+            		</div>
+        		</div>
+        		<div  v-for="item in items" style="width:100%;margin-top:60px;    overflow: hidden;" >
+
+            		<div style="width:20%;float:left;">
+            			<div style="margin-top:60px;background: #fff;border-radius:5px;">
+            				<div style="
+            				position: relative;
+            				top:-60px;
+            				text-align: center;
+            				">
+	            				<img style="
+	            				background: #ff6767;
+	            				border-radius: 50%;
+	            				width:100px;
+	            				margin-bottom:10px;"
+	            				src="{{item.logo}}">
+	            				
+            				</div>
+							<div style="
+            				position: relative;
+            				top:-40px;
+            				text-align: center;
+            				">
+								<h4 style="margin-bottom:20px;">{{item.name}}</h4>
+	            				<div v-for="info in item.info" style="color:#333;font-size:12px;margin-bottom:10px;">{{info.m}}</div>
+	            			
+	            				<div>BUG吐槽 <a class="qq" href="http://wpa.qq.com/msgrd?v=3&uin=869689491&site=qq&menu=yes">QQ</a></div>
+								<div style="color:#ccc;font-size:12px;">最后修改：{{item.lastDate}}</div>
+
+							</div>
+            			</div>
+            			<div class="my-pagination" >
+            				&nbsp;
+            			</div>
+            		</div>
+            		<div style="width:78%;float:left;margin-left:2%; ">
+            			<div class="swiper">
+            				<div class="swiper-container tab-view">
+            					<div class="swiper-wrapper">
+
+            						<div class="swiper-slide">
+            							<div  style="background: #fff;padding:10px;border-radius:5px;    text-align: center;">
+            								    <!-- Swiper -->
+											    <div class="imgs swiper-container">
+											        <div class="swiper-wrapper">
+
+											            <div v-for="img in item.imgs" class="swiper-slide">
+															<img src="{{img.m}}">
+											            </div>
+											        </div>
+											        <!-- Add Pagination -->
+											        <div class="swiper-pagination"></div>
+											    </div>
+            								
+            							</div>
+            						</div>
+            						<div class="swiper-slide" >
+            							<div  style="background: #fff;padding:10px;border-radius:5px; ">
+            								<div class="boxinfo">
+												<h3>用到的技术</h3>
+												<ul v-for="te in item.technologys">
+													<li>{{te.m}}</li>
+												</ul>
+											</div>
+            							</div>
+            						</div>
+            						<div class="swiper-slide">
+            							<div  style="background: #fff;padding:10px;border-radius:5px;    text-align: center;">
+            								<a href="{{item.downloadUrl}}"><img class="qr" style="width: 200px;background: #fff;" src="{{item.downloadImg}}"></a>
             							</div>
             						</div>
             					</div>
@@ -468,10 +543,31 @@
 <script src="js/lib/swiper-3.3.1.jquery.min.js"></script>
 <script src="js/lib/jquery.nicescroll.js"></script>
 <script src="js/lib/vue.js"></script>
+ 
 
 
-<script> 
-var mySwiper = new Swiper('.tab-view',{
+
+<script type="text/javascript">
+ new Vue({
+              el: '#appList',
+              data: {
+                items: [
+                	{	name:"Gank.io干货集中营",logo:"img/gank.io.png",lastDate:"2016-10-14",
+	                	info:[
+		                		{m:"提供关于IT行业的技术干货"},
+		                		{m:"包括但不限于以下行业相关"},
+		                		{m:"Android iOS 前端"},
+		                	],
+		                imgs:[{m:"img/gank1.png"},{m:"img/gank2.png"},{m:"img/gank3.png"},],
+		                technologys:[{m:"MVP"},{m:"dagger · butterknife"},{m:"RxJava · Retrofit"},{m:"Gson · Glide · ACache · okhttp3"},{m:"RecycleView · CardView · WebView · SwipeRefreshLayout"},{m:"滑动返回"},{m:"下拉刷新 上拉加载"},],
+		                downloadImg:"img/open2.png",downloadUrl:"#",
+
+                	},
+                ]
+            }
+        });
+ for (var i = 0; i < 1; i++) {
+ 	var mySwiper = new Swiper('.tab-view',{
 	pagination: '.my-pagination',
 	swipeHandler : '.swipe-handler',
 	paginationClickable: true,
@@ -485,16 +581,28 @@ var mySwiper = new Swiper('.tab-view',{
 		return '<span class="' + className + '">' + name + '</span>';
 	}
 })
+ };
+/*var mySwiper = new Swiper('.tab-view',{
+	pagination: '.my-pagination',
+	swipeHandler : '.swipe-handler',
+	paginationClickable: true,
+	paginationBulletRender: function (index, className) {
+		switch (index) {
+			case 0: name='应用截图';break;
+			case 1: name='技术介绍';break;
+			case 2: name='下载方式';break;
+			default: name='';
+		}
+		return '<span class="' + className + '">' + name + '</span>';
+	}
+})*/
     var swiper = new Swiper('.imgs', {
         pagination: '.swiper-pagination',
         paginationClickable: true,
         autoplay: 3000,
 		loop: true,
     });
-</script>
 
-
-<script type="text/javascript">
 
 $(function(){
 
@@ -527,24 +635,7 @@ $(function(){
 					}
 				}
 			});
-			$("[date-qr='1']").mouseenter(function(e){
-			//$(".pop").show(600);
-			$("[date-pop='1']").fadeIn();
-		});
-			$("[date-qr='1']").mouseleave(function(e){
 
-			//$(".pop").hide(600);
-			$("[date-pop='1']").fadeOut();
-		});
-			$("[date-qr='2']").mouseenter(function(e){
-			//$(".pop").show(600);
-			$("[date-pop='2']").fadeIn();
-		});
-			$("[date-qr='2']").mouseleave(function(e){
-
-			//$(".pop").hide(600);
-			$("[date-pop='2']").fadeOut();
-		});
 
 
 		});
