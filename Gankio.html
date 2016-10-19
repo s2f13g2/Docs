@@ -236,7 +236,8 @@
 				<div id="list">
 					<div class="item" ng-repeat="x in results" >
 						<img src="{{x.url}}">
-						<div ng-click="day('{{x.infoUrl}}')"> {{ x.desc + ', ' + x.who }}</div></a>
+
+						<div ng-click="day(x.publishedAt)"> {{ x.desc + ', ' + x.who }}</div></a>
 						<div></div>
 					</div>
 				</div>
@@ -302,9 +303,16 @@
 
 			}
 			$scope.day = function (url){
+				
 				if (url == "0") {
-					url = $scope.dates[0];
+					url = "http://gank.io/api/history/content/day/"+$scope.dates[0];
+				}else{
+					
+					
+					var gankdate = new Date(url).Format("yyyy-MM-dd");
+					url = "http://gank.io/api/history/content/day/"+gankdate.replace(/-/g,"/")
 				}
+
 				$scope.busy =true;
 				$("#day").show();
 				$("#list").hide();
@@ -343,11 +351,11 @@
 			}
 
 			function updateDay(date){
-				$http.get("http://gank.io/api/history/content/day/"+date)
+				$http.get(date)
 				.success(function(response){  
 					// $("#myApploader").hide();
 					console.log(response);
-					$scope.busy = false;
+					//$scope.busy = false;
 					if (response.results.length < 1) {
 						$scope.info = "没有更多了";
 						$("#myAppAgain").show();
