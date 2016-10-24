@@ -264,6 +264,7 @@
             		<li>一种与显示器 键盘 鼠标 日夜相处的生活方式。 <a class="qq" href=""> 关于设备</a></li>
             		<li>永无休止的学习，求知之路！</li>
             		<li>合作联系 <a class="qq" href="http://wpa.qq.com/msgrd?v=3&uin=869689491&site=qq&menu=yes">QQ</a></li>
+            		<li> 以下作品 仅作为内部交流之作,请勿用于商业用途</li>
             	</ul>
 
             </div>
@@ -335,8 +336,8 @@
             						</div>
             						<div class="swiper-slide">
             							<div  style="background: #fff;padding:10px;border-radius:5px;    text-align: center;">
-            								<a href="{{item.downloadUrl}}">
-												<h3>点击体验</h3>
+            								<a starget="_blank" href="{{item.downloadUrl}}">
+												<h3>{{item.downloadName}}</h3>
             									<img class="qr" style="width: 200px;background: #fff;" src="{{item.downloadImg}}"></a>
             							</div>
             						</div>
@@ -462,6 +463,17 @@
               el: '#appList',
               data: {
                 items: [
+               		 {	name:"Music",logo:"img/music.png",lastDate:"2016-10-24",style:"background: #fff;border-radius: 50%;width:100px;margin-bottom:10px;",
+	                	info:[
+		                		{m:""},
+		                		{m:"音乐播放器"},
+		                		{m:"Kotlin Java 混合开发"},
+		                		{m:"Android App"},
+		                	],
+		                imgs:[{m:"img/music3.gif"},{m:"img/music1.png"},{m:"img/music2.png"},],
+		                technologys:[{m:"Kotlin 与 Java 混合开发"},{m:"RxJava ·	RxBus ·  okhttp3"},{m:"Glide · JSONObject · 正则"},{m:"DrawerLayout · NavigationView · SwipeRefreshLayout ·RecycleView ·  CardView · ViewPager"},{m:"下拉刷新 上拉加载"},],
+		                downloadImg:"img/music.png",downloadUrl:"#",downloadName:"暂无下载"
+                	},
                 	{	name:"Gank.io干货集中营",logo:"img/gank.io.png",lastDate:"2016-10-14",style:"background: #ff6767;border-radius: 50%;width:100px;margin-bottom:10px;",
 	                	info:[
 		                		{m:"提供关于IT行业的技术干货"},
@@ -471,7 +483,7 @@
 		                	],
 		                imgs:[{m:"img/gank1.png"},{m:"img/gank2.png"},{m:"img/gank3.png"},],
 		                technologys:[{m:"MVP"},{m:"dagger · butterknife"},{m:"RxJava · Retrofit"},{m:"Gson · Glide · ACache · okhttp3"},{m:"RecycleView · CardView · WebView · SwipeRefreshLayout"},{m:"滑动返回"},{m:"下拉刷新 上拉加载"},],
-		                downloadImg:"img/open2.png",downloadUrl:"#",
+		                downloadImg:"img/open2.png",downloadUrl:"#",downloadName:"暂无下载，扫码只为演示"
                 	},
                 	{	name:"Songtaste客户端",logo:"img/songtaste.png",lastDate:"2015-07-22",style:"background: transparent;width:100px;margin-bottom:10px;",
 	                	info:[
@@ -482,7 +494,7 @@
 		                	],
 		                imgs:[{m:"img/songtasteMax.png"},{m:"img/songtasteMin.png"},],
 		                technologys:[{m:"Ex_Dui 2.0"},{m:"正则"},{m:"音乐播放"},{m:"使用说明"},{m:"翻页方法：右击上一曲是上一页。下一页同上。"}],
-		                downloadImg:"img/songtaste.png",downloadUrl:"app/songtaste.exe",
+		                downloadImg:"img/songtaste.png",downloadUrl:"app/songtaste.exe",downloadName:"点击下载"
                 	},
                 	{	name:"爱度亚麻籽油官网",logo:"img/aidu.png",lastDate:"2015-07-22",style:"padding:10px;background: #fff;border-radius: 5px;width:150px;margin-bottom:10px;",
 	                	info:[
@@ -496,8 +508,8 @@
 		                		{m:"此站点大部分时间用在了UI矫正方面"},
 		                		{m:"与设计图上标注的尺寸相差小于1px"},
 		                		{m:"此项目我负责一些难点的突破，与较为复杂页面的实现"},
-		                		{m:"首页/生活这两个页面我主要负责的，感谢左经理的帮忙。"},],
-		                downloadImg:"img/aidu.png",downloadUrl:"http://www.aiduworld.com/cn/",
+		                		{m:"首页/生活这两个页面我主要负责的，感谢左经理的援手"},],
+		                downloadImg:"img/aidu.png",downloadUrl:"http://www.aiduworld.com/cn/",downloadName:"点击查看"
                 	},
                 	
                 ]
@@ -512,7 +524,7 @@
 		switch (index) {
 			case 0: name='应用截图';break;
 			case 1: name='技术介绍';break;
-			case 2: name='下载方式';break;
+			case 2: name='体验方式';break;
 			default: name='';
 		}
 		return '<span class="' + className + '">' + name + '</span>';
