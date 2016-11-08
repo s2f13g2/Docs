@@ -31,19 +31,27 @@
 	.content{
 		border-radius: 4px;
 		margin: 2% 2% 2% 2%;
-		background: #fff;
-		padding: 2%;
-		overflow: hidden;
+
 	}
-	.item{
+	.boxContent{
+		border-radius: 4px;
+		
+
+
+	}
+	.boxRasterize{
+		width: 48%;
+		padding: 1%;
+		
+	}
+	.box{
 		padding: 3px;
 		margin: 1%;
 		border-radius: 4px;
 		background: #fff; 
-		float: left;
-		width: 30%;
+		width: 100%;
 	}
-	.item span{
+	.box span{
 		margin: 3px;
 
 	}
@@ -65,14 +73,24 @@
 	span{
 		color: #fff;
 	}
+
+
+	.title{
+		min-height: 24px;
+		max-height: 24px;
+		padding: 1%;
+		border-radius: 4px 4px 0px 0px;
+	}
 	.usaType{
-		
+		padding: 3px;
 		border-radius: 4px;
-		padding: 0px 4px 1px 0px;
 		color: #ff6f76;
+		background: #fff;
 		
 	}
 	.net{
+		padding: 1%;
+		text-align: center;
 		color: #666;
 	}
 	.qq{
@@ -91,7 +109,110 @@
 		color: #fff;
 		background: #70CAFD;
 	}
+	.qr{
+
+	}
+	.pop{
+		padding: 20px;
+		background: #333;
+		display: none;
+		overflow: hidden;
+		border-radius: 5px;
+		position: relative;
+		top: -335px;
+		z-index: 100;
+		left: 344px;
+		width: 200px;
+	}
+	.swiper-slide img{ 
+		
+		
+	}
+
+	.boxinfo{
+		padding: 1%;
+	}
 	
+	/**
+	* app 展示模块 
+	*/
+
+	.my-pagination{
+		margin-top: 15px;
+	}
+	.my-pagination .swiper-pagination-bullet{
+		width:100%;
+		background:rgba(144, 215, 255, 0.0); 
+		color: #555;
+		height:60px;
+		text-align:center;
+		line-height: 60px;
+		opacity: 1;
+		border-radius: 0;
+		/* border-bottom: 1px solid #f4f4f4; */
+	}
+	.my-pagination .swiper-pagination-bullet:first-child{
+		/* border-top-left-radius: 5px;
+		border-top-right-radius: 5px; */
+	}
+	.my-pagination .swiper-pagination-bullet:last-child{
+		/* border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px; */
+	}
+
+	.my-pagination .swiper-pagination-bullet-active{
+		opacity: 1;
+		background:#fff;
+		color: #6ed56c;
+		border-top-left-radius: 30px;
+		border-bottom-left-radius: 30px;
+	}
+	.my-pagination .swiper-pagination-bullet-active:before{
+		content: '';
+		position: absolute;
+		display: block;
+		width: 24px;
+		height: 24px;
+		margin: 18px 0 0 20px;
+		background: url(http://www.app-echo.com/statics/v3/images/current1.5.png) no-repeat;
+		background-size: 100%;
+		border-radius: 50%;
+
+	}
+	.phoneItem{
+		width: 190px;
+		float: left;
+		padding: 10px;
+		margin: 10px;
+		border-radius: 5px;
+		border: solid 1px #eee;
+	}
+	.phoneItemSe{
+		width: 112px;
+		float: left;
+		padding: 10px;
+		margin: 10px;
+		border-radius: 5px;
+		border: solid 1px #eee;	
+	}
+	.se{
+		background-color: #6ed56c;
+		color: #fff;
+	}
+
+
+.price{
+    color: #ff6767;
+    font-size: 1.3em;
+    text-align: center;
+}
+.size{
+background: #333;
+    color: #fff;
+    width: 50px;
+    text-align: center;
+    border-radius: 5px;
+}
 	</style>
 </head>
 <body>
@@ -170,125 +291,301 @@
             <div style="text-align:center;clear:both">
             </div>
 
-            <div class="banner">
-            	<h2>  购机须知！</h2>
-            	<ul>
-            		<li>所售商品均无保修（到手24小时检测）</li>
-            		<li>标价均为裸机标价即到手只有手机 <a class="qq" href=""> 选择配件</a></li>
-            		<li>购机联系 <a class="qq" href="http://wpa.qq.com/msgrd?v=3&uin=869689491&site=qq&menu=yes">QQ</a></li>
-            		<li>一般下单后7天内会收到</li>
-            	</ul>
-            	<div class="item" style="float:none;
-            	-webkit-box-shadow:0 0 7 #333;  
-            	-moz-box-shadow:0 0 7px #333;  
-            	box-shadow:0 0 7px #333; ">
-            	<div class="title" >
-            		<span style="color:#333;">手机型号</span>
-            		<span style="color:#333;">价格</span>
-            		<span class="usaType">版本</span>
-            		<span class="usaType">保修/官换</span>
-            		<span class="usaType">容量</span>
+
+            <div id="appList" class="content">
+            	<div  v-for="item in items" style="width:100%;margin-top:20px; background: #fff; border-radius:5px;  overflow: hidden;" >
+
+            		<div style="height:800px;width:20%;float:left;background: rgba(144, 215, 255, 0.75);">
+            			<div style="">
+            				<div style="text-align: center;">
+            					<img :style="item.style" :src="item.logo">
+            					<h4 style="margin-bottom:20px;color:#333">{{item.name}}</h4>
+            				</div>
+            				<div style="text-align: center;">
+            				</div>
+            			</div>
+            			<div class="my-pagination" >
+            				&nbsp;
+            			</div>
+            		</div>
+            		<div style="height:800px;width:78%;float:left;margin-left:2%; ">
+            			<div class="swiper">
+            				<div class="swiper-container tab-view">
+            					<div class="swiper-wrapper">
+
+            						<!-- <div class="swiper-slide">
+            							<div  style="background: #fff;padding:10px;border-radius:5px;    text-align: center;">
+            								Swiper
+            								<div class="imgs swiper-container">
+            									<div class="swiper-wrapper">
+            						
+            										<div v-for="img in item.info" class="swiper-slide">
+            											<h1>{{img.m}}</h1>
+            										</div>
+            									</div>
+            									Add Pagination
+            									<div class="swiper-pagination"></div>
+            								</div>
+            						
+            							</div>
+            						</div> -->
+            						<div class="swiper-slide" >
+            							<div  style="background: #fff;padding:10px;border-radius:5px; ">
+            								<div class="boxinfo">
+            									<h3>商品列表</h3>
+            									<div>
+            										<div>顶部</div>
+            										<div>
+            											<div style="float:left;width:20%;">
+            												
+            												<div v-for="(i,s) in item.type" v-on:click.native="typeChanged(i)"  class="phoneItemSe">
+            													{{s}} 
+            												</div>
+            												
+            											</div>
+            											<div style="float:left;width:80%;">
+            												<img-list :imgs="item.imgs" ></img-list>
+            												<!-- <imgitem v-for="img in item.imgs" v-bind:url="img.m">
+            												
+            											</imgitem> -->
+            												<!-- <div v-for="img in item.imgs" >
+            													<div style="float:left;width:25%; text-align: center;">
+            														
+            														<img style="margin:10px;" src="{{img.m}}">
+            													</div>
+            												</div> -->
+            												<div style="clear:both;"></div>
+
+            											</div>
+            											<div style="clear:both;"></div>
+            										</div>
+
+            									</div>
+            									
+            									<div v-for="te in item.infos">
+            										<div class="phoneItem">
+            											<div class="price">这里报价:{{te.price}} </div>
+            											<div class="size">{{te.size}}</div>
+            											<div>{{te.color}}</div>
+            											<div>京东报价:{{te.jdprice}} </div>
+            											<div>苹果报价:{{te.appleprice}} </div>
+            										</div>
+            									</div>
+            								</div>
+            							</div>
+            						</div>
+            						<div class="swiper-slide" >
+            							<div  style="background: #fff;padding:10px;border-radius:5px; ">
+            								<div class="boxinfo">
+            									<h3></h3>
+            									<!-- <ul v-for="te in item.technologys">
+            										<li>{{te.m}}</li>
+            									</ul> -->
+            								</div>
+            							</div>
+            						</div>
+            						<div class="swiper-slide">
+            							<div  style="background: #fff;padding:10px;border-radius:5px;    text-align: center;">
+            								<a starget="_blank" v-bind:href="item.downloadUrl">
+            									<!-- <h3>{{item.downloadName}}</h3> -->
+            									<img class="qr" style="width: 200px;background: #fff;" v-bind:src="item.downloadImg"></a>
+            								</div>
+            							</div>
+            						</div>
+            					</div>
+            				</div>
+            			</div>
+            		</div>
             	</div>
-            	<div class="net">网络支持 (背景颜色标示该机型的颜色)</div>
-            </div><span  style="color:#333;"> 黑 白 金 玫瑰金</span>
-        </div>
-        <div class="content">
-	<!-- 	<div class="item" style="background:#333;">
-		<div class="title"><span>iphone6</span><span>3200</span><span class="usaType"> S  </span><span class="usaType">64GB  </span></div>
-		<div class="net">全网4G</div>
-	</div>
-	<div class="item" style="    background-color: #dbdcdd;">
-		<div class="title"><span>iphone6s</span><span>3200</span><span class="usaType"> S  </span><span class="usaType">16GB  </span></div>
-		<div class="net">全网4G</div>
-	</div>
-	<div class="item" style="    background-color: #e2cab1;">
-		<div class="title"><span>iphone6s</span><span>3200</span><span class="usaType"> S  </span><span class="usaType">64GB  </span></div>
-		<div class="net">全网4G</div>
-	</div>
-	<div class="item" style="    background-color: #f1c7c1;">
-		<div class="title"><span>iphone6s</span><span>3200</span><span class="usaType"> S  </span><span class="usaType">64GB  </span></div>
-		<div class="net">全网4G</div>
-	</div> -->
-	<div class="item" style="    background-color: #dbdcdd;">
-		<div class="title">
-			<span>iphone6s</span>
-			<span >3800</span>
-			<span class="usaType"> S  </span>
-			<span class="usaType">64GB  </span>
-		</div>
-		<div class="net">全网4G</div>
-	</div>
-	<div class="item" style="    background-color: #dbdcdd;">
-		<div class="title">
-			<span>iphone6s</span>
-			<span >4100</span>
-			<span class="usaType"> S  </span>
-			<span class="usaType">128GB  </span>
-		</div>
-		<div class="net">全网4G</div>
-	</div>
-	<div class="item" style="    background-color: #dbdcdd;">
-		<div class="title">
-			<span>iphone6</span>
-			<span>3200</span>
-			<span class="usaType"> S  </span>
-			<span class="usaType">16GB  </span>
-		</div>
-		<div class="net">全网4G</div>
-	</div>
-	<div class="item" style="    background-color: #dbdcdd;">
-		<div class="title">
-			<span>iphone6</span>
-			<span>3100</span>
-			<span class="usaType"> S  </span>
-			<span class="usaType">16GB  </span>
-		</div>
-		<div class="net">全网4G</div>
-	</div>
-	<div class="item" style="    background-color: #f1c7c1;">
-		<div class="title">
-			<span>iwacth 38MM</span>
-			<span>1850</span>
-			<span class="usaType"> 国  </span>
-			<span class="usaType">16GB  </span>
-		</div>
-		<div class="net">黑色减100</div>
-	</div>
-	<div class="item" style="    background-color: #333;">
-		<div class="title">
-			<span>ipad air2</span>
-			<span>2999</span>
-			<span class="usaType"> ？  </span>
-			<span class="usaType">64GB  </span>
-		</div>
-		<div class="net"> Wi-Fi+插卡版 全网4G 白+100</div>
-	</div>
-	<div class="item" style="    background-color: #e2cab1;">
-		<div class="title">
-			<span>ipad air2</span>
-			<span>3599</span>
-			<span class="usaType"> 官网在保  </span>
-			<span class="usaType">64GB  </span>
-		</div>
-		<div class="net"> Wi-Fi+插卡版 全网4G </div>
-	</div>
-	<div class="item" style="    background-color: #e2cab1;">
-		<div class="title">
-			<span>iphone5s</span>
-			<span>1599</span>
-			<span class="usaType"> A1530 </span>
-			<span class="usaType">16GB  </span>
-		</div>
-		<div class="net"> 移动联通4G </div>
-	</div>
-</div>
-<div class="footer"></div>
-<script src="js/lib/jquery-2.1.1.min.js"></script>
-<script src="js/lib/jquery.gradientify.min.js"></script>
-<script src="js/lib/jquery.nicescroll.js"></script>
-<script src="js/lib/vue.js"></script>
-<script type="text/javascript">
+            	<div class="footer"></div>
+            	<script src="js/lib/jquery-2.1.1.min.js"></script>
+            	<script src="js/lib/jquery.gradientify.min.js"></script>
+            	<script src="js/lib/swiper-3.3.1.jquery.min.js"></script>
+            	<script src="js/lib/jquery.nicescroll.js"></script>
+            	<script src="js/lib/vue.js"></script>
+            	<script type="text/javascript">
+            	var typeCode = {1:"16GB",2:"32GB",3:"64GB",4:"128GB",5:"深空灰",6:"银白色",7:"香槟金",8:"玫瑰金",9:"256GB"}
+            	var drimgs ={iphone6s:[{m:"http://store.storeimages.cdn-apple.com/8748/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone6s/silver/iphone6s-silver-select-2015_AV1?wid=150&hei=305&fmt=png-alpha&qlt=95&.v=1466197978953"},{m:"http://store.storeimages.cdn-apple.com/8748/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone6s/gold/iphone6s-gold-select-2015_AV1?wid=150&hei=305&fmt=png-alpha&qlt=95&.v=1466197979238"},{m:"http://store.storeimages.cdn-apple.com/8748/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone6s/gray/iphone6s-gray-select-2015_AV1?wid=150&hei=305&fmt=png-alpha&qlt=95&.v=1466197977841"},{m:"http://store.storeimages.cdn-apple.com/8748/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone6s/rosegold/iphone6s-rosegold-select-2015_AV1?wid=150&hei=305&fmt=png-alpha&qlt=95&.v=1466197977564"}],
+            	iphone6:[{m:"http://store.storeimages.cdn-apple.com/8748/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone6s/silver/iphone6s-silver-select-2015_AV1?wid=150&hei=305&fmt=png-alpha&qlt=95&.v=1466197978953"},{m:"http://store.storeimages.cdn-apple.com/8748/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone6s/gold/iphone6s-gold-select-2015_AV1?wid=150&hei=305&fmt=png-alpha&qlt=95&.v=1466197979238"},{m:"http://store.storeimages.cdn-apple.com/8748/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone6s/gray/iphone6s-gray-select-2015_AV1?wid=150&hei=305&fmt=png-alpha&qlt=95&.v=1466197977841"}
+            	],}
+
+            	var infos ={ iphone6:[{price:"2499",appleprice:"3699",jdprice:"3699",size:typeCode[1],color:typeCode[5]},
+								{price:"2599",appleprice:"3699",jdprice:"3699",size:typeCode[1],color:typeCode[6]},
+								{price:"3150",appleprice:"3699",jdprice:"3399",size:typeCode[1],color:typeCode[7]},
+								{price:"----",appleprice:"----",jdprice:"----",size:typeCode[1],color:typeCode[8]},
+								{price:"2999",appleprice:"4399",jdprice:"4399",size:typeCode[3],color:typeCode[5]},
+								{price:"3099",appleprice:"4399",jdprice:"4399",size:typeCode[3],color:typeCode[6]},
+								{price:"3199",appleprice:"4399",jdprice:"4099",size:typeCode[3],color:typeCode[7]},
+								{price:"----",appleprice:"----",jdprice:"----",size:typeCode[3],color:typeCode[8]},
+								{price:"3150",appleprice:"----",jdprice:"----",size:typeCode[4],color:typeCode[5]},
+								{price:"3250",appleprice:"----",jdprice:"----",size:typeCode[4],color:typeCode[6]},
+								{price:"3299",appleprice:"----",jdprice:"----",size:typeCode[4],color:typeCode[7]},
+								{price:"----",appleprice:"----",jdprice:"----",size:typeCode[4],color:typeCode[8]}
+								],
+            				iphone6s:[{price:"2950",appleprice:"4388",jdprice:"3999",size:typeCode[1],color:typeCode[5]},
+								{price:"3050",appleprice:"4388",jdprice:"3999",size:typeCode[1],color:typeCode[6]},
+								{price:"3150",appleprice:"4388",jdprice:"3999",size:typeCode[1],color:typeCode[7]},
+								{price:"3150",appleprice:"4388",jdprice:"3999",size:typeCode[1],color:typeCode[8]},
+								{price:"3700",appleprice:"5088",jdprice:"5088",size:typeCode[3],color:typeCode[5]},
+								{price:"3800",appleprice:"5088",jdprice:"5088",size:typeCode[3],color:typeCode[6]},
+								{price:"3900",appleprice:"5088",jdprice:"5088",size:typeCode[3],color:typeCode[7]},
+								{price:"3900",appleprice:"5088",jdprice:"5088",size:typeCode[3],color:typeCode[8]},
+								{price:"4000",appleprice:"5388",jdprice:"5388",size:typeCode[4],color:typeCode[5]},
+								{price:"4100",appleprice:"5388",jdprice:"5388",size:typeCode[4],color:typeCode[6]},
+								{price:"----",appleprice:"5388",jdprice:"5388",size:typeCode[4],color:typeCode[7]},
+								{price:"----",appleprice:"5388",jdprice:"5388",size:typeCode[4],color:typeCode[8]}],
+							
+            	}
+            	
+
+		/*[
+		{m:"iPhone 6s",
+		sys_attrprice:{
+			"1_5":{price:"2950",appleprice:"4388",jdprice:"3999"},
+			"1_6":{price:"3050",appleprice:"4388",jdprice:"3999"},
+			"1_7":{price:"3150",appleprice:"4388",jdprice:"3999"},
+			"1_8":{price:"3150",appleprice:"4388",jdprice:"3999"},
+			"3_5":{price:"3700",appleprice:"5088",jdprice:"5088"},
+			"3_6":{price:"3800",appleprice:"5088",jdprice:"5088"},
+			"3_7":{price:"3900",appleprice:"5088",jdprice:"5088"},
+			"3_8":{price:"3900",appleprice:"5088",jdprice:"5088"},
+			"4_5":{price:"4000",appleprice:"5388",jdprice:"5388"},
+			"4_6":{price:"4100",appleprice:"5388",jdprice:"5388"},
+			"4_7":{price:"----",appleprice:"5388",jdprice:"5388"},
+			"4_8":{price:"----",appleprice:"5388",jdprice:"5388"},
+		},from:"美版"},
+
+		
+		{m:"iPhone 6",
+		sys_attrprice:{
+			"1_5":{price:"2499",appleprice:"3699",jdprice:"3699"},
+			"1_6":{price:"2599",appleprice:"3699",jdprice:"3699"},
+			"1_7":{price:"3150",appleprice:"3699",jdprice:"3399"},
+			"1_8":{price:"----",appleprice:"----",jdprice:"----"},
+			"3_5":{price:"2999",appleprice:"4399",jdprice:"4399"},
+			"3_6":{price:"3099",appleprice:"4399",jdprice:"4399"},
+			"3_7":{price:"3199",appleprice:"4399",jdprice:"4099"},
+			"3_8":{price:"----",appleprice:"----",jdprice:"----"},
+			"4_5":{price:"3150",appleprice:"----",jdprice:"----"},
+			"4_6":{price:"3250",appleprice:"----",jdprice:"----"},
+			"4_7":{price:"3299",appleprice:"----",jdprice:"----"},
+			"4_8":{price:"----",appleprice:"----",jdprice:"----"},
+		},from:"美版"},
+		{m:"iPhone 6",
+		sys_attrprice:{
+			"1_5":{price:"2499",appleprice:"3699",jdprice:"3699"},
+			"1_6":{price:"2599",appleprice:"3699",jdprice:"3699"},
+			"1_7":{price:"3150",appleprice:"3699",jdprice:"3399"},
+			"1_8":{price:"----",appleprice:"----",jdprice:"----"},
+			"3_5":{price:"2999",appleprice:"4399",jdprice:"4399"},
+			"3_6":{price:"3099",appleprice:"4399",jdprice:"4399"},
+			"3_7":{price:"3199",appleprice:"4399",jdprice:"4099"},
+			"3_8":{price:"----",appleprice:"----",jdprice:"----"},
+			"4_5":{price:"3150",appleprice:"----",jdprice:"----"},
+			"4_6":{price:"3250",appleprice:"----",jdprice:"----"},
+			"4_7":{price:"3299",appleprice:"----",jdprice:"----"},
+			"4_8":{price:"----",appleprice:"----",jdprice:"----"},
+		},from:"美版"},
+		]*/
+            /*	Vue.component('imgitem', {
+            		props: ['url'],
+            		template: '<div style="float:left;width:25%; text-align: center;">{{url}} <img style="margin:10px;" src="{{url}}"></div>'
+            	})*/           	
+            	/*Vue.component('imgitem', {
+            		props: ['url'],
+            		template: '<div style="float:left;width:25%; text-align: center;"><img style="margin:10px;"  v-bind:src="url.m"></div>'
+            	})*/
+var imgList = Vue.component('img-list', {
+	props: ['imgs'],
+	template: '<div v-for=" i in imgs"  style="float:left;width:25%; text-align: center;"><img style="margin:10px;"  v-bind:src="i.m"></div>'
+})
+var app = new Vue({
+	el: '#appList',
+	methods: {
+		typeChanged: function (t) {
+			
+			switch(t)
+			{
+				case 0:
+				this.items[0].imgs=drimgs.iphone6
+				 this.items[0].infos=infos.iphone6
+				break;
+				case 1:
+				this.items[0].imgs=drimgs.iphone6s
+				 this.items[0].infos=infos.iphone6s
+				break;
+				case 2:
+				
+				break;
+				default:
+
+				break;
+			}
+		}
+	},
+	ready: function () {
+      //这里是vue初始化完成后执行的函数
+              this.items[0].imgs=drimgs.iphone6
+              var list = [];
+              for (i in infos){
+              	list.push(i)
+              }
+              this.items[0].type=list
+              this.items[0].infos=infos.iphone6
+             
+              
+            },
+	data: {
+		items: [
+		{	name:"iPhone",logo:"http://store.storeimages.cdn-apple.com/8748/store.apple.com/shop/shop/rs-external/rel/cn/ac-globalnav/images/ac-globalnav/globalnav/apple/image_large.svg",lastDate:"2016-10-24",style:"background-color:#ff6767;margin-bottom:10px;margin-top:10px;width: 100px;height: 100px;border-radius: 50%;",
+		type:[],
+		infos:[],
+		imgs:[],
+
+
+		technologys:[{m:"Kotlin 与 Java 混合开发"},{m:"RxJava ·	RxBus ·  okhttp3"},{m:"Glide · JSONObject · 正则"},{m:"DrawerLayout · NavigationView · SwipeRefreshLayout ·RecycleView ·  CardView · ViewPager"},{m:"下拉刷新 上拉加载"},],
+		pics:{url:"http://store.storeimages.cdn-apple.com/8748/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone7/jetblack/iphone7-jetblack-select-2016_AV2?wid=150&hei=305&fmt=png-alpha&qlt=95&.v=1472693558353",
+		zurl:"http://store.storeimages.cdn-apple.com/8748/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone7/jetblack/iphone7-jetblack-select-2016_AV1?wid=150&hei=305&fmt=png-alpha&qlt=95&.v=1472693193136"},
+	},]
+
+}
+});
+
+var mySwiper = new Swiper('.tab-view',{
+	pagination: '.my-pagination',
+	swipeHandler : '.swipe-handler',
+	paginationClickable: true,
+	paginationBulletRender: function (index, className) {
+		switch (index) {
+			case 0: name='价格列表';break;
+			case 1: name='购买须知';break;
+			case 2: name='配件列表';break;
+			default: name='';
+		}
+		return '<span class="' + className + '">' + name + '</span>';
+	}
+});
+var swiper = new Swiper('.imgs', {
+	pagination: '.swiper-pagination',
+	paginationClickable: true,
+	autoplay: 3000,
+	initialSlide :1,
+		//loop: true,
+		slidesPerView : 4,
+		centeredSlides : true,
+	});
 $(function(){
+//console.log($(this))
+$(".phoneItemSe").each(function(){
+	$(this).click(function(){
+		$(".phoneItemSe").each(function(){
+			$(this).attr("class","phoneItemSe")
+		});
+		$("img-list").attr(":imgs","imgs")
+		$(this).attr("class","phoneItemSe se")
+	});
+});
+ $(".phoneItemSe").get(0).className = "phoneItemSe se"
 		 //logo颜色渐变动画
 		 $(".logo").gradientify({
 		 	gradients: [
@@ -301,8 +598,25 @@ $(function(){
             $("html").niceScroll({
             	touchbehavior:false,cursorcolor:"#0966ce",cursoropacitymax:1,cursorwidth:5,horizrailenabled:true,cursorborderradius:5,autohidemode:true,background:'none'
             });
-
+            
         });
 </script>
 </body>
 </html>
+
+
+<!-- {m:"iPhone 6s",
+            			sys_attrprice:{
+            				"1_5":{price:"2950",appleprice:"4388",jdprice:"3999"},
+            				"1_6":{price:"3050",appleprice:"4388",jdprice:"3999"},
+            				"1_7":{price:"3150",appleprice:"4388",jdprice:"3999"},
+            				"1_8":{price:"3150",appleprice:"4388",jdprice:"3999"},
+            				"3_5":{price:"3700",appleprice:"5088",jdprice:"5088"},
+            				"3_6":{price:"3800",appleprice:"5088",jdprice:"5088"},
+            				"3_7":{price:"3900",appleprice:"5088",jdprice:"5088"},
+            				"3_8":{price:"3900",appleprice:"5088",jdprice:"5088"},
+            				"4_5":{price:"4000",appleprice:"5388",jdprice:"5388"},
+            				"4_6":{price:"4100",appleprice:"5388",jdprice:"5388"},
+            				"4_7":{price:"----",appleprice:"5388",jdprice:"5388"},
+            				"4_8":{price:"----",appleprice:"5388",jdprice:"5388"},
+            			},from:"美版"}, -->
