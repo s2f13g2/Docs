@@ -201,18 +201,21 @@
 	}
 
 
-.price{
-    color: #ff6767;
-    font-size: 1.3em;
-    text-align: center;
-}
-.size{
-background: #333;
-    color: #fff;
-    width: 50px;
-    text-align: center;
-    border-radius: 5px;
-}
+	.price{
+		color: #ff6767;
+		font-size: 1.3em;
+		text-align: center;
+	}
+	.size{
+		background: #333;
+		color: #fff;
+		width: 50px;
+		text-align: center;
+		border-radius: 5px;
+	}
+	.niceScroll{
+		    height: 383px;
+	}
 	</style>
 </head>
 <body>
@@ -361,14 +364,15 @@ background: #333;
             										</div>
 
             									</div>
-            									
-            									<div v-for="te in item.infos">
-            										<div class="phoneItem">
-            											<div class="price">这里报价:{{te.price}} </div>
-            											<div class="size">{{te.size}}</div>
-            											<div>{{te.color}}</div>
-            											<div>京东报价:{{te.jdprice}} </div>
-            											<div>苹果报价:{{te.appleprice}} </div>
+            									<div class="niceScroll" style="overflow: scroll;">
+            										<div v-for="te in item.infos"  >
+            											<div class="phoneItem">
+            												<div class="price">这里报价:{{te.price}} </div>
+            												<div class="size">{{te.size}}</div>
+            												<div>{{te.color}}</div>
+            												<div>京东报价:{{te.jdprice}} </div>
+            												<div>苹果报价:{{te.appleprice}} </div>
+            											</div>
             										</div>
             									</div>
             								</div>
@@ -410,33 +414,33 @@ background: #333;
             	],}
 
             	var infos ={ iphone6:[{price:"2499",appleprice:"3699",jdprice:"3699",size:typeCode[1],color:typeCode[5]},
-								{price:"2599",appleprice:"3699",jdprice:"3699",size:typeCode[1],color:typeCode[6]},
-								{price:"3150",appleprice:"3699",jdprice:"3399",size:typeCode[1],color:typeCode[7]},
-								{price:"----",appleprice:"----",jdprice:"----",size:typeCode[1],color:typeCode[8]},
-								{price:"2999",appleprice:"4399",jdprice:"4399",size:typeCode[3],color:typeCode[5]},
-								{price:"3099",appleprice:"4399",jdprice:"4399",size:typeCode[3],color:typeCode[6]},
-								{price:"3199",appleprice:"4399",jdprice:"4099",size:typeCode[3],color:typeCode[7]},
-								{price:"----",appleprice:"----",jdprice:"----",size:typeCode[3],color:typeCode[8]},
-								{price:"3150",appleprice:"----",jdprice:"----",size:typeCode[4],color:typeCode[5]},
-								{price:"3250",appleprice:"----",jdprice:"----",size:typeCode[4],color:typeCode[6]},
-								{price:"3299",appleprice:"----",jdprice:"----",size:typeCode[4],color:typeCode[7]},
-								{price:"----",appleprice:"----",jdprice:"----",size:typeCode[4],color:typeCode[8]}
-								],
-            				iphone6s:[{price:"2950",appleprice:"4388",jdprice:"3999",size:typeCode[1],color:typeCode[5]},
-								{price:"3050",appleprice:"4388",jdprice:"3999",size:typeCode[1],color:typeCode[6]},
-								{price:"3150",appleprice:"4388",jdprice:"3999",size:typeCode[1],color:typeCode[7]},
-								{price:"3150",appleprice:"4388",jdprice:"3999",size:typeCode[1],color:typeCode[8]},
-								{price:"3700",appleprice:"5088",jdprice:"5088",size:typeCode[3],color:typeCode[5]},
-								{price:"3800",appleprice:"5088",jdprice:"5088",size:typeCode[3],color:typeCode[6]},
-								{price:"3900",appleprice:"5088",jdprice:"5088",size:typeCode[3],color:typeCode[7]},
-								{price:"3900",appleprice:"5088",jdprice:"5088",size:typeCode[3],color:typeCode[8]},
-								{price:"4000",appleprice:"5388",jdprice:"5388",size:typeCode[4],color:typeCode[5]},
-								{price:"4100",appleprice:"5388",jdprice:"5388",size:typeCode[4],color:typeCode[6]},
-								{price:"----",appleprice:"5388",jdprice:"5388",size:typeCode[4],color:typeCode[7]},
-								{price:"----",appleprice:"5388",jdprice:"5388",size:typeCode[4],color:typeCode[8]}],
-							
-            	}
-            	
+            	{price:"2599",appleprice:"3699",jdprice:"3699",size:typeCode[1],color:typeCode[6]},
+            	{price:"3150",appleprice:"3699",jdprice:"3399",size:typeCode[1],color:typeCode[7]},
+            	{price:"----",appleprice:"----",jdprice:"----",size:typeCode[1],color:typeCode[8]},
+            	{price:"2999",appleprice:"4399",jdprice:"4399",size:typeCode[3],color:typeCode[5]},
+            	{price:"3099",appleprice:"4399",jdprice:"4399",size:typeCode[3],color:typeCode[6]},
+            	{price:"3199",appleprice:"4399",jdprice:"4099",size:typeCode[3],color:typeCode[7]},
+            	{price:"----",appleprice:"----",jdprice:"----",size:typeCode[3],color:typeCode[8]},
+            	{price:"3150",appleprice:"----",jdprice:"----",size:typeCode[4],color:typeCode[5]},
+            	{price:"3250",appleprice:"----",jdprice:"----",size:typeCode[4],color:typeCode[6]},
+            	{price:"3299",appleprice:"----",jdprice:"----",size:typeCode[4],color:typeCode[7]},
+            	{price:"----",appleprice:"----",jdprice:"----",size:typeCode[4],color:typeCode[8]}
+            	],
+            	iphone6s:[{price:"2950",appleprice:"4388",jdprice:"3999",size:typeCode[1],color:typeCode[5]},
+            	{price:"3050",appleprice:"4388",jdprice:"3999",size:typeCode[1],color:typeCode[6]},
+            	{price:"3150",appleprice:"4388",jdprice:"3999",size:typeCode[1],color:typeCode[7]},
+            	{price:"3150",appleprice:"4388",jdprice:"3999",size:typeCode[1],color:typeCode[8]},
+            	{price:"3700",appleprice:"5088",jdprice:"5088",size:typeCode[3],color:typeCode[5]},
+            	{price:"3800",appleprice:"5088",jdprice:"5088",size:typeCode[3],color:typeCode[6]},
+            	{price:"3900",appleprice:"5088",jdprice:"5088",size:typeCode[3],color:typeCode[7]},
+            	{price:"3900",appleprice:"5088",jdprice:"5088",size:typeCode[3],color:typeCode[8]},
+            	{price:"4000",appleprice:"5388",jdprice:"5388",size:typeCode[4],color:typeCode[5]},
+            	{price:"4100",appleprice:"5388",jdprice:"5388",size:typeCode[4],color:typeCode[6]},
+            	{price:"----",appleprice:"5388",jdprice:"5388",size:typeCode[4],color:typeCode[7]},
+            	{price:"----",appleprice:"5388",jdprice:"5388",size:typeCode[4],color:typeCode[8]}],
+
+            }
+
 
 		/*[
 		{m:"iPhone 6s",
@@ -508,11 +512,11 @@ var app = new Vue({
 			{
 				case 0:
 				this.items[0].imgs=drimgs.iphone6
-				 this.items[0].infos=infos.iphone6
+				this.items[0].infos=infos.iphone6
 				break;
 				case 1:
 				this.items[0].imgs=drimgs.iphone6s
-				 this.items[0].infos=infos.iphone6s
+				this.items[0].infos=infos.iphone6s
 				break;
 				case 2:
 				
@@ -525,28 +529,28 @@ var app = new Vue({
 	},
 	ready: function () {
       //这里是vue初始化完成后执行的函数
-              this.items[0].imgs=drimgs.iphone6
-              var list = [];
-              for (i in infos){
-              	list.push(i)
-              }
-              this.items[0].type=list
-              this.items[0].infos=infos.iphone6
-             
-              
-            },
-	data: {
-		items: [
-		{	name:"iPhone",logo:"http://store.storeimages.cdn-apple.com/8748/store.apple.com/shop/shop/rs-external/rel/cn/ac-globalnav/images/ac-globalnav/globalnav/apple/image_large.svg",lastDate:"2016-10-24",style:"background-color:#ff6767;margin-bottom:10px;margin-top:10px;width: 100px;height: 100px;border-radius: 50%;",
-		type:[],
-		infos:[],
-		imgs:[],
+      this.items[0].imgs=drimgs.iphone6
+      var list = [];
+      for (i in infos){
+      	list.push(i)
+      }
+      this.items[0].type=list
+      this.items[0].infos=infos.iphone6
 
 
-		technologys:[{m:"Kotlin 与 Java 混合开发"},{m:"RxJava ·	RxBus ·  okhttp3"},{m:"Glide · JSONObject · 正则"},{m:"DrawerLayout · NavigationView · SwipeRefreshLayout ·RecycleView ·  CardView · ViewPager"},{m:"下拉刷新 上拉加载"},],
-		pics:{url:"http://store.storeimages.cdn-apple.com/8748/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone7/jetblack/iphone7-jetblack-select-2016_AV2?wid=150&hei=305&fmt=png-alpha&qlt=95&.v=1472693558353",
-		zurl:"http://store.storeimages.cdn-apple.com/8748/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone7/jetblack/iphone7-jetblack-select-2016_AV1?wid=150&hei=305&fmt=png-alpha&qlt=95&.v=1472693193136"},
-	},]
+  },
+  data: {
+  	items: [
+  	{	name:"iPhone",logo:"http://store.storeimages.cdn-apple.com/8748/store.apple.com/shop/shop/rs-external/rel/cn/ac-globalnav/images/ac-globalnav/globalnav/apple/image_large.svg",lastDate:"2016-10-24",style:"background-color:#ff6767;margin-bottom:10px;margin-top:10px;width: 100px;height: 100px;border-radius: 50%;",
+  	type:[],
+  	infos:[],
+  	imgs:[],
+
+
+  	technologys:[{m:"Kotlin 与 Java 混合开发"},{m:"RxJava ·	RxBus ·  okhttp3"},{m:"Glide · JSONObject · 正则"},{m:"DrawerLayout · NavigationView · SwipeRefreshLayout ·RecycleView ·  CardView · ViewPager"},{m:"下拉刷新 上拉加载"},],
+  	pics:{url:"http://store.storeimages.cdn-apple.com/8748/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone7/jetblack/iphone7-jetblack-select-2016_AV2?wid=150&hei=305&fmt=png-alpha&qlt=95&.v=1472693558353",
+  	zurl:"http://store.storeimages.cdn-apple.com/8748/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone7/jetblack/iphone7-jetblack-select-2016_AV1?wid=150&hei=305&fmt=png-alpha&qlt=95&.v=1472693193136"},
+  },]
 
 }
 });
@@ -585,7 +589,7 @@ $(".phoneItemSe").each(function(){
 		$(this).attr("class","phoneItemSe se")
 	});
 });
- $(".phoneItemSe").get(0).className = "phoneItemSe se"
+$(".phoneItemSe").get(0).className = "phoneItemSe se"
 		 //logo颜色渐变动画
 		 $(".logo").gradientify({
 		 	gradients: [
@@ -596,8 +600,19 @@ $(".phoneItemSe").each(function(){
 		 });
             //美化浏览器的滚动条
             $("html").niceScroll({
-            	touchbehavior:false,cursorcolor:"#0966ce",cursoropacitymax:1,cursorwidth:5,horizrailenabled:true,cursorborderradius:5,autohidemode:true,background:'none'
+            	touchbehavior:false,cursorcolor:"#6ed56c",cursoropacitymax:1,cursorwidth:5,horizrailenabled:true,cursorborderradius:5,autohidemode:true,background:'none'
             });
+        
+           
+            $('.niceScroll').niceScroll({ 
+			    cursorcolor: "#ccc",//#CC0071 光标颜色 
+			    cursoropacitymax: 1, //改变不透明度非常光标处于活动状态（scrollabar“可见”状态），范围从1到0 
+			    touchbehavior: false, //使光标拖动滚动像在台式电脑触摸设备 
+			    cursorwidth: "5px", //像素光标的宽度 
+			    cursorborder: "0", //     游标边框css定义 
+			    cursorborderradius: "5px",//以像素为光标边界半径 
+			    autohidemode: false //是否隐藏滚动条 
+			});
             
         });
 </script>
