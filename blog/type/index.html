@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="https://connoratherton.com/assets/css/vendor/loaders.css.min.css">
+	<link  rel="stylesheet" type="text/css" href="../../css/blog.css">
+
+	<title>走过的那些坑儿 · 方便你我的互联网地图 · liuyouth</title>
+	<style type="text/css">
+		
+	*{
+		padding: 0;
+		margin: 0;
+		font-family: "微软雅黑";
+	}
+	</style>
+</head>
+<body>
+	<div class="header"><span class="logo">  liuyouth.github.io</span>
+	</div>
+	<div class="content listBox">
+		<div id="listBox" class="">
+			<div style="    text-align: center; margin:0px 10px">
+				<svg class="icon" style="width: 6em; height: 6em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4085"><path d="M90.451753 511.864417l49.399368-51.399342 371.595243 245.596857 370.895253-246.596844 49.99936 52.499328-420.994612 288.896302-420.894612-288.996301z m0-159.097963l420.994611-288.896302 420.994611 288.896302-420.994611 288.896302-420.994611-288.896302z m420.994611 512.393441l370.895253-246.696842 49.99936 52.499328-420.994612 288.896302-420.994611-288.896302 49.399368-51.399342 371.695242 245.596856z" fill="#1fddb4" p-id="4086"></path></svg>
+				<div id="name" style="    text-align: center; margin:10px 0px">
+					<strong style="">走过的那些坑儿</strong>
+				</div>
+				<div style="margin:0 auto; margin-top:10px;width:40%;text">
+					<div onclick="addBasePitShow()" style="width:30%;float:left;">
+						<svg class="icon" style="width: 2em; height: 2em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1911"><path d="M832.006 544.004c0 17.668-14.334 32-32.004 32L576 575.996l0 224.012c0 17.664-14.332 31.996-31.996 32l-64.006-0.004c-17.672 0.004-32.002-14.332-32.002-32L447.996 575.996l-224.002 0.008c-17.674 0-32-14.328-32-32.004l0.002-64.002c0-17.67 14.33-32.004 31.998-32L448 447.998l-0.004-224c0.004-17.676 14.332-32.004 32.006-32.004l63.996 0c17.676 0.002 31.998 14.33 32.004 32.004l-0.006 224 224 0c17.676 0 32.01 14.332 32.01 32.004L832.006 544.004z" p-id="1912" fill="#1fddb4"></path></svg>
+						<span> 添加坑源</span></div>
+						<div style="width:70%;float:left;">
+							<svg onclick="SearchListPit()" class="icon" style="width: 2em; height: 2em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8313"><path d="M439.323351 775.47781c-49.280352 0-97.09834-9.656941-142.126681-28.699646-43.480015-18.388812-82.522793-44.706201-116.043584-78.225619s-59.841305-72.560596-78.230871-116.03883C83.878729 507.486196 74.222416 459.669144 74.222416 410.390811c0-49.284473 9.656313-97.104595 28.699798-142.133138 18.388542-43.479257 44.71008-82.520435 78.231894-116.03883 33.518745-33.515325 72.562546-59.832713 116.043584-78.219479 45.027318-19.039635 92.846329-28.694529 142.125658-28.694529 49.280352 0 97.099364 9.653871 142.126681 28.694529 43.481039 18.385742 82.525863 44.704155 116.044608 78.220502 33.520791 33.518395 59.842328 72.559573 78.230871 116.03883 19.042462 45.028543 28.699798 92.848665 28.699798 142.133138 0 49.278333-9.657336 97.095385-28.701845 142.122905-18.388542 43.47721-44.708033 82.520435-78.228824 116.03883s-72.563569 59.838853-116.043584 78.226642C536.422715 765.822916 488.603703 775.47781 439.323351 775.47781zM439.323351 98.516758c-171.975699 0-311.887855 139.906423-311.887855 311.875077S267.347652 722.265888 439.323351 722.265888s311.887855-139.907447 311.887855-311.874053S611.299051 98.516758 439.323351 98.516758z" p-id="8314" fill="#1fddb4"></path><path d="M890.678206 944.734702c-22.121716 0-42.90387-8.562003-58.541653-24.115234L674.672953 767.974929l37.039062-38.20616 157.888289 153.058978c5.606924 5.606695 13.091693 8.692986 21.077901 8.692986 7.983139 0 15.464837-3.087315 21.070738-8.69094 5.616135-5.622044 8.715856-13.126972 8.715856-21.123087 0-7.980765-3.091535-15.46318-8.702552-21.067828l-0.301888-0.306992L758.714395 682.769338l38.207726-37.035498 152.611906 157.427472c15.571265 15.638165 24.144876 36.422538 24.144876 58.549487 0 22.195511-8.625801 43.054585-24.287121 58.735729C933.723298 936.112324 912.876674 944.734702 890.678206 944.734702z" p-id="8315" fill="#1fddb4"></path><path d="M281.015489 568.754608c-42.340005-42.320874-65.652899-98.584296-65.643689-158.421102 0.008187-59.818387 23.319034-116.074645 65.637549-158.4078l37.634651 37.619806c-66.60666 66.629513-66.60973 175.00071-0.007163 241.577011L281.015489 568.754608z" p-id="8316" fill="#1fddb4"></path></svg>
+							<input id="Search" style="float:left" placeholder="搜索 Pit"></div>
+							<div style="clear:both;"></div>
+						</div>
+
+					</div>
+					<div id = "pitList">
+
+					</div>
+					<!-- <button onclick="hlLoad()"> 4544</button> -->
+				</div>
+
+	<!-- 		<pre >
+		<code class="lang-java">
+	
+			</code>
+		</pre> -->
+
+
+
+	</div>
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="typeindex" data-title="走过的那些坑儿" data-url="file:///D:/git/liuyouth.github.io/st.html"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"liuyouth"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.unstable.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+			|| document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+
+</div>
+
+</div>
+<div class="footer">
+
+</div>
+
+<script src="../../js/lib/jquery-2.1.1.min.js"></script>
+<script src="../../js/lib/jquery.gradientify.min.js"></script>
+<script src="https://cdn1.lncld.net/static/js/av-mini-0.6.4.js"></script>
+<script src="../../js/lib/layer.js"></script>
+<link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">  
+<script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>  
+<script src="../../js/blog.js"></script>
+<script type="text/javascript">
+
+var pitadd = '	<div>'+
+'<form>  '+
+'<div style="padding:10px;">'+               
+'<span>PS：BasePit类似于友盟,</span><br>'+
+'<span>PitSource类似于友盟·推送,</span>'+
+'<span>Pit类似于友盟·推送·无法获取device token	</span>'+
+'</div>'+
+'<div style="padding:10px;">'+
+'		<div class="BoxC"><h2>BasePit</h2>'+
+'<input name="OBasePitName" placeholder="BasePit //请输入BasePit的名字 例：友盟或者添加 → "  >'+
+'<svg onclick="showBasePit()" class="icon TranslateAnimation" style="margin-left:10px; width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3707"><path d="M25.074 163.594l383.724 376.875c0 0 29.937 38.587 92.888 38.587 54.833 0 88.127-26.977 88.127-26.977l386.687-388.484c0 0-16.284-104.944-101.735-42.778-29.889 21.744-279.556 199.251-279.556 199.251s-116.9 43.165-199.638-14.39c-82.047-57.076-269.782-196.04-269.782-196.04S37.729 73.487 25.074 163.594L25.074 163.594z" p-id="3708" fill="#1fddb4"></path><path d="M34.286 508.459l383.723 376.875c0 0 29.938 38.587 92.888 38.587 54.833 0 88.127-26.978 88.127-26.978L985.71 508.46c0 0-16.284-104.945-101.735-42.779-29.889 21.744-279.556 199.251-279.556 199.251s-116.9 43.165-199.638-14.391C322.735 593.466 135 454.502 135 454.502s-88.06-36.149-100.714 53.959L34.286 508.459z" p-id="3709" fill="#1fddb4"></path></svg></div>'+
+'			<div style="display:none" class="BoxC"><input class="Pit" name="OBasePitId" placeholder="BasePit " ></div>'+
+'			<div id="BaseBox" style="display:none" class="BoxC">'+
+'<div class="BoxC"><input class="Base" name="BasePitName" placeholder="BasePitName" ></div>'+
+'<div class="BoxC"><input class="Base" name="BasePitUrl" placeholder="BasePitUrl" ></div>'+
+'<div class="BoxC"><input class="Base" name="BasePitLogo" placeholder="BasePitLogo" ></div>'+
+'<div class="BoxC"><input class="Base" name="BasePitinfo" placeholder="BasePitinfo" ></div>'+
+'<div class="BoxC" style="text-align: right;"><button type="button" onclick="BasePitPost()">提交</button></div>'+
+'</div>'+
+'<div class="BoxC"><h2>PitSource</h2><input class="Pit" name="PitName" placeholder="PitName" ></div>'+
+'<div class="BoxC"><input class="Pit" name="PitLogo" placeholder="PitLogo" ></div>'+
+'<div class="BoxC"><input class="Pit" name="Pitinfo" placeholder="Pitinfo" ></div>'+
+'<div class="BoxC"><input class="Pit" name="PitUrl" placeholder="PitUrl" ></div>'+
+'<div class="BoxC" style="text-align: right;"><button type="button" onclick="PitPost()">提交</button></div>'+
+'</div>'+
+'</form>'+
+'</div>'
+var page = 1;
+$(function(){
+	AV.initialize('yrK7RbgXjVjaxFRpkmJyifOL-gzGzoHsz', '5vviMWddvuF4oLo5lzB2W2Xi');
+	initUtil();
+	initView();
+	ListPit();
+});
+
+</script>
+</body>
+</html>

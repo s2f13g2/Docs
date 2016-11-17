@@ -123,7 +123,7 @@
 		border: 1px solid #fff;
 		border-radius: 4px;
 		background: transparent;
-		color: #fff;
+		color: #333;
 		padding: 8px;
 		font-size: 0.8em;
 		transition: all .5s ease;
@@ -132,7 +132,7 @@
 		border: 1px solid #fff;
 		border-radius: 4px;
 		background: rgba(255,255,255,0.22);
-		color: #fff;
+		color: #333;
 		padding: 8px;
 		font-size: 0.8em;
 	}
@@ -156,162 +156,71 @@
 			</ul>
 
 		</div>
-		<div class="content logoBG">
-			<div ng-app="myApp" ng-controller="customersCtrl" > 
-				<div style="
-				overflow: hidden;
-				" id="container" infinite-scroll='nextdate(page)' infinite-scroll-disabled="busy"  infinite-scroll-distance='1'>		<div>当前页面加载了 {{page-1}} 页数据 <button ng-click="fuli()">福利图</button> <button ng-click="day('0')">每日一Gank</button> </div>
+		<div class="content">
+			
+				
 				<div id="list">
 					<div class="item" ng-repeat="x in results" >
-						<img src="{{x.url}}">
-						<div ng-click="day('{{x.infoUrl}}')"> {{ x.desc + ', ' + x.who }}</div></a>
-						<div></div>
+						
 					</div>
-				</div>
-			</div>
-			<div id="myApploader" style="
-			text-align: center;
-			margin: 0 auto;
-			width: 40px;
-			" class="loader"><div class="loader-inner ball-clip-rotate-multiple"><div></div><div></div></div></div>
-			<div id="myAppAgain" ng-click='updatedate(page);' style="display:none">
-				<div data-width="32.0" data-height="32.0" class="svg-box" style="width: 32.0px; height: 32.0px; margin: 0 auto;">
-					<svg width="38" height="38" viewBox="0 0 38 40">
-						<g class="transform-group">
-							<g transform="translate(0, 28.0) scale(1, -1) scale(0.03125, 0.03125)">
-								<path d="M512-212C229.239467-212 0 17.239467 0 300 0 582.760533 229.239467 812 512 812 794.760533 812 1024 582.760533 1024 300 1024 17.239467 794.760533-212 512-212ZM800.733867 374.717867 767.726933 374.717867 745.0624 374.717867C759.0912 342.9056 767.726933 308.123733 767.726933 270.9184 767.726933 127.387733 653.2096 10.993067 512 10.993067 370.7904 10.993067 256.273067 127.387733 256.273067 270.9184 256.273067 414.312533 370.4832 530.5024 511.453867 530.8096L512 434.382933 630.4768 554.805333 512 675.261867 511.488 583.170133C342.050133 582.897067 204.8 443.223467 204.8 270.9184 204.8 98.4768 342.3232-41.333333 512-41.333333 681.6768-41.333333 819.2 98.4768 819.2 270.9184 819.2 307.509333 812.270933 342.222933 800.733867 374.717867Z" fill="#737383"></path>
-							</g>
-						</g>
-					</svg>
-				</div>
-				<span>{{info}}</span>
-			</div>
 
+				</div>
+
+		
+			<button onclick="hlLoad()"> 4544</button>
+			         <pre >
+                <code class="lang-java">
+        function init(){
+            $scope.req.getArticle();
+            $('pre code').each(function(i, block) {
+                hljs.highlightBlock(block);
+            });
+        }
+                </code>
+            </pre>
+			
+			
+
+			</div>
+<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="st6666" data-title="code" data-url="file:///D:/git/liuyouth.github.io/st.html"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"liuyouth"};
+	(function() {
+		var ds = document.createElement('script');w
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.unstable.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
 
 		</div>
 
 	</div>
 	<div class="footer"></div>
-	<script src="js/jquery-2.1.1.min.js"></script>
-	<script src="js/jquery.gradientify.min.js"></script>
-	<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
-	<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular-animate.min.js"></script>
-	<script type='text/javascript' src='js/ng-infinite-scroll.min.js'></script>
-	<script type="text/javascript">
+	<script src="js/lib/jquery-2.1.1.min.js"></script>
+	<script src="js/lib/jquery.gradientify.min.js"></script>
+	<script type='text/javascript' src='js/lib/ng-infinite-scroll.min.js'></script>
+	<link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">  
+<script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>  
+<script type="text/javascript">
 
 
-	var app = angular.module('myApp', ['infinite-scroll']);
-	app.controller('customersCtrl', function($scope, $http) {
-			/**
-			 * 控制器
-			 */
-			 $scope.page = 1; // 记录页码
-			 $scope.datas =[]; // 数据
-			 $scope.busy =false; // 福利页面的刷新 开关  false 标示可以刷新  true  标示禁用刷新
-			 $scope.info = "Api服务器无响应，点击重试"; //福利面板 提示
-			//面板内容切换
-			$scope.fuli = function (){
-				$("#list").show();
-				$scope.busy =false;
+hljs.initHighlightingOnLoad();
 
-			}
-			$scope.day = function (url){
-				if (url == "0") {
-					url = $scope.datas[0].infoUrl;
-				}
-				$scope.busy =true;
-				$("#list").hide();
-				$("#myAppAgain").hide();
-				$("#myApploader").hide();
-				
-			}
-			
-			/*//初始化数据
-			$http.get("http://gank.io/api/data/%E7%A6%8F%E5%88%A9/10/1")
-			.success(function(response) {
-				$("#myApploader").hide();
-				console.log(response);
-				$scope.results = response.results;})
-			.error(function(data, status, headers, config) {  
-				$("#myAppAgain").show();
-				$("#myApploader").hide();
-			});*/
-			//更新数据
-			$scope.updatedate = function(page){ 
-				
-				$scope.busy = true;
-				console.log("刷新数据: page="+page); 
-				$("#myApploader").show();
-				$("#myAppAgain").hide();
-				$("#myApploader").show();
-				$http.get("http://gank.io/api/data/%E7%A6%8F%E5%88%A9/10/"+page)
-				.success(function(response){  
-					$("#myApploader").hide();
-					console.log(response);
-					$scope.busy = false;
-					if (response.results.length < 1) {
-						$scope.info = "没有更多了";
-						$("#myAppAgain").show();
-					}else{
-
-						$scope.page ++;	
-						for (var i = 0; i < response.results.length; i++) {
-							var dateStr =response.results[i].publishedAt; 
-							var gankdate = new Date(dateStr).Format("yyyy-MM-dd");
-							var infoUrl = "http://gank.io/api/day/"+gankdate.replace(/-/g,"/");
-							response.results[i].infoUrl = infoUrl;
-							$scope.datas.push(response.results[i]);
-						};
-
-						$scope.results = $scope.datas;
-					}
-				})
-				.error(function(data, status, headers, config) {  
-					$("#myAppAgain").show();
-					$("#myApploader").hide();
-				});
-
-			} 
-			//加载下一页数据
-			$scope.nextdate = function(page){ 
-				if ($scope.busy) return; 
-				$scope.busy = true;
-				console.log("正在加载数据：page="+page);
-				$("#myApploader").show();
-				$http.jsonp("http://www.app-echo.com/sound/api-get-more?page=1?callback=JSON_CALLBACK")
-				.success(function(response){  
-					$("#myApploader").hide();
-					console.log(response);
-				/*	$scope.busy = false;
-					if (response.results.length < 1) {
-						$scope.info = "没有更多了";
-						$("#myAppAgain").show();
-					}else{
-
-						$scope.page ++;	
-						for (var i = 0; i < response.results.length; i++) {
-							var dateStr =response.results[i].publishedAt; 
-							var gankdate = new Date(dateStr).Format("yyyy-MM-dd");
-							var infoUrl = "http://gank.io/api/day/"+gankdate.replace(/-/g,"/");
-							response.results[i].infoUrl = infoUrl;
-							$scope.datas.push(response.results[i]);
-						};
-
-						$scope.results = $scope.datas;
-					}*/
-				})
-				.error(function(data, status, headers, config) {  
-					console.log(data);
-					$("#myAppAgain").show();
-					$("#myApploader").hide();
-				});
-
-			} 
-		});
-
-
+function hlLoad(){
+	hljs.initHighlighting()
+	// $('pre code').each(function(i, block){    hljs.highlightBlock(block);  });
+	//
+}
 
 $(function(){
+
 	initUtil();
 	
 		//logo颜色渐变动画
@@ -331,6 +240,7 @@ $(function(){
 		});
 		
 	});
+
 /**
  * 添加自定义功能
  */

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="https://connoratherton.com/assets/css/vendor/loaders.css.min.css">
+
+	<title>Document</title>
+	<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+		font-family: "微软雅黑"
+	}
+	body{
+		background: #f5f5f5;
+		color: #333;
+	}
+	.header{
+		padding-left: 20px;
+		background: #fff;
+		height: 45px;
+	}
+	.logo{
+		background: -webkit-linear-gradient(left,#00b8ff,#7aff00);
+		-webkit-background-clip: text;
+		color: transparent;
+		line-height: 45px;
+		font-size: x-large;
+	}
+	.logoBG{
+		background: -webkit-linear-gradient(left,#00b8ff,#7aff00);
+		-webkit-background-clip: text;
+		line-height: 45px;
+		font-size: x-large;
+	}
+	.banner{
+		padding: 10px;
+		border-radius: 4px;
+		min-height: 150px;
+		background: #fff;
+		margin: 2% 2% 2% 2%;
+		
+	}
+	.content{
+		border-radius: 4px;
+		margin: 2% 2% 2% 2%;
+		background: #fff;
+		padding: 2%;
+		padding-bottom: 4%;
+		overflow: hidden;
+		min-height: 50px;
+	}
+	.item{
+		padding: 5px;
+		margin: 1%;
+		border-radius: 4px;
+		background: #fff; 
+		float: left;
+		width: 30%;
+		transition: all 1s ease;
+	}
+
+	.item span{
+		margin: 3px;
+
+	}
+	.item:hover{
+		-webkit-box-shadow:0 0 7 #333;  
+		-moz-box-shadow:0 0 7px #333;  
+		box-shadow:0 0 7px #333; 
+	}
+	.footer{
+
+	}
+	ul{
+		margin: 20px;
+	}
+	li{
+		color: #333;
+	}
+	a{text-decoration:none;}
+
+  /** 
+	* 
+	*/
+	span{
+		color: #fff;
+	}
+	.usaType{
+		
+		border-radius: 4px;
+		padding: 0px 4px 1px 0px;
+		color: #ff6f76;
+		
+	}
+	.net{
+		color: #666;
+	}
+	.qq{
+		border: 0;
+		padding: 4px 16px;
+		border-radius: 50px;
+		line-height: 50px;
+		color: #999;
+		background: #f5f5f5;
+		transition: all 1s ease;
+	}
+	.qq:hover{
+		-webkit-box-shadow:0 0 7 #333;  
+		-moz-box-shadow:0 0 7px #333;  
+		box-shadow:0 0 7px #333; 
+		color: #fff;
+		background: #70CAFD;
+	}
+	.item img{
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
+		width: 100%;
+		overflow: hidden;
+	}
+	h2{
+		color: #333;
+	}
+	.content button{
+		border: 1px solid #fff;
+		border-radius: 4px;
+		background: transparent;
+		color: #fff;
+		padding: 8px;
+		font-size: 0.8em;
+		transition: all .5s ease;
+	}
+	.content button:hover{
+		border: 1px solid #fff;
+		border-radius: 4px;
+		background: rgba(255,255,255,0.22);
+		color: #fff;
+		padding: 8px;
+		font-size: 0.8em;
+	}
+	.content button:link{
+
+	}
+	.listBox{
+		background-image: -webkit-linear-gradient(270deg,#ff9087,#fe7e84);
+	}
+	strong{
+		color: #fff;
+	}
+	span{
+		margin-right:1px; 
+		margin-left:1px; 
+	}
+	</style>
+</head>
+<body>
+	<div class="header"><span class="logo">  liuyouth.github.io</span>
+		
+
+		<div class="content listBox">
+			<div id="listBox" class="">
+				<div style="    text-align: center; margin:0px 10px">
+					<img id="icon" src="">
+					<div id="name">
+						<strong style="">友盟 - 消息推送</strong>
+					</div>
+					<div style="margin:0 auto; margin-top:10px;width:50%;text">
+						<div style="width:33%;float:left;">
+							<svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1901"><path d="M925.230486 377.716644 595.284845 173.486216c-31.600719-19.560498-53.66934-12.815887-64.011896-7.054673-10.341532 5.761214-27.691689 20.97573-27.691689 58.141188l0 75.611072c-17.833157 0-36.043914 0-54.219879 0-485.10035 0-374.45946 555.50484-374.45946 555.50484S110.877273 542.048363 449.533296 542.048363c18.073634 0 36.21583 0 54.015218 0 0 46.283116 0 88.579431 0 121.807207 0 0.309038 0 0.618077 0 0.926092 0 0.275269 0 0.584308 0 0.895393 0 5.118578 0 9.999748 0 14.637372 0.011256-0.001023 0.022513-0.002047 0.033769-0.00307l0-38.116109c0 37.164435 17.350157 52.379974 27.691689 58.140165 5.139044 2.863211 13.173021 5.968945 23.835871 5.968945 10.79281 0 24.278963-3.183506 40.176025-13.024641l329.946664-204.229404c23.225981-14.377452 36.018332-34.146705 36.018332-55.665811C961.248817 411.863349 948.456467 392.094096 925.230486 377.716644z" p-id="1902" fill="#ffffff"></path></svg>
+							<a target="_blank" href="http://dev.umeng.com/push/android/integration"><span> 官方集成指南</span></a>
+						</div>
+						<div style="width:33%;float:left;">
+							<svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1901"><path d="M925.230486 377.716644 595.284845 173.486216c-31.600719-19.560498-53.66934-12.815887-64.011896-7.054673-10.341532 5.761214-27.691689 20.97573-27.691689 58.141188l0 75.611072c-17.833157 0-36.043914 0-54.219879 0-485.10035 0-374.45946 555.50484-374.45946 555.50484S110.877273 542.048363 449.533296 542.048363c18.073634 0 36.21583 0 54.015218 0 0 46.283116 0 88.579431 0 121.807207 0 0.309038 0 0.618077 0 0.926092 0 0.275269 0 0.584308 0 0.895393 0 5.118578 0 9.999748 0 14.637372 0.011256-0.001023 0.022513-0.002047 0.033769-0.00307l0-38.116109c0 37.164435 17.350157 52.379974 27.691689 58.140165 5.139044 2.863211 13.173021 5.968945 23.835871 5.968945 10.79281 0 24.278963-3.183506 40.176025-13.024641l329.946664-204.229404c23.225981-14.377452 36.018332-34.146705 36.018332-55.665811C961.248817 411.863349 948.456467 392.094096 925.230486 377.716644z" p-id="1902" fill="#ffffff"></path></svg>
+							<a target="_blank" href="http://dev.umeng.com/push/android/sdk-download"><span> SDK下载地址 </span></a>
+						</div>
+						<div onclick="addPitShow()" style="width:33%;float:left;">
+							<svg class="icon" style="width: 2em; height: 2em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3584"><path d="M511.773849 960.382077c-247.185752 0-447.563432-200.37768-447.563432-447.563432s200.37768-447.563432 447.563432-447.563432 447.563432 200.37768 447.563432 447.563432S758.959601 960.382077 511.773849 960.382077L511.773849 960.382077zM511.773849 121.203456c-216.277812 0-391.615189 175.326121-391.615189 391.615189 0 216.277812 175.337377 391.615189 391.615189 391.615189S903.389038 729.096457 903.389038 512.818645C903.389038 296.529577 728.051661 121.203456 511.773849 121.203456L511.773849 121.203456zM679.618579 540.792767 539.747971 540.792767l0 139.859351c0 15.44783-12.514012 27.974122-27.974122 27.974122-15.448854 0-27.974122-12.526291-27.974122-27.974122L483.799728 540.792767 343.940376 540.792767c-15.44783 0-27.962865-12.525268-27.962865-27.974122s12.515035-27.974122 27.962865-27.974122l139.859351 0L483.799728 344.985172c0-15.44783 12.525268-27.974122 27.974122-27.974122 15.46011 0 27.974122 12.526291 27.974122 27.974122l0 139.859351 139.870608 0c15.436574 0 27.974122 12.525268 27.974122 27.974122S695.055153 540.792767 679.618579 540.792767L679.618579 540.792767z" p-id="3585" fill="#1fddb4"></path></svg>
+							<span> 挖坑填坑 </span>
+						</div>
+						<div style="clear:both;"></div>
+
+					</div>
+
+				</div>
+				<div class="item">导入PushSDK操作时，应下载全平台OS文件导入工程</div>
+
+				<!-- <button onclick="hlLoad()"> 4544</button> -->
+			</div>
+
+	<!-- 		<pre >
+		<code class="lang-java">
+	
+			</code>
+		</pre> -->
+
+
+
+	</div>
+	<!-- 多说评论框 start -->
+	<div id="dsDiv"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"liuyouth"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.unstable.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+			|| document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+
+</div>
+
+</div>
+<div class="footer"></div>
+<script src="../../js/lib/jquery-2.1.1.min.js"></script>
+<script src="../../js/lib/jquery.gradientify.min.js"></script>
+<script src="https://cdn1.lncld.net/static/js/av-mini-0.6.4.js"></script>
+<script src="../../js/lib/layer.js"></script>
+<link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">  
+<script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>  
+<script type="text/javascript">
+
+var pitadd = '	<div>'+
+'<form>  '+
+'<div style="padding:10px;">'+               
+'<span>PS：BasePit类似于友盟,</span><br>'+
+'<span>PitSource类似于友盟·推送,</span>'+
+'<span>Pit类似于友盟·推送·无法获取device token	</span>'+
+'</div>'+
+'<div style="padding:10px;">'+
+'		<div class="BoxC"><h2>BasePit</h2>'+
+'<input name="OBasePitName" placeholder="BasePit //请输入BasePit的名字 例：友盟或者添加 → "  >'+
+'<svg onclick="showBasePit()" class="icon TranslateAnimation" style="margin-left:10px; width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3707"><path d="M25.074 163.594l383.724 376.875c0 0 29.937 38.587 92.888 38.587 54.833 0 88.127-26.977 88.127-26.977l386.687-388.484c0 0-16.284-104.944-101.735-42.778-29.889 21.744-279.556 199.251-279.556 199.251s-116.9 43.165-199.638-14.39c-82.047-57.076-269.782-196.04-269.782-196.04S37.729 73.487 25.074 163.594L25.074 163.594z" p-id="3708" fill="#1fddb4"></path><path d="M34.286 508.459l383.723 376.875c0 0 29.938 38.587 92.888 38.587 54.833 0 88.127-26.978 88.127-26.978L985.71 508.46c0 0-16.284-104.945-101.735-42.779-29.889 21.744-279.556 199.251-279.556 199.251s-116.9 43.165-199.638-14.391C322.735 593.466 135 454.502 135 454.502s-88.06-36.149-100.714 53.959L34.286 508.459z" p-id="3709" fill="#1fddb4"></path></svg></div>'+
+'			<div style="display:none" class="BoxC"><input class="Pit" name="OBasePitId" placeholder="BasePit " ></div>'+
+'			<div id="BaseBox" style="display:none" class="BoxC">'+
+'<div class="BoxC"><input class="Base" name="BasePitName" placeholder="BasePitName" ></div>'+
+'<div class="BoxC"><input class="Base" name="BasePitUrl" placeholder="BasePitUrl" ></div>'+
+'<div class="BoxC"><input class="Base" name="BasePitLogo" placeholder="BasePitLogo" ></div>'+
+'<div class="BoxC"><input class="Base" name="BasePitinfo" placeholder="BasePitinfo" ></div>'+
+'<div class="BoxC" style="text-align: right;"><button type="button" onclick="BasePitPost()">提交</button></div>'+
+'</div>'+
+'<div class="BoxC"><h2>PitSource</h2><input class="Pit" name="PitName" placeholder="PitName" ></div>'+
+'<div class="BoxC"><input class="Pit" name="PitLogo" placeholder="PitLogo" ></div>'+
+'<div class="BoxC"><input class="Pit" name="Pitinfo" placeholder="Pitinfo" ></div>'+
+'<div class="BoxC"><input class="Pit" name="PitUrl" placeholder="PitUrl" ></div>'+
+'<div class="BoxC" style="text-align: right;"><button type="button" onclick="PitPost()">提交</button></div>'+
+'</div>'+
+'</form>'+
+'</div>'
+var page = 1;
+//hljs.initHighlightingOnLoad();
+
+function hlLoad(){
+	hljs.initHighlighting()
+	// $('pre code').each(function(i, block){    hljs.highlightBlock(block);  });
+}
+var type ;
+$(function(){
+	AV.initialize('yrK7RbgXjVjaxFRpkmJyifOL-gzGzoHsz', '5vviMWddvuF4oLo5lzB2W2Xi');
+	var myurl=GetQueryString("type");
+	if(myurl !=null && myurl.toString().length>1){
+		type = GetQueryString("type");
+		
+		
+		var query = new AV.Query('PitSource');
+		query.get(type).then(function (data) {
+			PitSource = data;
+			$("#icon").attr("src",PitSource.get("PitLogo"))
+			$("#dsDiv").append('<div class="ds-thread" data-thread-key="'+type+'" data-title="'+PitSource.get("PitName")+'" data-url="'+window.location.href+'"></div>')
+		}, function (error) {
+			console.log("error:"+error)
+		});
+		
+
+	}else{
+		window.location.href='index.html';
+	}
+
+	initUtil();
+	
+		//logo颜色渐变动画
+		$(".logo").gradientify({
+			gradients: [
+			{ start: [49,76,172], stop: [242,159,191] },
+			{ start: [255,103,69], stop: [240,154,241] },
+			{ start: [33,229,241], stop: [235,236,117] }
+			]
+		});
+		$(".logoBG").gradientify({
+			gradients: [
+			{ start: [49,76,172], stop: [242,159,191] },
+			{ start: [255,103,69], stop: [240,154,241] },
+			{ start: [33,229,241], stop: [235,236,117] }
+			]
+		});
+		
+	});
+//添加面板出现
+function addPitShow(){
+
+	layer.open({
+		title: '添加Pit【坑】',
+		type: 1,
+	area: ['580px', ''], //宽高
+	content: pitadd
+});
+	initForm();
+}
+/**
+ * 添加自定义功能
+ */
+ function initUtil(){
+		Date.prototype.Format = function (fmt) { //author: meizz 
+			var o = {
+        "M+": this.getMonth() + 1, //月份 
+        "d+": this.getDate(), //日 
+        "h+": this.getHours(), //小时 
+        "m+": this.getMinutes(), //分 
+        "s+": this.getSeconds(), //秒 
+        "q+": Math.floor((this.getMonth() + 3) / 3), //季度 
+        "S": this.getMilliseconds() //毫秒 
+    };
+    if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+    for (var k in o)
+    	if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+    return fmt;
+}
+}
+
+function GetQueryString(name)
+{
+	var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+	var r = window.location.search.substr(1).match(reg);
+	if(r!=null)return  unescape(r[2]); return null;
+}
+</script>
+</body>
+</html>
