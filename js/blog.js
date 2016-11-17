@@ -136,7 +136,7 @@ function initForm(){
 			$(this).closest('div').removeClass("error");
 		};
 	});
-	$('input[name="OBasePitName"]').bind('input propertychange', function() {
+	$('input[name="OBasePitName"]').bind('blur', function() {
 		var query = new AV.Query('BasePit');
 		query.equalTo('BasePitName',$(this).val() );
 		query.find({
