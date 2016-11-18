@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="https://connoratherton.com/assets/css/vendor/loaders.css.min.css">
+	<link  rel="stylesheet" type="text/css" href="../../css/blog.css">
+	<title>Pit · 方便你我的互联网地图 · liuyouth</title>
+	<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+		font-family: "微软雅黑"
+	}
+	.item{
+		width:999px;
+		float: none;
+		margin: 0 auto;
+		margin-top: 1em;
+	}
+	.item img {
+		width:initial;
+	}
+	</style>
+</head>
+<body>
+	<div class="header"><span class="logo">  liuyouth.github.io</span>
+	</div>
+
+	<div class="content listBox">
+		<div id="listBox" class="">
+			<div style="    text-align: center; margin:0px 10px">
+				<svg class="icon" style="width: 6em; height: 6em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4085"><path d="M90.451753 511.864417l49.399368-51.399342 371.595243 245.596857 370.895253-246.596844 49.99936 52.499328-420.994612 288.896302-420.894612-288.996301z m0-159.097963l420.994611-288.896302 420.994611 288.896302-420.994611 288.896302-420.994611-288.896302z m420.994611 512.393441l370.895253-246.696842 49.99936 52.499328-420.994612 288.896302-420.994611-288.896302 49.399368-51.399342 371.695242 245.596856z" fill="#1fddb4" p-id="4086"></path></svg>
+				
+				<div id="name">
+					<strong id="icontitle" style=""></strong>
+				</div>
+
+			</div>
+			<div class="item">
+				<div id="pitList"></div>
+				<!-- 多说评论框 start -->
+				<div id="dsDiv">
+
+				</div>
+				<!-- 多说评论框 end -->
+			</div>
+			
+			<!-- <button onclick="hlLoad()"> 4544</button> -->
+		</div>
+
+	<!-- 		<pre >
+		<code class="lang-java">
+	
+			</code>
+		</pre> -->
+
+
+
+	</div>
+
+
+
+</div>
+
+</div>
+<div class="footer"></div>
+<script src="../../js/lib/jquery-2.1.1.min.js"></script>
+<script src="../../js/lib/jquery.gradientify.min.js"></script>
+<script src="https://cdn1.lncld.net/static/js/av-mini-0.6.4.js"></script>
+<script src="../../js/lib/layer.js"></script>
+<link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">  
+<script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>  
+<script src="../../js/Pit.js"></script>
+<script type="text/javascript">
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+var duoshuoQuery = {short_name:"liuyouth"};
+<!-- 多说公共JS代码 end -->
+var pitadd = '	<div>'+
+'<form>  '+
+'<div style="padding:10px;">'+               
+'<span>PS：BasePit类似于友盟,</span><br>'+
+'<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PitSource类似于友盟·推送,</span><br>'+
+'<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pit类似于友盟·推送·无法获取device token	</span>'+
+'</div>'+
+'<div style="padding:10px;">'+
+'<div style="display:none" class="BoxC"><input class="Pit" name="PitSourceID" placeholder="PitSourceID " ></div>'+
+'<div class="BoxC"><h2>Pit</h2><input class="Pit" name="PitName" placeholder="PitName" ></div>'+
+'<div class="BoxC"><input class="Pit" name="PitLogo" placeholder="PitLogo" ></div>'+
+'<div class="BoxC"><input class="Pit" name="Pitinfo" placeholder="Pitinfo" ></div>'+
+'<div class="BoxC"><input class="Pit" name="PitUrl" placeholder="PitUrl" ></div>'+
+'<div class="BoxC" style="text-align: right;"><button type="button" onclick="PitPost()">提交</button></div>'+
+'</div>'+
+'</form>'+
+'</div>'
+function pitaddf(id){
+	pitadd = '	<div>'+
+	'<form>  '+
+	'<div style="padding:10px;">'+               
+	'<span>PS：BasePit类似于友盟,</span><br>'+
+	'<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PitSource类似于友盟·推送,</span><br>'+
+	'<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pit类似于友盟·推送·无法获取device token	</span>'+
+	'</div>'+
+	'<div style="padding:10px;">'+
+	'<div style="display:none" class="BoxC"><input class="Pit" name="PitSourceID" placeholder="PitSourceID "  value="'+id+'" ></div>'+
+	'<div class="BoxC"><h2>Pit</h2><input class="Pit" name="PitName" placeholder="PitName"></div>'+
+	'<div class="BoxC"><input class="Pit" name="PitSubmitter" placeholder="PitSubmitter //发布者" ></div>'+
+
+	'<div class="BoxC"><input class="Pit" name="Pitinfo" placeholder="Pitinfo" ></div>'+
+	'<div class="BoxC"><input class="Pit" name="PitPic" placeholder="PitPic //图片网络路径" ><a target="_blank" href="http://chuantu.biz/"><svg class="icon" style="margin-left:10px; width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1901"><path d="M925.230486 377.716644 595.284845 173.486216c-31.600719-19.560498-53.66934-12.815887-64.011896-7.054673-10.341532 5.761214-27.691689 20.97573-27.691689 58.141188l0 75.611072c-17.833157 0-36.043914 0-54.219879 0-485.10035 0-374.45946 555.50484-374.45946 555.50484S110.877273 542.048363 449.533296 542.048363c18.073634 0 36.21583 0 54.015218 0 0 46.283116 0 88.579431 0 121.807207 0 0.309038 0 0.618077 0 0.926092 0 0.275269 0 0.584308 0 0.895393 0 5.118578 0 9.999748 0 14.637372 0.011256-0.001023 0.022513-0.002047 0.033769-0.00307l0-38.116109c0 37.164435 17.350157 52.379974 27.691689 58.140165 5.139044 2.863211 13.173021 5.968945 23.835871 5.968945 10.79281 0 24.278963-3.183506 40.176025-13.024641l329.946664-204.229404c23.225981-14.377452 36.018332-34.146705 36.018332-55.665811C961.248817 411.863349 948.456467 392.094096 925.230486 377.716644z" p-id="1902" fill="#ff9087"></path></svg><span>去上传</span></a></div>'+
+	'<div class="BoxC" style="text-align: right;"><button type="button" onclick="PitPost()">提交</button></div>'+
+	'</div>'+
+	'</form>'+
+	'</div>'
+}
+var page = 1;
+//hljs.initHighlightingOnLoad();
+
+function hlLoad(){
+	hljs.initHighlighting()
+	// $('pre code').each(function(i, block){    hljs.highlightBlock(block);  });
+}
+//跳转页面
+function go(id){
+	window.location.href='PitInfo.html?type='+id;
+}
+var type ;
+$(function(){
+	AV.initialize('yrK7RbgXjVjaxFRpkmJyifOL-gzGzoHsz', '5vviMWddvuF4oLo5lzB2W2Xi');
+	var myurl=GetQueryString("type");
+	if(myurl !=null && myurl.toString().length>1){
+		type = GetQueryString("type");
+		pitaddf(type);
+		var query = new AV.Query('Pit');
+		query.get(type).then(function (data) {
+			Pit = data;
+			$("#icon").attr("src",Pit.get("PitLogo"))
+			$("#icontitle").text(Pit.get("PitName"))
+			$("#dsDiv").append('<div class="ds-thread" data-thread-key="'+type+'" data-title="'+Pit.get("PitName")+'" data-url="'+window.location.href+'"></div>');
+			dsInit();
+			$("#pitList").append('<div style="float:left;"><svg class="icon" style="margin:1em 1em 0 1em;width: 2em; height: 2em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4383"><path d="M705.724087 135.030369C653.978438 83.286891 585.179698 54.790884 512 54.790884s-141.978438 28.496008-193.724087 80.239486c-51.74565 51.743478-80.242854 120.540354-80.242854 193.71698 0 73.175603 28.497204 141.972479 80.242854 193.715957 18.474522 18.473747 39.130825 33.965579 61.375365 46.273906-57.393514 18.420535-111.200189 48.710398-157.819883 89.554642-80.322675 70.373791-132.84607 165.980265-147.893396 269.207301-2.182804 14.971993 8.186793 28.878724 23.158391 31.060413 1.340587 0.195451 2.669918 0.290619 3.985945 0.290619 13.38029 0 25.089451-9.816576 27.075772-23.448038 27.647824-189.669804 192.662874-332.699358 383.840869-332.699358 73.179698 0 141.978438-28.496008 193.725111-80.239486 51.744626-51.743478 80.242854-120.53933 80.242854-193.715957C785.967964 255.570723 757.469737 186.774871 705.724087 135.030369zM512 547.911908c-120.853441 0-219.173757-98.317213-219.173757-219.164558 0-120.848369 98.32134-219.165582 219.173757-219.165582s219.174781 98.317213 219.174781 219.165582C731.174781 449.594695 632.853441 547.911908 512 547.911908zM946.423994 927.370219c-6.287457-46.808072-20.036153-92.0116-40.864378-134.354987-20.302224-41.275056-46.900092-78.992075-79.052698-112.104217-10.540496-10.854209-27.885241-11.111059-38.740929-0.568958-10.854664 10.540054-11.109478 27.884071-0.568982 38.738279 57.672888 59.391668 93.954709 133.938502 104.920918 215.581963 1.848169 13.759375 13.607474 23.75196 27.118752 23.75196 1.214715 0 2.444781-0.080841 3.68201-0.246617C937.914846 956.154799 948.438969 942.365748 946.423994 927.370219z" p-id="4384" fill="#1fddb4"></path></svg><div style="text-align: center;">'+Pit.get("PitSubmitter")+'</div></div><div style="margin: 0 0 1em 0;background: rgba(7, 255, 200, 0.24);line-height: 5em;">'+Pit.get("PitName")+'</div><div style="text-align: center;"><img src="'+Pit.get("PitPic")+'"></div><div style="color:#666;">'+Pit.get("PitInfo")+'</div>');
+			
+		}, function (error) {
+			console.log("error:"+error)
+		});
+
+
+}else{
+	window.location.href='index.html';
+}
+initUtil();
+
+		//logo颜色渐变动画
+		$(".logo").gradientify({
+			gradients: [
+			{ start: [49,76,172], stop: [242,159,191] },
+			{ start: [255,103,69], stop: [240,154,241] },
+			{ start: [33,229,241], stop: [235,236,117] }
+			]
+		});
+		$(".logoBG").gradientify({
+			gradients: [
+			{ start: [49,76,172], stop: [242,159,191] },
+			{ start: [255,103,69], stop: [240,154,241] },
+			{ start: [33,229,241], stop: [235,236,117] }
+			]
+		});
+		
+	});
+//添加面板出现
+function addPitShow(){
+
+	layer.open({
+		title: '添加Pit【坑】',
+		type: 1,
+	area: ['580px', ''], //宽高
+	content: pitadd
+});
+	initForm();
+}
+
+//提交Pit
+function PitPost(){
+	if (PitText()) {
+		console.log("true")
+		var Pit = AV.Object.extend('Pit');
+		var Pit = new Pit();
+		var PitSource = AV.Object.createWithoutData('PitSource', $("input[name='PitSourceId']").val());
+		Pit.set("PitSource",PitSource);
+		Pit.save({
+			PitName: $("input[name='PitName']").val(),
+			PitSubmitter: $("input[name='PitSubmitter']").val(),
+			PitPic: $("input[name='PitPic']").val(),
+			PitInfo: $("input[name='PitInfo']").val(),
+		}, {
+			success: function(object) {
+				layer.msg('保存成功！');
+			},
+			error: function(object) {
+				layer.msg('保存失败！');
+			}
+		}
+		);
+	}else{
+		layer.msg('请正确填写表单内容');
+	};
+}
+//Pit检查
+function PitText(){
+	var b = true;
+	$(".Pit").each(function(){
+		if($(this).val()==""){
+			b = false;
+		}
+	});
+	$(".Pit").each(function(){
+		if($(this).closest('div').is('.error')){
+			b = false;
+		}
+	});
+
+	return b;
+}
+//多说初始化
+function dsInit(){
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.unstable.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+		|| document.getElementsByTagName('body')[0]).appendChild(ds);
+}
+/**
+ * 添加自定义功能
+ */
+ function initUtil(){
+		Date.prototype.Format = function (fmt) { //author: meizz 
+			var o = {
+        "M+": this.getMonth() + 1, //月份 
+        "d+": this.getDate(), //日 
+        "h+": this.getHours(), //小时 
+        "m+": this.getMinutes(), //分 
+        "s+": this.getSeconds(), //秒 
+        "q+": Math.floor((this.getMonth() + 3) / 3), //季度 
+        "S": this.getMilliseconds() //毫秒 
+    };
+    if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+    for (var k in o)
+    	if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+    return fmt;
+}
+}
+
+function GetQueryString(name)
+{
+	var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+	var r = window.location.search.substr(1).match(reg);
+	if(r!=null)return  unescape(r[2]); return null;
+}
+</script>
+
+</body>
+</html>
