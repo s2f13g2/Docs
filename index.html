@@ -234,8 +234,9 @@
                     { url:'网站链接',img:'网站logo',message: '一句话描述此站点' }
                 </div>
             </div>
-            <div id="webList" class="content" style="height:1000px">
-                
+    <div id="webList">
+            <div id="hotList" class="content" >
+                <h4>热门导航</h4>
                 <div v-for="item in items" style="width:25%;float:left;">
                    <div class="boxContent">
                         <a href="{{item.url}}" target="_blank">
@@ -248,6 +249,22 @@
                 </div>
 
             </div>
+               <div style="clear:both;"></div>
+            <div id="javaEEList" class="content" >
+                <h4>javaEE</h4>
+                <div v-for="item in javaEEitems" style="width:25%;float:left;">
+                   <div class="boxContent">
+                        <a href="{{item.url}}" target="_blank">
+                            <div style="text-align: center;">
+                                <img  src="{{item.img}}">
+                                <h5> {{ item.message }}</h5>
+                            </div>
+                        </a>
+                    </div> 
+                </div>
+
+            </div>
+      </div>
             <div class="footer"></div>
 
 
@@ -278,6 +295,11 @@
                   
                   
                   
+                ],
+                javaEEitems: [
+                  { url:'http://mvnrepository.com/',img:'http://mvnrepository.com/assets/images/392dffac024b9632664e6f2c0cac6fe5-logo.png',message: 'Maven Repository JAR包搜索' },
+                  { url:'http://tomcat.apache.org/',img:'http://tomcat.apache.org/images/tomcat.png',message: 'Tomcat'},
+
                 ]
               }
             })
