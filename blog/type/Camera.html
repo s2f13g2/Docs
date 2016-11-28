@@ -48,7 +48,7 @@ video{
 			<div style="clear:both;"></div>
 		</div>
 		<div>
-			<label>上传音频/拍照或者录像</label>
+			<label>上传音频(手机只是显示拍照或者录像)</label>
 			<input type="file" accept="audio/*" capture="microphone">
 			<div id="microphone" style="margin:0 auto ;width:98%;">
 				
@@ -140,7 +140,31 @@ $(function(){
       // 通过 file 生成目标 url
       var imgURL = URL.createObjectURL(file);
       // 用这个 URL 产生一个 <img> 将其显示出来
-      $('#microphone').append($('<audio/>').attr('src', imgURL));
+      var filename = file.name;
+      var index1=filename.lastIndexOf(".");   
+      var index2=filename.length;  
+	  var postf=filename.substring(index1,index2);//后缀名 
+      switch(postf)
+	  {
+	  	case ".png":
+	  	 $('#multiple').append($('<img/>').attr('src', imgURL));
+	  	break;
+	  	case ".gif":
+	  	 $('#multiple').append($('<img/>').attr('src', imgURL));
+	  	break;
+	  	case ".jpg":
+	  	 $('#multiple').append($('<img/>').attr('src', imgURL));
+	  	break;
+	  	case ".mp3":
+	  	 $('#multiple').append($('<audio/>').attr('src', imgURL));
+	  	break;
+	  	case ".mp4":
+	  	 $('#multiple').append($('<video/>').attr('src', imgURL));
+	  	break;
+	  	default:
+	  	 $('#multiple').append("<div>"+imgURL+"</div>" );
+		break;
+	  }
       // 使用下面这句可以在内存中释放对此 url 的伺服，跑了之后那个 URL 就无效了
       // URL.revokeObjectURL(imgURL);
   }
