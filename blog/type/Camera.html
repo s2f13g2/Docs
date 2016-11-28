@@ -5,7 +5,13 @@
 <title>GetUserMedia实例</title>  
 </head>  
 <body>  
-<video id="video" autoplay><ideo>  
+ <div><video id="video" autoplay><video> </div>
+<div>
+	    <input type="file" accept="image/*" capture="camera">
+    <input type="file" accept="video/*" capture="camcorder">
+    <input type="file" accept="audio/*" capture="microphone">
+        <input type="file" accept="image/*" multiple>
+</div> 
 </body>  
 <script type="text/javascript">  
 var getUserMedia = (navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);   
