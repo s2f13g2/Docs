@@ -4,7 +4,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>liuyouth 技术导航站点</title>
     <link rel="stylesheet" href="css/lib/swiper-3.3.1.min.css">
+    <link rel="stylesheet" href="http://demo.htmleaf.com/1609/201609271528/css/build.css">
+    
     <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/swich.css">
     <style>
         .boxContent img {
         height: 50px;
@@ -131,6 +134,60 @@
   overflow: hidden;
 
 }
+#searchSettingDiv{
+  padding: 2em;
+
+}
+#searchSettingDiv h4{
+  padding: .5em;
+  
+}
+  #searchinput{
+    float: left;
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 400;
+    letter-spacing: 0em;
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: top;
+    height: 34px;
+    padding-top: 1px;
+    padding-top: 5px\0;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #333333;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+    background: white;
+    background-clip: padding-box;
+    width: 83%
+  }
+  .clear{
+    clear:both;
+  }
+  button{
+    margin: 5px;
+    display: inline-block;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 18px;
+    background-color: #1E9FFF;
+    color: #fff;
+    white-space: nowrap;
+    text-align: center;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    opacity: .9;
+  }
+  .hide{
+    display: none;
+  }
+
+.radioclass {
+
+}
     </style>
 </head>
 <body>
@@ -226,11 +283,17 @@
             <li></li>
             <li></li>
         </ul>
-                <div class="boxContent" style="color:#fff; position: absolute;top: 100px;width: 76%; margin:20px 10%; text-align: center;background-color:rgba(255, 255, 255, 0.32)">
+                <div class="boxContent" style="z-index:999;color:#fff; position: absolute;top: 100px;width: 76%; margin:20px 10%; text-align: center;background-color:rgba(255, 255, 255, 0.32)">
                     <h1 style="padding:10px;font-size:1.1em;display:block;">方便你我的互联网地图</h1>
                     
-                    <span style="padding:10px;font-size:1em;color:#999;display:block;">添加你需要站点的方式（自助添加开发中）</span>
-                    <h4>人工添加 将您想要添加的网站信息以如下格式发送至我的邮箱（faithll@163.com）</h4>
+                    <div style="padding-left:80px;">
+                        <input id="searchinput" onkeypress="searchEnter()" >
+                        <svg id="searchSetting" t="1481330464507" onclick="searchSetting()" class="icon" style="width: 2em; height: 2em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1919"><path d="M512 353.152c-85.76 0-155.456 70.656-155.456 157.568s69.76 157.632 155.456 157.632c8.576 0 17.408-0.896 27.776-2.816 12.096-2.24 20.096-13.952 17.92-26.176-2.24-12.288-13.76-20.48-25.856-18.176-7.68 1.408-14.016 2.048-19.84 2.048-61.184 0-110.976-50.496-110.976-112.512s49.792-112.512 110.976-112.512c61.248 0 110.976 50.496 110.976 112.512 0 5.952-0.64 12.288-2.048 20.096-2.24 12.224 5.824 24 17.856 26.24 12.096 2.24 23.68-5.888 25.856-18.112 1.856-10.496 2.752-19.456 2.752-28.16 0.064-86.976-69.696-157.632-155.392-157.632zM970.56 422.016c-1.664-8.768-8.256-15.744-16.832-17.792-48.768-11.392-89.28-41.664-114.112-85.248s-30.4-94.208-15.808-142.656c2.56-8.512-0.064-17.792-6.72-23.616-44.736-39.168-95.744-69.056-151.744-88.832-8.32-2.944-17.536-0.64-23.552 5.888-34.112 37.12-80.192 57.472-129.792 57.472s-95.68-20.416-129.728-57.408c-6.016-6.528-15.296-8.832-23.616-5.888-55.936 19.712-107.008 49.6-151.744 88.832-6.656 5.824-9.28 15.104-6.72 23.616 14.592 48.384 8.96 99.072-15.808 142.592-24.832 43.648-65.344 73.92-114.112 85.248-8.576 1.984-15.232 8.96-16.832 17.792-5.632 29.952-8.448 59.84-8.448 88.704s2.816 58.752 8.448 88.704c1.664 8.768 8.256 15.744 16.832 17.728 48.768 11.392 89.28 41.664 114.112 85.248 24.768 43.584 30.4 94.208 15.808 142.656-2.56 8.512 0.064 17.792 6.72 23.616 44.736 39.168 95.744 69.056 151.744 88.832 2.368 0.832 4.864 1.28 7.296 1.28 6.08 0 11.968-2.496 16.256-7.168 34.112-36.992 80.192-57.408 129.792-57.408s95.68 20.352 129.728 57.408c6.016 6.528 15.232 8.832 23.552 5.952 55.936-19.712 106.944-49.6 151.744-88.832 6.656-5.824 9.28-15.104 6.72-23.616-14.592-48.384-8.96-99.072 15.872-142.656s65.344-73.856 114.112-85.248c8.576-1.984 15.168-8.96 16.832-17.728 5.632-30.016 8.448-59.904 8.448-88.704 0-28.864-2.816-58.752-8.448-88.768zM929.28 577.216c-53.888 16.512-100.032 53.312-128.192 102.72-28.096 49.344-36.48 108.224-23.744 163.712-34.304 28.096-72.448 50.432-113.664 66.496-41.28-39.488-94.592-60.992-151.68-60.992-56.192 0-110.656 22.08-151.68 60.992-41.216-16.064-79.36-38.4-113.6-66.496 13.056-56 4.8-113.6-23.744-163.712-28.224-49.408-74.368-86.208-128.256-102.72-3.52-22.528-5.312-44.8-5.312-66.432s1.792-43.968 5.312-66.496c53.824-16.512 99.968-53.312 128.128-102.72 28.096-49.344 36.48-108.224 23.744-163.712 34.304-28.16 72.384-50.432 113.664-66.56 41.024 38.976 95.552 61.056 151.744 61.056 57.088 0 110.4-21.568 151.744-60.992 41.28 16.064 79.424 38.4 113.664 66.496-12.736 55.488-4.416 114.368 23.68 163.712 28.16 49.408 74.304 86.208 128.192 102.72 3.52 22.592 5.312 44.864 5.312 66.496 0 21.568-1.792 43.84-5.312 66.432z" p-id="1920" fill="#8a8a8a"></path></svg>
+
+                    </div>
+                    <div class="clear"></div>
+                    <div id="searchtype"><button onclick="baidus()">百度搜索</button><button onclick="sos()">360搜索</button><button onclick="sogous()">搜狗搜索</button></div>
+                    <h4>添加你需要站点的方式   将您想要添加的网站信息以如下格式发送至我的邮箱（faithll@163.com）</h4>
                     { url:'网站链接',img:'网站logo',message: '一句话描述此站点' }
                 </div>
             </div>
@@ -265,13 +328,40 @@
 
             </div>
       </div>
-            <div class="footer"></div>
+      <div class="footer"></div>
+      <div class="clear">
+          <div id="searchSettingDiv" style="display:none;">
+            <H4>选择默认搜索引擎</H4> 
+            <div style="
+    padding: 1em;
+    background: #ff6767;
+    margin: .5em;
+    border-radius: 5px;
+">
+                <div style="
+    float: left;
+    line-height: 33px;
+">显示多个搜索项：</div>
+               <input id="typeswich" class="mui-switch mui-switch-anim" onclick="taggle(this)" type="checkbox" checked="">
+            </div>
+            <input id='baidu' type="radio" name='r-group-1'  />
+            <label for="baidu">百度</label>
+            <input id='google' type="radio" name='r-group-1' />
+            <label for="google">谷歌</label>
+            <input id='so' type="radio" name='r-group-1' />
+            <label for="so">360</label>
+            <input id='sougou' type="radio" name='r-group-1' />
+            <label for="sougou">搜狗</label>
+            
+          </div>
+      </div>
 
 
         </body>
         <script src="js/lib/jquery-2.1.1.min.js"></script>
         <script src="js/lib/vue.js"></script>
         <script src="js/lib/jquery.gradientify.min.js"></script>
+        <script src="js/lib/layer.js"></script>
         <script src="js/lib/jquery.nicescroll.js"></script>
         <script type="text/javascript">
 
@@ -304,7 +394,18 @@
               }
             })
         $(function(){
+  /*          $("input[type=radio]").each(function(){
+              $(this).addClass("radioclass");
+            })*/
             //logo颜色渐变动画
+            $("input[name='r-group-1']").each(function(){
+              $(this).attr("onclick","setSearchdefault();");
+            })
+            if("false"!=localStorage.searchtypeisshow){
+                 $('#searchtype').hide();
+                 $("#typeswich").removeAttr("checked");
+            }
+            $('#'+localStorage.searchtypename).attr('checked', 'checked');
             $(".logo").gradientify({
                 gradients: [
                 { start: [0, 184, 255], stop: [110, 213, 108] },
@@ -334,5 +435,67 @@
                 }
             });
         });
+function searchEnter(){
+  if (event.keyCode==13) {
+     window.open(localStorage.searchtype+$("#searchinput").val()); 
+  };
+  
+}
+  function taggle(checkbox) {
+
+       if($(checkbox).prop("checked")){
+           $('#searchtype').show(500);
+           localStorage.searchtypeisshow=true;
+       }else{
+           $('#searchtype').hide(500);
+           localStorage.searchtypeisshow=true;
+       }
+
+   }
+function searchSetting(){
+//捕获页
+layer.open({
+  type: 1,
+  shade: false,
+  title: false, //不显示标题
+  content: $('#searchSettingDiv'), //捕获的元素
+  cancel: function(){
+      if (!window.localStorage) {
+        layer.msg('您浏览器暂不支持该功能，请更换浏览器使用；PS：推荐"Chrome"、"火狐"');
+      };
+  }
+});
+}
+function setSearchdefault(){
+  var name = $('input[name="r-group-1"]:checked').attr("id");
+  switch(name){
+    case "baidu":
+      localStorage.searchtypename="baidu";
+      localStorage.searchtype="https://www.baidu.com/s?wd=";
+      break;
+    case "google":
+      localStorage.searchtypename="google";
+      localStorage.searchtype="https://www.baidu.com/s?wd=";
+      break;
+    case "so":
+      localStorage.searchtypename="so";
+      localStorage.searchtype="https://www.so.com/s?q=";
+      break;
+    case "sogou":
+      localStorage.searchtypename="sogou";
+      localStorage.searchtype="https://www.sogou.com/web?query=";
+      break;
+  }
+
+}
+function baidus(){
+  window.open("https://www.baidu.com/s?wd="+$("#searchinput").val()); 
+}
+function sos(){
+  window.open("https://www.so.com/s?q="+$("#searchinput").val()); 
+}
+function sogous(){
+  window.open("https://www.sogou.com/web?query="+$("#searchinput").val()); 
+}
         </script>
         </html>
