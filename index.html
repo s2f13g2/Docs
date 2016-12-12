@@ -298,6 +298,21 @@
                 </div>
             </div>
     <div id="webList">
+            <div id="utilsList" class="content" >
+                <h4>在线工具</h4>
+                <div v-for="item in utilsItems" style="width:25%;float:left;">
+                   <div class="boxContent">
+                        <a href="{{item.url}}" target="_blank">
+                            <div style="text-align: center;">
+                                <img  src="{{item.img}}">
+                                <h5> {{ item.message }}</h5>
+                            </div>
+                        </a>
+                    </div> 
+                </div>
+
+            </div>
+              <div style="clear:both;"></div>
             <div id="hotList" class="content" >
                 <h4>热门导航</h4>
                 <div v-for="item in items" style="width:25%;float:left;">
@@ -382,13 +397,22 @@
                   { url:'http://intheworld.win/',img:'http://intheworld.win/wordpress/wp-content/themes/zalive/img/features_img_1.jpg',message: 'intheworld - 浮舟沧海'},
                    { url:'http://www.androidblog.cn/',img:'http://www.androidblog.cn/Public/home/img/android_96px_1110302_easyicon.net.png',message: 'Android最火的源码/工具'},
                     { url:'http://shejidx.com/',img:'http://shejidaxue.com/wp-content/themes/monster0825a/static/img/logo.jpg',message: 'UI设计/工具/资源'},
+                    { url:'http://blog.csdn.net/zxt0601',img:'http://avatar.csdn.net/4/3/8/1_zxt0601.jpg',message: '张旭童的博客-Android开发'},
+                    
                   
                   
                   
                 ],
+                
                 javaEEitems: [
                   { url:'http://mvnrepository.com/',img:'http://mvnrepository.com/assets/images/392dffac024b9632664e6f2c0cac6fe5-logo.png',message: 'Maven Repository JAR包搜索' },
                   { url:'http://tomcat.apache.org/',img:'http://tomcat.apache.org/images/tomcat.png',message: 'Tomcat'},
+                  
+
+                ],
+                utilsItems: [
+                 { url:'utils/svg2android/index.html',img:'utils/svg2android/img/logo.svg',message: 'Android SVG to VectorDrawable' },
+                 
 
                 ]
               }
