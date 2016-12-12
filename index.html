@@ -429,7 +429,12 @@
                  $('#searchtype').hide();
                  $("#typeswich").removeAttr("checked");
             }
-            $('#'+localStorage.searchtypename).attr('checked', 'checked');
+            if (!localStorage.searchtypename) {
+                localStorage.searchtypename="baidu";
+                localStorage.searchtype="https://www.baidu.com/s?wd=";
+                $('#'+localStorage.searchtypename).attr('checked', 'checked');
+            };
+            
             $(".logo").gradientify({
                 gradients: [
                 { start: [0, 184, 255], stop: [110, 213, 108] },
