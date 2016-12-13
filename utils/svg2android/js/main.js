@@ -8,7 +8,7 @@ String.prototype.f = function () {
     }
     return s;
 };
-
+var index =0;
 String.prototype.repeat = function (num) {
     return new Array(num + 1).join(this);
 };
@@ -530,8 +530,22 @@ function printPath(pathData, stylesArray, groupLevel, clipPath) {
         generatedOutput += generateAttr('strokeLineCap', styles["stroke-linecap"], groupLevel, "butt");
         generatedOutput += generateAttr('pathData', pathData, groupLevel, null, true);
         pathsParsedCount++;
-        $("#output-path").append(pathData);
-        $("#output-path").append("\n\n");
+
+
+
+        index++;
+        htmls = '    <div style="text-align: center;">';
+        htmls += '        <div id="button-box" class="btn-group">'
+        htmls += '            <button type="button" class="btn btn-default btn-sm" onclick="selectAllpath('+index+')">Select all'
+        htmls += '            </button>'
+        htmls += '        </div>'
+        htmls += '<svg class="icon" style="width: 3em; height: 3em;vertical-align: middle;fill: currentColor;overflow: hidden;float: left;margin: 1em;"'
+        htmls += ' viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1982">'
+        htmls += '<path d="'+pathData+'" p-id="1983"></path></svg>'
+        htmls += '<pre class="pre-scrollable" id="output-path'+index+'" >'+pathData+'</pre></div>'
+        $("#pathDiv").append(htmls);
+        $("#pathDiv").append("\n\n");
+
        
     } else {
         clipPathMerged.push(pathData);
@@ -545,7 +559,8 @@ function printPath(pathData, stylesArray, groupLevel, clipPath) {
 
 function generateCode(inputXml) {
     var resultData = { error:null, warnings:null, code:null };
-    $("#output-path").empty();
+    $("#pathDiv").empty();
+   index = 0;
     var xml;
     try {
         xml = $($.parseXML(inputXml));
@@ -729,8 +744,8 @@ function selectAll() {
     }
 }
 
-function selectAllpath() {
-    var el = $("#output-path")[0];
+function selectAllpath(index) {
+    var el = $("#output-path"+index)[0];
     if (typeof window.getSelection != "undefined" && typeof document.createRange != "undefined") {
         var range = document.createRange();
         range.selectNodeContents(el);
