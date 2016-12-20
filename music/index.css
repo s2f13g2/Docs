@@ -1,0 +1,196 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	font:14px/1.5 normal Lato,DIN,'Microsoft Yahei',"Droid Sans","Helvetica Neue","Droid Sans Fallback","Heiti SC",sans-self;
+	background-color:#e6e6e6;
+}
+.header{
+	height:42px;
+	padding-left:10%;
+	background-color:#fff;
+	-moz-box-shadow:6px 5px 13px #333333; -webkit-box-shadow:6px 5px 13px #333333; box-shadow:6px 5px 13px #333333;
+}
+.header h4{
+	line-height:44px;
+}
+.clear{ clear:both} 
+.content{
+	margin:0 auto;
+	width:1170px;
+	margin-top:100px;
+	overflow:auto;
+	background-color:#fff;
+	border-radius: 5px;
+}
+.title{
+	min-height:320px;
+	padding:.5%;
+	border-radius: 5px 5px 0px 0px;
+	background-image: url("http://img.laozuo.org/3.jpg");
+	background-repeat: round;
+	color: #fff;
+  font-size: 2em;
+}
+.backgrounds{
+    position: fixed;
+    top: 1px;
+    z-index: -1;
+    min-height: 100%;
+    width: 99.5%;
+    padding: .5%;
+    background-image: url("https://y.gtimg.cn/music/photo_new/T002R300x300M000004EYzvs4W0GLy.jpg?max_age=2592000");
+    background-repeat: round;
+	    background-size: 100%;
+}
+.blur {   
+    -webkit-filter: blur(35px); /* Chrome, Opera */
+       -moz-filter: blur(35px);
+        -ms-filter: blur(35px);   
+            filter: blur(35px) brightness(1);
+
+}
+
+.title h4{
+		margin: 2em .5em .5em 1em;
+    transition: all 1s ease;
+	 		position: relative;
+    bottom: -122px;
+    border-radius: 50px;
+	padding-left:2%;
+}
+.title h4:hover{
+	color:rgb(29, 247, 148);
+	background-color:#333;
+}
+.author img{
+width: 82px;
+    border-radius: 50%;
+	margin-right:5px;
+}
+.author h5{
+	float:left;
+		margin-right:5px;
+}
+.author h5:before{
+	content:"by:";
+	color:#ff6767;
+		font-size:12px
+}
+.author{
+	  transition: all 1s ease;
+			margin: 2em .5em .5em 1em;
+}
+
+.info{
+	padding:1%;
+	
+}
+.info span{
+	margin:1em;
+}
+.icon path {
+  fill: #FF9585;
+}
+.info pre{
+	padding-left:1%;
+		background: #ece7e7;
+    border: solid 2px #cfcfcf;
+    border-radius: 5px;
+}
+.item{
+	width:960px;
+	background-color:#e0e0e0;
+	border-radius:50px 10px 10px 50px ;
+	margin:5px;
+}
+.itemP  {
+	background-color:#F17676;
+	width:960px;
+	border-radius:50px 10px 10px 50px ;
+	margin:5px;
+}
+.footer{
+	min-height:100px;
+	margin-top:30px;
+}
+
+.tou{
+	height:50px;
+	width:50px;
+	border-radius:50%;
+	line-height:43px;
+	text-align:center;
+	font-size:2em;
+	color:#fff;
+	float:left;
+}
+.tou img{
+	height:50px;
+	width:50px;
+	border-radius:50%;
+	line-height:43px;
+	text-align:center;
+	color:#fff;
+
+}
+
+
+.Sharer{
+	margin-top:14px;
+	padding:2px 10px 3px 10px;
+	margin-right:20px;
+	line-height:16px;
+	text-align:center;
+	font-size:0.8em;
+	font-weight:bold;
+	border-radius:10px;
+	color:#999;
+	float:right;
+}
+.SharerP{
+	margin-top:14px;
+	padding:2px 10px 3px 10px;
+	margin-right:20px;
+	line-height:16px;
+	text-align:center;
+	font-size:0.8em;
+	font-weight:bold;
+	border-radius:10px;
+	color:#FB6060;
+	background-color:#fff;
+	float:right;
+}
+
+#notification{
+  position: fixed;
+  right: 10px;
+  width: 364px;
+  top: 54px;
+	overflow: hidden;
+}
+#notification img{
+	width: 84px;
+  border-radius: 84px;
+	float:left;
+}
+#notification div{
+	height:84px;
+	padding:10px;
+	background-color:#fff;
+	border-radius:5px;
+	overflow: hidden;
+}
+#notification h5{
+ font-size: 15px;
+}
+#notification p{
+ font-size: 12px;
+}
+.no-close{
+	position: relative;
+  right: -243px;
+  top: -13px;
+}
+

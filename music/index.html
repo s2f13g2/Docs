@@ -1,0 +1,72 @@
+
+<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<link href="http://cdn.bootcss.com/nprogress/0.2.0/nprogress.css" rel="stylesheet">
+<script src="http://cdn.bootcss.com/nprogress/0.2.0/nprogress.js"></script>
+<link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<script src="https://cdn.bootcss.com/socket.io/1.6.0/socket.io.min.js"></script>
+<script src="music.js"></script>
+<script src="index.js"></script>
+<link href="index.css" rel="stylesheet">
+<link href="music.css" rel="stylesheet">
+<body>
+		<div class="backgrounds blur">
+	
+		</div>
+	
+			
+
+<div class="grid-music-container f-usn">
+    <div class="m-music-play-wrap">
+        <div class="u-cover"></div>
+        <div class="m-play-controls">
+                <a class="u-play-btn prev" title="上一曲"></a>
+                <a class="u-play-btn ctrl-play play" title="暂停"></a>
+                <a class="u-play-btn next" title="下一曲"></a>
+        </div>
+        <div class="m-now-info">
+            <h1 class="u-music-title"><strong>标题</strong><small>歌手</small></h1>
+            <div class="m-now-controls">
+                <div class="u-control u-process">
+                    <span class="buffer-process"></span>
+                    <span class="current-process"></span>
+                </div>
+                <div class="u-control u-time">00:00/00:00</div>
+            </div>
+        </div>
+        <div class="m-play-controls">
+                <div class="u-control u-volume">
+                <a class="volume-control"></a>
+                    <div class="volume-process show" data-volume="0.50">
+                        <span class="volume-current"></span>
+               <!--          <span class="volume-bar"></span> -->
+                        <span class="volume-event"></span>
+                    </div>
+                    
+                </div>
+                <div>
+                <a class="u-play-btn mode mode-list current" title="列表循环"></a>
+                <a class="u-play-btn mode mode-random" title="随机播放"></a>
+                <a class="u-play-btn mode mode-single" title="单曲循环"></a>
+                </div>
+        </div>
+        <div class="m-play-controls"><img class=" mlist-btn" data-state="false" src="imgs/mlist.svg"></div>
+    </div>
+    <div class="m-music-list-wrap"></div>
+    <div class="m-music-lyric-wrap">
+        <div class="inner">
+            <ul class="js-music-lyric-content">
+                <li class="eof">暂无歌词...</li>
+            </ul>
+        </div>
+    </div>
+    
+</div>
+
+	
+	<div class="footer">
+		
+	</div>
+	<div id="notification">
+		
+	</div>
+</body>

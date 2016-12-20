@@ -292,7 +292,8 @@
 
                     </div>
                     <div class="clear"></div>
-                    <div id="searchtype"><button onclick="baidus()">百度搜索</button><button onclick="sos()">360搜索</button><button onclick="sogous()">搜狗搜索</button></div>
+                    <div id="searchtype"><button onclick="baidus()">百度搜索</button>
+                      <button onclick="google()">谷歌搜索</button><button onclick="sos()">360搜索</button><button onclick="sogous()">搜狗搜索</button></div>
                     <h4>添加你需要站点的方式   将您想要添加的网站信息以如下格式发送至我的邮箱（faithll@163.com）</h4>
                     { url:'网站链接',img:'网站logo',message: '一句话描述此站点' }
                 </div>
@@ -389,6 +390,8 @@
                   { url:'http://www.apkbus.com',img:'http://www.apkbus.com/static/image/common/logo.png',message: '移动互联网门户'},
                   { url:'http://www.biaonimeia.com/',img:'http://www.biaonimeia.com/images/logo_s.png',message: '一款自动化设计标注工具'},
                   { url:'http://www.app-echo.com/',img:'http://www.app-echo.com/statics/v3/images/echoBrand@2x.png',message: '音乐社区'},
+                  
+                  { url:'http://p.codekk.com/',img:'',message: 'Android 精品项目例子'},
                   { url:'http://huaban.com/',img:'http://huaban.com/img/logo.svg',message: '国内最优质图片灵感库'},
                   { url:'https://dribbble.com/',img:'https://d13yacurqjgara.cloudfront.net/assets/ball-2acfbb9fdf187a34b07a7cc209d07025b39697eba6302c54942a556c10b3fa94.png',message: 'dribbble国外设计站'},
                   { url:'http://iconfont.cn/',img:'http://www.easyicon.net/api/resizeApi.php?id=1194933&size=72',message: 'iconfont 阿里旗下的图标/字体站'},
@@ -407,6 +410,7 @@
                 javaEEitems: [
                   { url:'http://mvnrepository.com/',img:'http://mvnrepository.com/assets/images/392dffac024b9632664e6f2c0cac6fe5-logo.png',message: 'Maven Repository JAR包搜索' },
                   { url:'http://tomcat.apache.org/',img:'http://tomcat.apache.org/images/tomcat.png',message: 'Tomcat'},
+                  { url:'http://www.bootcdn.cn/',img:'',message: 'CDN加速文件css js'},
                   
 
                 ],
@@ -504,7 +508,7 @@ function setSearchdefault(){
       break;
     case "google":
       localStorage.searchtypename="google";
-      localStorage.searchtype="https://www.baidu.com/s?wd=";
+      localStorage.searchtype="https://www.google.com/#newwindow=1&q=";
       break;
     case "so":
       localStorage.searchtypename="so";
@@ -519,6 +523,9 @@ function setSearchdefault(){
 }
 function baidus(){
   window.open("https://www.baidu.com/s?wd="+$("#searchinput").val()); 
+}
+function google(){
+  window.open("https://www.google.com/#newwindow=1&q="+$("#searchinput").val()); 
 }
 function sos(){
   window.open("https://www.so.com/s?q="+$("#searchinput").val()); 
