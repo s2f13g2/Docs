@@ -67,6 +67,9 @@
 						<div>
 							<button type="button" id="btn" onclick="tojs()"> tojs </button>
 						</div>
+						<div>
+							<button type="button" id="btn" onclick="echo()"> echoinfo </button>
+						</div>
 
 					</div>
 					<textarea id="tos"></textarea>
@@ -124,7 +127,25 @@ function tojs(){
 	}
 	$("#tos").val(resule);
 }
+function echo(){
+	var str = $("#names").val();
+	var dataObj=eval("("+str+")");
+/*	console.log(dataObj);*/
+	var resule ="";
+	resule += '{ title:"'+dataObj.info.name+'",';
+	resule += 'singer:"'+dataObj.info.user.name+'",';
+	resule += 'cover:"'+dataObj.info.pic_100+'",';
+	resule += 'src:"'+dataObj.info.source+'",';
+	resule += 'lyric:"null"},';
+	//resule += 'info:"'+dataObj.info.info+'",';
 
+	
+	$("#tos").val(resule);
+}
+$.getJSON("http://www.app-echo.com/api/sound/info?id=341890&comment=1",  
+        function(data){  
+       console.log(data);
+    }); 
 </script>
 </body>
 </html>
