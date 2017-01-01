@@ -270,7 +270,7 @@
             <div style="text-align:center;clear:both">
             </div>
 
-            <div class="content wrapper">
+            <div style="" class="content wrapper">
                 <ul class="bg-bubbles">
             <li></li>
             <li></li>
@@ -298,7 +298,7 @@
                     { url:'网站链接',img:'网站logo',message: '一句话描述此站点' }
                 </div>
             </div>
-    <div id="webList">
+    <div id="webList"  style="max-width: 1100px;margin: 0 auto;" >
             <div id="utilsList" class="content" >
                 <h4>在线工具</h4>
                 <div v-for="item in utilsItems" style="width:25%;float:left;">
@@ -345,19 +345,16 @@
             </div>
       </div>
       <div class="footer"></div>
-      <div class="clear">
+      <div class="clear"></div>
+      <!-- 脱离文档布局层-->
+<div class="imgback"> 
+<img class="bodyback" height="100%" width="100%"> 
+
+<div class="colorback"></div>
           <div id="searchSettingDiv" style="display:none;">
             <H4>选择默认搜索引擎</H4> 
-            <div style="
-    padding: 1em;
-    background: #ff6767;
-    margin: .5em;
-    border-radius: 5px;
-">
-                <div style="
-    float: left;
-    line-height: 33px;
-">显示多个搜索项：</div>
+            <div style="padding: 1em;background: #ff6767;margin: .5em;border-radius: 5px;">
+                <div style="float: left;line-height: 33px;">显示多个搜索项：</div>
                <input id="typeswich" class="mui-switch mui-switch-anim" onclick="taggle(this)" type="checkbox" checked="">
             </div>
             <input id='baidu' type="radio" name='r-group-1'  />
@@ -371,7 +368,7 @@
             
           </div>
       </div>
-
+    <!-- 脱离文档布局层-->
 
         </body>
         <script src="js/lib/jquery-2.1.1.min.js"></script>
@@ -380,7 +377,17 @@
         <script src="js/lib/layer.js"></script>
         <script src="js/lib/jquery.nicescroll.js"></script>
         <script type="text/javascript">
-
+bimgs = [
+    {uri:"http://desk.fd.zol-img.com.cn/t_s1920x1200c5/g5/M00/0B/04/ChMkJ1diS1GIYSL8AA5CY_M74n0AASqZgAzDxkADkJ7634.jpg"},
+    {uri:"http://desk.fd.zol-img.com.cn/t_s1920x1080c5/g5/M00/0B/04/ChMkJldiS1qISsKeAAzwUI7y2LIAASqZwBOQesADPBo196.jpg"},
+    {uri:"http://desk.fd.zol-img.com.cn/t_s1920x1080c5/g5/M00/0B/04/ChMkJldiS1aIMKDIAAwER8BHqD8AASqZgIVJ0wADARf295.jpg"},
+    {uri:"http://desk.fd.zol-img.com.cn/t_s1920x1080c5/g5/M00/0B/04/ChMkJldiS1eIZrq7AA0lqb0yX8kAASqZgLX4XMADSXB895.jpg"},
+  {uri:"http://desk.fd.zol-img.com.cn/t_s1920x1080c5/g5/M00/0B/04/ChMkJ1diS1iId7DNAAqYUHeMHIAAASqZgOtA3oACpho409.jpg"},
+      {uri:"http://desk.fd.zol-img.com.cn/t_s2560x1600c5/g5/M00/0F/06/ChMkJlfI162IeK07AAY_egKaTWoAAU6qQHhDUcABj-S342.jpg"},
+    {uri:"http://desk.fd.zol-img.com.cn/t_s1920x1080c5/g5/M00/0F/06/ChMkJ1fI18uIPl4SAAH7nIUWw9wAAU6qQKoXZ4AAfu0026.jpg"},
+  {uri:"https://a-ssl.duitang.com/uploads/item/201605/29/20160529111226_WSAz3.jpeg"}, {uri:"http://img17.3lian.com/201612/15/4e842dcf566fa044a0ca1067c7dfd6dc.jpg"}
+  
+  ];
         new Vue({
               el: '#webList',
               data: {
@@ -425,6 +432,8 @@
   /*          $("input[type=radio]").each(function(){
               $(this).addClass("radioclass");
             })*/
+            //开启随机背景
+            lback();
             //logo颜色渐变动画
             $("input[name='r-group-1']").each(function(){
               $(this).attr("onclick","setSearchdefault();");
@@ -532,6 +541,12 @@ function sos(){
 }
 function sogous(){
   window.open("https://www.sogou.com/web?query="+$("#searchinput").val()); 
+}
+
+function lback(){
+     var id = Math.ceil(Math.random()*bimgs.length-1);
+  $(".bodyback").css("background","url("+bimgs[id].uri+")  no-repeat center");
+  $(".bodyback").css("background-size","cover");
 }
         </script>
         </html>
