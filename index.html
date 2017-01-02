@@ -5,7 +5,6 @@
     <title>liuyouth 技术导航站点</title>
     <link rel="stylesheet" href="css/lib/swiper-3.3.1.min.css">
     <link rel="stylesheet" href="http://demo.htmleaf.com/1609/201609271528/css/build.css">
-    
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/swich.css">
     <style>
@@ -127,7 +126,8 @@
   background: #50a3a2;
   background: -webkit-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
   background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
-  top: 50%;
+  top: 0px;
+  position: relative;
   left: 0;
   width: 96%;
   height: 220px;
@@ -191,6 +191,7 @@
     </style>
 </head>
 <body>
+<div id="body">
     <div id="header">
         <div style="width:30%;float:left;">
             <span class="logo">  liuyouth.github.io</span>
@@ -283,7 +284,7 @@
             <li></li>
             <li></li>
         </ul>
-                <div class="boxContent" style="z-index:999;color:#fff; position: absolute;top: 100px;width: 76%; margin:20px 10%; text-align: center;background-color:rgba(255, 255, 255, 0.32)">
+                <div class="boxContent" style="z-index:999;color:#fff; position: absolute;top: 0px;width: 76%; margin:20px 10%; text-align: center;background-color:rgba(255, 255, 255, 0.32)">
                     <h1 style="padding:10px;font-size:1.1em;display:block;">方便你我的互联网地图</h1>
                     
                     <div style="padding-left:80px;">
@@ -343,14 +344,49 @@
                 </div>
 
             </div>
+             <div style="clear:both;"></div>
       </div>
-      <div class="footer"></div>
+      <div class="footer">
+      </div>
+      <div style="height: 100px;"></div>
       <div class="clear"></div>
+</div>     
       <!-- 脱离文档布局层-->
+<!--底部Duck区 -->
+<div class="Duck">
+  <div class="fixedButtom">
+    <div  class="boxshadow"></div>
+    <div>
+    
+      <div onclick="appsShow()" class="dapps"><img src="http://d.lanrentuku.com/down/png/1406/mac-os-x-yosemite-pack-by-johanchalibert/launchpad.png"></div>
+      <div class="dapps"><img src="http://d.lanrentuku.com/down/png/1406/mac-os-x-yosemite-pack-by-johanchalibert/systempreferences.png"></div>
+      <div class="dapps"><img src="http://d.lanrentuku.com/down/png/1406/mac-os-x-yosemite-pack-by-johanchalibert/appstore.png"></div>
+      <div onclick="show('videoDiv')" class="dapps"><img src="http://img.macx.cn/upload/softicon1/20151030131218.png"></div>
+     
+    </div>
+  </div>
+</div>
+<!--底部Duck区 End-->
+<!--背景图片区 -->
 <div class="imgback"> 
-<img class="bodyback" height="100%" width="100%"> 
-
+<img class="bodyback" height="100%" width="100%">  </div>
 <div class="colorback"></div>
+<!--背景图片区 End -->
+<!--视频区 -->
+            <div id="videoDiv" class="content" style="display:none;" >
+                
+                <div style="width: 528px;height: 363px;position: fixed;right: 0px;bottom: 70px;">
+                   <div class="boxContent">
+                   <span onclick="hide('videoDiv')" class="no-close"><svg t="1481097029172" class="icon" style="width: 2em; height: 2em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1904"><path d="M313.123668 679.090794c-8.307584 9.355062-8.307584 22.863915 0 31.171499 9.391182 9.391182 22.936155 9.391182 31.243739 0L706.72254 348.30448c8.307584-8.307584 8.307584-21.816437 0-31.207619-8.343704-8.307584-21.852557-8.307584-31.243739 0L313.123668 679.090794zM679.632593 706.108501c8.307584 8.307584 22.936155 8.307584 31.243739 0 8.307584-8.271464 8.307584-21.816437 0-31.171499L348.557319 312.943069c-8.307584-8.307584-22.936155-8.307584-31.243739 0-8.307584 9.355062-8.307584 22.900035 0 31.207619L679.632593 706.108501z" p-id="1905" fill="#8a8a8a"></path></svg></span>
+                      <h5 style="margin: 5px;font-size: 1em;color: #565656;">所以遇到了就别放手</h5>
+                       <video id="video" class="video" style="width: 100%; opacity: 1; z-index: 2;" webkit-playsinline="true" src="http://gslb.miaopai.com/stream/uPQkFFX6ARPSWrig-Ejh9w__.mp4" poster="" proload="meta" controls=""><object width="100%" height="100%" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"><param name="src" value="http://wscdn.miaopai.com/splayer2.2.0.swf?scid=uPQkFFX6ARPSWrig-Ejh9w__&amp;token=&amp;autopause=true&amp;fromweibo=false"><param name="wmode" value="transparent"><param name="wmode" value="opaque"><param name="quality" value="high"> <param name="allowfullscreen" value="true"><param name="allowscriptaccess" value="always"><embed src="http://wscdn.miaopai.com/splayer2.2.0.swf?scid=uPQkFFX6ARPSWrig-Ejh9w__&amp;token=&amp;autopause=true&amp;fromweibo=false" type="application/x-shockwave-flash" autostart="false" width="100%" height="100%" quality="high" allowfullscreen="true" wmode="transparent" allowscriptaccess="always" pluginspage="http://www.macromedia.com/go/getflashplayer"></object></video>
+                    </div> 
+                </div>
+
+            </div>
+<!--视频区 End-->
+<!--搜索弹框区 -->
+
           <div id="searchSettingDiv" style="display:none;">
             <H4>选择默认搜索引擎</H4> 
             <div style="padding: 1em;background: #ff6767;margin: .5em;border-radius: 5px;">
@@ -367,14 +403,84 @@
             <label for="sougou">搜狗</label>
             
           </div>
-      </div>
-    <!-- 脱离文档布局层-->
+<!--搜索弹框区 End-->
+<!--Apps区 -->
 
-        </body>
+          <div id="AppsDiv" class="fills"  onclick="appsHide()" >
+            <div style="padding: 3em;">
+              <div class="AppsHeader">
+            </div>
+              <div class="AppsTab" style=" width: 1024px;text-align: center;margin: 0 auto">
+                 <!-- Swiper -->
+                          <div class="imgs swiper-container">
+                              <div class="swiper-wrapper">
+                                  <div  class="swiper-slide">
+                                    <div style="overflow: hidden;padding: 3em;height: 650px;" >
+                                       <div id="asd" onclick="appsShow()" class="apps">
+                                            <img src="http://d.lanrentuku.com/down/png/1406/mac-os-x-yosemite-pack-by-johanchalibert/launchpad.png">
+                                           <h5 style="color: #fff">应用</h5>
+                                       </div>
+                                       <div id="asd" onclick="appsShow()" class="apps">
+                                            <img src="http://d.lanrentuku.com/down/png/1406/mac-os-x-yosemite-pack-by-johanchalibert/launchpad.png">
+                                           <h5 style="color: #fff">应用</h5>
+                                       </div>
+                                       <div id="asd" onclick="appsShow()" class="apps">
+                                            <img src="http://d.lanrentuku.com/down/png/1406/mac-os-x-yosemite-pack-by-johanchalibert/launchpad.png">
+                                           <h5 style="color: #fff">应用</h5>
+                                       </div>
+                                       <div id="asd" onclick="appsShow()" class="apps">
+                                            <img src="http://d.lanrentuku.com/down/png/1406/mac-os-x-yosemite-pack-by-johanchalibert/launchpad.png">
+                                           <h5 style="color: #fff">应用</h5>
+                                       </div>
+                                       <div id="asd" onclick="appsShow()" class="apps">
+                                            <img src="http://d.lanrentuku.com/down/png/1406/mac-os-x-yosemite-pack-by-johanchalibert/launchpad.png">
+                                           <h5 style="color: #fff">应用</h5>
+                                       </div>
+                                       <div id="asd" onclick="appsShow()" class="apps">
+                                            <img src="http://d.lanrentuku.com/down/png/1406/mac-os-x-yosemite-pack-by-johanchalibert/launchpad.png">
+                                           <h5 style="color: #fff">应用</h5>
+                                       </div>
+                                       <div id="asd" onclick="appsShow()" class="apps">
+                                            <img src="http://d.lanrentuku.com/down/png/1406/mac-os-x-yosemite-pack-by-johanchalibert/launchpad.png">
+                                           <h5 style="color: #fff">应用</h5>
+                                       </div>
+                                       <div id="asd" onclick="appsShow()" class="apps">
+                                            <img src="http://d.lanrentuku.com/down/png/1406/mac-os-x-yosemite-pack-by-johanchalibert/launchpad.png">
+                                           <h5 style="color: #fff">应用</h5>
+                                       </div>
+                                       <div id="asd" onclick="appsShow()" class="apps">
+                                            <img src="http://d.lanrentuku.com/down/png/1406/mac-os-x-yosemite-pack-by-johanchalibert/launchpad.png">
+                                           <h5 style="color: #fff">应用</h5>
+                                       </div>
+                                       <div id="asd" onclick="appsShow()" class="apps">
+                                            <img src="http://d.lanrentuku.com/down/png/1406/mac-os-x-yosemite-pack-by-johanchalibert/launchpad.png">
+                                           <h5 style="color: #fff">应用</h5>
+                                       </div>
+
+                                       
+                                    </div>
+                                  </div>
+                                  <div  class="swiper-slide">
+                                    <img  width="500px" src="http://ww4.sinaimg.cn/large/610dc034jw1fb8iv9u08ij20u00u0tc7.jpg">
+                                  </div>
+                              </div>
+                              <!-- Add Pagination -->
+                              <div class="swiper-pagination"></div>
+                          </div> 
+                
+            </div>
+           
+            </div>
+          </div>
+<!--Apps区 End-->
+<!-- 脱离文档布局层-->
+
+     </body>
         <script src="js/lib/jquery-2.1.1.min.js"></script>
         <script src="js/lib/vue.js"></script>
         <script src="js/lib/jquery.gradientify.min.js"></script>
         <script src="js/lib/layer.js"></script>
+        <script src="js/lib/swiper-3.3.1.jquery.min.js"></script>
         <script src="js/lib/jquery.nicescroll.js"></script>
         <script type="text/javascript">
 bimgs = [
@@ -388,6 +494,19 @@ bimgs = [
   {uri:"https://a-ssl.duitang.com/uploads/item/201605/29/20160529111226_WSAz3.jpeg"}, {uri:"http://img17.3lian.com/201612/15/4e842dcf566fa044a0ca1067c7dfd6dc.jpg"}
   
   ];
+  Videos = [
+    { 
+      uri:"http://gslb.miaopai.com/stream/uPQkFFX6ARPSWrig-Ejh9w__.mp4"},
+    {uri:"http://desk.fd.zol-img.com.cn/t_s1920x1080c5/g5/M00/0B/04/ChMkJldiS1qISsKeAAzwUI7y2LIAASqZwBOQesADPBo196.jpg"},
+    {uri:"http://desk.fd.zol-img.com.cn/t_s1920x1080c5/g5/M00/0B/04/ChMkJldiS1aIMKDIAAwER8BHqD8AASqZgIVJ0wADARf295.jpg"},
+    {uri:"http://desk.fd.zol-img.com.cn/t_s1920x1080c5/g5/M00/0B/04/ChMkJldiS1eIZrq7AA0lqb0yX8kAASqZgLX4XMADSXB895.jpg"},
+  {uri:"http://desk.fd.zol-img.com.cn/t_s1920x1080c5/g5/M00/0B/04/ChMkJ1diS1iId7DNAAqYUHeMHIAAASqZgOtA3oACpho409.jpg"},
+      {uri:"http://desk.fd.zol-img.com.cn/t_s2560x1600c5/g5/M00/0F/06/ChMkJlfI162IeK07AAY_egKaTWoAAU6qQHhDUcABj-S342.jpg"},
+    {uri:"http://desk.fd.zol-img.com.cn/t_s1920x1080c5/g5/M00/0F/06/ChMkJ1fI18uIPl4SAAH7nIUWw9wAAU6qQKoXZ4AAfu0026.jpg"},
+  {uri:"https://a-ssl.duitang.com/uploads/item/201605/29/20160529111226_WSAz3.jpeg"}, {uri:"http://img17.3lian.com/201612/15/4e842dcf566fa044a0ca1067c7dfd6dc.jpg"}
+  
+  ];
+  
         new Vue({
               el: '#webList',
               data: {
@@ -428,11 +547,37 @@ bimgs = [
                 ]
               }
             })
+
+        function remove(id){
+          $("#"+id).children().remove();
+        }
+        function show(id){
+          $("#"+id).show(500);
+        }
+        function hide(id){
+          $("#"+id).hide(500);
+        }
+     var swiper = new Swiper('.imgs', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        loop: true,
+    });
+
         $(function(){
   /*          $("input[type=radio]").each(function(){
               $(this).addClass("radioclass");
             })*/
             //开启随机背景
+            //
+            //
+            $(".apps").each(function(){
+              $(this).click(function(e){
+                  layer.msg('应用打开了'); 
+                  e.stopPropagation(); 
+              });
+            });
+            $("#AppsDiv").hide();
+
             lback();
             //logo颜色渐变动画
             $("input[name='r-group-1']").each(function(){
@@ -494,6 +639,42 @@ function searchEnter(){
        }
 
    }
+     function appsHide(){
+    $('#AppsDiv').hide(500);
+    $('.imgback').removeClass("blur");
+    $('.Duck').show(700);
+    $('#body').show();
+  }
+   function appsShow(){
+    $('#AppsDiv').show(500);
+    $('.imgback').addClass("blur");
+    $('.Duck').hide(300);
+    $('#body').hide();
+    //自定页
+/*layer.open({
+  type: 1,
+  //skin: 'layui-layer-demo', //样式类名
+  closeBtn: 0, //不显示关闭按钮
+  anim: 2,
+  title: false,
+  shadeClose: true, //开启遮罩关闭
+  content: $('#AppsDiv')
+});*/
+//捕获页
+/*layer.open({
+  type: 1,
+  shade: false,
+  closeBtn: 0,
+  shadeClose: true,
+  title: false, //不显示标题
+  content: $('#AppsDiv'), //捕获的元素
+  cancel: function(){
+      if (!window.localStorage) {
+        layer.msg('您浏览器暂不支持该功能，请更换浏览器使用；PS：推荐"Chrome"、"火狐"');
+      };
+  }
+});*/
+}
 function searchSetting(){
 //捕获页
 layer.open({

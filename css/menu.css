@@ -71,9 +71,116 @@ html{background-attachment: fixed; background-color: #eee; height: 100%;}
 position:fixed;width:100%;height:100%;z-index:-1;left:0;top:0;
 }
 .colorback{
-position:absolute;width:100%;height:100%;z-index:-1;left:0;background: rgba(0, 0, 0, 0.21);top:0;
+position:fixed;width:100%;height:100%;z-index:-1;left:0;background: rgba(0, 0, 0, 0.21);top:0;
 }
 
 .bodyback{
     position:absolute;left:0; top:0;
 }
+
+.types{
+    color: #fff;
+    background: rgb(83, 222, 166);
+    width: 10%;
+    text-align: center;
+    padding: 5px;
+    border-radius: 2px;
+    box-shadow: 0px 0px 8px 3px rgb(175, 175, 175);
+}
+
+.Duck{
+    width: 100%;
+    height: 60px;
+    bottom: 0px;
+    position: fixed;
+    font-family: "Microsoft Yahei","微软雅黑","Helvetica Neue","Hiragino Sans GB",Helvetica,Tahoma,sans-serif;
+    transition: height ;
+}
+.fixedButtom{
+    position: relative;
+    width: 80%;
+    height: 60px;
+    margin: 0 auto;
+}
+/**
+ * box-shadow: 0px -5px 9px 5px rgba(255, 255, 255, 0.55);
+ */
+.boxshadow{
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.55);
+    width: 100%;
+    height: 60px;
+    bottom: 0px;
+    z-index: -99;
+}
+.footer{
+    height: 200px;
+    margin-bottom: 60px;
+    overflow: hidden;
+}
+.dapps{
+    bottom: 0px;
+    float:left;
+    width: 60px;
+    margin: 0px 5px 0px 5px;
+    position: relative;
+    transition: all .5s ease;
+}
+.dapps img{
+    width: 100%;
+}
+.dapps:hover{
+    width: 80px;
+    bottom: 20px;
+}
+
+.apps{
+    bottom: 0px;
+    float:left;
+    width: 12.2%;
+    height: 130px;
+    margin: 0px 1% 0px 1%;
+    position: relative;
+    transition: all .5s ease;
+}
+.apps img{
+    width: 100px;
+    transition: all .5s ease;
+}
+.apps img:hover{
+    width: 110px;
+}
+
+.no-close{
+    position: relative;
+    right: -484px;
+    top: -8px;
+}
+
+.backgrounds{
+    position: fixed;
+    top: 1px;
+    z-index: -1;
+    min-height: 100%;
+    width: 99.5%;
+    padding: .5%;
+    background-image: url("https://y.gtimg.cn/music/photo_new/T002R300x300M000004EYzvs4W0GLy.jpg?max_age=2592000");
+    background-repeat: round;
+        background-size: 100%;
+}
+.blur {   
+    -webkit-filter: blur(35px); /* Chrome, Opera */
+       -moz-filter: blur(35px);
+        -ms-filter: blur(35px);   
+            filter: blur(35px) brightness(1);
+
+}
+.fills{
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
