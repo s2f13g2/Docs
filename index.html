@@ -188,6 +188,10 @@
 .radioclass {
 
 }
+#body{
+  max-height: 800px;
+  overflow: hidden;
+}
     </style>
 </head>
 <body>
@@ -602,6 +606,9 @@ bimgs = [
             });
             //美化浏览器的滚动条
             $("html").niceScroll({
+                touchbehavior:false,cursorcolor:"#0966ce",cursoropacitymax:1,cursorwidth:5,horizrailenabled:true,cursorborderradius:5,autohidemode:true,background:'none'
+            });
+            $("#body").niceScroll({
                 touchbehavior:false,cursorcolor:"#0966ce",cursoropacitymax:1,cursorwidth:5,horizrailenabled:true,cursorborderradius:5,autohidemode:true,background:'none'
             });
             
