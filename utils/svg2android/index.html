@@ -171,16 +171,20 @@
 var jss = [];
 var id = "";
 $(function(){
-    $('.item').each(function(){
+
+});
+function doCopy(njss){
+    $('.copybtn').each(function(){
        $(this).mouseover(function(){
         id = $(this).attr('id');
+       
        });
-       lids.push("layout"+$(this).attr('id'));
+       
     });
-    for(var i=0;i<jss.length;i++){
-                eval(jss[i]);
-            }
-});
+    for(var i=0;i<njss.length;i++){
+        eval(njss[i]);
+    }
+}
     function normal () {
         $("svg").css("height","42px");
         $("svg").css("width","42px");

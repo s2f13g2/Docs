@@ -1,4 +1,5 @@
 /* Helper methods */
+var jss = [];
 String.prototype.f = function () {
     var s = this,
         i = arguments.length;
@@ -531,18 +532,48 @@ function printPath(pathData, stylesArray, groupLevel, clipPath) {
         generatedOutput += generateAttr('pathData', pathData, groupLevel, null, true);
         pathsParsedCount++;
 
+   index++;
 
 
-        index++;
-        htmls = '    <div style="text-align: center;">';
+var js = 'i'+index+'uc = new ZeroClipboard.Client();'+
+'i'+index+'uc.setHandCursor( true );'+
+'i'+index+'uc.addEventListener(\'load\', i'+index+'u_load);'+
+'i'+index+'uc.addEventListener(\'mouseOver\', i'+index+'u_mouse_over);'+
+'i'+index+'uc.addEventListener(\'complete\', i'+index+'u_complete);'+
+'i'+index+'uc.glue( ["c'+index+'"] );'+
+/*index+'lc = new ZeroClipboard.Client();'+
+index+'lc.setHandCursor( true );'+
+index+'lc.addEventListener(\'load\', '+index+'layout_load);'+
+index+'lc.addEventListener(\'mouseOver\', '+index+'layout_mouse_over);'+
+index+'lc.addEventListener(\'complete\', '+index+'layout_complete);'+
+index+'lc.glue( ["c'+index+'"] );'+*/
+
+'        function i'+index+'u_load(client) {'+
+'           console.log("Flash movie loaded and ready.");'+
+'       }'+
+'       '+
+'       function i'+index+'u_mouse_over(client) {'+
+'           i'+index+'uc.setText( $("#output-path"+id)[0].innerHTML );'+
+'       }'+
+'       '+
+'       function i'+index+'u_complete(client, text) {'+
+'         console.log("Copied text to clipboard: " + text );'+
+'       }';
+        
+   jss.push(js);
+
+     
+        htmls = '    <div class="copybtn" id="cd'+index+'" style="text-align: center;">';
         htmls += '        <div id="button-box" class="btn-group">'
         htmls += '            <button type="button" class="btn btn-default btn-sm" onclick="selectAllpath('+index+')">Select all'
+        htmls += '            </button>'
+        htmls += '            <button type="button" class="btn btn-default btn-sm " id="c'+index+'">Hi, I\'m a copy. '
         htmls += '            </button>'
         htmls += '        </div>'
         htmls += '<svg class="icon" style="width: 3em; height: 3em;vertical-align: middle;fill: currentColor;overflow: hidden;float: left;margin: 1em;"'
         htmls += ' viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1982">'
         htmls += '<path d="'+pathData+'" p-id="1983"></path></svg>'
-        htmls += '<pre class="pre-scrollable" id="output-path'+index+'" >'+pathData+'</pre></div>'
+        htmls += '<pre class="pre-scrollable" id="output-pathcd'+index+'" >'+pathData+'</pre></div>'
         $("#pathDiv").append(htmls);
         $("#pathDiv").append("\n\n");
 
@@ -552,7 +583,7 @@ function printPath(pathData, stylesArray, groupLevel, clipPath) {
   
         //Check If added all clipPath elements
         if (clipPathMerged.length >= clipPathItemsCount) {
-            printClipPath(clipPathMerged.join(" "), groupLevel);
+            printClipPath(clipPathMerged.join(" "), groupLevel); 
         }
     }
 }
@@ -560,6 +591,7 @@ function printPath(pathData, stylesArray, groupLevel, clipPath) {
 function generateCode(inputXml) {
     var resultData = { error:null, warnings:null, code:null };
     $("#pathDiv").empty();
+
    index = 0;
     var xml;
     try {
@@ -659,6 +691,7 @@ function parseSingleFile(inputXml) {
         $(".nouploadinfo").hide();
         $("#dropzone").animate({height: 50}, 500);
         $("#success-box").show();
+       doCopy(jss);
     }
 }
 
@@ -782,11 +815,13 @@ function setMessage(text, type) {
 function useIdAsName(el) {
     localStorage.useIdAsName = el.checked;
     if (groupData.groupSize == 1) parseSingleFile(lastFileData);
+   
 }
 
 function bakeTransforms(el) {
     localStorage.bakeTransforms = el.checked;
     if (groupData.groupSize == 1) parseSingleFile(lastFileData);
+
 }
 
 function clearGroups(el) {
