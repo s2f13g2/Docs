@@ -563,7 +563,7 @@ index+'lc.glue( ["c'+index+'"] );'+*/
    jss.push(js);
 
      
-        htmls = '    <div class="copybtn" id="cd'+index+'" style="text-align: center;">';
+        htmls = '    <div class="copybtn" id="cd'+index+'" style="overflow: hidden;text-align: center;">';
         htmls += '        <div id="button-box" class="btn-group">'
         htmls += '            <button type="button" class="btn btn-default btn-sm" onclick="selectAllpath('+index+')">Select all'
         htmls += '            </button>'
