@@ -191,12 +191,34 @@
 
 }
 #body{
+  width: 80%;
   max-height: 800px;
   overflow: hidden;
+  float: left;
+}
+.right{
+  width: 20%;
+  float: left;
+}
+.rboxContent{
+  background: #fff;
+  border-radius: 5px;
+}
+.rboxContent img {
+  height: 50px;
+  width: 50px;
+  padding: 3px;
+  float: left;
+  border-radius: 50%;
+}
+.tag{
+  float: left;
+  padding: 2px;
+  font-size: 14px;
 }
     </style>
 </head>
-<body>
+<body id="Abody">
 <div id="body">
     <div id="header">
         <div style="width:30%;float:left;">
@@ -356,7 +378,31 @@
       </div>
       <div style="height: 100px;"></div>
       <div class="clear"></div>
-</div>     
+</div>   
+<!-- 右侧友链 -->
+<div class="right">
+  <div style="background: #333;overflow: hidden;padding-top: 10px;padding-bottom: 10px;">
+    <div style="overflow: hidden;">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" t="1484228596920" class="icon" style="
+    float: left;margin-right: 30px;margin-left: 11px;background: #fff;border-radius: 5px;padding: 2px;box-shadow:0 0 5px #fff" viewBox="0 0 1024 1024" version="1.1" p-id="2017" width="60" height="60"><defs><style type="text/css"></style></defs><path d="M493.72583 514.27417C424.671007 445.219348 420.544805 338.553608 482.674524 276.423889L644.423891 114.674524C706.583821 52.514594 813.268826 56.720483 882.27417 125.72583 951.230726 194.68239 955.513645 301.387939 893.927181 362.974404L780.45079 476.450794C767.954016 488.947571 767.954016 509.20885 780.45079 521.705628 792.947571 534.202405 813.208851 534.202405 825.705626 521.705628L939.182016 408.229238C1026.609952 320.8013 1020.703456 173.645445 927.529005 80.470996 834.292646-12.765362 687.154784-18.566041 599.169055 69.41969L437.41969 231.169055C349.480384 319.108361 355.171544 466.229551 448.470996 559.529004 460.967773 572.025781 481.229053 572.025781 493.72583 559.529004 506.222607 547.032227 506.222607 526.770947 493.72583 514.27417L493.72583 514.27417Z" fill="#1296db" p-id="2018"></path><path d="M559.607503 443.059164C649.311059 532.762721 686.000877 634.90071 637.325476 683.576109L411.576111 909.325478C349.416181 971.485408 242.731178 967.27952 173.72583 898.27417 104.76927 829.317613 100.486352 722.612064 162.072817 661.025594L292.635347 530.463066C305.132125 517.966288 305.132125 497.705009 292.635347 485.208232 280.13857 472.711454 259.877291 472.711454 247.380513 485.208232L116.817983 615.770762C29.390045 703.198701 35.296547 850.354554 128.470996 943.529005 221.707354 1036.765363 368.845214 1042.566042 456.830945 954.580307L682.580307 728.830944C765.53168 645.879571 716.532512 509.474501 604.862337 397.80433 592.36556 385.307552 572.104281 385.307552 559.607503 397.80433 547.110726 410.301107 547.110726 430.562386 559.607503 443.059164L559.607503 443.059164Z" p-id="2019" fill="#1296db"></path></svg>
+      <h4 style="color: #fff;padding-left: 16px;margin-top: 20px;">友情链接</h4>
+    </div>
+  
+
+  <div v-for="item in youItems" style="width:86%;margin:0 auto;margin-top: 10px;">
+       <div class="rboxContent">
+            <a href="{{item.url}}" target="_blank">
+                <div style="text-align: center;overflow: hidden;">
+                    <img  src="{{item.img}}">
+                    <h5> {{ item.name }}</h5>
+                    <div class="tag" v-for="tag in item.tags">{{tag}}</div>
+                </div>
+            </a>
+        </div> 
+  </div>
+  </div>
+</div>
+<!-- 右侧友链 -->  
       <!-- 脱离文档布局层-->
 <!--底部Duck区 -->
 <div class="Duck">
@@ -479,7 +525,7 @@ bimgs = [
   ];
   
         new Vue({
-              el: '#webList',
+              el: '#Abody',
               data: {
                 items: [
                   { url:'http://gold.xitu.io/',img:'http://assets.gold.xitu.io/images/logo-header.svg',message: '高质量的技术社区' },
@@ -494,11 +540,10 @@ bimgs = [
                   { url:'https://dribbble.com/',img:'https://d13yacurqjgara.cloudfront.net/assets/ball-2acfbb9fdf187a34b07a7cc209d07025b39697eba6302c54942a556c10b3fa94.png',message: 'dribbble国外设计站'},
                   { url:'http://iconfont.cn/',img:'http://www.easyicon.net/api/resizeApi.php?id=1194933&size=72',message: 'iconfont 阿里旗下的图标/字体站'},
                   { url:'http://www.colays.cn/',img:'http://www.colays.cn/skin/mp4/images/logo.gif',message: '考拉影视【最新的高清电影电视剧】'},
-                  { url:'http://androidwing.net/',img:'http://androidwing.net/wp-content/uploads/2016/08/cropped-1_wingichoy-180x180.png',message: '一个Android开发者瞎瘠薄扯淡的地方'},
-                  { url:'http://intheworld.win/',img:'http://intheworld.win/wordpress/wp-content/themes/zalive/img/features_img_1.jpg',message: 'intheworld - 浮舟沧海'},
+                  
                    { url:'http://www.androidblog.cn/',img:'http://www.androidblog.cn/Public/home/img/android_96px_1110302_easyicon.net.png',message: 'Android最火的源码/工具'},
                     { url:'http://shejidx.com/',img:'http://shejidaxue.com/wp-content/themes/monster0825a/static/img/logo.jpg',message: 'UI设计/工具/资源'},
-                    { url:'http://blog.csdn.net/zxt0601',img:'http://avatar.csdn.net/4/3/8/1_zxt0601.jpg',message: '张旭童的博客-Android开发'},
+                    
                     
                   
                   
@@ -515,6 +560,15 @@ bimgs = [
                 utilsItems: [
                  { url:'utils/svg2android/index.html',img:'utils/svg2android/img/logo.svg',message: 'Android SVG to VectorDrawable' },
                  
+
+                ],
+                youItems: [
+                { url:'http://androidwing.net/',img:'http://androidwing.net/wp-content/uploads/2016/08/cropped-1_wingichoy-180x180.png',name: 'wing',
+                tags:['Android','Java','Kotlin']},
+                { url:'http://intheworld.win/',img:'http://intheworld.win/wordpress/wp-content/themes/zalive/img/features_img_1.jpg',name: '浮舟沧海',
+              tags:['Android','Java','Kotlin']},
+                { url:'http://blog.csdn.net/zxt0601',img:'http://avatar.csdn.net/4/3/8/1_zxt0601.jpg',name: '张旭童',
+              tags:['Android','Java','Kotlin']},
 
                 ]
               }
