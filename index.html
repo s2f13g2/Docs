@@ -609,7 +609,7 @@ bimgs = [
             $("input[name='r-group-1']").each(function(){
               $(this).attr("onclick","setSearchdefault();");
             })
-            if("false"!=localStorage.searchtypeisshow){
+            if("false"==localStorage.searchtypeisshow){
                  $('#searchtype').hide();
                  $("#typeswich").removeAttr("checked");
             }
