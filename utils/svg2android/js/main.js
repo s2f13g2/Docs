@@ -718,7 +718,7 @@ index+'lc.glue( ["c'+index+'"] );'+*/
 '       }'+
 '       '+
 '       function i'+index+'u_complete(client, text) {'+
-'         console.log("Copied text to clipboard: " + text );'+
+'         layer.msg("Copy成功，快去粘贴吧！"); console.log("Copied text to clipboard: " + text );'+
 '       }';
 jss.push(js);
  htmls = '    <div class="copybtn" id="cd'+index+'" style="overflow: hidden;text-align: center;">';
