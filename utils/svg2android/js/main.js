@@ -558,7 +558,7 @@ index+'lc.glue( ["c'+index+'"] );'+*/
 '       }'+
 '       '+
 '       function i'+index+'u_complete(client, text) {'+
-'         console.log("Copied text to clipboard: " + text );'+
+'        layer.msg("Copy成功，快去粘贴吧！"); console.log("Copied text to clipboard: " + text );'+
 '       }';
         
    jss.push(js);
