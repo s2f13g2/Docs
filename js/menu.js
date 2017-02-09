@@ -9,13 +9,15 @@ function showRight(){
 	$('.rightMenu').css("left","0px");
 	$('#rightIconShow').addClass("show");
 	$('#rightIconHide').removeClass("show");
+	$('#rootIcon').css("left","-70px");
 }
 
 function hideRight(){
 	$('.right').css("right","-280px");
-  $('.rightMenu').css("left","-70px");
+    $('.rightMenu').css("left","-70px");
 	$('#rightIconHide').addClass("show");
 	$('#rightIconShow').removeClass("show");
+	$('#rootIcon').css("left","70px");
 }
 
 function showTop(){
