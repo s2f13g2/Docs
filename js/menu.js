@@ -12,8 +12,8 @@ function showRight(){
 }
 
 function hideRight(){
-	$('.right').css("right","-250px");
-  $('.rightMenu').css("left","-100px");
+	$('.right').css("right","-280px");
+  $('.rightMenu').css("left","-70px");
 	$('#rightIconHide').addClass("show");
 	$('#rightIconShow').removeClass("show");
 }
@@ -26,7 +26,7 @@ function showTop(){
 }
 
 function hideTop(){
-	$('.top').css("top","-250px");
+	$('.top').css("top","-280px");
   $('.topMenu').css("bottom","-210px");
 	$('#topIconHide').addClass("show");
 	$('#topIconShow').removeClass("show");

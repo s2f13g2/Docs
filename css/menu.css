@@ -196,10 +196,11 @@ position:fixed;width:100%;height:100%;z-index:-1;left:0;background: rgba(0, 0, 0
     transition: all .5s ease;
 }
 .rightMenu{
-        overflow: hidden;
-      left:0;
+    overflow: hidden;
+    left:0;
     position: relative;
-      transition: all .5s ease;
+    transition: all .5s ease;
+    width: 100%;
 }
 .rightMenu:hover{
 }
@@ -209,9 +210,9 @@ position:fixed;width:100%;height:100%;z-index:-1;left:0;background: rgba(0, 0, 0
 }
 .rightMenuIconDiv{
     background: rgba(111, 111, 111, 0);
-    width:60px;
+    width: 30px;
     position: absolute;
-    height: 60px;
+    height: 30px;
     text-align: center;
     margin-left: 11px;
     padding: 2px;
