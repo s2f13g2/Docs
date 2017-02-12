@@ -1,0 +1,35 @@
+
+	/**
+	 * footer 
+	 */
+	
+	.footer{
+    min-height: 200px;
+    margin-top: 60px;
+    overflow: hidden;
+	}
+	.mingList{
+		padding: 10px;
+	}
+	.mingTitle{
+		padding:5px; 
+	}
+	.mingItem{
+	float: left;
+    padding: 3px;
+    text-align: center;
+    margin: 3px;
+    border: 1px solid #333;
+    border-radius: 3px;
+    transition: all .5s ease;
+	}
+	.mingItem a{
+		color: #999;
+		transition: all .5s ease;
+	}
+	.mingItem:hover {
+		border: 1px solid #ff6767;
+	}
+	.mingItem:hover a {
+		color: #ff6767;
+	}
