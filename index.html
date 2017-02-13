@@ -329,27 +329,21 @@
 
                
         <div id="webList"  style="max-width: 1180px;margin: 0 auto;" >
-                 <div class="weixin">
-                   <div style="width: 100%;margin-top:20px;">
-                      <div style="background:#fff;padding:5px;border-radius:5px;overflow: hidden;"><h3 style="float:left;">郭霖公众号推荐</h3><span style="float:right;margin-right:10px;color:#9a9a9a;">仅显示前10条信息</span></div>
-                      <div id="guolin" style="height: 300px;overflow: hidden;margin-top:10px;">
-                        <div v-for="item in guolinList" style=" width: 100%;">
-                           <div class="boxContent">
-                                <a href="{{item.app_msg_ext_info.content_url}}" target="_blank">
-                                    <div style="text-align: center;overflow: hidden;">
-                                        <img style=" height: 110px;float: left;" v-bind:src="item.app_msg_ext_info.cover" >
-                                        <h4>{{item.app_msg_ext_info.author}}</h4>
-                                        <h5> {{ item.app_msg_ext_info.title }}</h5>
-                                        <span>{{item.app_msg_ext_info.digest}}</span>
-                                        <span class="datetime" style="color:#efefef">{{item.comm_msg_info.datetime}}</span>
+                <div style="background:#fff;padding: 5px;border-radius: 5px; overflow: hidden;margin-top:10px; ">
+                  <div v-for="item in userWebs" style="width:80px;float:left;">
+                       <div class="">
+                            <a href="{{item.url}}" target="_blank">
+                                <div style="text-align: center;overflow: hidden;">
+                                   <div style="padding: 3px; background: {{item.bcolor}}">
+                                    <img style="width: 50px;border-radius: 10px;" v-bind:src="item.img" >
                                     </div>
-                                </a>
-                            </div> 
+                                    <h5> {{ item.message }}</h5>
+                                </div>
+                            </a>
                         </div> 
-                        <div class="clear"></div>
-                      </div>
                     </div>
-                  </div>
+                </div>
+                
                 <div id="utilsList" class="content" >
                     <h4>在线工具</h4>
                     <div v-for="item in utilsItems" style="width:25%;float:left;">
@@ -394,6 +388,27 @@
 
                 </div>
                  <div style="clear:both;"></div>
+                  <div class="weixin">
+                   <div style="width: 100%;margin-top:20px;padding">
+                      <div style="background:#fff;padding:5px;border-radius:5px;overflow: hidden;"><h3 style="float:left;">郭霖公众号推荐</h3><span style="float:right;margin-right:10px;color:#9a9a9a;">仅显示前10条信息</span></div>
+                      <div id="guolin" style="height: 380px;overflow: hidden;margin-top:10px;">
+                        <div v-for="item in guolinList" style=" width: 100%;">
+                           <div class="boxContent">
+                                <a href="{{item.app_msg_ext_info.content_url}}" target="_blank">
+                                    <div style="text-align: center;overflow: hidden;">
+                                        <img style="height: 110px;float: left;" v-bind:src="item.app_msg_ext_info.cover" >
+                                        <h4>{{item.app_msg_ext_info.author}}</h4>
+                                        <h5> {{ item.app_msg_ext_info.title }}</h5>
+                                        <span>{{item.app_msg_ext_info.digest}}</span>
+                                        <span class="datetime" style="color:#efefef">{{item.comm_msg_info.datetime}}</span>
+                                    </div>
+                                </a>
+                            </div> 
+                        </div> 
+                        <div class="clear"></div>
+                      </div>
+                    </div>
+                  </div>
           </div>
           
           <div class="footer"  style="background:#fff;">
@@ -414,7 +429,7 @@
                 </div>
 
                 <div style="width: 480px;float: right;color: #999;font-size: 12px;text-align: center;">
-                <div style="padding-top:25px;"><div>扫码联系我，更方便、更快捷！</div><img width="100px" src="img/qq.jpg"></div>
+                <div style="padding-top:25px;"><div>扫码联系我，更方便、更快捷！</div><a href="tencent://message/?uin=869689491&Site=liuyouth&Menu=yes"><img width="100px" src="img/qq.jpg"></a></div>
                 所有资源收集于网络，如有侵犯到您的权益请联系我们删除
                 </div>
 
@@ -428,9 +443,42 @@
           </div>
           <div class="clear"></div>
     </div>   
+    <!-- 搜索模块 -->
+    <div class="searchDiv">
+        <div style="background: #333;border-radius: 4px 4px 0 0;padding-bottom: 10px;height: 100%;">
+        <div  style="
+        /* position: absolute; */
+        width: 280px;
+        height: 130px;
+        top: 0;
+        left: 0;
+        margin: 0 0 30px 0;
+        border-radius: 4px 4px 0 0;
+        /* overflow: hidden; */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-image: url('http://i0.hdslb.com/bfs/space/cb1c3ef50e22b6096fde67febe863494caefebad.png@75Q.webp');
+        " >
+     
+         <div style="  padding: 112px 0 0 20px;">
+          <div style="">
+            <!-- <img style="width:100px;height:100px;border-radius:100px;position: relative;" src="http://7xavig.com2.z0.glb.qiniucdn.com/b5ecaffd5ae41b0e230e34d677dec98f.png?imageMogr2/auto-orient/quality/100%7CimageMogr2/thumbnail/!100x100r/gravity/Center/crop/100x100/dx/0/dy/0"> -->
+           
+           <svg t="1486906993203" class="searchMenu" onclick="hideSearch()" style="width: 120px; height: 25px;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4199"><path d="M716.705 213.684c-138.888-138.934-364.124-138.934-503.059 0s-138.934 364.17 0 503.059c138.914 138.924 364.14 138.924 503.059 0.015v-0.015c138.924-138.904 138.924-364.13 0.015-503.044 0-0.005-0.015-0.005-0.015-0.015zM136.238 794.151c-181.64-181.69-181.64-476.225 0-657.921 181.68-181.64 476.2-181.64 657.921 0 181.65 181.696 181.65 476.23 0 657.921-181.721 181.64-476.235 181.64-657.92 0z m869.113 211.238c-24.836 24.801-65.069 24.801-89.885 0l-89.84-89.885c-24.806-24.822-24.806-65.039 0-89.845 24.801-24.8 65.018-24.8 89.84 0l89.885 89.845c24.863 24.862 24.863 65.069 0 89.885z" fill="#1CC3AD" p-id="4200"></path></svg>
+             <!-- <img  style="width:100px;height:100px;border-radius:100px;position: relative;left:70px; transition: all 1.2s ease;" src="img/root_icon.png"> -->
+          </div>                                      
+  
+          <div class="clear"></div>
+           </div>
+          
+        </div>
+      </div>
+    </div>
+    <!-- 搜索模块 -->  
     <!-- 右侧友链 -->
 
-
+  
     <div class="right" style="right: -280px;">
       <div style="background: #333;border-radius: 4px 4px 0 0;padding-bottom: 10px;height: 100%;">
         <div  style="
@@ -648,7 +696,7 @@
                     items: [
                       { url:'http://gold.xitu.io/',img:'http://assets.gold.xitu.io/images/logo-header.svg',message: '高质量的技术社区' },
                        { url:'https://github.com/',img:'https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=1945343878,3655021699&fm=58',message: '嘿，Gayhub' },
-                      { url:'http://www.jcodecraeer.com/',img:'http://www.easyicon.net/api/resizeApi.php?id=1194933&size=72',message: '泡在网上的日子做最好的移动开发社区'},
+                      { url:'http://www.jcodecraeer.com/',img:'http://www.easyicon.net/api/resizeApi.php?id=1194933&size=72',message: '泡在网上的日子'},
                       { url:'http://www.apkbus.com',img:'http://www.apkbus.com/static/image/common/logo.png',message: '移动互联网门户'},
                       { url:'http://www.biaonimeia.com/',img:'http://www.biaonimeia.com/images/logo_s.png',message: '一款自动化设计标注工具'},
                       { url:'http://www.app-echo.com/',img:'http://www.app-echo.com/statics/v3/images/echoBrand@2x.png',message: '音乐社区'},
@@ -682,7 +730,10 @@
 
                     ],
                     userWebs: [
-                     { url:'https://wx.qq.com/',img:'https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=953742269,1041746281&fm=58',message: '微信' },
+                     { url:'https://wx.qq.com/',img:'https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=953742269,1041746281&fm=58',message: '微信',bcolor:"#fff" },
+                     { url:'http://email.163.com/',img:'https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=671129676,1621892593&fm=58',message: '163邮箱',bcolor:"#fff" },
+                     { url:'http://runjs.cn/',img:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1486912109174&di=160118cf0d848c41e7b8238d9bce65ee&imgtype=0&src=http%3A%2F%2Fimg.25pp.com%2Fuploadfile%2Fsoft%2Fimages%2F2013%2F0902%2F20130902012715726.jpg',message: 'Run.JS',bcolor:"#fff" },
+                    
                      
 
                     ],
@@ -699,7 +750,7 @@
 
 
 
-                  guolinList:[{app_msg_ext_info:
+                  guolinList:[{"app_msg_ext_info":{"author":"朱小姐","content":"","content_url":"https://mp.weixin.qq.com/s?__biz=MzA5MzI3NjE2MA==&mid=2650238570&idx=1&sn=48314cd2d4202ff39647979a45dd17dc&chksm=88639f05bf141613cdcff7bc58fb58b19ad847621f990ba8eac31b57b5ef647c87730f3957c2&mpshare=1&scene=1&srcid=0213oM1LMFMvyUMSWLRMT9ay&pass_ticket=kGSXC2R4VqnMW53ukAJOO7yFvbdOrQbQWBwwarWPfPZs4KWp3UdpJ6ieHMUy0c0g#rd","copyright_stat":11,"cover":"http://mmbiz.qpic.cn/mmbiz_png/v1LbPPWiaSt6U9eymkHtic2DZraRCXlSKZemYppt74wmSAk5t4n0BaLx4BzxvLvib8HRD03vIMsWVrwzx3LazVicDA/0?wx_fmt=png","digest":"聊聊平板的屏幕适配。","fileid":502754921,"is_multi":0,"multi_app_msg_item_list":[],"source_url":"http://blog.csdn.net/qq_27570955/article/details/53996420","subtype":9,"title":"Android平板多屏幕适配"},"comm_msg_info":{"content":"","datetime":1486944014,"fakeid":"3093276160","id":1000000160,"status":2,"type":49}},{app_msg_ext_info:
     {author:"张旭童",content:"",content_url:"https://mp.weixin.qq.com/s?__biz=MzA5MzI3NjE2MA==&mid=2650238563&idx=1&sn=98b1c3b689e5658854fcda26f20461bd&chksm=88639f0cbf14161a7969c803895f0ea59c5d6d080d3acbb18df0dd2602fa56b71b93995c3592&mpshare=1&scene=1&srcid=02127nN7gaGUBahllA8ojrxd&pass_ticket=w2OQichfFoNboGT5jfc8WRR2nw%2BMv%2Bs4zYsVOTi%2BS5eAc%2FFGi%2B8Nv%2FTBiW%2BILf7Y#rd",copyright_stat:11,cover:"http://mmbiz.qpic.cn/mmbiz_png/v1LbPPWiaSt4wwXjdHluNf1HZkiauO6IQPku2ufUqDZgFib9pG4VPBrg8qt3qWhXRVNbyMsibXC63FDWibJ0cORwo2A/0?wx_fmt=png",digest:"支持不同格式以及不同数据结构Item，分享设计思路。",fileid:502754914,is_multi:0,multi_app_msg_item_list:[],source_url:"http://blog.csdn.net/zxt0601/article/details/53618694",subtype:9,title:"DataBinding：一行实现花式列表"},comm_msg_info:{content:"",datetime:1486684811,fakeid:"3093276160",id:1000000159,status:2,type:49}},{app_msg_ext_info:{author:"王月半子",content:"",content_url:"https://mp.weixin.qq.com/s?__biz=MzA5MzI3NjE2MA==&mid=2650238541&idx=1&sn=acd7da7cd5e9977e0d04859ad72251ba&chksm=88639f22bf141634b27d01a81a0a1336a1ba988e88e55aac6c1361cd49f301b6e344943a59a9&mpshare=1&scene=1&srcid=0212XrjugVdzd86RvZu5IJoz&pass_ticket=tu9jjlqsJPr6y%2BsTUnBRv9WMeMkEyo%2BlG6QllbJ8Zx%2BE%2FO1QkJE3BC2DiXeDMVS%2F#rd",copyright_stat:11,cover:"http://mmbiz.qpic.cn/mmbiz_png/v1LbPPWiaSt7cUbb0xqn19nMSZcbCDx7dSpucZuSQJ2Y5rWDSnAsq0n43zVDwBITLrfWbUAKep8yRCVMJDaQCuw/0?wx_fmt=png",digest:"RemoteViews的对比，剖析与实战！",fileid:502754892,is_multi:0,multi_app_msg_item_list:[],source_url:"http://blog.csdn.net/wrg_20100512/article/details/53940485",subtype:9,title:"Android神奇 控件 一一RemoteViews"},comm_msg_info:{content:"",datetime:1486598406,fakeid:"3093276160",id:1000000158,status:2,type:49}},{app_msg_ext_info:{author:"杨道龙",content:"",content_url:"https://mp.weixin.qq.com/s?__biz=MzA5MzI3NjE2MA==&mid=2650238515&idx=1&sn=e2eff06078027ffe2220217c43242c68&chksm=88639f5cbf14164af011066d5c25784ad5dea486b0844e11607e4d4dcbaf129aa3ed864a76db&mpshare=1&scene=1&srcid=0212eWi5mP97MOWD6bqZp42m&pass_ticket=tu9jjlqsJPr6y%2BsTUnBRv9WMeMkEyo%2BlG6QllbJ8Zx%2BE%2FO1QkJE3BC2DiXeDMVS%2F#rd",copyright_stat:11,cover:"http://mmbiz.qpic.cn/mmbiz_png/v1LbPPWiaSt4rDZHmrh35K6N7ibQ3MhP6V97YbQazFMPCUoibbib2Mic9vAyk3IyZWnYDrjwdl4BNPTb8GxHdCtvhkA/0?wx_fmt=png",digest:"隐式启动Activity的一些规则。",fileid:502754866,is_multi:0,multi_app_msg_item_list:[],source_url:"http://blog.csdn.net/qq_32059827/article/details/53819775",subtype:9,title:"挖掘隐式启动Activity可能存在的坑"},comm_msg_info:{content:"",datetime:1486512011,fakeid:"3093276160",id:1000000157,status:2,type:49}},{app_msg_ext_info:{author:"NEXTB",content:"",content_url:"https://mp.weixin.qq.com/s?__biz=MzA5MzI3NjE2MA==&mid=2650238499&idx=1&sn=61036da3eafed63634b1e171daaa0522&chksm=88639f4cbf14165a8ca444c7f760a4779d4c6c5c7368a85d3d2284eca42b204d260c1c93b5a8&mpshare=1&scene=1&srcid=0212U6BPW24wNcQKQJn7LZSz&pass_ticket=tu9jjlqsJPr6y%2BsTUnBRv9WMeMkEyo%2BlG6QllbJ8Zx%2BE%2FO1QkJE3BC2DiXeDMVS%2F#rd",copyright_stat:11,cover:"http://mmbiz.qpic.cn/mmbiz_jpg/v1LbPPWiaSt7zhVcKV2WmvrYgbMicyuLaF8DHynu0CylxiaZ4NCewqGdiafzxUFNM7rTkYbPOuxXg4TLX47GMHEJSA/0?wx_fmt=jpeg",digest:"解决服务器还未准备好等问题。",fileid:502754850,is_multi:0,multi_app_msg_item_list:[],source_url:"https://yuanjunli.github.io/2016/12/15/%E6%A8%A1%E6%8B%9F%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%94%E5%9B%9E%E6%95%B0%E6%8D%AE/",subtype:9,title:"模拟服务器返回数据"},comm_msg_info:{content:"",datetime:1486425613,fakeid:"3093276160",id:1000000156,status:2,type:49}},{app_msg_ext_info:{author:"AndroidMsky",content:"",content_url:"https://mp.weixin.qq.com/s?__biz=MzA5MzI3NjE2MA==&mid=2650238492&idx=1&sn=631dc7fb6d70d16f59592cfd595b63b8&chksm=88639f73bf141665626fb24868ea21fc2d1f523811939592ed6f764c270c5c9992ca20f4e5b8&mpshare=1&scene=1&srcid=021204grlYNDl2tzmm4WrmLz&pass_ticket=tu9jjlqsJPr6y%2BsTUnBRv9WMeMkEyo%2BlG6QllbJ8Zx%2BE%2FO1QkJE3BC2DiXeDMVS%2F#rd",copyright_stat:11,cover:"http://mmbiz.qpic.cn/mmbiz_png/v1LbPPWiaSt5GEB5UrzfJcxnokQ2iaBp3ta1jFRpaIqugfG2e6zXIriczY6NjibxTSadicNT3PiatmqL9DTvwDvmheLg/0?wx_fmt=png",digest:"仿&quot;知乎&quot;个人主页",fileid:502754839,is_multi:0,multi_app_msg_item_list:[],source_url:"http://blog.csdn.net/AndroidMsky/article/details/53784984",subtype:9,title:"Android实现嵌套滑动和渐隐效果"},comm_msg_info:{content:"",datetime:1486339221,fakeid:"3093276160",id:1000000155,status:2,type:49}},{app_msg_ext_info:{author:"明伟",content:"",content_url:"https://mp.weixin.qq.com/s?__biz=MzA5MzI3NjE2MA==&mid=2650238479&idx=1&sn=cef582b5c5a15853f391d013a0747a9d&chksm=88639f60bf1416761f9da62e7b59c0d2f892d1b6f6e85a809f963dca593cffdcb14a9e171ddb&mpshare=1&scene=1&srcid=0212xoZS8X0tApXKcWqA0P3v&pass_ticket=tu9jjlqsJPr6y%2BsTUnBRv9WMeMkEyo%2BlG6QllbJ8Zx%2BE%2FO1QkJE3BC2DiXeDMVS%2F#rd",copyright_stat:11,cover:"http://mmbiz.qpic.cn/mmbiz_png/v1LbPPWiaSt5RSPEnicjHiaNHEMQKMRH5Fx0vV6tQzA2K5n6f9v0haQAGf05ic4boPic8uibxkH18BfsTsvyKwGpWNZg/0?wx_fmt=png",digest:"聊一聊注解的基本概念以及用法。",fileid:502754829,is_multi:0,multi_app_msg_item_list:[],source_url:"http://blog.csdn.net/u013045971/article/details/53433874",subtype:9,title:"一小时搞明白自定义注解(Annotation)"},comm_msg_info:{content:"",datetime:1486166682,fakeid:"3093276160",id:1000000154,status:2,type:49}},{app_msg_ext_info:{author:"郭霖",content:"",content_url:"https://mp.weixin.qq.com/s?__biz=MzA5MzI3NjE2MA==&mid=2650238469&idx=1&sn=49154d3b2c0a94c68c27a2b6da0e3759&chksm=88639f6abf14167cbd3e197c6770af73864917322b2b18bcbbf07870667f60951d6ac4bc4d86&mpshare=1&scene=1&srcid=0212vKbVBLKPUefRzZiVVarR&pass_ticket=tu9jjlqsJPr6y%2BsTUnBRv9WMeMkEyo%2BlG6QllbJ8Zx%2BE%2FO1QkJE3BC2DiXeDMVS%2F#rd",copyright_stat:11,cover:"http://mmbiz.qpic.cn/mmbiz_png/v1LbPPWiaSt7A6wBHZMkiaRtOwxlJvOajtuSZ75UDeP5vnaUMLge4Dym1YhVCfSqov7hOxdFvDNZl2QdYzGZvn5g/0?wx_fmt=png",digest:"亲自执笔，给大家带来新年第一篇原创文章",fileid:502754820,is_multi:0,multi_app_msg_item_list:[],source_url:"",subtype:9,title:"最全面的ConstraintLayout教程"},comm_msg_info:{content:"",datetime:1486080040,fakeid:"3093276160",id:1000000153,status:2,type:49}},{app_msg_ext_info:{author:"郭霖",content:"",content_url:"https://mp.weixin.qq.com/s?__biz=MzA5MzI3NjE2MA==&mid=2650238430&idx=1&sn=0430aa716d06e9be45856c1b5c74b39f&chksm=88639cb1bf1415a793b141e4dfc1f187325259dc0f0373f2e3f3efb876f6d450d6553177d3d0&mpshare=1&scene=1&srcid=0212WkGHbSsy1WlTq8P70M6C&pass_ticket=tu9jjlqsJPr6y%2BsTUnBRv9WMeMkEyo%2BlG6QllbJ8Zx%2BE%2FO1QkJE3BC2DiXeDMVS%2F#rd",copyright_stat:100,cover:"http://mmbiz.qpic.cn/mmbiz_jpg/v1LbPPWiaSt50R9VLp6TDdb1qtuVaXvLx0FmaoUzB3Qicb9htSria5KuAibib7Kkic6kJD8ibOD1QoFG6cMLrrMQIumsQ/0?wx_fmt=jpeg",digest:"金猴留恋丰收年，鸡鸣又报万家春",fileid:502754771,is_multi:0,multi_app_msg_item_list:[],source_url:"http://kg.qq.com/share.html?s=PaRY_4PiJ2eYtPfj&amp;songid=1100005447",subtype:9,title:"大年初一红包来啦！"},comm_msg_info:{content:"",datetime:1485562021,fakeid:"3093276160",id:1000000152,status:2,type:49}},{app_msg_ext_info:{author:"郭霖",content:"",content_url:"https://mp.weixin.qq.com/s?__biz=MzA5MzI3NjE2MA==&mid=2650238428&idx=1&sn=ecc3ae10e1f6bb91fb796a2faefddf0d&chksm=88639cb3bf1415a53f42143af815f2494ecbf9ea6a48b2bbd5c28d707fde7e53f90f756f752e&mpshare=1&scene=1&srcid=02124fDgETnAKY28Cra5gfWz&pass_ticket=tu9jjlqsJPr6y%2BsTUnBRv9WMeMkEyo%2BlG6QllbJ8Zx%2BE%2FO1QkJE3BC2DiXeDMVS%2F#rd",copyright_stat:100,cover:"http://mmbiz.qpic.cn/mmbiz_jpg/v1LbPPWiaSt50R9VLp6TDdb1qtuVaXvLxY5pcr6DkkCO33anvGjCJib5eaM0nIqVTviboXSqhr7WrPsQ0pZZHlVibA/0?wx_fmt=jpeg",digest:"今夜除夕已来临，好运滚滚向你行！",fileid:502754768,is_multi:0,multi_app_msg_item_list:[],source_url:"",subtype:9,title:"除夕红包来啦！"},comm_msg_info:{content:"",datetime:1485509253,fakeid:"3093276160",id:1000000151,status:2,type:49}},{app_msg_ext_info:{author:"郭霖",content:"",content_url:"https://mp.weixin.qq.com/s?__biz=MzA5MzI3NjE2MA==&mid=2650238426&idx=1&sn=c8254b50a550e285dbc6c3d7878ca630&chksm=88639cb5bf1415a376d03a71467abe733347cc77ec9a71ce2000bb70464e10b862778d4bc740&mpshare=1&scene=1&srcid=02127zHkgF18Pgl0bo0wfkzH&pass_ticket=tu9jjlqsJPr6y%2BsTUnBRv9WMeMkEyo%2BlG6QllbJ8Zx%2BE%2FO1QkJE3BC2DiXeDMVS%2F#rd",copyright_stat:100,cover:"http://mmbiz.qpic.cn/mmbiz_jpg/v1LbPPWiaSt50R9VLp6TDdb1qtuVaXvLxWPCjGA1NPgCEo9e1RtosJWdMaLRr82c5icotKVEJ22jbYOTHiaNibzAbg/0?wx_fmt=jpeg",digest:"红包即将来袭！不过不是今天",fileid:502754767,is_multi:0,multi_app_msg_item_list:[],source_url:"",subtype:9,title:"红包！红包！"},comm_msg_info:{content:"",datetime:1485422619,fakeid:"3093276160",id:1000000150,status:2,type:49}}],
                   
         
@@ -732,6 +783,7 @@
                 //
                 //
                 hideRight();
+                hideSearch();
                 $(".apps").each(function(){
                   $(this).click(function(e){
                       layer.msg('应用打开了'); 

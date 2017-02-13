@@ -33,3 +33,19 @@ function hideTop(){
 	$('#topIconHide').addClass("show");
 	$('#topIconShow').removeClass("show");
 }
+
+function showSearch(){
+	$('.searchDiv').css("left","0px");
+	$('.searchMenu').css("left","50px");
+	$(".searchMenu").attr("onclick","hideSearch();");
+	$(".searchMenu").css("width","120px");
+	//$(".searchMenu").click(hideSearch());
+}
+
+function hideSearch(){
+	$('.searchDiv').css("left","-280px");
+    $('.searchMenu').css("left","270px");
+    $(".searchMenu").attr("onclick","showSearch();");
+    $(".searchMenu").css("width","45px");
+	//$(".searchMenu").click(showSearch());
+}
