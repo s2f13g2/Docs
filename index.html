@@ -448,7 +448,7 @@
         <div style="background: #333;border-radius: 4px 4px 0 0;padding-bottom: 10px;height: 100%;">
         <div  style="
         /* position: absolute; */
-        width: 280px;
+        /*width: 280px;*/
         height: 130px;
         top: 0;
         left: 0;
@@ -461,14 +461,18 @@
         background-image: url('http://i0.hdslb.com/bfs/space/cb1c3ef50e22b6096fde67febe863494caefebad.png@75Q.webp');
         " >
      
-         <div style="  padding: 112px 0 0 20px;">
-          <div style="">
+         <div id="piaochu" style="transition: all 1s linear; width: 800px;  padding: 112px 0 0 20px;">
+          <div class="searchMDiv" style="float: left;">
             <!-- <img style="width:100px;height:100px;border-radius:100px;position: relative;" src="http://7xavig.com2.z0.glb.qiniucdn.com/b5ecaffd5ae41b0e230e34d677dec98f.png?imageMogr2/auto-orient/quality/100%7CimageMogr2/thumbnail/!100x100r/gravity/Center/crop/100x100/dx/0/dy/0"> -->
-           
+           <div style="float: left;" >
            <svg t="1486906993203" class="searchMenu" onclick="hideSearch()" style="width: 120px; height: 25px;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4199"><path d="M716.705 213.684c-138.888-138.934-364.124-138.934-503.059 0s-138.934 364.17 0 503.059c138.914 138.924 364.14 138.924 503.059 0.015v-0.015c138.924-138.904 138.924-364.13 0.015-503.044 0-0.005-0.015-0.005-0.015-0.015zM136.238 794.151c-181.64-181.69-181.64-476.225 0-657.921 181.68-181.64 476.2-181.64 657.921 0 181.65 181.696 181.65 476.23 0 657.921-181.721 181.64-476.235 181.64-657.92 0z m869.113 211.238c-24.836 24.801-65.069 24.801-89.885 0l-89.84-89.885c-24.806-24.822-24.806-65.039 0-89.845 24.801-24.8 65.018-24.8 89.84 0l89.885 89.845c24.863 24.862 24.863 65.069 0 89.885z" fill="#1CC3AD" p-id="4200"></path></svg>
+           </div>
              <!-- <img  style="width:100px;height:100px;border-radius:100px;position: relative;left:70px; transition: all 1.2s ease;" src="img/root_icon.png"> -->
+            <div class="rootSDiv" style="width: 0px">
+                <input id="rootSInput" type="" name="" style="text-align: center;" placeholder="百度搜索   输入完毕后按下Enter" onkeypress="searchEnter2()">
+            </div>
           </div>                                      
-  
+          
           <div class="clear"></div>
            </div>
           
@@ -847,6 +851,12 @@
     function searchEnter(){
       if (event.keyCode==13) {
          window.open(localStorage.searchtype+$("#searchinput").val()); 
+      };
+      
+    }
+    function searchEnter2(){
+      if (event.keyCode==13) {
+         window.open(localStorage.searchtype+$("#rootSInput").val()); 
       };
       
     }

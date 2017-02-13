@@ -36,16 +36,22 @@ function hideTop(){
 
 function showSearch(){
 	$('.searchDiv').css("left","0px");
-	$('.searchMenu').css("left","50px");
+	$('.searchMDiv').css("left","50px");
 	$(".searchMenu").attr("onclick","hideSearch();");
 	$(".searchMenu").css("width","120px");
+	$(".rootSDiv").css("width","300px");
+	$("#rootSInput").css("height","35px");
+	$("#piaochu").css("width","800px");
 	//$(".searchMenu").click(hideSearch());
 }
 
 function hideSearch(){
 	$('.searchDiv').css("left","-280px");
-    $('.searchMenu').css("left","270px");
+    $('.searchMDiv').css("left","270px");
     $(".searchMenu").attr("onclick","showSearch();");
     $(".searchMenu").css("width","45px");
+    $(".rootSDiv").css("width","0px");
+	$("#rootSInput").css("height","0px");
+	$("#piaochu").css("width","100px");
 	//$(".searchMenu").click(showSearch());
 }
