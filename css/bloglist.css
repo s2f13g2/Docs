@@ -1,0 +1,14 @@
+.readAll{
+	color: #666;
+}
+.readAll:hover{
+	color: #333;
+}
+.readAll:after{
+	font-size: 10px;
+	content: " >"
+}
+.typeLabel{
+	line-height: 40px;
+    padding: 0 0 0 10px;
+}
