@@ -5,6 +5,7 @@
             <title>liuyouth 技术导航站点</title>
             <link rel="stylesheet" href="../../css/lib/swiper-3.3.1.min.css">
             <link rel="stylesheet" href="http://demo.htmleaf.com/1609/201609271528/css/build.css">
+            <link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">  
             <link rel="stylesheet" href="../../css/menu.css">
             <link rel="stylesheet" href="../../css/footer.css">
             <link rel="stylesheet" href="../../css/swich.css">
@@ -215,6 +216,9 @@
           padding: 2px;
           font-size: 14px;
         }
+        code{
+          border-radius: 5px;
+        }
             </style>
         </head>
         <body id="Abody">
@@ -269,35 +273,209 @@
                     </div> -->
     <!-- 中心内容区域 -->
                    <div style="min-height:597px;width: 1180px;margin: 0 auto;margin-top: 20px; ">
-                       <div style="width: 80%;float: left;">
-                           <div v-for="item in items" style="background: #fff;padding: 20px;">
-                             <div class="" style="margin: 10px 0px 20px 0">
-                                  <a href="{{item.url}}" >
-                                      <div style="color: #555;margin: 10px 20px 5px 0;font-size: 27px;">{{item.title}}</div>
-                                      </a>
-                                      <div style="color: #999;font-size: 12px;">
-                                      <div style="float: left;margin-right: 10px; ">
-                                            发表于 : {{item.createTime}}
-                                          </div>
-                                          <div style="float: left;margin-right: 10px; ">
-                                            所属分类 : <a href="{{item.type.url}}">{{item.type.name}}</a>
-                                          </div>
-                                          <div style="clear: both;"></div>
-                                      </div>
-                                      <div style="margin: 10px 0px 20px 0">
-                                          
+                       <div style="width: 80%;float: left;background: #fff;">
+                           <div style="text-align: center;">
+                              <div style="color: #555;margin: 10px 20px 5px 0;font-size: 27px;">{{items.title}}</div>
+                                      
+                              <span style="color: #999;font-size: 12px;">
+                                  <span style="margin-right: 10px; ">
+                                    发表于 : {{items.createTime}}
+                                  </span>
+                                  <span style="margin-right: 10px; ">
+                                    所属分类 : <a href="{{items.type.url}}" style="color: #666; border-bottom:1px solid #666;">{{items.type.name}}</a>
+                                  </span>
+                                  <div style="clear: both;"></div>
+                              </span>
+                           </div>
+                           <div style="margin: 20px 0 20px 0">
+                              <hr style="width: 95%;background: #00BCD4;height: 1px;border: 0;margin: 0 auto;">
+                           </div>
+                            <div style="width: 90%;margin: 0 auto;color: #666;">
+                              <pre>{{items.message}}
+                              </pre>
 
-                                      <span style="color: #999;font-size: 12px;"> {{ item.message }}</span>
-                                         
-                                      </div>
-                                      <a href="{{item.url}}" target="_blank">
-                                      <h5 class="readAll">阅读全文</h5>
-                                      </a>
-                                  
-                                
-                              </div> 
-                                <hr style="width: 95%;background: #00BCD4;height: 1px;border: 0;margin: 0 auto;">
-                          </div>
+                              <pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;看了会儿之后，我脑海中就冒出了个问题。
+用 ItemDecoration 来实现一些头像框没啥问题。但是动画的效果漂移到另外的item，还是有些问题的。
+（仅仅是思想层面的想法，并未实践。其实是偷懒。）
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;然后我就想在Listview 上面放上一个透明的view ，再根据itme的位置进行绘制闪光点。
+好就这么干，然后做出的效果就是下面这个样子的。
+                              </pre>
+                              <div><img src="../../img/wanglist.gif"></div>
+                              <pre>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;看完了效果，各位看官该撤了。没什么技术含量，下面说的其实就是自定义View的一些基础部分。
+首先 先写一个继承自View的类。
+<code>
+public class DrawView extends View {
+    private ArrayList<DrawXYStyle> dList = new ArrayList<>();//储存闪光点位置的list
+    public DrawView(Context context) { super(context); }
+
+    @Override
+    protected void onDraw(Canvas canvas) {
+        super.onDraw(canvas);
+
+      ....画闪光的代码
+
+    }
+
+    public void setDrawStyle(ArrayList<DrawXYStyle> list) { dList = list; }
+}
+</code>
+setDrawStyle 方法用来更新闪光点的位置。DrawXYStyle 的结构如下
+<code>
+public class DrawXYStyle {
+    int x;
+    int y;
+    int type;
+    int times = 20;
+    boolean show = true;
+
+    public DrawXYStyle(int x, int y, int type) {
+        this.y = y;
+        this.x = x;
+        this.type = type;
+    }
+
+    public int getTimes() {
+        return times;
+    }
+
+
+    public int next() {
+        if (times < 1) {
+            show = false;
+        }
+        return times--;
+    }
+
+    public boolean isShow() {
+        return show;
+    }
+
+    public int getY() {
+        next();
+        return y;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
+    }
+}
+</code>
+getY()方法每调用一次就调用next()方法，times就会递减 ，如果times小于1的时候就设置show为false。
+
+接下来需要的是在需要闪光的视图的布局文件中，在listview的上方添加一个LinearLayout 
+用FrameLayout 包裹listview ，并在listview的结束节点后添加LinearLayout。
+
+<code>
+FrameLayout
+
+    android.support.v7.widget.RecyclerView
+        android:id="@+id/wang_list"
+    /android.support.v7.widget.RecyclerView
+
+    LinearLayout
+        android:id="@+id/draw"
+    /LinearLayout
+
+/FrameLayout
+</code>
+修改完布局后，去视图的java类初始化DrawView.
+<code>
+    private void init() {
+        view = new DrawView(this);
+        view.setMinimumHeight(draw.getHeight());
+        view.setMinimumWidth(draw.getWidth());
+        draw.addView(view);
+    }
+</code>
+然后我们开始动画的核心部分，一个循环执行的部分。循环的查询 当前视图中可见部分的item 是否需要闪光，
+需要的话需要哪种闪光的方式，和使用哪些闪光资源。
+注：下面代码中的DrawStyleUtils 是提供闪光点的位置变换工具类
+<code>
+        final DrawStyleUtils s = new DrawStyleUtils();
+        final DrawStyleUtils ds = new DrawStyleUtils();
+        final Handler handler = new Handler();
+
+        Runnable task = new Runnable() {
+            public void run() {
+                // 删除消失的闪光点
+                for (int i = 0; i < list.size(); i++) {
+                    if (!list.get(i).isShow())
+                        list.remove(i);
+                }
+
+                DrawXY d = s.red2();
+                DrawXY dss = ds.redAndBlue();
+                int count = wangList.getChildCount();
+                for (int i = 0; i < count; i++) {
+                    ViewHolder viewHolder = (ViewHolder) wangList.getChildViewHolder(wangList.getChildAt(i));
+                    System.out.println(dss.getX()+"x2:"+dss.getX2());
+                    //这里我是用了判断item中的文本是否符合来作为闪光点类型的判断
+                    if ("ssw" == viewHolder.getConvertView().getTag()) {
+                        list.add(new DrawXYStyle(ConvertUtils.dp2px(d.getX() + 8), wangList.getChildAt(i).getTop() + ConvertUtils.dp2px(d.getY()), R.mipmap.hongg));
+                        list.add(new DrawXYStyle(ConvertUtils.dp2px(d.getX2() + 8), wangList.getChildAt(i).getTop() + ConvertUtils.dp2px(d.getY2()), R.mipmap.hongg));
+                    }
+                    if ("sws" == viewHolder.getConvertView().getTag()) {
+                        list.add(new DrawXYStyle(ConvertUtils.dp2px(dss.getX() + 8), wangList.getChildAt(i).getTop() + ConvertUtils.dp2px(dss.getY()), R.mipmap.hongg));
+                        list.add(new DrawXYStyle(ConvertUtils.dp2px(dss.getX2() + 8), wangList.getChildAt(i).getTop() + ConvertUtils.dp2px(dss.getY2()), R.mipmap.languangsgd));
+                    }
+                }
+
+                postY(list);
+
+                handler.postDelayed(this, 25);//设置延迟时间，此处是5秒
+            }
+        };
+        handler.postDelayed(task, 80);//延迟调用
+</code>
+这些都做完了之后，就剩下DrawView中onDraw方法的实现了。代码也很简单
+<code>
+       Paint p = new Paint();
+        if (dList.size() > 0) {
+        //循环每个闪光点 
+            for (int i = 0; i < dList.size(); i++) {
+                DrawXYStyle ds = dList.get(i);
+                //判断是否该显示
+                if (ds.isShow()) {
+                    if (ds.getTimes() > 0) {
+                        //画光点
+                        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),ds.getType());
+                        //根据光点存在的出现的次数来决定透明度 
+                        p.setAlpha(60+ds.getTimes());
+                        canvas.drawBitmap(bitmap, ds.getX(),ds.getY(), p);
+                    }
+                }
+            }
+
+        }
+</code>
+走到这步，赶快去Run一下。看看是否能正确运行。应该大功告成了。
+
+谢谢小伙伴能坚持看到这里,喜欢的话，随手点个Star。多谢
+附上Github链接：<a href="https://github.com/liuyouth/Draw" target="_blank">Liuyouth/高仿王者荣耀好友列表炫光</a>
+暂时没有上传代码。
+
+
+
+                              </pre>
+                            </div>
                        </div>
                         <div style="width: 20%;float: left;color: #999;">
                            <div style="width: 80%;margin-left: 20%;background: #fff;overflow: hidden; ">
@@ -318,7 +496,7 @@
                            
 
                         </div>
-                       
+                       <div class="clear"></div>
 
                    </div>
     <!-- 中心内容区域 End-->
@@ -511,8 +689,9 @@
                 <script src="../../js/lib/layer.js"></script>
                 <script src="../../js/lib/swiper-3.3.1.jquery.min.js"></script>
                 <script src="../../js/lib/jquery.nicescroll.js"></script>
+                <script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>  
                 <script type="text/javascript">
-
+ hljs.initHighlightingOnLoad();
         var 
 
         bimgs = [
@@ -542,17 +721,8 @@
                 new Vue({
                       el: '#Abody',
                       data: {
-                        items: [
-                          { title:'高仿王者荣耀好友列表炫光',url:'x00001.html',type:{id:1,name:'Android',url:'www.baidu.com'},createTime:'2017-02-14',message: '前几日和基友一起玩王者荣耀，发现列表上有个人的头像框带炫光的。就突发奇想，\nAndroid上面如何实现这种可以跨item的动画呢。于是乎便开始了查资料（百度ing...），\n没发现什么有用的东西。\n然后四处闲逛看到了Match的“【Android】快速实现仿美团选择城市界面，微信通讯录界面”，就随手点了进去...' },
-                           { url:'https://github.com/',img:'https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=1945343878,3655021699&fm=58',message: '嘿，Gayhub' },
-                         
-                            
-                            
-                            
-                          
-                          
-                          
-                        ],
+                        items: { title:'高仿王者荣耀好友列表炫光',url:'http://gold.xitu.io/',type:{id:1,name:'Android',url:'www.baidu.com'},createTime:'2017-02-14',message:'        前几日和基友一起玩王者荣耀，发现列表上有个人的头像框带炫光的。就突发奇想，\nAndroid上面如何实现这种可以跨item的动画呢。于是乎便开始了查资料（百度ing...），\n没发现什么有用的东西。\n然后四处闲逛看到了Match的“【Android】快速实现仿美团选择城市界面，微信通讯录界面”，就随手点了进去...' }
+                        ,
                          youItems: [
                       { url:'http://androidwing.net/',img:'http://androidwing.net/wp-content/uploads/2016/08/cropped-1_wingichoy-180x180.png',name: 'wing',
                       tags:['Android','Java','Kotlin']},
