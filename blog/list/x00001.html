@@ -430,13 +430,17 @@
                       System.out.println(dss.getX()+"x2:"+dss.getX2());
                       //这里我是用了判断item中的文本是否符合来作为闪光点类型的判断
                       if ("ssw" == viewHolder.getConvertView().getTag()) {
-                          list.add(new DrawXYStyle(ConvertUtils.dp2px(d.getX() + 8), wangList.getChildAt(i).getTop() + ConvertUtils.dp2px(d.getY()), R.mipmap.hongg));
+                          list.add(new DrawXYStyle(ConvertUtils.dp2px(d.getX() + 8), wangList.getChildAt(i).getTop() +
+                           ConvertUtils.dp2px(d.getY()), R.mipmap.hongg));
                           // R.mipmap.hongg   是资源文件。
-                          list.add(new DrawXYStyle(ConvertUtils.dp2px(d.getX2() + 8), wangList.getChildAt(i).getTop() + ConvertUtils.dp2px(d.getY2()), R.mipmap.hongg));
+                          list.add(new DrawXYStyle(ConvertUtils.dp2px(d.getX2() + 8), wangList.getChildAt(i).getTop() +
+                           ConvertUtils.dp2px(d.getY2()), R.mipmap.hongg));
                       }
                       if ("sws" == viewHolder.getConvertView().getTag()) {
-                          list.add(new DrawXYStyle(ConvertUtils.dp2px(dss.getX() + 8), wangList.getChildAt(i).getTop() + ConvertUtils.dp2px(dss.getY()), R.mipmap.hongg));
-                          list.add(new DrawXYStyle(ConvertUtils.dp2px(dss.getX2() + 8), wangList.getChildAt(i).getTop() + ConvertUtils.dp2px(dss.getY2()), R.mipmap.languangsgd));
+                          list.add(new DrawXYStyle(ConvertUtils.dp2px(dss.getX() + 8), wangList.getChildAt(i).getTop() +
+                           ConvertUtils.dp2px(dss.getY()), R.mipmap.hongg));
+                          list.add(new DrawXYStyle(ConvertUtils.dp2px(dss.getX2() + 8), wangList.getChildAt(i).getTop() +
+                           ConvertUtils.dp2px(dss.getY2()), R.mipmap.languangsgd));
                       }
                   }
 
