@@ -445,7 +445,222 @@ FrameLayout
         };
         handler.postDelayed(task, 80);//延迟调用
 </code>
-这些都做完了之后，就剩下DrawView中onDraw方法的实现了。代码也很简单
+关于DrawStyleUtils 是提供闪光点位置的工具类，代码如下
+<code>
+public class DrawStyleUtils {
+    int dox = 0;
+    int doy = 0;
+    int maxXY = 0;
+    int direction = 0;
+    int dox2 = 0;
+    int doy2 = 0;
+    int maxXY2 = 0;
+    int direction2 = 0;
+    int number = 0;
+    /**
+     * 炫光头像框 【方形】
+     *        略（不知道如何描述运动轨迹 ）
+     */
+    public DrawXY redAndBlue(){
+        if (number==0){
+            maxXY = 48;
+            dox = (maxXY/2);
+            doy = 0;
+            direction = 0;
+            
+            maxXY2 = 48;
+            dox2 = (maxXY/2);
+            doy2 = 0;
+            direction2 = 0;
+            number = 1;
+        }
+        DrawXY drawXY = new DrawXY();
+        switch (direction) {
+            case 0:
+                if (dox < maxXY && doy == 0) {
+                    dox++;
+                    dox++;
+                    dox++;
+                } else {
+                    direction = 1;
+                }
+                break;
+            case 1:
+                if (dox == maxXY && doy < maxXY) {
+                    doy++;
+                    doy++;
+                    doy++;
+                } else {
+                    direction = 2;
+                }
+                break;
+            case 2:
+                if (dox > (maxXY/2) && doy == maxXY) {
+                    dox--;
+                    dox--;
+                    dox--;
+                } else {
+                    dox=(maxXY/2);
+                    doy=0;
+                    direction = 0;
+                }
+                break;
+            case 3:
+                if (dox == 0 && doy > 0) {
+                    doy--;
+                    doy--;
+                    doy--;
+                } else {
+                    direction = 0;
+                }
+                break;
+        }
+        switch (direction2) {
+            case 0:
+                if (dox2 > 0 && doy2 == 0) {
+                    dox2--;
+                    dox2--;
+                    dox2--;
+
+                } else {
+                    direction2 = 1;
+                }
+                break;
+            case 1:
+                if (dox2 == 0 && doy2 < maxXY) {
+                    doy2++;
+                    doy2++;
+                    doy2++;
+                } else {
+                    direction2 = 2;
+                }
+                break;
+            case 2:
+                if (dox2 < (maxXY/2) && doy2 == maxXY) {
+                    dox2++;
+                    dox2++;
+                    dox2++;
+                } else {
+                    dox2=(maxXY/2);
+                    doy2=0;
+                    direction2 = 0;
+                }
+                break;
+
+        }
+        drawXY.setX(dox);
+        drawXY.setX2(dox2);
+        drawXY.setY(doy);
+        drawXY.setY2(doy2);
+        return drawXY;
+    }
+    /**
+     * 炫光头像框 【方形】
+     *        两个光点相差矩形一半的距离顺时针运动
+     */
+    public DrawXY red2(){
+        if (number==0){
+            dox = 0;
+            doy = 0;
+            maxXY = 48;
+            direction = 0;
+            dox2 = 48;
+            doy2 = 48;
+            maxXY2 = 48;
+            direction2 = 2;
+            number = 1;
+        }
+
+        DrawXY drawXY = new DrawXY();
+        switch (direction) {
+            case 0:
+                if (dox < maxXY && doy == 0) {
+                    dox++;
+                    dox++;
+                    dox++;
+                } else {
+                    direction = 1;
+                }
+                break;
+            case 1:
+                if (dox == maxXY && doy < maxXY) {
+                    doy++;
+                    doy++;
+                    doy++;
+                } else {
+                    direction = 2;
+                }
+                break;
+            case 2:
+                if (dox > 0 && doy == maxXY) {
+                    dox--;
+                    dox--;
+                    dox--;
+                } else {
+                    direction = 3;
+                }
+                break;
+            case 3:
+                if (dox == 0 && doy > 0) {
+                    doy--;
+                    doy--;
+                    doy--;
+                } else {
+                    direction = 0;
+                }
+                break;
+        }
+
+        switch (direction2) {
+            case 0:
+                if (dox2 < maxXY && doy2 == 0) {
+                    dox2++;
+                    dox2++;
+                    dox2++;
+
+                } else {
+                    direction2 = 1;
+                }
+                break;
+            case 1:
+                if (dox2 == maxXY && doy2 < maxXY) {
+                    doy2++;
+                    doy2++;
+                    doy2++;
+                } else {
+                    direction2 = 2;
+                }
+                break;
+            case 2:
+                if (dox2 > 0 && doy2 == maxXY) {
+                    dox2--;
+                    dox2--;
+                    dox2--;
+                } else {
+                    direction2 = 3;
+                }
+                break;
+            case 3:
+                if (dox2 == 0 && doy2 > 0) {
+                    doy2--;
+                    doy2--;
+                    doy2--;
+                } else {
+                    direction2 = 0;
+                }
+                break;
+        }
+        drawXY.setX(dox);
+        drawXY.setX2(dox2);
+        drawXY.setY(doy);
+        drawXY.setY2(doy2);
+        return drawXY;
+    }
+}
+</code>
+PS：DrawStyleUtils 工具类是生成48dp的矩形  maxXY 值的大小决定了矩形的大小。
+可根据自己的矩形大小来修改。
+这些都做完了之后，就剩下DrawView中 onDraw方法的实现了。代码也很简单
 <code>
        Paint p = new Paint();
         if (dList.size() > 0) {
@@ -467,6 +682,7 @@ FrameLayout
         }
 </code>
 走到这步，赶快去Run一下。看看是否能正确运行。应该大功告成了。
+如果需要更多
 
 谢谢小伙伴能坚持看到这里,喜欢的话，随手点个Star。多谢
 附上Github链接：<a href="https://github.com/liuyouth/Draw" target="_blank">Liuyouth/高仿王者荣耀好友列表炫光</a>
