@@ -588,8 +588,8 @@
     </div>
     <!--底部Duck区 End-->
     <!--背景图片区 -->
-    <div class="imgback"> 
-    <img class="bodyback" height="100%" width="100%">  </div>
+    <div class="imgback" style="background:url(http://www.isofts.org/wp-content/themes/Tinection-Pro-master/images/pix.png) top left repeat,url(http://www.isofts.org/wp-content/uploads/2014/04/bg.jpg) top center;"> 
+    <!-- <img class="bodyback" height="100%" width="100%">  --> </div>
     <div class="colorback"></div>
     <!--背景图片区 End -->
     <!--视频区 
@@ -826,13 +826,13 @@
                 });
                 //美化浏览器的滚动条
                 $("html").niceScroll({
-                    touchbehavior:false,cursorcolor:"#0966ce",cursoropacitymax:1,cursorwidth:5,horizrailenabled:true,cursorborderradius:5,autohidemode:true,background:'none'
+                    touchbehavior:false,cursorcolor:"#53dca6",cursoropacitymax:1,cursorwidth:8,horizrailenabled:true,cursorborderradius:0,autohidemode:true,background:'none'
                 });
               /*  $("#body").niceScroll({
                     touchbehavior:false,cursorcolor:"#0966ce",cursoropacitymax:1,cursorwidth:5,horizrailenabled:true,cursorborderradius:5,autohidemode:true,background:'none'
                 });*/
                 $("#guolin").niceScroll({
-                    touchbehavior:false,cursorcolor:"#0966ce",cursoropacitymax:1,cursorwidth:5,horizrailenabled:true,cursorborderradius:5,autohidemode:true,background:'none'
+                    touchbehavior:false,cursorcolor:"#53dca6",cursoropacitymax:1,cursorwidth:5,horizrailenabled:true,cursorborderradius:5,autohidemode:true,background:'none'
                 });
                 //扩展动画
                 $.extend($.easing,{
@@ -965,9 +965,13 @@
     }
 
     function lback(){
-         var id = Math.ceil(Math.random()*bimgs.length-1);
-      $(".bodyback").css("background","url("+bimgs[id].uri+")  no-repeat center");
-      $(".bodyback").css("background-size","cover");
+        // var id = Math.ceil(Math.random()*bimgs.length-1);
+      //$(".bodyback").css("background","url("+bimgs[id].uri+")  no-repeat center");
+      //$(".bodyback").css("background-size","cover");
+        $(".imgback").css("background","url(http://www.isofts.org/wp-content/themes/Tinection-Pro-master/images/pix.png) top left repeat,url(http://www.isofts.org/wp-content/uploads/2014/04/bg.jpg) top center;");
+        $(".imgback").css("background-attachment","fixed");
+        $(".imgback").css("background-size","2px 2px,cover");
+       
     }
             </script>
             </html>
