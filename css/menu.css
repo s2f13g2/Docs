@@ -57,9 +57,22 @@ html{background-attachment: fixed; background-color: #eee; height: 100%;}
 
     .content{
         border-radius: 4px;
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+        background: #fff;
         margin: 2% 2% 2% 2%;
+        border-top: 4px solid #5dd5c8;
+        transition: all ease .5s;
+        overflow: hidden;
+    }
+    .content h4{
 
     }
+    .contenttitle{
+        padding: 5px;
+        color: #5dd5c8;
+    }
+
     .boxContent{
         border-radius: 4px;
         background: #fff;

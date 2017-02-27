@@ -337,7 +337,8 @@
 
                
         <div id="webList"  style="max-width: 1180px;margin: 0 auto;" >
-                <div style="background:#fff;padding: 5px;border-radius: 5px; overflow: hidden;margin-top:10px; ">
+                <div class="content" >
+                <div class="contenttitle"><h4>快捷站点</h4></div>
                   <div v-for="item in userWebs" style="width:80px;float:left;">
                        <div class="">
                             <a href="{{item.url}}" target="_blank">
@@ -352,23 +353,11 @@
                     </div>
                 </div>
                 
-                <div id="utilsList" class="content" >
-                    <h4>在线工具</h4>
-                    <div v-for="item in utilsItems" style="width:25%;float:left;">
-                       <div class="boxContent">
-                            <a href="{{item.url}}" target="_blank">
-                                <div style="text-align: center;">
-                                    <img v-bind:src="item.img" >
-                                    <h5> {{ item.message }}</h5>
-                                </div>
-                            </a>
-                        </div> 
-                    </div>
-                </div>
-                  <div style="clear:both;"></div>
-                <div id="hotList" class="content" >
-                    <h4>热门导航</h4>
-                    <div v-for="item in items" style="width:25%;float:left;">
+       
+                <div style="clear:both;"></div>
+                 <div id="utilsList" class="content" >
+                    <div class="contenttitle"><h4>在线工具</h4></div>
+                    <div v-for="item in utilsItems" style="width:33.3%;float:left;">
                        <div class="boxContent">
                             <a href="{{item.url}}" target="_blank">
                                 <div style="text-align: center;">
@@ -380,14 +369,29 @@
                     </div>
 
                 </div>
-                   <div style="clear:both;"></div>
-                <div id="javaEEList" class="content" >
-                    <h4>javaEE</h4>
-                    <div v-for="item in javaEEitems" style="width:25%;float:left;">
+                  <div style="clear:both;"></div>
+                <div>
+                <div id="hotList" class="content" style="width:70%;float:left;">
+                    <div class="contenttitle"><h4>热门导航</h4></div>
+                    <div v-for="item in items" style="width:33.3%;float:left;">
                        <div class="boxContent">
                             <a href="{{item.url}}" target="_blank">
                                 <div style="text-align: center;">
-                                    <img  v-bind:src="item.img">
+                                    <img v-bind:src="item.img" >
+                                    <h5> {{ item.message }}</h5>
+                                </div>
+                            </a>
+                        </div> 
+                    </div>
+
+                </div>
+                <div id="javaEEList" class="content" style="width:22%;float:left;">
+                    <div class="contenttitle"><h4>javaEE</h4></div>
+                    <div v-for="item in javaEEitems" style="width:98%;">
+                       <div class="boxContent">
+                            <a href="{{item.url}}" target="_blank">
+                                <div style="text-align: center;">
+                                    <!-- <img  v-bind:src="item.img"> -->
                                     <h5> {{ item.message }}</h5>
                                 </div>
                             </a>
@@ -396,7 +400,8 @@
 
                 </div>
                  <div style="clear:both;"></div>
-                  <div class="weixin">
+                 </div>
+                 <!--  <div class="weixin">
                    <div style="width: 100%;margin-top:20px;padding">
                       <div style="background:#fff;padding:5px;border-radius:5px;overflow: hidden;"><h3 style="float:left;">郭霖公众号推荐</h3><span style="float:right;margin-right:10px;color:#9a9a9a;">仅显示前10条信息</span></div>
                       <div id="guolin" style="height: 380px;overflow: hidden;margin-top:10px;">
@@ -416,7 +421,7 @@
                         <div class="clear"></div>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
           </div>
           
           <div class="footer"  style="background:#fff;">
