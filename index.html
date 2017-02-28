@@ -336,7 +336,7 @@
                 </div>
 
                
-        <div id="webList"  style="max-width: 1180px;margin: 0 auto;" >
+        <div id="webList"  style="max-width: 1180px;margin: 0 auto;display: none; " >
                 <div class="content" >
                 <div class="contenttitle"><h4>快捷站点</h4></div>
                   <div v-for="item in userWebs" style="width:80px;float:left;">
@@ -710,6 +710,14 @@
       
             new Vue({
                   el: '#Abody',
+                  created: function () {
+                        // `this` 指向 vm 实例
+                        console.log('a is:sssss ')
+                  },
+                  ready: function () {
+                       console.log('a is: ');
+                       $("#webList").show(500)
+                  },
                   data: {
                     items: [
                       { url:'http://gold.xitu.io/',img:'http://assets.gold.xitu.io/images/logo-header.svg',message: '高质量的技术社区' },
