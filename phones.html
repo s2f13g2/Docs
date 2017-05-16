@@ -581,7 +581,10 @@ var swiper = new Swiper('.imgs', {
 		centeredSlides : true,
 	});
 $(function(){
-//console.log($(this))
+console.log(localStorage.phone)
+
+localStorage.phone = JSON.stringify(infos)
+
 $(".phoneItemSe").each(function(){
 	$(this).click(function(){
 		$(".phoneItemSe").each(function(){
