@@ -1,0 +1,1167 @@
+      <!DOCTYPE html>
+      <html lang="en" >
+      <head>
+          <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+          <title>liuyouth 技术导航站点</title>
+          <link rel="stylesheet" href="css/lib/swiper-3.3.1.min.css">
+          <link rel="stylesheet" href="http://demo.htmleaf.com/1609/201609271528/css/build.css">
+          <link rel="stylesheet" href="css/menu.css">
+          <link rel="stylesheet" href="css/localHrefs.css">
+          <link rel="stylesheet" href="css/footer.css">
+          <link rel="stylesheet" href="css/swich.css">
+          <link href="music/musicmin.css" rel="stylesheet">
+          <style>
+          *{
+          }
+              .boxContent img {
+              height: 50px;
+          }
+          .bg-bubbles {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 220px;
+        z-index: 1;
+      }
+      .bg-bubbles li {
+        position: absolute;
+        list-style: none;
+        display: block;
+        width: 40px;
+        height: 40px;
+        background-color: rgba(255, 255, 255, 0.15);
+        bottom: -160px;
+        -webkit-animation: square 25s infinite;
+        animation: square 25s infinite;
+        -webkit-transition-timing-function: linear;
+        transition-timing-function: linear;
+      }
+      .bg-bubbles li:nth-child(1) {
+        left: 10%;
+      }
+      .bg-bubbles li:nth-child(2) {
+        left: 20%;
+        width: 80px;
+        height: 80px;
+        -webkit-animation-delay: 2s;
+                animation-delay: 2s;
+        -webkit-animation-duration: 17s;
+                animation-duration: 17s;
+      }
+      .bg-bubbles li:nth-child(3) {
+        left: 25%;
+        -webkit-animation-delay: 4s;
+                animation-delay: 4s;
+      }
+      .bg-bubbles li:nth-child(4) {
+        left: 40%;
+        width: 60px;
+        height: 60px;
+        -webkit-animation-duration: 22s;
+                animation-duration: 22s;
+        background-color: rgba(255, 255, 255, 0.25);
+      }
+      .bg-bubbles li:nth-child(5) {
+        left: 70%;
+      }
+      .bg-bubbles li:nth-child(6) {
+        left: 80%;
+        width: 120px;
+        height: 120px;
+        -webkit-animation-delay: 3s;
+                animation-delay: 3s;
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+      .bg-bubbles li:nth-child(7) {
+        left: 32%;
+        width: 160px;
+        height: 160px;
+        -webkit-animation-delay: 7s;
+                animation-delay: 7s;
+      }
+      .bg-bubbles li:nth-child(8) {
+        left: 55%;
+        width: 20px;
+        height: 20px;
+        -webkit-animation-delay: 15s;
+                animation-delay: 15s;
+        -webkit-animation-duration: 40s;
+                animation-duration: 40s;
+      }
+      .bg-bubbles li:nth-child(9) {
+        left: 25%;
+        width: 10px;
+        height: 10px;
+        -webkit-animation-delay: 2s;
+                animation-delay: 2s;
+        -webkit-animation-duration: 40s;
+                animation-duration: 40s;
+        background-color: rgba(255, 255, 255, 0.3);
+      }
+      .bg-bubbles li:nth-child(10) {
+        left: 90%;
+        width: 160px;
+        height: 160px;
+        -webkit-animation-delay: 11s;
+                animation-delay: 11s;
+      }
+      @-webkit-keyframes square {
+        0% {
+          -webkit-transform: translateY(0);
+                  transform: translateY(0);
+        }
+        100% {
+          -webkit-transform: translateY(-700px) rotate(600deg);
+                  transform: translateY(-700px) rotate(600deg);
+        }
+      }
+      @keyframes square {
+        0% {
+          -webkit-transform: translateY(0);
+                  transform: translateY(0);
+        }
+        100% {
+          -webkit-transform: translateY(-700px) rotate(600deg);
+                  transform: translateY(-700px) rotate(600deg);
+        }
+      }
+
+      .wrapper {
+        background: #50a3a2;
+        background: -webkit-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
+        background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
+        top: 0px;
+        position: relative;
+        left: 0;
+        width: 96%;
+      max-width: 1100px;
+          height: 220px;
+          margin: 0 auto;
+        overflow: hidden;
+
+      }
+      #searchSettingDiv{
+        padding: 2em;
+
+      }
+      #searchSettingDiv h4{
+        padding: .5em;
+
+      }
+        #searchinput{
+          float: left;
+          font-size: 16px;
+          line-height: 1.25;
+          font-weight: 400;
+          letter-spacing: 0em;
+          display: inline-block;
+          box-sizing: border-box;
+          vertical-align: top;
+          height: 34px;
+          padding-top: 1px;
+          padding-top: 5px\0;
+          padding-left: 15px;
+          padding-right: 15px;
+          color: #333333;
+          border: 1px solid #d6d6d6;
+          border-radius: 4px;
+          background: white;
+          background-clip: padding-box;
+          width: 83%
+        }
+        .clear{
+          clear:both;
+        }
+        button{
+          margin: 5px;
+          display: inline-block;
+          height: 38px;
+          line-height: 38px;
+          padding: 0 18px;
+          background-color: #1E9FFF;
+          color: #fff;
+          white-space: nowrap;
+          text-align: center;
+          border: none;
+          border-radius: 2px;
+          cursor: pointer;
+          opacity: .9;
+        }
+        .hide{
+          display: none;
+        }
+
+      .radioclass {
+
+      }
+      #body{
+        width: 100%;
+        overflow: hidden;
+
+      }
+
+      .rboxContent{
+        background: #fff;
+        border-radius: 5px;
+      }
+      .rboxContent img {
+        height: 50px;
+        width: 50px;
+        padding: 3px;
+        float: left;
+        border-radius: 50%;
+      }
+      .tag{
+        float: left;
+        padding: 2px;
+        font-size: 14px;
+      }
+
+      ::selection {
+      color: #fff;
+      background: #55CBC4;
+  }
+
+  .marker-logo {
+    font-family: 'Share Tech Mono', monospace;
+    font-weight: bold;
+    font-size: 2.5em;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    cursor: default;
+}
+.marker-logo:before,
+.marker-logo:after {
+    content: attr(data-content);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+.marker-logo:before,
+#logo-nav:before {
+    color: #5AE8FD;
+    z-index: -2;
+}
+
+.marker-logo:after,
+#logo-nav:after {
+    color: #FD5AE8;
+    z-index: -1;
+}
+
+.marker-logo:hover:before {
+    animation: glitchy 0.2s ease 0.3s infinite;
+    display: block;
+}
+.marker-logo:hover:after {
+    animation: glitchy 0.3s ease infinite reverse;
+    display:  block;
+}
+          </style>
+      </head>
+      <body id="Abody">
+      <div id="body">
+          <div id="header">
+              <div style="width:30%;float:left;">
+                  <span class="logo">  liuyouth.github.io</span>
+              </div>
+              <div id="navmenu" style="width:70%">
+                  <nav id="menu">
+                      <ul>
+                          <li class="active"><a href="index.html">liuyouth</a>
+
+                          </li>
+                          <li><a href="apps.html">个人作品</a>
+                          </li>
+                          <li><a href="Gankio.html">Gank.io</a>
+
+                          </li>
+                          <li><a href="blog/list/list.html">Blog</a>
+
+                          </li>
+                          <!-- <li><a href="blog/type/index.html">走过的那些坑儿</a>
+
+                          </li> -->
+                          <!-- <li><a href="phones.html">iPhones</a>
+                              <ul>
+                                  <li><a href="phones.html"><span class="icon elem0"></span>手机报价</a></li>
+                                  <li><a href="#"><span class="icon elem0"></span>配件列表</a></li>
+                                  <li><a href="#"><span class="icon elem0"></span>iphone 小通告</a></li>
+
+                                  </ul>
+                              </li> -->
+                              <!-- <li><a href="#">Videos</a></li>
+                              <li><a href="#">Games</a></li>
+                              <li><a href="#">Blog</a>
+                                  <ul>
+                                      <li><a href="#"><span class="icon elem0"></span>menu element 1</a></li>
+                                      <li><a href="#"><span class="icon elem0"></span>menu element 2</a></li>
+                                      <li><a href="#"><span class="icon elem0"></span>menu element 3</a></li>
+                                      <li><a href="#"><span class="icon elem0"></span>menu element 4</a></li>
+                                      <li><a href="#"><span class="icon elem0"></span>menu element 5</a></li>
+                                  </ul>
+                              </li> -->
+                             <!--  <li><a href="#">Me</a>
+                                 <ul>
+                                     <li class="icon elem0" >
+                                         <div style="width:350px;padding:10px;">
+                                             <div style="width:33.3%;text-align:center; float:left;">
+                                                 <img style="border-radius:50%;width:73%;height:73%;" src="http://7xavig.com2.z0.glb.qiniucdn.com/b5ecaffd5ae41b0e230e34d677dec98f.png?imageMogr2/auto-orient/quality/100%7CimageMogr2/thumbnail/!100x100r/gravity/Center/crop/100x100/dx/0/dy/0">
+                                                 <br>
+                                                 <span style="font-weight:bold; color:rgb(103, 106, 108); font-size:0.8em; line-height: 30px;">刘 博</span>
+                                             </div>
+                                             <div style="width:66.6%; float:left;">
+                                                 <div style=" padding-left:10px;">
+                                                     <span style="font-weight:bold; color:rgb(103, 106, 108);font-size:0.8em; "><img  src="http://www.app-echo.com/statics/v3/images/sex0.png"> 白羊座</span>
+
+                                                     <br>
+                                                     <span style=" color:rgb(103, 106, 108);font-size:0.6em; "><img style="    width: 8px;margin: -2px 3px 0 0;
+                                                         height: 14px;"src="http://www.app-echo.com/statics/v3/images/icon_place.png"> 北京</span>
+                                                         <br>
+                                                         <span style="font-weight:bold; color:rgb(103, 106, 108);font-size:0.8em; ">LiuYouth, Item.</span>
+                                                         <br>
+                                                         <span style="color:rgb(103, 106, 108);font-size:0.7em; ">163邮箱： Faithll@163.com</span>
+                                                         <br>
+                                                         <span style="color:rgb(103, 106, 108);font-size:0.7em; "><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=869689491&amp;site=qq&amp;menu=yes">神兽：38637714 </a></span>
+
+                                                         <span style="color:rgb(103, 106, 108);font-size:0.7em; "><a href="刘博Android 工程师.doc">简历下载 </a></span>
+                                                         <br>
+
+                                                     </div>
+                                                 </div>
+                                             </div>
+                                             <div style="    clear: both;"></div>
+
+                                         </li>
+                                     </ul>
+                                 </li> -->
+                              </ul>
+                          </nav>
+
+                      </div>
+                  </div>
+                  <div style="text-align:center;clear:both">
+                  </div>
+
+                  <div style="" class="content wrapper">
+                      <ul class="bg-bubbles">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+              </ul>
+                      <div class="boxContent" style="z-index:999;color:#fff; position: absolute;top: 0px;width: 76%; margin:20px 10%; text-align: center;background-color:rgba(255, 255, 255, 0.32)">
+                          <h1 class="marker-logo" style="padding:10px;font-size:1.1em;display:block;">方便你我的互联网地图</h1>
+
+                          <div style="padding-left:80px;">
+                              <input id="searchinput" onkeypress="searchEnter()" >
+                              <svg id="searchSetting" t="1481330464507" onclick="searchSetting()" class="icon" style="width: 2em; height: 2em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1919"><path d="M512 353.152c-85.76 0-155.456 70.656-155.456 157.568s69.76 157.632 155.456 157.632c8.576 0 17.408-0.896 27.776-2.816 12.096-2.24 20.096-13.952 17.92-26.176-2.24-12.288-13.76-20.48-25.856-18.176-7.68 1.408-14.016 2.048-19.84 2.048-61.184 0-110.976-50.496-110.976-112.512s49.792-112.512 110.976-112.512c61.248 0 110.976 50.496 110.976 112.512 0 5.952-0.64 12.288-2.048 20.096-2.24 12.224 5.824 24 17.856 26.24 12.096 2.24 23.68-5.888 25.856-18.112 1.856-10.496 2.752-19.456 2.752-28.16 0.064-86.976-69.696-157.632-155.392-157.632zM970.56 422.016c-1.664-8.768-8.256-15.744-16.832-17.792-48.768-11.392-89.28-41.664-114.112-85.248s-30.4-94.208-15.808-142.656c2.56-8.512-0.064-17.792-6.72-23.616-44.736-39.168-95.744-69.056-151.744-88.832-8.32-2.944-17.536-0.64-23.552 5.888-34.112 37.12-80.192 57.472-129.792 57.472s-95.68-20.416-129.728-57.408c-6.016-6.528-15.296-8.832-23.616-5.888-55.936 19.712-107.008 49.6-151.744 88.832-6.656 5.824-9.28 15.104-6.72 23.616 14.592 48.384 8.96 99.072-15.808 142.592-24.832 43.648-65.344 73.92-114.112 85.248-8.576 1.984-15.232 8.96-16.832 17.792-5.632 29.952-8.448 59.84-8.448 88.704s2.816 58.752 8.448 88.704c1.664 8.768 8.256 15.744 16.832 17.728 48.768 11.392 89.28 41.664 114.112 85.248 24.768 43.584 30.4 94.208 15.808 142.656-2.56 8.512 0.064 17.792 6.72 23.616 44.736 39.168 95.744 69.056 151.744 88.832 2.368 0.832 4.864 1.28 7.296 1.28 6.08 0 11.968-2.496 16.256-7.168 34.112-36.992 80.192-57.408 129.792-57.408s95.68 20.352 129.728 57.408c6.016 6.528 15.232 8.832 23.552 5.952 55.936-19.712 106.944-49.6 151.744-88.832 6.656-5.824 9.28-15.104 6.72-23.616-14.592-48.384-8.96-99.072 15.872-142.656s65.344-73.856 114.112-85.248c8.576-1.984 15.168-8.96 16.832-17.728 5.632-30.016 8.448-59.904 8.448-88.704 0-28.864-2.816-58.752-8.448-88.768zM929.28 577.216c-53.888 16.512-100.032 53.312-128.192 102.72-28.096 49.344-36.48 108.224-23.744 163.712-34.304 28.096-72.448 50.432-113.664 66.496-41.28-39.488-94.592-60.992-151.68-60.992-56.192 0-110.656 22.08-151.68 60.992-41.216-16.064-79.36-38.4-113.6-66.496 13.056-56 4.8-113.6-23.744-163.712-28.224-49.408-74.368-86.208-128.256-102.72-3.52-22.528-5.312-44.8-5.312-66.432s1.792-43.968 5.312-66.496c53.824-16.512 99.968-53.312 128.128-102.72 28.096-49.344 36.48-108.224 23.744-163.712 34.304-28.16 72.384-50.432 113.664-66.56 41.024 38.976 95.552 61.056 151.744 61.056 57.088 0 110.4-21.568 151.744-60.992 41.28 16.064 79.424 38.4 113.664 66.496-12.736 55.488-4.416 114.368 23.68 163.712 28.16 49.408 74.304 86.208 128.192 102.72 3.52 22.592 5.312 44.864 5.312 66.496 0 21.568-1.792 43.84-5.312 66.432z" p-id="1920" fill="#8a8a8a"></path></svg>
+
+                          </div>
+                          <div class="clear"></div>
+                          <div id="searchtype"><button onclick="baidus()">百度搜索</button>
+                            <button onclick="google()">谷歌搜索</button><button onclick="sos()">360搜索</button><button onclick="sogous()">搜狗搜索</button></div>
+                          <h4>添加你需要站点的方式   将您想要添加的网站信息以如下格式发送至我的邮箱（faithll@163.com）</h4>
+                          { url:'网站链接',img:'网站logo',message: '一句话描述此站点' }
+                      </div>
+                  </div>
+
+
+          <div id="webList"  style="max-width: 1180px;margin: 0 auto;display: none; " >
+                <div style="margin-top:20px;display: none;">
+                <div style="background:#fff;float:left;">
+                <img style="margin-top: 9px;" src="http://i1.hdslb.com/bfs/active/64882d1f0bee58775384dddd972505fe2b831940.gif">
+                </div>
+                <div style="float:left;width:93%;">
+                    <div class="grid-music-container f-usn" style="position:initial">
+    <div class="m-music-play-wrap">
+        <div class="u-cover" style="background:#fd4c5d;border-radius:50%;"></div>
+        <div class="m-play-controls">
+                <a class="u-play-btn prev" title="上一曲"></a>
+                <a class="u-play-btn ctrl-play play" title="暂停"></a>
+                <a class="u-play-btn next" title="下一曲"></a>
+        </div>
+        <div class="m-now-info">
+            <h1 class="u-music-title"><strong>标题</strong><small>歌手</small></h1>
+            <div class="m-now-controls">
+                <div class="u-control u-process">
+                    <span class="buffer-process"></span>
+                    <span class="current-process"></span>
+                </div>
+                <div class="u-control u-time">00:00/00:00</div>
+            </div>
+        </div>
+        <div class="m-play-controls">
+                <div class="u-control u-volume">
+                <a class="volume-control"></a>
+                    <div class="volume-process show" data-volume="0.50">
+                        <span class="volume-current"></span>
+               <!--          <span class="volume-bar"></span> -->
+                        <span class="volume-event"></span>
+                    </div>
+
+                </div>
+                <div>
+                <a class="u-play-btn mode mode-list current" title="列表循环"></a>
+                <a class="u-play-btn mode mode-random" title="随机播放"></a>
+                <a class="u-play-btn mode mode-single" title="单曲循环"></a>
+                </div>
+        </div>
+        <div class="m-play-controls"><img class=" mlist-btn" data-state="false" src="music/imgs/mlist.svg"></div>
+    </div>
+    <div class="m-music-list-wrap"></div>
+    <div class="m-music-lyric-wrap">
+        <div class="inner">
+            <ul class="js-music-lyric-content">
+                <li class="eof">暂无歌词...</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+                </div>
+                </div>
+
+                  <div style="display:none;"></div>
+                  <div id="localHrefs" style="display:none;">
+
+                       <div class="localHrefs" style=" width:70%; float:left" >
+                        <div class="hideMenus">
+                        <botton onclick="openloaclHrefs()">添加</botton>
+                        </div>
+                        <div class="localTitle">快捷导航</div>
+                        <hr>
+                        <div class="localContent">
+
+                        </div>
+                      </div>
+                      <div class="localHrefs" style=" width:20%;float:left;">
+                        <div class="hideMenus">
+                        <botton onclick="openloaclHrefs()">添加</botton>
+                        </div>
+                        <div class="localTitle">快捷导航</div>
+                        <hr>
+                        <div class="localContent">
+
+                        </div>
+                      </div>
+
+                  </div>
+                   <div style="clear:both;"></div>
+                  <div class="content" >
+                  <div class="contenttitle"><h4>GitBook</h4></div>
+                    <div style="width:20%;float:left;">
+                         <div class="">
+                              <a href="https://huanglizhuo.gitbooks.io/kotlin-in-chinese/content/" target="_blank">
+                                  <div style="text-align: center;overflow: hidden;">
+                                     <div style="padding: 3px;">
+
+                                      </div>
+                                      <h5> Kotlin</h5>
+                                  </div>
+                              </a>
+                          </div>
+                      </div>
+                      <div style="width:20%;float:left;">
+                         <div class="">
+                              <a href="https://www.gitbook.com/book/yumenokanata/dbflow-tutorials/details" target="_blank">
+                                  <div style="text-align: center;overflow: hidden;">
+                                     <div style="padding: 3px;">
+
+                                      </div>
+                                      <h5> DBFlow</h5>
+                                  </div>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+                  <div style="clear:both;"></div>
+                  <div class="content" >
+                  <div class="contenttitle"><h4>快捷站点</h4></div>
+                    <div v-for="item in userWebs" style="width:80px;float:left;">
+                         <div class="">
+                              <a href="{{item.url}}" target="_blank">
+                                  <div style="text-align: center;overflow: hidden;">
+                                     <div style="padding: 3px; background: {{item.bcolor}}">
+                                      <img style="width: 50px;border-radius: 10px;" v-bind:src="item.img" >
+                                      </div>
+                                      <h5> {{ item.message }}</h5>
+                                  </div>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+
+
+                  <div style="clear:both;"></div>
+
+                   <div id="utilsList" class="content" >
+                      <div class="contenttitle"><h4>在线工具</h4></div>
+                      <div v-for="item in utilsItems" style="width:33.3%;float:left;">
+                         <div class="boxContent">
+                              <a href="{{item.url}}" target="_blank">
+                                  <div style="text-align: center;">
+                                      <img v-bind:src="item.img" >
+                                      <h5> {{ item.message }}</h5>
+                                  </div>
+                              </a>
+                          </div>
+                      </div>
+
+                  </div>
+                    <div style="clear:both;"></div>
+                  <div>
+                  <div id="hotList" class="content" style="width:70%;float:left;">
+                      <div class="contenttitle"><h4>热门导航</h4></div>
+                      <div v-for="item in items" style="width:33.3%;float:left;">
+                         <div class="boxContent">
+                              <a href="{{item.url}}" target="_blank">
+                                  <div style="text-align: center;">
+                                      <img v-bind:src="item.img" >
+                                      <h5> {{ item.message }}</h5>
+                                  </div>
+                              </a>
+                          </div>
+                      </div>
+
+                  </div>
+                  <div id="javaEEList" class="content" style="width:22%;float:left;">
+                      <div class="contenttitle"><h4>javaEE</h4></div>
+                      <div v-for="item in javaEEitems" style="width:98%;">
+                         <div class="boxContent">
+                              <a href="{{item.url}}" target="_blank">
+                                  <div style="text-align: center;">
+                                      <!-- <img  v-bind:src="item.img"> -->
+                                      <h5> {{ item.message }}</h5>
+                                  </div>
+                              </a>
+                          </div>
+                      </div>
+
+                  </div>
+                   <div style="clear:both;"></div>
+                   </div>
+                   <!--  <div class="weixin">
+                     <div style="width: 100%;margin-top:20px;padding">
+                        <div style="background:#fff;padding:5px;border-radius:5px;overflow: hidden;"><h3 style="float:left;">郭霖公众号推荐</h3><span style="float:right;margin-right:10px;color:#9a9a9a;">仅显示前10条信息</span></div>
+                        <div id="guolin" style="height: 380px;overflow: hidden;margin-top:10px;">
+                          <div v-for="item in guolinList" style=" width: 100%;">
+                             <div class="boxContent">
+                                  <a href="{{item.app_msg_ext_info.content_url}}" target="_blank">
+                                      <div style="text-align: center;overflow: hidden;">
+                                          <img style="height: 110px;float: left;" v-bind:src="item.app_msg_ext_info.cover" >
+                                          <h4>{{item.app_msg_ext_info.author}}</h4>
+                                          <h5> {{ item.app_msg_ext_info.title }}</h5>
+                                          <span>{{item.app_msg_ext_info.digest}}</span>
+                                          <span class="datetime" style="color:#efefef">{{item.comm_msg_info.datetime}}</span>
+                                      </div>
+                                  </a>
+                              </div>
+                          </div>
+                          <div class="clear"></div>
+                        </div>
+                      </div>
+                    </div> -->
+            </div>
+
+            <div class="footer"  style="background:#fff;">
+                <div style="max-width: 1180px;margin: 0 auto">
+
+                <div style="height:180px;">
+                  <div style="width: 700px;float: left;color: #999;font-size: 12px;">
+                    <div class="mingTitle">鸣谢 ：</div>
+                    <div class="mingList">
+                      <div class="mingItem">
+                      <svg aria-hidden="true" class="octicon octicon-mark-github" height="32" version="1.1" viewBox="0 0 16 16" width="32"><path fill="#684f84" fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+                      <div><a href="https://github.com/" target="_blank" >GitHub</a></div>
+                      </div>
+                      <div class="mingItem"><a href="http://blog.csdn.net/guolin_blog/" target="_blank" >郭霖</a></div>
+                      <div class="mingItem"><a href="https://daimajia.com/" target="_blank" >代码家</a></div>
+
+                    </div>
+                  </div>
+
+                  <div style="width: 480px;float: right;color: #999;font-size: 12px;text-align: center;">
+                  <div style="padding-top:25px;"><div>扫码联系我，更方便、更快捷！</div><a href="tencent://message/?uin=869689491&Site=liuyouth&Menu=yes"><img width="100px" src="img/qq.jpg"></a></div>
+                  所有资源收集于网络，如有侵犯到您的权益请联系我们删除
+                  </div>
+
+                </div>
+                <div style="height:40px;line-height: 40px; text-align: center;border-top: 1px solid #efefef;color: #999;font-size: 12px;">
+                版权所有 Copyright © 2014-2017 liuyouth. All Rights Reserved
+                </div>
+
+                </div>
+              <div style="background:#efefef;height: 20px;"></div>
+            </div>
+            <div class="clear"></div>
+      </div>
+      <!-- 搜索模块 -->
+      <div class="searchDiv">
+          <div style="background: #333;border-radius: 4px 4px 0 0;padding-bottom: 10px;height: 100%;">
+          <div  style="
+          /* position: absolute; */
+          /*width: 280px;*/
+          height: 130px;
+          top: 0;
+          left: 0;
+          margin: 0 0 30px 0;
+          border-radius: 4px 4px 0 0;
+          /* overflow: hidden; */
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: 50%;
+          background-image: url('http://i0.hdslb.com/bfs/space/cb1c3ef50e22b6096fde67febe863494caefebad.png@75Q.webp');
+          " >
+
+           <div id="piaochu" style="transition: all 1s linear; width: 800px;  padding: 112px 0 0 20px;">
+            <div class="searchMDiv" style="float: left;">
+              <!-- <img style="width:100px;height:100px;border-radius:100px;position: relative;" src="http://7xavig.com2.z0.glb.qiniucdn.com/b5ecaffd5ae41b0e230e34d677dec98f.png?imageMogr2/auto-orient/quality/100%7CimageMogr2/thumbnail/!100x100r/gravity/Center/crop/100x100/dx/0/dy/0"> -->
+             <div style="float: left;" >
+             <svg t="1486906993203" class="searchMenu" onclick="hideSearch()" style="width: 120px; height: 25px;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4199"><path d="M716.705 213.684c-138.888-138.934-364.124-138.934-503.059 0s-138.934 364.17 0 503.059c138.914 138.924 364.14 138.924 503.059 0.015v-0.015c138.924-138.904 138.924-364.13 0.015-503.044 0-0.005-0.015-0.005-0.015-0.015zM136.238 794.151c-181.64-181.69-181.64-476.225 0-657.921 181.68-181.64 476.2-181.64 657.921 0 181.65 181.696 181.65 476.23 0 657.921-181.721 181.64-476.235 181.64-657.92 0z m869.113 211.238c-24.836 24.801-65.069 24.801-89.885 0l-89.84-89.885c-24.806-24.822-24.806-65.039 0-89.845 24.801-24.8 65.018-24.8 89.84 0l89.885 89.845c24.863 24.862 24.863 65.069 0 89.885z" fill="#1CC3AD" p-id="4200"></path></svg>
+             </div>
+               <!-- <img  style="width:100px;height:100px;border-radius:100px;position: relative;left:70px; transition: all 1.2s ease;" src="img/root_icon.png"> -->
+              <div class="rootSDiv" style="width: 0px">
+                  <input id="rootSInput" type="" name="" style="text-align: center;" placeholder="百度搜索   输入完毕后按下Enter" onkeypress="searchEnter2()">
+              </div>
+            </div>
+
+            <div class="clear"></div>
+             </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- 搜索模块 -->
+      <!-- 右侧友链 -->
+
+
+      <div class="right" style="right: -280px;">
+        <div style="background: #333;border-radius: 4px 4px 0 0;padding-bottom: 10px;height: 100%;">
+          <div  style="
+          /* position: absolute; */
+          width: 280px;
+          height: 130px;
+          top: 0;
+          left: 0;
+          margin: 0 0 30px 0;
+          border-radius: 4px 4px 0 0;
+          /* overflow: hidden; */
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: 50%;
+          background-image: url('http://i0.hdslb.com/bfs/space/cb1c3ef50e22b6096fde67febe863494caefebad.png@75Q.webp');
+          " >
+           <div style="  padding: 80px 0 0 20px;">
+            <div style="float: left;height:100px;">
+              <!-- <img style="width:100px;height:100px;border-radius:100px;position: relative;" src="http://7xavig.com2.z0.glb.qiniucdn.com/b5ecaffd5ae41b0e230e34d677dec98f.png?imageMogr2/auto-orient/quality/100%7CimageMogr2/thumbnail/!100x100r/gravity/Center/crop/100x100/dx/0/dy/0"> -->
+
+               <img id="rootIcon" style="width:100px;height:100px;border-radius:100px;position: relative;left:70px; transition: all 1.2s ease;" src="img/root_icon.png">
+            </div>
+            <div style="height:100px; overflow: hidden;">
+
+              <h5 style="color: #fff; margin: 60px 15px 0 30px;background: #ff6767;padding: 4px;  position: relative;">  ``  刘 小 白</h5>
+            </div>
+            <div class="clear"></div>
+             </div>
+
+          </div>
+          <div class="rightMenu" >
+            <div style="overflow: hidden;float: left;padding: 5px;">
+              <div id="rightIconShow" onclick="hideRight()" class="rightMenuIconDiv show">
+                <svg t="1484282886684" class="icon" style="width: 25px; height: 25px;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="709"><path d="M307.018 49.445c11.517 0 23.032 4.394 31.819 13.18L756.404 480.18c8.439 8.438 13.181 19.885 13.181 31.82s-4.741 23.38-13.181 31.82L338.838 961.376c-17.574 17.573-46.065 17.573-63.64-0.001-17.573-17.573-17.573-46.065 0.001-63.64L660.944 512 275.198 126.265c-17.574-17.573-17.574-46.066-0.001-63.64C283.985 53.839 295.501 49.445 307.018 49.445z" p-id="710" fill="#fff"></path></svg>
+              </div>
+              <div id="rightIconHide" onclick="showRight()" class="rightMenuIconDiv ">
+
+                <svg t="1484282947029" class="icon" style="width: 25px; height: 25px;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="886"><path d="M236.686 543.15l491.806 448.184c16.139 16.057 42.313 16.057 58.45 0s16.138-42.107 0-58.162L324.791 512.02 786.942 90.829c16.138-16.056 16.138-42.107 0-58.163-16.179-16.056-42.312-16.056-58.45 0L236.727 480.85c-8.603 8.561-12.288 19.947-11.715 31.13C224.439 523.244 228.125 534.59 236.686 543.15z" p-id="887" fill="#fff"></path></svg>
+              </div>
+              <svg class="rightMenuIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" t="1484228596920" class="icon" style="
+          float: left;margin-right: 30px;margin-left: 11px;background: #fff;border-radius: 5px;" viewBox="0 0 1024 1024" version="1.1" p-id="2017" width="30" height="30"><defs><style type="text/css"></style></defs><path d="M493.72583 514.27417C424.671007 445.219348 420.544805 338.553608 482.674524 276.423889L644.423891 114.674524C706.583821 52.514594 813.268826 56.720483 882.27417 125.72583 951.230726 194.68239 955.513645 301.387939 893.927181 362.974404L780.45079 476.450794C767.954016 488.947571 767.954016 509.20885 780.45079 521.705628 792.947571 534.202405 813.208851 534.202405 825.705626 521.705628L939.182016 408.229238C1026.609952 320.8013 1020.703456 173.645445 927.529005 80.470996 834.292646-12.765362 687.154784-18.566041 599.169055 69.41969L437.41969 231.169055C349.480384 319.108361 355.171544 466.229551 448.470996 559.529004 460.967773 572.025781 481.229053 572.025781 493.72583 559.529004 506.222607 547.032227 506.222607 526.770947 493.72583 514.27417L493.72583 514.27417Z" fill="#1296db" p-id="2018"></path><path d="M559.607503 443.059164C649.311059 532.762721 686.000877 634.90071 637.325476 683.576109L411.576111 909.325478C349.416181 971.485408 242.731178 967.27952 173.72583 898.27417 104.76927 829.317613 100.486352 722.612064 162.072817 661.025594L292.635347 530.463066C305.132125 517.966288 305.132125 497.705009 292.635347 485.208232 280.13857 472.711454 259.877291 472.711454 247.380513 485.208232L116.817983 615.770762C29.390045 703.198701 35.296547 850.354554 128.470996 943.529005 221.707354 1036.765363 368.845214 1042.566042 456.830945 954.580307L682.580307 728.830944C765.53168 645.879571 716.532512 509.474501 604.862337 397.80433 592.36556 385.307552 572.104281 385.307552 559.607503 397.80433 547.110726 410.301107 547.110726 430.562386 559.607503 443.059164L559.607503 443.059164Z" p-id="2019" fill="#1296db"></path></svg>
+            </div>
+
+            <h4 style="color: #fff;padding-left: 16px;margin-top: 20px;">GAYGAY</h4>
+          </div>
+          <div v-for="item in youItems" style="width:86%;margin:0 auto;margin-top: 10px;">
+             <div class="rboxContent">
+                  <a href="{{item.url}}" target="_blank">
+                      <div style="text-align: center;overflow: hidden;">
+                          <img  v-bind:src="item.img">
+                          <h5> {{ item.name }}</h5>
+                          <div class="tag" v-for="tag in item.tags">{{tag}}</div>
+                      </div>
+                  </a>
+              </div>
+        </div>
+
+
+
+        </div>
+      </div>
+
+      <!-- <div class="right">
+        <div style="background: #333;overflow: hidden;padding-top: 10px;padding-bottom: 10px;">
+          <div style="overflow: hidden;">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" t="1484228596920" class="icon" style="
+          float: left;margin-right: 30px;margin-left: 11px;background: #fff;border-radius: 5px;padding: 2px;box-shadow:0 0 5px #fff" viewBox="0 0 1024 1024" version="1.1" p-id="2017" width="60" height="60"><defs><style type="text/css"></style></defs><path d="M493.72583 514.27417C424.671007 445.219348 420.544805 338.5536 08 482.674524 276.423889L644.423891 114.674524C706.583821 52.514594 813.268826 56.720483 882.27417 125.72583 951.230726 194.68239 955.513645 301.387939 893.927181 362.974404L780.45079 476.450794C767.954016 488.947571 767.954016 509.20885 780.45079 521.705628 792.947571 534.202405 813.208851 534.202405 825.705626 521.705628L939.182016 408.229238C1026.609952 320.8013 1020.703456 173.645445 927.529005 80.470996 834.292646-12.765362 687.154784-18.566041 599.169055 69.41969L437.41969 231.169055C349.480384 319.108361 355.171544 466.229551 448.470996 559.529004 460.967773 572.025781 481.229053 572.025781 493.72583 559.529004 506.222607 547.032227 506.222607 526.770947 493.72583 514.27417L493.72583 514.27417Z" fill="#1296db" p-id="2018"></path><path d="M559.607503 443.059164C649.311059 532.762721 686.000877 634.90071 637.325476 683.576109L411.576111 909.325478C349.416181 971.485408 242.731178 967.27952 173.72583 898.27417 104.76927 829.317613 100.486352 722.612064 162.072817 661.025594L292.635347 530.463066C305.132125 517.966288 305.132125 497.705009 292.635347 485.208232 280.13857 472.711454 259.877291 472.711454 247.380513 485.208232L116.817983 615.770762C29.390045 703.198701 35.296547 850.354554 128.470996 943.529005 221.707354 1036.765363 368.845214 1042.566042 456.830945 954.580307L682.580307 728.830944C765.53168 645.879571 716.532512 509.474501 604.862337 397.80433 592.36556 385.307552 572.104281 385.307552 559.607503 397.80433 547.110726 410.301107 547.110726 430.562386 559.607503 443.059164L559.607503 443.059164Z" p-id="2019" fill="#1296db"></path></svg>
+            <h4 style="color: #fff;padding-left: 16px;margin-top: 20px;">友情链接</h4>
+          </div>
+
+
+        <div v-for="item in youItems" style="width:86%;margin:0 auto;margin-top: 10px;">
+             <div class="rboxContent">
+                  <a href="{{item.url}}" target="_blank">
+                      <div style="text-align: center;overflow: hidden;">
+                          <img  src="{{item.img}}">
+                          <h5> {{ item.name }}</h5>
+                          <div class="tag" v-for="tag in item.tags">{{tag}}</div>
+                      </div>
+                  </a>
+              </div>
+        </div>
+        </div>
+      </div> -->
+      <!-- 右侧友链 -->
+            <!-- 脱离文档布局层-->
+      <!--底部Duck区 -->
+      <div class="Duck" style="display: none;">
+        <div class="fixedButtom">
+          <div  class="boxshadow"></div>
+          <div>
+
+            <div onclick="appsShow()" class="dapps"><img src="img/launchpad.png"></div>
+            <div class="dapps"><img src="img/systempreferences.png"></div>
+            <div class="dapps"><img src="img/appstore.png"></div>
+            <div onclick="show('videoDiv')" class="dapps"><img src="img/video.png"></div>
+
+          </div>
+        </div>
+      </div>
+      <!--底部Duck区 End-->
+      <!--背景图片区 -->
+      <div class="imgback" style="background:url(http://www.isofts.org/wp-content/themes/Tinection-Pro-master/images/pix.png) top left repeat,url(http://www.isofts.org/wp-content/uploads/2014/04/bg.jpg) top center;">
+      <!-- <img class="bodyback" height="100%" width="100%">  --> </div>
+      <div class="colorback"></div>
+      <!--背景图片区 End -->
+      <!--视频区
+                  <div id="videoDiv" class="content" style="display:none;" >
+
+                      <div style="width: 528px;height: 363px;position: fixed;right: 0px;bottom: 70px;">
+                         <div class="boxContent">
+                         <span onclick="hide('videoDiv')" class="no-close"><svg t="1481097029172" class="icon" style="width: 2em; height: 2em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1904"><path d="M313.123668 679.090794c-8.307584 9.355062-8.307584 22.863915 0 31.171499 9.391182 9.391182 22.936155 9.391182 31.243739 0L706.72254 348.30448c8.307584-8.307584 8.307584-21.816437 0-31.207619-8.343704-8.307584-21.852557-8.307584-31.243739 0L313.123668 679.090794zM679.632593 706.108501c8.307584 8.307584 22.936155 8.307584 31.243739 0 8.307584-8.271464 8.307584-21.816437 0-31.171499L348.557319 312.943069c-8.307584-8.307584-22.936155-8.307584-31.243739 0-8.307584 9.355062-8.307584 22.900035 0 31.207619L679.632593 706.108501z" p-id="1905" fill="#8a8a8a"></path></svg></span>
+                            <h5 style="margin: 5px;font-size: 1em;color: #565656;">所以遇到了就别放手</h5>
+                             <video id="video" class="video" style="width: 100%; opacity: 1; z-index: 2;" webkit-playsinline="true" src="http://gslb.miaopai.com/stream/uPQkFFX6ARPSWrig-Ejh9w__.mp4" poster="" proload="meta" controls=""><object width="100%" height="100%" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"><param name="src" value="http://wscdn.miaopai.com/splayer2.2.0.swf?scid=uPQkFFX6ARPSWrig-Ejh9w__&amp;token=&amp;autopause=true&amp;fromweibo=false"><param name="wmode" value="transparent"><param name="wmode" value="opaque"><param name="quality" value="high"> <param name="allowfullscreen" value="true"><param name="allowscriptaccess" value="always"><embed src="http://wscdn.miaopai.com/splayer2.2.0.swf?scid=uPQkFFX6ARPSWrig-Ejh9w__&amp;token=&amp;autopause=true&amp;fromweibo=false" type="application/x-shockwave-flash" autostart="false" width="100%" height="100%" quality="high" allowfullscreen="true" wmode="transparent" allowscriptaccess="always" pluginspage="http://www.macromedia.com/go/getflashplayer"></object></video>
+                          </div>
+                      </div>
+
+                  </div>
+      <!--视频区 End-->
+      <!--搜索弹框区 -->
+
+                <div id="searchSettingDiv" style="display:none;">
+                  <H4>选择默认搜索引擎</H4>
+                  <div style="padding: 1em;background: #ff6767;margin: .5em;border-radius: 5px;">
+                      <div style="float: left;line-height: 33px;">显示多个搜索项：</div>
+                     <input id="typeswich" class="mui-switch mui-switch-anim" onclick="taggle(this)" type="checkbox" checked="">
+                  </div>
+                  <input id='baidu' type="radio" name='r-group-1'  />
+                  <label for="baidu">百度</label>
+                  <input id='google' type="radio" name='r-group-1' />
+                  <label for="google">谷歌</label>
+                  <input id='so' type="radio" name='r-group-1' />
+                  <label for="so">360</label>
+                  <input id='sougou' type="radio" name='r-group-1' />
+                  <label for="sougou">搜狗</label>
+
+                </div>
+      <!--搜索弹框区 End-->
+      <!--Apps区 -->
+
+                <div id="AppsDiv"  style="display: none;" class="fills"  onclick="appsHide()" >
+                  <div style="padding: 3em;">
+                    <div class="AppsHeader">
+                  </div>
+                    <div class="AppsTab" style=" width: 1024px;text-align: center;margin: 0 auto">
+                       <!-- Swiper -->
+                                <div class="imgs swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div  class="swiper-slide">
+                                          <div style="overflow: hidden;padding: 3em;height: 650px;" >
+                                             <div id="asd" onclick="appsShow()" class="apps">
+                                                  <img src="img/launchpad.png">
+                                                 <h5 style="color: #fff">应用</h5>
+                                             </div>
+
+
+
+                                          </div>
+                                        </div>
+                                        <div  class="swiper-slide">
+                                          <img  width="500px" src="http://ww4.sinaimg.cn/large/610dc034jw1fb8iv9u08ij20u00u0tc7.jpg">
+                                        </div>
+                                    </div>
+                                    <!-- Add Pagination -->
+                                    <div class="swiper-pagination"></div>
+                                </div>
+
+                  </div>
+
+                  </div>
+                </div>
+      <!--Apps区 End-->
+      <!-- 脱离文档布局层-->
+
+           </body>
+              <script src="js/lib/jquery-2.1.1.min.js"></script>
+              <script src="//cdn.bootcss.com/dynamics.js/1.1.5/dynamics.js"></script>
+              <script src="js/menu.js"></script>
+              <script src="js/lib/vue.js"></script>
+              <script src="js/lib/jquery.gradientify.min.js"></script>
+              <script src="js/lib/layer.js"></script>
+              <script src="js/lib/swiper-3.3.1.jquery.min.js"></script>
+              <script src="js/lib/jquery.nicescroll.js"></script>
+              <script src="music/music.js"></script>
+              <script src="music/song.js"></script>
+              <script type="text/javascript">
+
+      var
+
+      bimgs = [
+          {uri:"http://desk.fd.zol-img.com.cn/t_s1920x1200c5/g5/M00/0B/04/ChMkJ1diS1GIYSL8AA5CY_M74n0AASqZgAzDxkADkJ7634.jpg"},
+          {uri:"http://desk.fd.zol-img.com.cn/t_s1920x1080c5/g5/M00/0B/04/ChMkJldiS1qISsKeAAzwUI7y2LIAASqZwBOQesADPBo196.jpg"},
+          {uri:"http://desk.fd.zol-img.com.cn/t_s1920x1080c5/g5/M00/0B/04/ChMkJldiS1aIMKDIAAwER8BHqD8AASqZgIVJ0wADARf295.jpg"},
+          {uri:"http://desk.fd.zol-img.com.cn/t_s1920x1080c5/g5/M00/0B/04/ChMkJldiS1eIZrq7AA0lqb0yX8kAASqZgLX4XMADSXB895.jpg"},
+        {uri:"http://desk.fd.zol-img.com.cn/t_s1920x1080c5/g5/M00/0B/04/ChMkJ1diS1iId7DNAAqYUHeMHIAAASqZgOtA3oACpho409.jpg"},
+            {uri:"http://desk.fd.zol-img.com.cn/t_s2560x1600c5/g5/M00/0F/06/ChMkJlfI162IeK07AAY_egKaTWoAAU6qQHhDUcABj-S342.jpg"},
+          {uri:"http://desk.fd.zol-img.com.cn/t_s1920x1080c5/g5/M00/0F/06/ChMkJ1fI18uIPl4SAAH7nIUWw9wAAU6qQKoXZ4AAfu0026.jpg"},
+        {uri:"https://a-ssl.duitang.com/uploads/item/201605/29/20160529111226_WSAz3.jpeg"}, {uri:"http://img17.3lian.com/201612/15/4e842dcf566fa044a0ca1067c7dfd6dc.jpg"}
+
+        ];
+        Videos = [
+          {
+            uri:"http://gslb.miaopai.com/stream/uPQkFFX6ARPSWrig-Ejh9w__.mp4"},
+          {uri:"http://desk.fd.zol-img.com.cn/t_s1920x1080c5/g5/M00/0B/04/ChMkJldiS1qISsKeAAzwUI7y2LIAASqZwBOQesADPBo196.jpg"},
+          {uri:"http://desk.fd.zol-img.com.cn/t_s1920x1080c5/g5/M00/0B/04/ChMkJldiS1aIMKDIAAwER8BHqD8AASqZgIVJ0wADARf295.jpg"},
+          {uri:"http://desk.fd.zol-img.com.cn/t_s1920x1080c5/g5/M00/0B/04/ChMkJldiS1eIZrq7AA0lqb0yX8kAASqZgLX4XMADSXB895.jpg"},
+        {uri:"http://desk.fd.zol-img.com.cn/t_s1920x1080c5/g5/M00/0B/04/ChMkJ1diS1iId7DNAAqYUHeMHIAAASqZgOtA3oACpho409.jpg"},
+            {uri:"http://desk.fd.zol-img.com.cn/t_s2560x1600c5/g5/M00/0F/06/ChMkJlfI162IeK07AAY_egKaTWoAAU6qQHhDUcABj-S342.jpg"},
+          {uri:"http://desk.fd.zol-img.com.cn/t_s1920x1080c5/g5/M00/0F/06/ChMkJ1fI18uIPl4SAAH7nIUWw9wAAU6qQKoXZ4AAfu0026.jpg"},
+        {uri:"https://a-ssl.duitang.com/uploads/item/201605/29/20160529111226_WSAz3.jpeg"}, {uri:"http://img17.3lian.com/201612/15/4e842dcf566fa044a0ca1067c7dfd6dc.jpg"}
+
+        ];
+
+              new Vue({
+                    el: '#Abody',
+                    created: function () {
+
+                    },
+                    ready: function () {
+
+                         $("#webList").show(1000)
+                    },
+                    data: {
+                      items: [
+                        { url:'http://gold.xitu.io/',img:'http://assets.gold.xitu.io/images/logo-header.svg',message: '高质量的技术社区' },
+                         { url:'https://github.com/',img:'https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=1945343878,3655021699&fm=58',message: '嘿，Gayhub' },
+                        { url:'http://www.jcodecraeer.com/',img:'http://www.easyicon.net/api/resizeApi.php?id=1194933&size=72',message: '泡在网上的日子'},
+                        { url:'http://www.apkbus.com',img:'http://www.apkbus.com/static/image/common/logo.png',message: '移动互联网门户'},
+                        { url:'http://www.biaonimeia.com/',img:'http://www.biaonimeia.com/images/logo_s.png',message: '一款自动化设计标注工具'},
+                        { url:'http://www.app-echo.com/',img:'http://www.app-echo.com/statics/v3/images/echoBrand@2x.png',message: '音乐社区'},
+
+                        { url:'http://p.codekk.com/',img:'',message: 'Android 精品项目例子'},
+                        { url:'http://huaban.com/',img:'http://huaban.com/img/logo.svg',message: '国内最优质图片灵感库'},
+                        { url:'http://699pic.com/',img:'',message: '摄图网，高清图片素材网站'},
+                        { url:'https://dribbble.com/',img:'https://d13yacurqjgara.cloudfront.net/assets/ball-2acfbb9fdf187a34b07a7cc209d07025b39697eba6302c54942a556c10b3fa94.png',message: 'dribbble国外设计站'},
+                        { url:'http://iconfont.cn/',img:'http://www.easyicon.net/api/resizeApi.php?id=1194933&size=72',message: 'iconfont 阿里旗下的图标/字体站'},
+                        { url:'https://icons8.com/',img:'http://www.easyicon.net/api/resizeApi.php?id=1194933&size=72',message: 'icons8 国外付费图标站，也有免费的'},
+
+
+                         { url:'http://www.androidblog.cn/',img:'http://www.androidblog.cn/Public/home/img/android_96px_1110302_easyicon.net.png',message: 'Android最火的源码/工具'},
+                          { url:'http://shejidx.com/',img:'http://shejidaxue.com/wp-content/themes/monster0825a/static/img/logo.jpg',message: 'UI设计/工具/资源'},
+                          { url:'http://www.colays.cn/',img:'http://www.colays.cn/templets/hanjutv/images/logo.png',message: '考拉影视【最新的高清电影电视剧】'},
+                          { url:'http://www.bhusk.com',img:'http://oot0mlws2.bkt.clouddn.com/favicon.png',message: '黑壳网，是一个以网络优秀技术资源分享交流为主题，网络技术为中心的博客网站。' },
+                          { url:'http://www.bingoll.cn:1024',img:'http://www.bingoll.cn:808/web/images/logo.png',message: '宾果云，你身边的流量加油站' },
+                           { url:'http://icon.wuruihong.com/',img:'http://www.easyicon.net/api/resizeApi.php?id=1194933&size=72',message: '一键生成所有尺寸的应用图标' },
+
+                         /*  { url:'http://www.di.fm/',img:'http://cdn.audioaddict.com/di.fm/assets/flux/branding/logo-di-e9580dd4ef317e3a977539651162ff5f.png',message: '国外DJ电子舞曲电台，专注于电子舞曲音乐流派的音乐和创作'},*/
+
+
+
+
+
+
+                      ],
+
+                      javaEEitems: [
+                        { url:'http://mvnrepository.com/',img:'http://mvnrepository.com/assets/images/392dffac024b9632664e6f2c0cac6fe5-logo.png',message: 'Maven Repository JAR包搜索' },
+                        { url:'http://tomcat.apache.org/',img:'http://tomcat.apache.org/images/tomcat.png',message: 'Tomcat'},
+                        { url:'http://www.bootcdn.cn/',img:'',message: 'CDN加速文件css js'},
+                         { url:'https://services.gradle.org/',img:'',message: 'gradle 各个版本下载'},
+
+
+
+                      ],
+                      utilsItems: [
+                       { url:'utils/svg2android/index.html',img:'utils/svg2android/img/logo.svg',message: 'Android SVG to VectorDrawable' },
+
+
+                      ],
+                      userWebs: [
+                       { url:'https://wx.qq.com/',img:'https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=953742269,1041746281&fm=58',message: '微信',bcolor:"#fff" },
+                       { url:'http://email.163.com/',img:'https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=671129676,1621892593&fm=58',message: '163邮箱',bcolor:"#fff" },
+                       { url:'http://runjs.cn/',img:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1486912109174&di=160118cf0d848c41e7b8238d9bce65ee&imgtype=0&src=http%3A%2F%2Fimg.25pp.com%2Fuploadfile%2Fsoft%2Fimages%2F2013%2F0902%2F20130902012715726.jpg',message: 'Run.JS',bcolor:"#fff" },
+
+
+
+                      ],
+                      youItems: [
+                      { url:'http://androidwing.net/',img:'http://androidwing.net/wp-content/uploads/2016/08/cropped-1_wingichoy-180x180.png',name: 'wing',
+                      tags:['Android','Java','Kotlin']},
+                      { url:'http://intheworld.win/',img:'http://intheworld.win/wordpress/wp-content/themes/zalive/img/features_img_1.jpg',name: '浮舟沧海',
+                    tags:['Android','Java','Kotlin']},
+                      { url:'http://blog.csdn.net/zxt0601',img:'http://avatar.csdn.net/4/3/8/1_zxt0601.jpg',name: '张旭童',
+                    tags:['Android','Java','Kotlin']},
+                    ],
+
+
+
+
+
+                    guolinList:[{"app_msg_ext_info":{"author":"朱小姐","content":"","content_url":"https://mp.weixin.qq.com/s?__biz=MzA5MzI3NjE2MA==&mid=2650238570&idx=1&sn=48314cd2d4202ff39647979a45dd17dc&chksm=88639f05bf141613cdcff7bc58fb58b19ad847621f990ba8eac31b57b5ef647c87730f3957c2&mpshare=1&scene=1&srcid=0213oM1LMFMvyUMSWLRMT9ay&pass_ticket=kGSXC2R4VqnMW53ukAJOO7yFvbdOrQbQWBwwarWPfPZs4KWp3UdpJ6ieHMUy0c0g#rd","copyright_stat":11,"cover":"http://mmbiz.qpic.cn/mmbiz_png/v1LbPPWiaSt6U9eymkHtic2DZraRCXlSKZemYppt74wmSAk5t4n0BaLx4BzxvLvib8HRD03vIMsWVrwzx3LazVicDA/0?wx_fmt=png","digest":"聊聊平板的屏幕适配。","fileid":502754921,"is_multi":0,"multi_app_msg_item_list":[],"source_url":"http://blog.csdn.net/qq_27570955/article/details/53996420","subtype":9,"title":"Android平板多屏幕适配"},"comm_msg_info":{"content":"","datetime":1486944014,"fakeid":"3093276160","id":1000000160,"status":2,"type":49}},{app_msg_ext_info:
+      {author:"张旭童",content:"",content_url:"https://mp.weixin.qq.com/s?__biz=MzA5MzI3NjE2MA==&mid=2650238563&idx=1&sn=98b1c3b689e5658854fcda26f20461bd&chksm=88639f0cbf14161a7969c803895f0ea59c5d6d080d3acbb18df0dd2602fa56b71b93995c3592&mpshare=1&scene=1&srcid=02127nN7gaGUBahllA8ojrxd&pass_ticket=w2OQichfFoNboGT5jfc8WRR2nw%2BMv%2Bs4zYsVOTi%2BS5eAc%2FFGi%2B8Nv%2FTBiW%2BILf7Y#rd",copyright_stat:11,cover:"http://mmbiz.qpic.cn/mmbiz_png/v1LbPPWiaSt4wwXjdHluNf1HZkiauO6IQPku2ufUqDZgFib9pG4VPBrg8qt3qWhXRVNbyMsibXC63FDWibJ0cORwo2A/0?wx_fmt=png",digest:"支持不同格式以及不同数据结构Item，分享设计思路。",fileid:502754914,is_multi:0,multi_app_msg_item_list:[],source_url:"http://blog.csdn.net/zxt0601/article/details/53618694",subtype:9,title:"DataBinding：一行实现花式列表"},comm_msg_info:{content:"",datetime:1486684811,fakeid:"3093276160",id:1000000159,status:2,type:49}},{app_msg_ext_info:{author:"王月半子",content:"",content_url:"https://mp.weixin.qq.com/s?__biz=MzA5MzI3NjE2MA==&mid=2650238541&idx=1&sn=acd7da7cd5e9977e0d04859ad72251ba&chksm=88639f22bf141634b27d01a81a0a1336a1ba988e88e55aac6c1361cd49f301b6e344943a59a9&mpshare=1&scene=1&srcid=0212XrjugVdzd86RvZu5IJoz&pass_ticket=tu9jjlqsJPr6y%2BsTUnBRv9WMeMkEyo%2BlG6QllbJ8Zx%2BE%2FO1QkJE3BC2DiXeDMVS%2F#rd",copyright_stat:11,cover:"http://mmbiz.qpic.cn/mmbiz_png/v1LbPPWiaSt7cUbb0xqn19nMSZcbCDx7dSpucZuSQJ2Y5rWDSnAsq0n43zVDwBITLrfWbUAKep8yRCVMJDaQCuw/0?wx_fmt=png",digest:"RemoteViews的对比，剖析与实战！",fileid:502754892,is_multi:0,multi_app_msg_item_list:[],source_url:"http://blog.csdn.net/wrg_20100512/article/details/53940485",subtype:9,title:"Android神奇 控件 一一RemoteViews"},comm_msg_info:{content:"",datetime:1486598406,fakeid:"3093276160",id:1000000158,status:2,type:49}},{app_msg_ext_info:{author:"杨道龙",content:"",content_url:"https://mp.weixin.qq.com/s?__biz=MzA5MzI3NjE2MA==&mid=2650238515&idx=1&sn=e2eff06078027ffe2220217c43242c68&chksm=88639f5cbf14164af011066d5c25784ad5dea486b0844e11607e4d4dcbaf129aa3ed864a76db&mpshare=1&scene=1&srcid=0212eWi5mP97MOWD6bqZp42m&pass_ticket=tu9jjlqsJPr6y%2BsTUnBRv9WMeMkEyo%2BlG6QllbJ8Zx%2BE%2FO1QkJE3BC2DiXeDMVS%2F#rd",copyright_stat:11,cover:"http://mmbiz.qpic.cn/mmbiz_png/v1LbPPWiaSt4rDZHmrh35K6N7ibQ3MhP6V97YbQazFMPCUoibbib2Mic9vAyk3IyZWnYDrjwdl4BNPTb8GxHdCtvhkA/0?wx_fmt=png",digest:"隐式启动Activity的一些规则。",fileid:502754866,is_multi:0,multi_app_msg_item_list:[],source_url:"http://blog.csdn.net/qq_32059827/article/details/53819775",subtype:9,title:"挖掘隐式启动Activity可能存在的坑"},comm_msg_info:{content:"",datetime:1486512011,fakeid:"3093276160",id:1000000157,status:2,type:49}},{app_msg_ext_info:{author:"NEXTB",content:"",content_url:"https://mp.weixin.qq.com/s?__biz=MzA5MzI3NjE2MA==&mid=2650238499&idx=1&sn=61036da3eafed63634b1e171daaa0522&chksm=88639f4cbf14165a8ca444c7f760a4779d4c6c5c7368a85d3d2284eca42b204d260c1c93b5a8&mpshare=1&scene=1&srcid=0212U6BPW24wNcQKQJn7LZSz&pass_ticket=tu9jjlqsJPr6y%2BsTUnBRv9WMeMkEyo%2BlG6QllbJ8Zx%2BE%2FO1QkJE3BC2DiXeDMVS%2F#rd",copyright_stat:11,cover:"http://mmbiz.qpic.cn/mmbiz_jpg/v1LbPPWiaSt7zhVcKV2WmvrYgbMicyuLaF8DHynu0CylxiaZ4NCewqGdiafzxUFNM7rTkYbPOuxXg4TLX47GMHEJSA/0?wx_fmt=jpeg",digest:"解决服务器还未准备好等问题。",fileid:502754850,is_multi:0,multi_app_msg_item_list:[],source_url:"https://yuanjunli.github.io/2016/12/15/%E6%A8%A1%E6%8B%9F%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%94%E5%9B%9E%E6%95%B0%E6%8D%AE/",subtype:9,title:"模拟服务器返回数据"},comm_msg_info:{content:"",datetime:1486425613,fakeid:"3093276160",id:1000000156,status:2,type:49}},{app_msg_ext_info:{author:"AndroidMsky",content:"",content_url:"https://mp.weixin.qq.com/s?__biz=MzA5MzI3NjE2MA==&mid=2650238492&idx=1&sn=631dc7fb6d70d16f59592cfd595b63b8&chksm=88639f73bf141665626fb24868ea21fc2d1f523811939592ed6f764c270c5c9992ca20f4e5b8&mpshare=1&scene=1&srcid=021204grlYNDl2tzmm4WrmLz&pass_ticket=tu9jjlqsJPr6y%2BsTUnBRv9WMeMkEyo%2BlG6QllbJ8Zx%2BE%2FO1QkJE3BC2DiXeDMVS%2F#rd",copyright_stat:11,cover:"http://mmbiz.qpic.cn/mmbiz_png/v1LbPPWiaSt5GEB5UrzfJcxnokQ2iaBp3ta1jFRpaIqugfG2e6zXIriczY6NjibxTSadicNT3PiatmqL9DTvwDvmheLg/0?wx_fmt=png",digest:"仿&quot;知乎&quot;个人主页",fileid:502754839,is_multi:0,multi_app_msg_item_list:[],source_url:"http://blog.csdn.net/AndroidMsky/article/details/53784984",subtype:9,title:"Android实现嵌套滑动和渐隐效果"},comm_msg_info:{content:"",datetime:1486339221,fakeid:"3093276160",id:1000000155,status:2,type:49}},{app_msg_ext_info:{author:"明伟",content:"",content_url:"https://mp.weixin.qq.com/s?__biz=MzA5MzI3NjE2MA==&mid=2650238479&idx=1&sn=cef582b5c5a15853f391d013a0747a9d&chksm=88639f60bf1416761f9da62e7b59c0d2f892d1b6f6e85a809f963dca593cffdcb14a9e171ddb&mpshare=1&scene=1&srcid=0212xoZS8X0tApXKcWqA0P3v&pass_ticket=tu9jjlqsJPr6y%2BsTUnBRv9WMeMkEyo%2BlG6QllbJ8Zx%2BE%2FO1QkJE3BC2DiXeDMVS%2F#rd",copyright_stat:11,cover:"http://mmbiz.qpic.cn/mmbiz_png/v1LbPPWiaSt5RSPEnicjHiaNHEMQKMRH5Fx0vV6tQzA2K5n6f9v0haQAGf05ic4boPic8uibxkH18BfsTsvyKwGpWNZg/0?wx_fmt=png",digest:"聊一聊注解的基本概念以及用法。",fileid:502754829,is_multi:0,multi_app_msg_item_list:[],source_url:"http://blog.csdn.net/u013045971/article/details/53433874",subtype:9,title:"一小时搞明白自定义注解(Annotation)"},comm_msg_info:{content:"",datetime:1486166682,fakeid:"3093276160",id:1000000154,status:2,type:49}},{app_msg_ext_info:{author:"郭霖",content:"",content_url:"https://mp.weixin.qq.com/s?__biz=MzA5MzI3NjE2MA==&mid=2650238469&idx=1&sn=49154d3b2c0a94c68c27a2b6da0e3759&chksm=88639f6abf14167cbd3e197c6770af73864917322b2b18bcbbf07870667f60951d6ac4bc4d86&mpshare=1&scene=1&srcid=0212vKbVBLKPUefRzZiVVarR&pass_ticket=tu9jjlqsJPr6y%2BsTUnBRv9WMeMkEyo%2BlG6QllbJ8Zx%2BE%2FO1QkJE3BC2DiXeDMVS%2F#rd",copyright_stat:11,cover:"http://mmbiz.qpic.cn/mmbiz_png/v1LbPPWiaSt7A6wBHZMkiaRtOwxlJvOajtuSZ75UDeP5vnaUMLge4Dym1YhVCfSqov7hOxdFvDNZl2QdYzGZvn5g/0?wx_fmt=png",digest:"亲自执笔，给大家带来新年第一篇原创文章",fileid:502754820,is_multi:0,multi_app_msg_item_list:[],source_url:"",subtype:9,title:"最全面的ConstraintLayout教程"},comm_msg_info:{content:"",datetime:1486080040,fakeid:"3093276160",id:1000000153,status:2,type:49}},{app_msg_ext_info:{author:"郭霖",content:"",content_url:"https://mp.weixin.qq.com/s?__biz=MzA5MzI3NjE2MA==&mid=2650238430&idx=1&sn=0430aa716d06e9be45856c1b5c74b39f&chksm=88639cb1bf1415a793b141e4dfc1f187325259dc0f0373f2e3f3efb876f6d450d6553177d3d0&mpshare=1&scene=1&srcid=0212WkGHbSsy1WlTq8P70M6C&pass_ticket=tu9jjlqsJPr6y%2BsTUnBRv9WMeMkEyo%2BlG6QllbJ8Zx%2BE%2FO1QkJE3BC2DiXeDMVS%2F#rd",copyright_stat:100,cover:"http://mmbiz.qpic.cn/mmbiz_jpg/v1LbPPWiaSt50R9VLp6TDdb1qtuVaXvLx0FmaoUzB3Qicb9htSria5KuAibib7Kkic6kJD8ibOD1QoFG6cMLrrMQIumsQ/0?wx_fmt=jpeg",digest:"金猴留恋丰收年，鸡鸣又报万家春",fileid:502754771,is_multi:0,multi_app_msg_item_list:[],source_url:"http://kg.qq.com/share.html?s=PaRY_4PiJ2eYtPfj&amp;songid=1100005447",subtype:9,title:"大年初一红包来啦！"},comm_msg_info:{content:"",datetime:1485562021,fakeid:"3093276160",id:1000000152,status:2,type:49}},{app_msg_ext_info:{author:"郭霖",content:"",content_url:"https://mp.weixin.qq.com/s?__biz=MzA5MzI3NjE2MA==&mid=2650238428&idx=1&sn=ecc3ae10e1f6bb91fb796a2faefddf0d&chksm=88639cb3bf1415a53f42143af815f2494ecbf9ea6a48b2bbd5c28d707fde7e53f90f756f752e&mpshare=1&scene=1&srcid=02124fDgETnAKY28Cra5gfWz&pass_ticket=tu9jjlqsJPr6y%2BsTUnBRv9WMeMkEyo%2BlG6QllbJ8Zx%2BE%2FO1QkJE3BC2DiXeDMVS%2F#rd",copyright_stat:100,cover:"http://mmbiz.qpic.cn/mmbiz_jpg/v1LbPPWiaSt50R9VLp6TDdb1qtuVaXvLxY5pcr6DkkCO33anvGjCJib5eaM0nIqVTviboXSqhr7WrPsQ0pZZHlVibA/0?wx_fmt=jpeg",digest:"今夜除夕已来临，好运滚滚向你行！",fileid:502754768,is_multi:0,multi_app_msg_item_list:[],source_url:"",subtype:9,title:"除夕红包来啦！"},comm_msg_info:{content:"",datetime:1485509253,fakeid:"3093276160",id:1000000151,status:2,type:49}},{app_msg_ext_info:{author:"郭霖",content:"",content_url:"https://mp.weixin.qq.com/s?__biz=MzA5MzI3NjE2MA==&mid=2650238426&idx=1&sn=c8254b50a550e285dbc6c3d7878ca630&chksm=88639cb5bf1415a376d03a71467abe733347cc77ec9a71ce2000bb70464e10b862778d4bc740&mpshare=1&scene=1&srcid=02127zHkgF18Pgl0bo0wfkzH&pass_ticket=tu9jjlqsJPr6y%2BsTUnBRv9WMeMkEyo%2BlG6QllbJ8Zx%2BE%2FO1QkJE3BC2DiXeDMVS%2F#rd",copyright_stat:100,cover:"http://mmbiz.qpic.cn/mmbiz_jpg/v1LbPPWiaSt50R9VLp6TDdb1qtuVaXvLxWPCjGA1NPgCEo9e1RtosJWdMaLRr82c5icotKVEJ22jbYOTHiaNibzAbg/0?wx_fmt=jpeg",digest:"红包即将来袭！不过不是今天",fileid:502754767,is_multi:0,multi_app_msg_item_list:[],source_url:"",subtype:9,title:"红包！红包！"},comm_msg_info:{content:"",datetime:1485422619,fakeid:"3093276160",id:1000000150,status:2,type:49}}],
+
+
+
+
+                    }
+                  })
+
+              function remove(id){
+                $("#"+id).children().remove();
+              }
+              function show(id){
+                $("#"+id).show(500);
+              }
+              function hide(id){
+                $("#"+id).hide(500);
+              }
+           var swiper = new Swiper('.imgs', {
+              pagination: '.swiper-pagination',
+              paginationClickable: true,
+              loop: true,
+          });
+
+              $(function(){
+        /*          $("input[type=radio]").each(function(){
+                    $(this).addClass("radioclass");
+                  })*/
+                  //开启随机背景
+                  //
+                  //
+                  //
+
+                  new SMusic({
+                          musicList : musicList,
+                          autoPlay  : false,  //是否自动播放
+                          defaultMode : 1,   //默认播放模式，随机
+                          callback   : function (obj) {  //返回当前播放歌曲信息
+                              console.log(obj);
+                              $(".backgrounds").css('background-image','url("'+obj.cover+'")')
+                          }
+                      });
+                  hideRight();
+                  hideSearch();
+                  $(".apps").each(function(){
+                    $(this).click(function(e){
+                        layer.msg('应用打开了');
+                        e.stopPropagation();
+                    });
+                  });
+                  $("#AppsDiv").hide();
+
+                  lback();
+                  //logo颜色渐变动画
+                  $("input[name='r-group-1']").each(function(){
+                    $(this).attr("onclick","setSearchdefault();");
+                  })
+                  if("false"==localStorage.searchtypeisshow){
+                       $('#searchtype').hide();
+                       $("#typeswich").removeAttr("checked");
+                  }
+                  if (!localStorage.searchtypename) {
+                      localStorage.searchtypename="baidu";
+                      localStorage.searchtype="https://www.baidu.com/s?wd=";
+                      $('#'+localStorage.searchtypename).attr('checked', 'checked');
+                  }else{
+                    $('#'+localStorage.searchtypename).attr('checked', 'checked');
+                    setSearchdefault();
+                  };
+
+                  $(".logo").gradientify({
+                      gradients: [
+                      { start: [0, 184, 255], stop: [110, 213, 108] },
+                      { start: [255,103,69], stop: [240,154,241] },
+                      { start: [33,229,241], stop: [235,236,117] }
+                      ]
+                  });
+                  //美化浏览器的滚动条
+                  $("html").niceScroll({
+                      touchbehavior:false,cursorcolor:"#53dca6",cursoropacitymax:1,cursorwidth:8,horizrailenabled:true,cursorborderradius:0,autohidemode:true,background:'none'
+                  });
+                /*  $("#body").niceScroll({
+                      touchbehavior:false,cursorcolor:"#0966ce",cursoropacitymax:1,cursorwidth:5,horizrailenabled:true,cursorborderradius:5,autohidemode:true,background:'none'
+                  });*/
+                  $("#guolin").niceScroll({
+                      touchbehavior:false,cursorcolor:"#53dca6",cursoropacitymax:1,cursorwidth:5,horizrailenabled:true,cursorborderradius:5,autohidemode:true,background:'none'
+                  });
+                  //扩展动画
+                  $.extend($.easing,{
+                          easeOutExpo:function(e,f,a,h,g){
+                              return(f==g)?a+h:h*(-Math.pow(2,-10*f/g)+1)+a
+                          },easeOutBounce:function(x,t,b,c,d){
+                          if((t/=d)<(1/2.75)){
+                              return c*(7.5625*t*t)+b;
+                          }else if(t<(2/2.75)){
+                              return c*(7.5625*(t-=(1.5/2.75))*t+.75)+b;
+                          }else if(t<(2.5/2.75)){
+                              return c*(7.5625*(t-=(2.25/2.75))*t+.9375)+b;
+                          }else{
+                              return c*(7.5625*(t-=(2.625/2.75))*t+.984375)+b;
+                          }
+                      }
+                  });
+              });
+      function searchEnter(){
+        if (event.keyCode==13) {
+           window.open(localStorage.searchtype+$("#searchinput").val());
+        };
+
+      }
+      function searchEnter2(){
+        if (event.keyCode==13) {
+           window.open(localStorage.searchtype+$("#rootSInput").val());
+        };
+
+      }
+        function taggle(checkbox) {
+
+             if($(checkbox).prop("checked")){
+                 $('#searchtype').show(500);
+                 localStorage.searchtypeisshow=true;
+             }else{
+                 $('#searchtype').hide(500);
+                 localStorage.searchtypeisshow=false;
+             }
+
+         }
+           function appsHide(){
+          $('#AppsDiv').hide(500);
+          $('.imgback').removeClass("blur");
+          $('.Duck').show(700);
+          $('#body').show();
+        }
+         function appsShow(){
+          $('#AppsDiv').show(500);
+          $('.imgback').addClass("blur");
+          $('.Duck').hide(300);
+          $('#body').hide();
+          //自定页
+      /*layer.open({
+        type: 1,
+        //skin: 'layui-layer-demo', //样式类名
+        closeBtn: 0, //不显示关闭按钮
+        anim: 2,
+        title: false,
+        shadeClose: true, //开启遮罩关闭
+        content: $('#AppsDiv')
+      });*/
+      //捕获页
+      /*layer.open({
+        type: 1,
+        shade: false,
+        closeBtn: 0,
+        shadeClose: true,
+        title: false, //不显示标题
+        content: $('#AppsDiv'), //捕获的元素
+        cancel: function(){
+            if (!window.localStorage) {
+              layer.msg('您浏览器暂不支持该功能，请更换浏览器使用；PS：推荐"Chrome"、"火狐"');
+            };
+        }
+      });*/
+      }
+      function getDate(tm){
+      var tt=new Date(parseInt(tm) * 1000).toLocaleString().replace(/年|月/g, "-").replace(/日/g, " ")
+      return tt;
+      }
+
+      function searchSetting(){
+      //捕获页
+      layer.open({
+        type: 1,
+        shade: false,
+        title: false, //不显示标题
+        content: $('#searchSettingDiv'), //捕获的元素
+        cancel: function(){
+            if (!window.localStorage) {
+              layer.msg('您浏览器暂不支持该功能，请更换浏览器使用；PS：推荐"Chrome"、"火狐"');
+            };
+        }
+      });
+      }
+      function setSearchdefault(){
+        var name = $('input[name="r-group-1"]:checked').attr("id");
+        switch(name){
+          case "baidu":
+            localStorage.searchtypename="baidu";
+            localStorage.searchtype="https://www.baidu.com/s?wd=";
+            break;
+          case "google":
+            localStorage.searchtypename="google";
+            localStorage.searchtype="https://www.google.com/#newwindow=1&q=";
+            break;
+          case "so":
+            localStorage.searchtypename="so";
+            localStorage.searchtype="https://www.so.com/s?q=";
+            break;
+          case "sogou":
+            localStorage.searchtypename="sogou";
+            localStorage.searchtype="https://www.sogou.com/web?query=";
+            break;
+        }
+
+      }
+      function baidus(){
+        window.open("https://www.baidu.com/s?wd="+$("#searchinput").val());
+      }
+      function google(){
+        window.open("https://www.google.com/#newwindow=1&q="+$("#searchinput").val());
+      }
+      function sos(){
+        window.open("https://www.so.com/s?q="+$("#searchinput").val());
+      }
+      function sogous(){
+        window.open("https://www.sogou.com/web?query="+$("#searchinput").val());
+      }
+
+      function lback(){
+          // var id = Math.ceil(Math.random()*bimgs.length-1);
+        //$(".bodyback").css("background","url("+bimgs[id].uri+")  no-repeat center");
+        //$(".bodyback").css("background-size","cover");
+          $(".imgback").css("background","url(http://www.isofts.org/wp-content/themes/Tinection-Pro-master/images/pix.png) top left repeat,url(http://www.isofts.org/wp-content/uploads/2014/04/bg.jpg) top center;");
+          $(".imgback").css("background-attachment","fixed");
+          $(".imgback").css("background-size","2px 2px,cover");
+
+      }
+              </script>
+              </html>

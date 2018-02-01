@@ -142,7 +142,7 @@ if (localStorage.phone !== "") {
 					div += '<span>'+p.size+'</span>'
 					div += '<span>'+p.price+'</span>'
 					div += '<span style="width:14%">'+p.submitDate+'</span>'
-					div += '<button class="addjson" data-json='+JSON.stringify(p)+'>'+p.+'</button></div>'
+					div += '<button class="addjson" data-json='+JSON.stringify(p)+'></button></div>'
 				}
 			}
 		}

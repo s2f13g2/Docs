@@ -64,7 +64,7 @@
 .cellBox div {
     padding: 3px;
     float: left;
-    transition: ease all .5s;ß
+    transition: ease all .5s;
 }
 .contentt{
     border-radius: 4px;
@@ -91,4 +91,23 @@
 }
 .active{
     color: #fd4c5d;
+}
+
+.banner{
+     margin: 2% 2% 2% 2%;
+     overflow: hidden;
+}
+
+.bannerItem{
+    width: 23%;
+    min-height: 35px;
+    margin-right: 2%;
+    padding: 8px;
+    border-radius: 5px;
+    float: left; 
+    color: #fff;
+}
+.hot{
+    font-size: 30px;
+    color: #ff6767;
 }
